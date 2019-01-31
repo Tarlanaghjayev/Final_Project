@@ -1,0 +1,91 @@
+@import 'partials/variables';
+header{
+    .menu1{
+        background-image: url(../img/cover_photos/map.jpg);
+        // position: fixed;
+        width: 1366px;
+        height: 100px;
+        // margin-top: 7px;
+        .main_name{
+            a{
+                text-decoration: none;
+                display: block;
+                font-size: 24px;
+                margin-top: 14px;
+                color: white;
+                margin-left: -383px;
+                font-weight: 700;
+                line-height: 35px;
+                background-color: transparent;
+                font-family: 'Roboto Condensed', sans-serif;
+                a:hover{
+                    text-decoration: none;
+                    text-decoration: none;
+                }
+            }
+        }
+        .atasozu{
+            .span1{
+                margin-top: -60px;
+                margin-left: 290px;
+                color: white;
+                display: block;
+            }
+            .span2{
+                color: white;
+                margin-left: 674px;
+                margin-top: 7px;
+                font-size: 18px;
+                font-weight: 600;
+                display: block;
+            }
+
+        }
+    }
+    .menu2{
+        background: $primary-c;
+        // position: fixed;
+        width: 1366px;
+        height: 53px;
+        .navbar_list{
+            margin-right: 30px;
+            ul{
+                list-style: none;
+                display: inline-flex;
+                height: 29px;
+                text-align: center;
+                margin-top: 13px;
+                float: left;
+                margin-left: 72px;
+                li{
+                    margin-right: 211px;
+                    // &::before{
+                    //     height: 10px;
+                    //     width: 10px;
+                    //     border-color: aqua;
+                    // }
+                    a{
+                        color: white;
+                        text-decoration: none;
+                        font-size: 19px;
+                        font-weight: 600;
+                        font-family: 'Roboto Condensed', sans-serif;
+                        &:hover{
+                            text-decoration: none;
+                            box-shadow: 0px 2px #ffffff;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    // .menu3{
+    //     .photo_portfolio{
+    //         background-image: url("../img/cover_photos/esger mektub-03.1.png");
+    //         // margin-top: 89px;
+    //         background-repeat: round;
+    //         height: 400px;
+    //     }
+    // }
+}

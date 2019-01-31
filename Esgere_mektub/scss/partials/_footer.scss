@@ -1,0 +1,142 @@
+@import 'partials/variables';
+
+#footer{
+    .row{}
+    .footer_medium{
+        background-image: url(../img/cover_photos/map.jpg);
+        height: 350px;
+    .row{
+        
+        .footer_left{
+            .main_name{
+                a{
+                    text-decoration: none;
+                    display: block;
+                    font-size: 24px;
+                    color: white;
+                    font-weight: 700;
+                    margin-left: 200px;
+                    margin-top: 81px;
+                    line-height: 35px;
+                    background-color: transparent;
+                    font-family: 'Roboto Condensed', sans-serif;
+                    a:hover{
+                        text-decoration: none;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .sosial{
+                ul{
+                    li{
+                        display: inline-block;
+                        a{
+                            width: 40px;
+                            height: 40px;
+                            line-height: 40px;
+                            display: inline-block;
+                            width: 40px;
+                            height: 40px;
+                            text-align: center;
+                            line-height: 40px;
+                            border-radius: 50px;
+                            color: #fff;
+                            background: #343d23;
+                            transition: .3s all ease;
+                            i{
+                                font-size: 15px;
+                                line-height: 40px;
+                                .fa{
+                                    // display: inline-block;
+                                    // font-family: 'FontAwesome';
+                                    // font-size: normal;
+                                    // font-weight: 14px/1;
+                                    // // font: 14px/1 ;
+                                    // font-style: normal;
+                                    // text-rendering: auto;
+                                    // -webkit-font-smoothing: antialiased;
+
+                                    font-family: 'FontAwesome';
+                                    font-weight: 700;
+                                    font-style: normal;
+                                    font-size: 21px;
+                                    margin-top: -3px;
+                                    display: block;
+                                    margin-right: 9px;
+                                }
+                                .fa-facebook::before{
+                                    content: '\f09a';
+                                }
+                                .fa-twitter::before{
+                                    content: '\f099';
+                                }
+                                .fa-instagram::before{
+                                    content: '\f16d';
+                                }
+                                .fa-youtube-play::before{
+                                    content: '\f16a';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer_right{
+            margin-top: 85px;
+            h4{
+                color: $letter-c;
+                margin-bottom: 29px;
+            }
+            dl{
+                color: $letter-c;
+                dt{
+                    display: -webkit-inline-box;
+                    .icon{
+                        color: $icon-c;
+                        cursor: pointer;
+                    }
+                    .material-icons-ico{
+                        font-family: 'Material Icons';
+                        font-weight: 700;
+                        font-style: normal;
+                        font-size: 21px;
+                        margin-top: -3px;
+                        display: block;
+                        margin-right: 9px;
+                    }
+                    .material-icons-room::before{
+                        content: '\e8b4';
+                    }
+                    .material-icons-local_phone::before{
+                        content: '\e551';
+                    }
+                    .material-icons-email::before{
+                        content: '\e0be';
+                    }
+                }
+                dd{
+                    margin-bottom: .5rem;
+                    display: inline-block;
+                    margin-left: 15px;
+                    a{
+                        color: $letter-c;
+                        &:hover{
+                            color: $letter-c;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+    .row{
+        .footer_end{
+            background: $primary-c;
+            height: 60px;
+            .span3{
+            }
+        }
+    }
+}
