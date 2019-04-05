@@ -1,0 +1,242 @@
+#slider{
+    position: relative;
+    
+    .carousel-item{
+   
+        .carusel-text-1{
+            position: absolute;
+            top: 30%;
+            left: 22%;
+            width: 80%;
+            visibility: hidden;
+            opacity: 0;
+            h3{
+            font-size: $font-size*4-4;
+            color: white;
+            font-weight: 700;
+            font-family: $font-family-second;
+            margin-bottom: 25px;
+            animation-name: fadeIn;
+            animation-duration: 1s;
+            }
+            p{
+                width: 700px;
+                position: relative;
+                left: 9%;
+                color: $color-effet-2;
+                font-size: $font-size+3;
+                text-align: left;
+                margin-bottom: 45px;
+                animation-delay: 0.1s;
+                animation-name: slide-left;
+                animation-duration: 2.5s;
+                animation-fill-mode: forwards;
+            }
+            .carousel-button{
+                animation-delay: 0.1s;
+                animation-name: fadeIn;
+                animation-duration: 7s;
+                
+            }
+        }
+    }
+    .carousel-item.active{
+        .carusel-text-1{
+        visibility: visible;
+        opacity: 1;
+        }
+    }
+
+    .carousel-item{
+        .carusel-text-2{
+        position: absolute;
+        top: 30%;
+        right: 22%;
+        width: 80%;
+        visibility: hidden;
+        opacity: 0;
+        h3{
+            position: relative;
+            left: -9%;
+           font-size: $font-size*4-4;
+           color: white;
+           font-weight: 700;
+           font-family: $font-family-second;
+           margin-bottom: 25px;
+           text-align: right;
+           animation-delay: 0.2s;
+           animation-name: slide-right;
+           animation-duration: 0.8s;
+           animation-fill-mode: forwards;
+        }
+        p{
+            position: relative;
+            width: 700px;
+            right: -35%;
+            color: $color-effet-2;
+            font-size: $font-size+3;
+            text-align: right;
+            margin-bottom: 45px;
+            animation-delay: 0.5s;
+            animation-name: fadeIn;
+            animation-duration: 3s;
+        }
+        .carousel-button{
+            position: relative;
+            left: 74%;
+            animation-delay: 0.2s;
+            animation-name: fadeIn;
+            animation-duration: 7s;
+        }
+
+    }
+}
+.carousel-item.active{
+    .carusel-text-2{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+    .carousel-item{
+        .carusel-text-3{
+            position: absolute;
+            top: 30%;
+            right: 22%;
+            width: 80%;
+            visibility: hidden;
+            opacity: 0;
+           
+            h3{
+                position: relative;
+               font-size: $font-size*4-4;
+               color: white;
+               left: 6%;
+               font-weight: 700;
+               font-family: $font-family-second;
+               margin-bottom: 25px;
+               text-align: center;
+               animation-delay: 0.1s;
+               animation-name: slide-right;
+               animation-duration: 1.5s;
+               animation-fill-mode: forwards;
+
+            }
+            p{
+                position: relative;
+                width: 700px;
+                left: 41%;
+                color: $color-effet-2;
+                font-size: $font-size+3;
+                text-align: center;
+                margin-bottom: 45px;
+                animation-delay: 0.3s;
+                animation-name: slide-left;
+                animation-duration: 2.5s;
+                animation-fill-mode: forwards;
+            }
+            .carousel-button{
+                position: relative;
+                left: 51.5%;
+                animation-delay: 0.3s;
+                animation-name: fadeIn;
+                animation-duration: 7s;
+            }
+        }
+    }
+
+    .carousel-item.active{
+        .carusel-text-3{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+
+
+    //icon
+    .carousel-indicators{
+        height: 30px;
+        display: block;
+        left: 31.5%;
+    }
+    .carousel-indicators li{
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background-color: white;
+        display: inline-block;
+    }
+    .carousel-indicators li.active{
+        background-color: $color;
+        top: -10;
+        height: 25px;
+        width: 12px;
+        border-radius: 8px;
+        //transform: rotate(90deg);
+        //@include transition(all,0.5s);
+        animation-name: scale-up-ver-bottom;
+        animation-duration: 1s;
+         
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    #slider{
+       p{
+           display: none;
+       }
+       h3{
+           font-size: $font-size+4 !important;
+       }
+       .carousel-indicators{
+           display: none;
+       }
+        
+       .carousel-button{
+           .btn-blue-custom{
+                padding: 6px 15px !important;
+                text-transform: capitalize;
+                font-size: 13px;
+                margin: 0;
+                min-width: 50px!important;
+                height: auto !important;
+           }
+           .btn-blue-w{
+                padding: 6px 15px !important;
+                text-transform: capitalize;
+                font-size: 13px !important;
+                margin: 0;  
+                min-width: 50px !important;
+                height: auto !important;
+           }
+       }
+       .carusel-text-1{
+           .carousel-button{
+               animation-delay: 0s !important;
+           }
+       }
+     .carusel-text-2{
+        h3{
+            left: -27% !important;
+        }
+        .carousel-button{
+            left: 30% !important;
+            animation-delay: 0s !important;
+        }
+     }
+     .carusel-text-3{
+            h3{
+                left: -4% !important;
+            }
+            .carousel-button{
+                animation-delay: 0s !important;
+            }
+     }
+ }
+ .carousel-item{
+    display: none;
+ }  
+}

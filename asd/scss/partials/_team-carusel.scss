@@ -1,0 +1,106 @@
+#team-carusel{
+    position: relative;
+    background-color: $color-black;
+
+    .title{
+        // position: absolute;
+        h2{
+            font-family: $font-family-second;
+            font-weight: 600;
+            font-size: $font-size*2; 
+            margin-bottom: 10px;
+            color: $color-white;
+        }
+      span{
+         height: 3px;
+         width: 80px;
+         margin: 0 0 15px;
+         border-bottom: 2px solid $color;
+         position: relative;
+         display: inline-block;
+         
+      }
+      span::after{
+         content: "";
+         border-bottom: 2px solid $color;
+         width: 45px;
+         height: 2px;
+         display: block;
+         margin: 5px auto;
+      }
+      p{
+          font-size: $font-size;
+          margin: 0 auto 50px;
+          color: $color-white !important;
+      }
+  }
+
+
+  //card
+  .card{
+    text-align: center;
+    width: 360px;
+    .team-img-carusel{
+        position: relative;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+    }
+    .card-body{
+        padding: 0 20px 20px 20px;
+
+        .team-p{
+            color: darken($color-effet-2, 40%);
+        }
+        .team-star{
+            color: $star;
+            font-size: ($font-size)-2;
+            margin: 20px 0;
+        }
+        h5{
+            color: $color-black;
+
+            &:hover{
+                color: $color;
+            }
+        }
+        p.team-text{
+            color:darken($color-effet-2, 20%);
+            font-size: ($font-size-s)-1;
+        }
+    }
+    
+  }
+
+  .fa-angle-left{
+      position: absolute;
+      color: $color-black;
+      font-size: $font-size+2;
+      right: 6%;
+      top: -11%;
+      padding: 10px;
+      background-color: $color-effet-2;
+  }
+  .fa-angle-right{
+      color: $color-black;
+      font-size: $font-size+2;
+      position: absolute;
+      right: 3%;
+      top: -11%;
+      padding: 10px;
+      background-color: $color-effet-2;
+  }
+}
+
+
+@media screen and (max-width: 520px) {
+    #team-carusel .fa-angle-left{
+        right: 16%; 
+    }
+}

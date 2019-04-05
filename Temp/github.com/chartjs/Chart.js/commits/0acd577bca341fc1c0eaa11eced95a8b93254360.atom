@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/chartjs/Chart.js/commits/0acd577bca341fc1c0eaa11eced95a8b93254360</id>
+  <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commits/0acd577bca341fc1c0eaa11eced95a8b93254360"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/chartjs/Chart.js/commits/0acd577bca341fc1c0eaa11eced95a8b93254360.atom"/>
+  <title>Recent Commits to Chart.js:0acd577bca341fc1c0eaa11eced95a8b93254360</title>
+  <updated>2019-02-10T19:57:19Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0acd577bca341fc1c0eaa11eced95a8b93254360</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/0acd577bca341fc1c0eaa11eced95a8b93254360"/>
+    <title>
+        Add missing space
+    </title>
+    <updated>2019-02-10T19:57:19Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add missing space&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3c0bbeacb0cd23fefdb8a1c8a89e822442290123</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/3c0bbeacb0cd23fefdb8a1c8a89e822442290123"/>
+    <title>
+        Fix parameter ordering
+    </title>
+    <updated>2019-02-10T19:56:00Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix parameter ordering&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2b0f46cf53db71a67f588ba61a86858fd9eede9e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/2b0f46cf53db71a67f588ba61a86858fd9eede9e"/>
+    <title>
+        Revert moving functions to top of file
+    </title>
+    <updated>2019-02-10T19:43:47Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Revert moving functions to top of file&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4f49e41923fea67e61955acafd751249ec7ac671</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/4f49e41923fea67e61955acafd751249ec7ac671"/>
+    <title>
+        Address latest round of comments
+    </title>
+    <updated>2019-02-10T19:23:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Address latest round of comments&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/84bad1c3d72b9149e2a4274de53aa2ddfea72d0f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/84bad1c3d72b9149e2a4274de53aa2ddfea72d0f"/>
+    <title>
+        Address .gitignore comment
+    </title>
+    <updated>2019-02-10T19:23:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Address .gitignore comment&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/bd1dffbed679b4dff87474b331fd999d7138688c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/bd1dffbed679b4dff87474b331fd999d7138688c"/>
+    <title>
+        Fix type and parameter name ordering
+    </title>
+    <updated>2019-02-10T19:23:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix type and parameter name ordering&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0d50ebc6ba8985e7e48ae2d95beccb7548788a02</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/0d50ebc6ba8985e7e48ae2d95beccb7548788a02"/>
+    <title>
+        Replace object with Tooltip
+    </title>
+    <updated>2019-02-10T19:23:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Replace object with Tooltip&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/901bab9a27b271aafedfdf56e54520eb6a3b0ac6</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/901bab9a27b271aafedfdf56e54520eb6a3b0ac6"/>
+    <title>
+        Change configure docs to take ILayoutItem
+    </title>
+    <updated>2019-02-10T19:23:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Change configure docs to take ILayoutItem&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/00fa64a6cd1f09e0ca075e2ecb5a2bee6d92998f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/00fa64a6cd1f09e0ca075e2ecb5a2bee6d92998f"/>
+    <title>
+        Change object to Chart
+    </title>
+    <updated>2019-02-10T19:23:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Change object to Chart&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/1bd3dfb5923d19fe78a649822615d671e13f4848</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/1bd3dfb5923d19fe78a649822615d671e13f4848"/>
+    <title>
+        Remove extraneous backtick
+    </title>
+    <updated>2019-02-10T19:23:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Remove extraneous backtick&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/948199f38c6be438ec321cac56a54a61d260739c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/948199f38c6be438ec321cac56a54a61d260739c"/>
+    <title>
+        Replace one more colon
+    </title>
+    <updated>2019-02-10T19:23:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Replace one more colon&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/89c97e2bb4734e2fa7d322f18b081eba16962b69</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/89c97e2bb4734e2fa7d322f18b081eba16962b69"/>
+    <title>
+        Replace colon in jsdoc
+    </title>
+    <updated>2019-02-10T19:23:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Replace colon in jsdoc&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e4b8a2ae090cda141850311bf8bd435d99593386</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/e4b8a2ae090cda141850311bf8bd435d99593386"/>
+    <title>
+        Fix comment style
+    </title>
+    <updated>2019-02-10T19:23:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix comment style&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/91398d4516ac630596286c88db7a8cec7177762d</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/91398d4516ac630596286c88db7a8cec7177762d"/>
+    <title>
+        Fix comment style
+    </title>
+    <updated>2019-02-10T19:23:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix comment style&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/7d6c3823e828106f1bb6e86abfead3008396e823</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/7d6c3823e828106f1bb6e86abfead3008396e823"/>
+    <title>
+        Address review comment
+    </title>
+    <updated>2019-02-10T19:23:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Address review comment&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/6def03bc00851426d7a74616cfbb9083ced7ac8f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/6def03bc00851426d7a74616cfbb9083ced7ac8f"/>
+    <title>
+        Replace rectangle with ILayoutItem
+    </title>
+    <updated>2019-02-10T19:23:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Replace rectangle with ILayoutItem&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a5b15906cf8211650ab31f5b335b59486d6c8bb0</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/a5b15906cf8211650ab31f5b335b59486d6c8bb0"/>
+    <title>
+        Address review comments
+    </title>
+    <updated>2019-02-10T19:23:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Address review comments&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/dfccca201afa13d1a5b5b66b28043fa447e2f12c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/dfccca201afa13d1a5b5b66b28043fa447e2f12c"/>
+    <title>
+        Use lowercase for primitives in jsdocs
+    </title>
+    <updated>2019-02-10T19:23:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Use lowercase for primitives in jsdocs&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/8b07cc2f28b042ab0706d8ee9f5a8d5adb3ca2a5</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/8b07cc2f28b042ab0706d8ee9f5a8d5adb3ca2a5"/>
+    <title>
+        Implement scriptable options for points in radar charts (#6041)
+    </title>
+    <updated>2019-02-09T22:07:54Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/723188?s=30&amp;v=4"/>
+    <author>
+      <name>nagix</name>
+      <uri>https://github.com/nagix</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Implement scriptable options for points in radar charts (#6041)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0ed652b39f7fc96cfcbfd916081d5d930850a231</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/0ed652b39f7fc96cfcbfd916081d5d930850a231"/>
+    <title>
+        Fix typo in radial linear scale docs (#6054)
+    </title>
+    <updated>2019-02-09T07:19:57Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/32302360?s=30&amp;v=4"/>
+    <author>
+      <name>JABedford</name>
+      <uri>https://github.com/JABedford</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix typo in radial linear scale docs (#6054)&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

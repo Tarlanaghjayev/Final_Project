@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/chartjs/Chart.js/commits/52b9793ba0c5155e599b5e03e1d66638ad68de04</id>
+  <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commits/52b9793ba0c5155e599b5e03e1d66638ad68de04"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/chartjs/Chart.js/commits/52b9793ba0c5155e599b5e03e1d66638ad68de04.atom"/>
+  <title>Recent Commits to Chart.js:52b9793ba0c5155e599b5e03e1d66638ad68de04</title>
+  <updated>2018-12-17T06:50:02Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/52b9793ba0c5155e599b5e03e1d66638ad68de04</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/52b9793ba0c5155e599b5e03e1d66638ad68de04"/>
+    <title>
+        Use HTTPS instead of HTTP for URLs supporting it
+    </title>
+    <updated>2018-12-17T06:50:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Use HTTPS instead of HTTP for URLs supporting it&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2388eeaf38ff3f3209d1560f773e36386ededaf9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/2388eeaf38ff3f3209d1560f773e36386ededaf9"/>
+    <title>
+        Add omi-chart to extensions.md (#5912)
+    </title>
+    <updated>2018-12-15T11:27:08Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/7917954?s=30&amp;v=4"/>
+    <author>
+      <name>dntzhang</name>
+      <uri>https://github.com/dntzhang</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add omi-chart to extensions.md (#5912)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3a29b99e3b24e4d7dbfcb22df5e1f98ba9a0be4b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/3a29b99e3b24e4d7dbfcb22df5e1f98ba9a0be4b"/>
+    <title>
+        Use HTTPS in documentation links where possible (#5915)
+    </title>
+    <updated>2018-12-15T10:28:17Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Use HTTPS in documentation links where possible (#5915)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/2a97ec21c55c70f81b6c6f5d46979c273cc4c091</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/2a97ec21c55c70f81b6c6f5d46979c273cc4c091"/>
+    <title>
+        Migrate from Browserify to rollup (#5904)
+    </title>
+    <updated>2018-12-14T19:20:43Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Migrate from Browserify to rollup (#5904)
+
+Browserify isn&amp;#39;t optimal bundling Chart.js because it adds too many internal wrappers, doesn&amp;#39;t handle external/global dependencies and doesn&amp;#39;t provide a way to generate ESM builds. Therefore, it seems the right choice to switch to rollup, so move all the build process in `rollup.config.js` and make Gulp to execute `rollup -c`.
+
+We also had to switch to Terser instead of UglifyJS because this last one contains a breaking bug. Note that tests now use the exact same rollup config as our builds (the minified one) to ensure that the bundling and minification steps don&amp;#39;t break anything. Finally, replace the `gulp watch` task by `gulp build --watch` to be consistent with the other `unittest` and `docs` watching syntax.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f2a9e66b738468a88c773cf19bbfde13d9915680</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/f2a9e66b738468a88c773cf19bbfde13d9915680"/>
+    <title>
+        Remove `innerHTML` usage from our DOM platform (#5909)
+    </title>
+    <updated>2018-12-14T02:19:42Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Remove `innerHTML` usage from our DOM platform (#5909)
+
+Prevent &amp;quot;Unsafe assignment to innerHTML&amp;quot; reported by Firefox when submitting addon to their store.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/69fcba029b32fd2a290f6356cd857b8c2d6809e3</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/69fcba029b32fd2a290f6356cd857b8c2d6809e3"/>
+    <title>
+        Remove autoSkip logic to always display last tick (#5891)
+    </title>
+    <updated>2018-12-09T17:56:51Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/4473201?s=30&amp;v=4"/>
+    <author>
+      <name>sgray</name>
+      <uri>https://github.com/sgray</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Remove autoSkip logic to always display last tick (#5891)
+
+This changes the behavior of `autoSkip` so that it does not force the
+display of the last tick. If the last tick can be displayed with equal
+spacing to the rest of the ticks, it will be. Otherwise, it is not.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/40495ec9d0c15997bf9c309f7a97d6620f2a50de</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/40495ec9d0c15997bf9c309f7a97d6620f2a50de"/>
+    <title>
+        Fix the rounding issue of floating point numbers in category scale (#…
+    </title>
+    <updated>2018-12-09T10:34:34Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/723188?s=30&amp;v=4"/>
+    <author>
+      <name>nagix</name>
+      <uri>https://github.com/nagix</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix the rounding issue of floating point numbers in category scale (#5880)
+
+- Remove `Math.round` in the category scale code
+- Add `helpers._alignPixel` to align grid/tick/axis border lines
+- Fix grid/tick/axis border line calculation
+- Add a check of the width of the axis border
+- Refactor core.scale code&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/7c45fdac0dc44d416c1cc381444543f61276cfab</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/7c45fdac0dc44d416c1cc381444543f61276cfab"/>
+    <title>
+        Remove gaps on the left and right when the axis offset is true (#5884)
+    </title>
+    <updated>2018-12-05T16:59:07Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/723188?s=30&amp;v=4"/>
+    <author>
+      <name>nagix</name>
+      <uri>https://github.com/nagix</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Remove gaps on the left and right when the axis offset is true (#5884)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/bfa635e55d6e494d9d032729c1475d6339e61d21</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/bfa635e55d6e494d9d032729c1475d6339e61d21"/>
+    <title>
+        Fix docs about bar chart indexable options (#5876)
+    </title>
+    <updated>2018-12-04T08:10:15Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/723188?s=30&amp;v=4"/>
+    <author>
+      <name>nagix</name>
+      <uri>https://github.com/nagix</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix docs about bar chart indexable options (#5876)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/5797e034218bebb5c9330407c391c87e812ae839</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/5797e034218bebb5c9330407c391c87e812ae839"/>
+    <title>
+        Refactor data generation in scatter basic example (#5877)
+    </title>
+    <updated>2018-12-04T08:07:35Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/40661852?s=30&amp;v=4"/>
+    <author>
+      <name>generic-github-user</name>
+      <uri>https://github.com/generic-github-user</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Refactor data generation in scatter basic example (#5877)
+
+Replace repeated function call with compact function, generateData&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3cb2d7050e0976f92383beb48bee07e5d579a2c0</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/3cb2d7050e0976f92383beb48bee07e5d579a2c0"/>
+    <title>
+        Remove gulp-connect and add jsdelivr/unpkg paths (#5875)
+    </title>
+    <updated>2018-12-01T07:35:43Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Remove gulp-connect and add jsdelivr/unpkg paths (#5875)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/be8d78a900b560a1dbd465a29736063e4e8fa4ef</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/be8d78a900b560a1dbd465a29736063e4e8fa4ef"/>
+    <title>
+        Make Chart.controllers.* importable (#5871)
+    </title>
+    <updated>2018-11-29T20:06:34Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Make Chart.controllers.* importable (#5871)
+
+`controllers.*.js` and `core.datasetController.js` are now importable (no more function export), that&amp;#39;s why there is so many changes mainly due to one indentation level removed. Split code for `bar/horizontalBar` and `doughnut/pie` in separate files, added a global controllers import (`src/controllers/index.js`) and add tests to check that all dataset controllers are correctly registered under `chart.controllers.{type}`.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c84d24903571cdaf371eb1a003fa0e85011ed953</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/c84d24903571cdaf371eb1a003fa0e85011ed953"/>
+    <title>
+        Fix test failures on Windows (#5872)
+    </title>
+    <updated>2018-11-29T20:05:36Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/723188?s=30&amp;v=4"/>
+    <author>
+      <name>nagix</name>
+      <uri>https://github.com/nagix</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix test failures on Windows (#5872)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ecfa7b24c64d873befe625d21b64c826a304e10e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/ecfa7b24c64d873befe625d21b64c826a304e10e"/>
+    <title>
+        Add support for CanvasPattern and CanvasGradient in tooltip (#5869)
+    </title>
+    <updated>2018-11-29T12:52:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/723188?s=30&amp;v=4"/>
+    <author>
+      <name>nagix</name>
+      <uri>https://github.com/nagix</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add support for CanvasPattern and CanvasGradient in tooltip (#5869)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/aa652df240a98a5283381591bed0bca555cc5b55</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/aa652df240a98a5283381591bed0bca555cc5b55"/>
+    <title>
+        Deprecate Chart.{Type} classes (#5868)
+    </title>
+    <updated>2018-11-29T06:56:20Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Deprecate Chart.{Type} classes (#5868)
+
+It looks like these classes are a legacy from version 1 but we actually never promoted their usage. Instead, the regular way to create a chart is to set the type in the config, for example: `new Chart(ctx, {type: &amp;#39;bar&amp;#39;})`. Some types are actually missing (no `Chart.HorizontalBar` or `Chart.Pie`) but it&amp;#39;s also not scalable because it can easily conflict with other classes scoped under the `Chart` namespace.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d6ac7d8a80a80866d64845c99cbfaec66b377ddd</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/d6ac7d8a80a80866d64845c99cbfaec66b377ddd"/>
+    <title>
+        Fix cut off tick labels in radial scale (#5848)
+    </title>
+    <updated>2018-11-28T07:35:15Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/723188?s=30&amp;v=4"/>
+    <author>
+      <name>nagix</name>
+      <uri>https://github.com/nagix</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix cut off tick labels in radial scale (#5848)
+
+Fix the issue that the topmost tick label and the bottom of the chart area are cut off with a radial scale.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/bbca2fc78982e09414330f5addd7be5e0de57527</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/bbca2fc78982e09414330f5addd7be5e0de57527"/>
+    <title>
+        Enhance documentation for bar specific scale options (#5854)
+    </title>
+    <updated>2018-11-28T06:56:41Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/5911945?s=30&amp;v=4"/>
+    <author>
+      <name>jedrekdomanski</name>
+      <uri>https://github.com/jedrekdomanski</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Enhance documentation for bar specific scale options (#5854)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/1f2fa5c90c7a270874893919af1af9ae6fd5666b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/1f2fa5c90c7a270874893919af1af9ae6fd5666b"/>
+    <title>
+        Adjust the size of rectRounded/rectRot point to fit pointRadius (#5858)
+    </title>
+    <updated>2018-11-28T06:53:41Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/723188?s=30&amp;v=4"/>
+    <author>
+      <name>nagix</name>
+      <uri>https://github.com/nagix</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adjust the size of rectRounded/rectRot point to fit pointRadius (#5858)
+
+- Calculate the vertices of the shapes so that they are inscribed in the circle that has the radius of `pointRadius`
+- Remove `translate()` and `rotate()` to fix the regression introduced by #5319
+- Refactor `rectRounded` for better performance&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/241499d27f6b684a348eee3a7b1e615c031809b6</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/241499d27f6b684a348eee3a7b1e615c031809b6"/>
+    <title>
+        Make getHoverColor() return the original value if it is CanvasGradien…
+    </title>
+    <updated>2018-11-28T00:54:03Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/723188?s=30&amp;v=4"/>
+    <author>
+      <name>nagix</name>
+      <uri>https://github.com/nagix</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Make getHoverColor() return the original value if it is CanvasGradient (#5865)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f5437fe548e5ca4d9236f3724fae692c30913c84</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/f5437fe548e5ca4d9236f3724fae692c30913c84"/>
+    <title>
+        Fix nearest interaction mode to return all items (#5857)
+    </title>
+    <updated>2018-11-27T15:26:41Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/27971921?s=30&amp;v=4"/>
+    <author>
+      <name>kurkle</name>
+      <uri>https://github.com/kurkle</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix nearest interaction mode to return all items (#5857)
+
+Return all items that are at the nearest distance to the point and add unit tests for nearest + axis: &amp;#39;x&amp;#39; and nearest + axis: &amp;#39;y&amp;#39;&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

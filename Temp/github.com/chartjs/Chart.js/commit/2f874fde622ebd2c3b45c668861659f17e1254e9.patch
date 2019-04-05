@@ -1,0 +1,1203 @@
+From 2f874fde622ebd2c3b45c668861659f17e1254e9 Mon Sep 17 00:00:00 2001
+From: Ben McCann <322311+benmccann@users.noreply.github.com>
+Date: Sun, 10 Feb 2019 23:51:39 -0800
+Subject: [PATCH] Use lowercase for primitives in jsdocs (#6033)
+
+---
+ .gitignore                                  |   2 +
+ src/controllers/controller.bar.js           |  10 +-
+ src/controllers/controller.horizontalBar.js |   1 -
+ src/core/core.animations.js                 |   4 +-
+ src/core/core.controller.js                 |   8 +-
+ src/core/core.helpers.js                    |  22 ++--
+ src/core/core.interaction.js                |  55 ++++----
+ src/core/core.layouts.js                    |  34 ++---
+ src/core/core.plugins.js                    | 132 ++++++++++----------
+ src/core/core.scale.js                      |   6 +-
+ src/core/core.ticks.js                      |  10 +-
+ src/core/core.tooltip.js                    |  22 ++--
+ src/helpers/helpers.canvas.js               |  16 +--
+ src/helpers/helpers.core.js                 |  50 ++++----
+ src/helpers/helpers.options.js              |  24 ++--
+ src/platforms/platform.dom.js               |   2 +-
+ src/platforms/platform.js                   |  20 +--
+ src/plugins/plugin.legend.js                |   8 +-
+ src/scales/scale.linearbase.js              |   2 +-
+ src/scales/scale.logarithmic.js             |   6 +-
+ src/scales/scale.time.js                    |   4 +-
+ 21 files changed, 223 insertions(+), 215 deletions(-)
+
+diff --git a/.gitignore b/.gitignore
+index 0a65be9b2..f275dac07 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -9,6 +9,8 @@
+ /package-lock.json
+ .DS_Store
+ .idea
++.project
++.settings
+ .vscode
+ bower.json
+ *.log
+diff --git a/src/controllers/controller.bar.js b/src/controllers/controller.bar.js
+index aef53b68a..992333a25 100644
+--- a/src/controllers/controller.bar.js
++++ b/src/controllers/controller.bar.js
+@@ -190,8 +190,8 @@ module.exports = DatasetController.extend({
+ 
+ 	/**
+ 	 * Returns the stacks based on groups and bar visibility.
+-	 * @param {Number} [last] - The dataset index
+-	 * @returns {Array} The stack list
++	 * @param {number} [last] - The dataset index
++	 * @returns {string[]} The list of stack IDs
+ 	 * @private
+ 	 */
+ 	_getStacks: function(last) {
+@@ -226,9 +226,9 @@ module.exports = DatasetController.extend({
+ 
+ 	/**
+ 	 * Returns the stack index for the given dataset based on groups and bar visibility.
+-	 * @param {Number} [datasetIndex] - The dataset index
+-	 * @param {String} [name] - The stack name to find
+-	 * @returns {Number} The stack index
++	 * @param {number} [datasetIndex] - The dataset index
++	 * @param {string} [name] - The stack name to find
++	 * @returns {number} The stack index
+ 	 * @private
+ 	 */
+ 	getStackIndex: function(datasetIndex, name) {
+diff --git a/src/controllers/controller.horizontalBar.js b/src/controllers/controller.horizontalBar.js
+index 62bd07d3b..ebfc6d84a 100644
+--- a/src/controllers/controller.horizontalBar.js
++++ b/src/controllers/controller.horizontalBar.js
+@@ -1,4 +1,3 @@
+-
+ 'use strict';
+ 
+ var BarController = require('./controller.bar');
+diff --git a/src/core/core.animations.js b/src/core/core.animations.js
+index c307f4995..54645ddd9 100644
+--- a/src/core/core.animations.js
++++ b/src/core/core.animations.js
+@@ -20,8 +20,8 @@ module.exports = {
+ 	/**
+ 	 * @param {Chart} chart - The chart to animate.
+ 	 * @param {Chart.Animation} animation - The animation that we will animate.
+-	 * @param {Number} duration - The animation duration in ms.
+-	 * @param {Boolean} lazy - if true, the chart is not marked as animating to enable more responsive interactions
++	 * @param {number} duration - The animation duration in ms.
++	 * @param {boolean} lazy - if true, the chart is not marked as animating to enable more responsive interactions
+ 	 */
+ 	addAnimation: function(chart, animation, duration, lazy) {
+ 		var animations = this.animations;
+diff --git a/src/core/core.controller.js b/src/core/core.controller.js
+index a294b1600..92cfcd017 100644
+--- a/src/core/core.controller.js
++++ b/src/core/core.controller.js
+@@ -736,8 +736,10 @@ helpers.extend(Chart.prototype, /** @lends Chart */ {
+ 		plugins.notify(me, 'afterTooltipDraw', [args]);
+ 	},
+ 
+-	// Get the single element that was clicked on
+-	// @return : An object containing the dataset index and element index of the matching element. Also contains the rectangle that was draw
++	/**
++	 * Get the single element that was clicked on
++	 * @return An object containing the dataset index and element index of the matching element. Also contains the rectangle that was draw
++	 */
+ 	getElementAtEvent: function(e) {
+ 		return Interaction.modes.single(this, e);
+ 	},
+@@ -970,7 +972,7 @@ helpers.extend(Chart.prototype, /** @lends Chart */ {
+ 	 * Handle an event
+ 	 * @private
+ 	 * @param {IEvent} event the event to handle
+-	 * @return {Boolean} true if the chart needs to re-render
++	 * @return {boolean} true if the chart needs to re-render
+ 	 */
+ 	handleEvent: function(e) {
+ 		var me = this;
+diff --git a/src/core/core.helpers.js b/src/core/core.helpers.js
+index a30b3723b..5b4aec34c 100644
+--- a/src/core/core.helpers.js
++++ b/src/core/core.helpers.js
+@@ -123,8 +123,8 @@ module.exports = function() {
+ 	/**
+ 	 * Returns the number of decimal places
+ 	 * i.e. the number of digits after the decimal point, of the value of this Number.
+-	 * @param {Number} x - A number.
+-	 * @returns {Number} The number of decimal places.
++	 * @param {number} x - A number.
++	 * @returns {number} The number of decimal places.
+ 	 */
+ 	helpers.decimalPlaces = function(x) {
+ 		if (!helpers.isFinite(x)) {
+@@ -173,9 +173,9 @@ module.exports = function() {
+ 	/**
+ 	 * Returns the aligned pixel value to avoid anti-aliasing blur
+ 	 * @param {Chart} chart - The chart instance.
+-	 * @param {Number} pixel - A pixel value.
+-	 * @param {Number} width - The width of the element.
+-	 * @returns {Number} The aligned pixel value.
++	 * @param {number} pixel - A pixel value.
++	 * @param {number} width - The width of the element.
++	 * @returns {number} The aligned pixel value.
+ 	 * @private
+ 	 */
+ 	helpers._alignPixel = function(chart, pixel, width) {
+@@ -430,11 +430,13 @@ module.exports = function() {
+ 		return value !== undefined && value !== null && value !== 'none';
+ 	}
+ 
+-	// Private helper to get a constraint dimension
+-	// @param domNode : the node to check the constraint on
+-	// @param maxStyle : the style that defines the maximum for the direction we are using (maxWidth / maxHeight)
+-	// @param percentageProperty : property of parent to use when calculating width as a percentage
+-	// @see https://www.nathanaeljones.com/blog/2013/reading-max-width-cross-browser
++	/**
++	 * Returns the max width or height of the given DOM node in a cross-browser compatible fashion
++	 * @param {HTMLElement} domNode - the node to check the constraint on
++	 * @param {string} maxStyle - the style that defines the maximum for the direction we are using ('max-width' / 'max-height')
++	 * @param {string} percentageProperty - property of parent to use when calculating width as a percentage
++	 * @see {@link https://www.nathanaeljones.com/blog/2013/reading-max-width-cross-browser}
++	 */
+ 	function getConstraintDimension(domNode, maxStyle, percentageProperty) {
+ 		var view = document.defaultView;
+ 		var parentNode = helpers._getParentNode(domNode);
+diff --git a/src/core/core.interaction.js b/src/core/core.interaction.js
+index 9b99e53bb..e163f1182 100644
+--- a/src/core/core.interaction.js
++++ b/src/core/core.interaction.js
+@@ -6,7 +6,7 @@ var helpers = require('../helpers/index');
+  * Helper function to get relative position for an event
+  * @param {Event|IEvent} event - The event to get the position for
+  * @param {Chart} chart - The chart
+- * @returns {Point} the event position
++ * @returns {object} the event position
+  */
+ function getRelativePosition(e, chart) {
+ 	if (e.native) {
+@@ -21,8 +21,8 @@ function getRelativePosition(e, chart) {
+ 
+ /**
+  * Helper function to traverse all of the visible elements in the chart
+- * @param chart {chart} the chart
+- * @param handler {Function} the callback to execute for each visible item
++ * @param {Chart} chart - the chart
++ * @param {function} handler - the callback to execute for each visible item
+  */
+ function parseVisibleItems(chart, handler) {
+ 	var datasets = chart.data.datasets;
+@@ -45,8 +45,8 @@ function parseVisibleItems(chart, handler) {
+ 
+ /**
+  * Helper function to get the items that intersect the event position
+- * @param items {ChartElement[]} elements to filter
+- * @param position {Point} the point to be nearest to
++ * @param {ChartElement[]} items - elements to filter
++ * @param {object} position - the point to be nearest to
+  * @return {ChartElement[]} the nearest items
+  */
+ function getIntersectItems(chart, position) {
+@@ -63,10 +63,10 @@ function getIntersectItems(chart, position) {
+ 
+ /**
+  * Helper function to get the items nearest to the event position considering all visible items in teh chart
+- * @param chart {Chart} the chart to look at elements from
+- * @param position {Point} the point to be nearest to
+- * @param intersect {Boolean} if true, only consider items that intersect the position
+- * @param distanceMetric {Function} function to provide the distance between points
++ * @param {Chart} chart - the chart to look at elements from
++ * @param {object} position - the point to be nearest to
++ * @param {boolean} intersect - if true, only consider items that intersect the position
++ * @param {function} distanceMetric - function to provide the distance between points
+  * @return {ChartElement[]} the nearest items
+  */
+ function getNearestItems(chart, position, intersect, distanceMetric) {
+@@ -80,7 +80,6 @@ function getNearestItems(chart, position, intersect, distanceMetric) {
+ 
+ 		var center = element.getCenterPoint();
+ 		var distance = distanceMetric(position, center);
+-
+ 		if (distance < minDistance) {
+ 			nearestItems = [element];
+ 			minDistance = distance;
+@@ -96,7 +95,7 @@ function getNearestItems(chart, position, intersect, distanceMetric) {
+ /**
+  * Get a distance metric function for two points based on the
+  * axis mode setting
+- * @param {String} axis the axis mode. x|y|xy
++ * @param {string} axis - the axis mode. x|y|xy
+  */
+ function getDistanceMetricForAxis(axis) {
+ 	var useX = axis.indexOf('x') !== -1;
+@@ -179,9 +178,9 @@ module.exports = {
+ 		 * If the options.intersect mode is false, we find the nearest item and return the items at the same index as that item
+ 		 * @function Chart.Interaction.modes.index
+ 		 * @since v2.4.0
+-		 * @param chart {chart} the chart we are returning items from
+-		 * @param e {Event} the event we are find things at
+-		 * @param options {IInteractionOptions} options to use during interaction
++		 * @param {Chart} chart - the chart we are returning items from
++		 * @param {Event} e - the event we are find things at
++		 * @param {IInteractionOptions} options - options to use during interaction
+ 		 * @return {Chart.Element[]} Array of elements that are under the point. If none are found, an empty array is returned
+ 		 */
+ 		index: indexMode,
+@@ -190,9 +189,9 @@ module.exports = {
+ 		 * Returns items in the same dataset. If the options.intersect parameter is true, we only return items if we intersect something
+ 		 * If the options.intersect is false, we find the nearest item and return the items in that dataset
+ 		 * @function Chart.Interaction.modes.dataset
+-		 * @param chart {chart} the chart we are returning items from
+-		 * @param e {Event} the event we are find things at
+-		 * @param options {IInteractionOptions} options to use during interaction
++		 * @param {Chart} chart - the chart we are returning items from
++		 * @param {Event} e - the event we are find things at
++		 * @param {IInteractionOptions} options - options to use during interaction
+ 		 * @return {Chart.Element[]} Array of elements that are under the point. If none are found, an empty array is returned
+ 		 */
+ 		dataset: function(chart, e, options) {
+@@ -222,8 +221,8 @@ module.exports = {
+ 		 * Point mode returns all elements that hit test based on the event position
+ 		 * of the event
+ 		 * @function Chart.Interaction.modes.intersect
+-		 * @param chart {chart} the chart we are returning items from
+-		 * @param e {Event} the event we are find things at
++		 * @param {Chart} chart - the chart we are returning items from
++		 * @param {Event} e - the event we are find things at
+ 		 * @return {Chart.Element[]} Array of elements that are under the point. If none are found, an empty array is returned
+ 		 */
+ 		point: function(chart, e) {
+@@ -234,9 +233,9 @@ module.exports = {
+ 		/**
+ 		 * nearest mode returns the element closest to the point
+ 		 * @function Chart.Interaction.modes.intersect
+-		 * @param chart {chart} the chart we are returning items from
+-		 * @param e {Event} the event we are find things at
+-		 * @param options {IInteractionOptions} options to use
++		 * @param {Chart} chart - the chart we are returning items from
++		 * @param {Event} e - the event we are find things at
++		 * @param {IInteractionOptions} options - options to use
+ 		 * @return {Chart.Element[]} Array of elements that are under the point. If none are found, an empty array is returned
+ 		 */
+ 		nearest: function(chart, e, options) {
+@@ -249,9 +248,9 @@ module.exports = {
+ 		/**
+ 		 * x mode returns the elements that hit-test at the current x coordinate
+ 		 * @function Chart.Interaction.modes.x
+-		 * @param chart {chart} the chart we are returning items from
+-		 * @param e {Event} the event we are find things at
+-		 * @param options {IInteractionOptions} options to use
++		 * @param {Chart} chart - the chart we are returning items from
++		 * @param {Event} e - the event we are find things at
++		 * @param {IInteractionOptions} options - options to use
+ 		 * @return {Chart.Element[]} Array of elements that are under the point. If none are found, an empty array is returned
+ 		 */
+ 		x: function(chart, e, options) {
+@@ -280,9 +279,9 @@ module.exports = {
+ 		/**
+ 		 * y mode returns the elements that hit-test at the current y coordinate
+ 		 * @function Chart.Interaction.modes.y
+-		 * @param chart {chart} the chart we are returning items from
+-		 * @param e {Event} the event we are find things at
+-		 * @param options {IInteractionOptions} options to use
++		 * @param {Chart} chart - the chart we are returning items from
++		 * @param {Event} e - the event we are find things at
++		 * @param {IInteractionOptions} options - options to use
+ 		 * @return {Chart.Element[]} Array of elements that are under the point. If none are found, an empty array is returned
+ 		 */
+ 		y: function(chart, e, options) {
+diff --git a/src/core/core.layouts.js b/src/core/core.layouts.js
+index 96887770b..fbaf96a95 100644
+--- a/src/core/core.layouts.js
++++ b/src/core/core.layouts.js
+@@ -67,19 +67,19 @@ defaults._set('global', {
+ 
+ /**
+  * @interface ILayoutItem
+- * @prop {String} position - The position of the item in the chart layout. Possible values are
++ * @prop {string} position - The position of the item in the chart layout. Possible values are
+  * 'left', 'top', 'right', 'bottom', and 'chartArea'
+- * @prop {Number} weight - The weight used to sort the item. Higher weights are further away from the chart area
+- * @prop {Boolean} fullWidth - if true, and the item is horizontal, then push vertical boxes down
+- * @prop {Function} isHorizontal - returns true if the layout item is horizontal (ie. top or bottom)
+- * @prop {Function} update - Takes two parameters: width and height. Returns size of item
+- * @prop {Function} getPadding -  Returns an object with padding on the edges
+- * @prop {Number} width - Width of item. Must be valid after update()
+- * @prop {Number} height - Height of item. Must be valid after update()
+- * @prop {Number} left - Left edge of the item. Set by layout system and cannot be used in update
+- * @prop {Number} top - Top edge of the item. Set by layout system and cannot be used in update
+- * @prop {Number} right - Right edge of the item. Set by layout system and cannot be used in update
+- * @prop {Number} bottom - Bottom edge of the item. Set by layout system and cannot be used in update
++ * @prop {number} weight - The weight used to sort the item. Higher weights are further away from the chart area
++ * @prop {boolean} fullWidth - if true, and the item is horizontal, then push vertical boxes down
++ * @prop {function} isHorizontal - returns true if the layout item is horizontal (ie. top or bottom)
++ * @prop {function} update - Takes two parameters: width and height. Returns size of item
++ * @prop {function} getPadding -  Returns an object with padding on the edges
++ * @prop {number} width - Width of item. Must be valid after update()
++ * @prop {number} height - Height of item. Must be valid after update()
++ * @prop {number} left - Left edge of the item. Set by layout system and cannot be used in update
++ * @prop {number} top - Top edge of the item. Set by layout system and cannot be used in update
++ * @prop {number} right - Right edge of the item. Set by layout system and cannot be used in update
++ * @prop {number} bottom - Bottom edge of the item. Set by layout system and cannot be used in update
+  */
+ 
+ // The layout service is very self explanatory.  It's responsible for the layout within a chart.
+@@ -110,7 +110,7 @@ module.exports = {
+ 	/**
+ 	 * Remove a layoutItem from a chart
+ 	 * @param {Chart} chart - the chart to remove the box from
+-	 * @param {Object} layoutItem - the item to remove from the layout
++	 * @param {ILayoutItem} layoutItem - the item to remove from the layout
+ 	 */
+ 	removeBox: function(chart, layoutItem) {
+ 		var index = chart.boxes ? chart.boxes.indexOf(layoutItem) : -1;
+@@ -122,8 +122,8 @@ module.exports = {
+ 	/**
+ 	 * Sets (or updates) options on the given `item`.
+ 	 * @param {Chart} chart - the chart in which the item lives (or will be added to)
+-	 * @param {Object} item - the item to configure with the given options
+-	 * @param {Object} options - the new item options.
++	 * @param {ILayoutItem} item - the item to configure with the given options
++	 * @param {object} options - the new item options.
+ 	 */
+ 	configure: function(chart, item, options) {
+ 		var props = ['fullWidth', 'position', 'weight'];
+@@ -143,8 +143,8 @@ module.exports = {
+ 	 * Fits boxes of the given chart into the given size by having each box measure itself
+ 	 * then running a fitting algorithm
+ 	 * @param {Chart} chart - the chart
+-	 * @param {Number} width - the width to fit into
+-	 * @param {Number} height - the height to fit into
++	 * @param {number} width - the width to fit into
++	 * @param {number} height - the height to fit into
+ 	 */
+ 	update: function(chart, width, height) {
+ 		if (!chart) {
+diff --git a/src/core/core.plugins.js b/src/core/core.plugins.js
+index f2fbcadec..cf44af0ac 100644
+--- a/src/core/core.plugins.js
++++ b/src/core/core.plugins.js
+@@ -29,7 +29,7 @@ module.exports = {
+ 
+ 	/**
+ 	 * Registers the given plugin(s) if not already registered.
+-	 * @param {Array|Object} plugins plugin instance(s).
++	 * @param {IPlugin[]|IPlugin} plugins plugin instance(s).
+ 	 */
+ 	register: function(plugins) {
+ 		var p = this._plugins;
+@@ -44,7 +44,7 @@ module.exports = {
+ 
+ 	/**
+ 	 * Unregisters the given plugin(s) only if registered.
+-	 * @param {Array|Object} plugins plugin instance(s).
++	 * @param {IPlugin[]|IPlugin} plugins plugin instance(s).
+ 	 */
+ 	unregister: function(plugins) {
+ 		var p = this._plugins;
+@@ -69,7 +69,7 @@ module.exports = {
+ 
+ 	/**
+ 	 * Returns the number of registered plugins?
+-	 * @returns {Number}
++	 * @returns {number}
+ 	 * @since 2.1.5
+ 	 */
+ 	count: function() {
+@@ -78,7 +78,7 @@ module.exports = {
+ 
+ 	/**
+ 	 * Returns all registered plugin instances.
+-	 * @returns {Array} array of plugin objects.
++	 * @returns {IPlugin[]} array of plugin objects.
+ 	 * @since 2.1.5
+ 	 */
+ 	getAll: function() {
+@@ -89,10 +89,10 @@ module.exports = {
+ 	 * Calls enabled plugins for `chart` on the specified hook and with the given args.
+ 	 * This method immediately returns as soon as a plugin explicitly returns false. The
+ 	 * returned value can be used, for instance, to interrupt the current action.
+-	 * @param {Object} chart - The chart instance for which plugins should be called.
+-	 * @param {String} hook - The name of the plugin method to call (e.g. 'beforeUpdate').
++	 * @param {Chart} chart - The chart instance for which plugins should be called.
++	 * @param {string} hook - The name of the plugin method to call (e.g. 'beforeUpdate').
+ 	 * @param {Array} [args] - Extra arguments to apply to the hook call.
+-	 * @returns {Boolean} false if any of the plugins return false, else returns true.
++	 * @returns {boolean} false if any of the plugins return false, else returns true.
+ 	 */
+ 	notify: function(chart, hook, args) {
+ 		var descriptors = this.descriptors(chart);
+@@ -117,7 +117,7 @@ module.exports = {
+ 
+ 	/**
+ 	 * Returns descriptors of enabled plugins for the given chart.
+-	 * @returns {Array} [{ plugin, options }]
++	 * @returns {object[]} [{ plugin, options }]
+ 	 * @private
+ 	 */
+ 	descriptors: function(chart) {
+@@ -179,36 +179,36 @@ module.exports = {
+  * @method IPlugin#beforeInit
+  * @desc Called before initializing `chart`.
+  * @param {Chart.Controller} chart - The chart instance.
+- * @param {Object} options - The plugin options.
++ * @param {object} options - The plugin options.
+  */
+ /**
+  * @method IPlugin#afterInit
+  * @desc Called after `chart` has been initialized and before the first update.
+  * @param {Chart.Controller} chart - The chart instance.
+- * @param {Object} options - The plugin options.
++ * @param {object} options - The plugin options.
+  */
+ /**
+  * @method IPlugin#beforeUpdate
+  * @desc Called before updating `chart`. If any plugin returns `false`, the update
+  * is cancelled (and thus subsequent render(s)) until another `update` is triggered.
+  * @param {Chart.Controller} chart - The chart instance.
+- * @param {Object} options - The plugin options.
+- * @returns {Boolean} `false` to cancel the chart update.
++ * @param {object} options - The plugin options.
++ * @returns {boolean} `false` to cancel the chart update.
+  */
+ /**
+  * @method IPlugin#afterUpdate
+  * @desc Called after `chart` has been updated and before rendering. Note that this
+  * hook will not be called if the chart update has been previously cancelled.
+  * @param {Chart.Controller} chart - The chart instance.
+- * @param {Object} options - The plugin options.
++ * @param {object} options - The plugin options.
+  */
+ /**
+  * @method IPlugin#beforeDatasetsUpdate
+  * @desc Called before updating the `chart` datasets. If any plugin returns `false`,
+  * the datasets update is cancelled until another `update` is triggered.
+  * @param {Chart.Controller} chart - The chart instance.
+- * @param {Object} options - The plugin options.
+- * @returns {Boolean} false to cancel the datasets update.
++ * @param {object} options - The plugin options.
++ * @returns {boolean} false to cancel the datasets update.
+  * @since version 2.1.5
+ */
+ /**
+@@ -216,7 +216,7 @@ module.exports = {
+  * @desc Called after the `chart` datasets have been updated. Note that this hook
+  * will not be called if the datasets update has been previously cancelled.
+  * @param {Chart.Controller} chart - The chart instance.
+- * @param {Object} options - The plugin options.
++ * @param {object} options - The plugin options.
+  * @since version 2.1.5
+  */
+ /**
+@@ -224,51 +224,51 @@ module.exports = {
+  * @desc Called before updating the `chart` dataset at the given `args.index`. If any plugin
+  * returns `false`, the datasets update is cancelled until another `update` is triggered.
+  * @param {Chart} chart - The chart instance.
+- * @param {Object} args - The call arguments.
+- * @param {Number} args.index - The dataset index.
+- * @param {Object} args.meta - The dataset metadata.
+- * @param {Object} options - The plugin options.
+- * @returns {Boolean} `false` to cancel the chart datasets drawing.
++ * @param {object} args - The call arguments.
++ * @param {number} args.index - The dataset index.
++ * @param {object} args.meta - The dataset metadata.
++ * @param {object} options - The plugin options.
++ * @returns {boolean} `false` to cancel the chart datasets drawing.
+  */
+ /**
+  * @method IPlugin#afterDatasetUpdate
+  * @desc Called after the `chart` datasets at the given `args.index` has been updated. Note
+  * that this hook will not be called if the datasets update has been previously cancelled.
+  * @param {Chart} chart - The chart instance.
+- * @param {Object} args - The call arguments.
+- * @param {Number} args.index - The dataset index.
+- * @param {Object} args.meta - The dataset metadata.
+- * @param {Object} options - The plugin options.
++ * @param {object} args - The call arguments.
++ * @param {number} args.index - The dataset index.
++ * @param {object} args.meta - The dataset metadata.
++ * @param {object} options - The plugin options.
+  */
+ /**
+  * @method IPlugin#beforeLayout
+  * @desc Called before laying out `chart`. If any plugin returns `false`,
+  * the layout update is cancelled until another `update` is triggered.
+  * @param {Chart.Controller} chart - The chart instance.
+- * @param {Object} options - The plugin options.
+- * @returns {Boolean} `false` to cancel the chart layout.
++ * @param {object} options - The plugin options.
++ * @returns {boolean} `false` to cancel the chart layout.
+  */
+ /**
+  * @method IPlugin#afterLayout
+  * @desc Called after the `chart` has been layed out. Note that this hook will not
+  * be called if the layout update has been previously cancelled.
+  * @param {Chart.Controller} chart - The chart instance.
+- * @param {Object} options - The plugin options.
++ * @param {object} options - The plugin options.
+  */
+ /**
+  * @method IPlugin#beforeRender
+  * @desc Called before rendering `chart`. If any plugin returns `false`,
+  * the rendering is cancelled until another `render` is triggered.
+  * @param {Chart.Controller} chart - The chart instance.
+- * @param {Object} options - The plugin options.
+- * @returns {Boolean} `false` to cancel the chart rendering.
++ * @param {object} options - The plugin options.
++ * @returns {boolean} `false` to cancel the chart rendering.
+  */
+ /**
+  * @method IPlugin#afterRender
+  * @desc Called after the `chart` has been fully rendered (and animation completed). Note
+  * that this hook will not be called if the rendering has been previously cancelled.
+  * @param {Chart.Controller} chart - The chart instance.
+- * @param {Object} options - The plugin options.
++ * @param {object} options - The plugin options.
+  */
+ /**
+  * @method IPlugin#beforeDraw
+@@ -276,34 +276,34 @@ module.exports = {
+  * easing value. If any plugin returns `false`, the frame drawing is cancelled until
+  * another `render` is triggered.
+  * @param {Chart.Controller} chart - The chart instance.
+- * @param {Number} easingValue - The current animation value, between 0.0 and 1.0.
+- * @param {Object} options - The plugin options.
+- * @returns {Boolean} `false` to cancel the chart drawing.
++ * @param {number} easingValue - The current animation value, between 0.0 and 1.0.
++ * @param {object} options - The plugin options.
++ * @returns {boolean} `false` to cancel the chart drawing.
+  */
+ /**
+  * @method IPlugin#afterDraw
+  * @desc Called after the `chart` has been drawn for the specific easing value. Note
+  * that this hook will not be called if the drawing has been previously cancelled.
+  * @param {Chart.Controller} chart - The chart instance.
+- * @param {Number} easingValue - The current animation value, between 0.0 and 1.0.
+- * @param {Object} options - The plugin options.
++ * @param {number} easingValue - The current animation value, between 0.0 and 1.0.
++ * @param {object} options - The plugin options.
+  */
+ /**
+  * @method IPlugin#beforeDatasetsDraw
+  * @desc Called before drawing the `chart` datasets. If any plugin returns `false`,
+  * the datasets drawing is cancelled until another `render` is triggered.
+  * @param {Chart.Controller} chart - The chart instance.
+- * @param {Number} easingValue - The current animation value, between 0.0 and 1.0.
+- * @param {Object} options - The plugin options.
+- * @returns {Boolean} `false` to cancel the chart datasets drawing.
++ * @param {number} easingValue - The current animation value, between 0.0 and 1.0.
++ * @param {object} options - The plugin options.
++ * @returns {boolean} `false` to cancel the chart datasets drawing.
+  */
+ /**
+  * @method IPlugin#afterDatasetsDraw
+  * @desc Called after the `chart` datasets have been drawn. Note that this hook
+  * will not be called if the datasets drawing has been previously cancelled.
+  * @param {Chart.Controller} chart - The chart instance.
+- * @param {Number} easingValue - The current animation value, between 0.0 and 1.0.
+- * @param {Object} options - The plugin options.
++ * @param {number} easingValue - The current animation value, between 0.0 and 1.0.
++ * @param {object} options - The plugin options.
+  */
+ /**
+  * @method IPlugin#beforeDatasetDraw
+@@ -311,12 +311,12 @@ module.exports = {
+  * are drawn in the reverse order). If any plugin returns `false`, the datasets drawing
+  * is cancelled until another `render` is triggered.
+  * @param {Chart} chart - The chart instance.
+- * @param {Object} args - The call arguments.
+- * @param {Number} args.index - The dataset index.
+- * @param {Object} args.meta - The dataset metadata.
+- * @param {Number} args.easingValue - The current animation value, between 0.0 and 1.0.
+- * @param {Object} options - The plugin options.
+- * @returns {Boolean} `false` to cancel the chart datasets drawing.
++ * @param {object} args - The call arguments.
++ * @param {number} args.index - The dataset index.
++ * @param {object} args.meta - The dataset metadata.
++ * @param {number} args.easingValue - The current animation value, between 0.0 and 1.0.
++ * @param {object} options - The plugin options.
++ * @returns {boolean} `false` to cancel the chart datasets drawing.
+  */
+ /**
+  * @method IPlugin#afterDatasetDraw
+@@ -324,32 +324,32 @@ module.exports = {
+  * (datasets are drawn in the reverse order). Note that this hook will not be called
+  * if the datasets drawing has been previously cancelled.
+  * @param {Chart} chart - The chart instance.
+- * @param {Object} args - The call arguments.
+- * @param {Number} args.index - The dataset index.
+- * @param {Object} args.meta - The dataset metadata.
+- * @param {Number} args.easingValue - The current animation value, between 0.0 and 1.0.
+- * @param {Object} options - The plugin options.
++ * @param {object} args - The call arguments.
++ * @param {number} args.index - The dataset index.
++ * @param {object} args.meta - The dataset metadata.
++ * @param {number} args.easingValue - The current animation value, between 0.0 and 1.0.
++ * @param {object} options - The plugin options.
+  */
+ /**
+  * @method IPlugin#beforeTooltipDraw
+  * @desc Called before drawing the `tooltip`. If any plugin returns `false`,
+  * the tooltip drawing is cancelled until another `render` is triggered.
+  * @param {Chart} chart - The chart instance.
+- * @param {Object} args - The call arguments.
+- * @param {Object} args.tooltip - The tooltip.
+- * @param {Number} args.easingValue - The current animation value, between 0.0 and 1.0.
+- * @param {Object} options - The plugin options.
+- * @returns {Boolean} `false` to cancel the chart tooltip drawing.
++ * @param {object} args - The call arguments.
++ * @param {Tooltip} args.tooltip - The tooltip.
++ * @param {number} args.easingValue - The current animation value, between 0.0 and 1.0.
++ * @param {object} options - The plugin options.
++ * @returns {boolean} `false` to cancel the chart tooltip drawing.
+  */
+ /**
+  * @method IPlugin#afterTooltipDraw
+  * @desc Called after drawing the `tooltip`. Note that this hook will not
+  * be called if the tooltip drawing has been previously cancelled.
+  * @param {Chart} chart - The chart instance.
+- * @param {Object} args - The call arguments.
+- * @param {Object} args.tooltip - The tooltip.
+- * @param {Number} args.easingValue - The current animation value, between 0.0 and 1.0.
+- * @param {Object} options - The plugin options.
++ * @param {object} args - The call arguments.
++ * @param {Tooltip} args.tooltip - The tooltip.
++ * @param {number} args.easingValue - The current animation value, between 0.0 and 1.0.
++ * @param {object} options - The plugin options.
+  */
+ /**
+  * @method IPlugin#beforeEvent
+@@ -357,7 +357,7 @@ module.exports = {
+  * the event will be discarded.
+  * @param {Chart.Controller} chart - The chart instance.
+  * @param {IEvent} event - The event object.
+- * @param {Object} options - The plugin options.
++ * @param {object} options - The plugin options.
+  */
+ /**
+  * @method IPlugin#afterEvent
+@@ -365,18 +365,18 @@ module.exports = {
+  * will not be called if the `event` has been previously discarded.
+  * @param {Chart.Controller} chart - The chart instance.
+  * @param {IEvent} event - The event object.
+- * @param {Object} options - The plugin options.
++ * @param {object} options - The plugin options.
+  */
+ /**
+  * @method IPlugin#resize
+  * @desc Called after the chart as been resized.
+  * @param {Chart.Controller} chart - The chart instance.
+- * @param {Number} size - The new canvas display size (eq. canvas.style width & height).
+- * @param {Object} options - The plugin options.
++ * @param {number} size - The new canvas display size (eq. canvas.style width & height).
++ * @param {object} options - The plugin options.
+  */
+ /**
+  * @method IPlugin#destroy
+  * @desc Called after the chart as been destroyed.
+  * @param {Chart.Controller} chart - The chart instance.
+- * @param {Object} options - The plugin options.
++ * @param {object} options - The plugin options.
+  */
+diff --git a/src/core/core.scale.js b/src/core/core.scale.js
+index 5bbf6ebcb..5384e3236 100644
+--- a/src/core/core.scale.js
++++ b/src/core/core.scale.js
+@@ -717,8 +717,10 @@ module.exports = Element.extend({
+ 		return false;
+ 	},
+ 
+-	// Actually draw the scale on the canvas
+-	// @param {rectangle} chartArea : the area of the chart to draw full grid lines on
++	/**
++	 * Actually draw the scale on the canvas
++	 * @param {object} chartArea - the area of the chart to draw full grid lines on
++	 */
+ 	draw: function(chartArea) {
+ 		var me = this;
+ 		var options = me.options;
+diff --git a/src/core/core.ticks.js b/src/core/core.ticks.js
+index f63e52598..c9e75181f 100644
+--- a/src/core/core.ticks.js
++++ b/src/core/core.ticks.js
+@@ -16,7 +16,7 @@ module.exports = {
+ 		 * Formatter for value labels
+ 		 * @method Chart.Ticks.formatters.values
+ 		 * @param value the value to display
+-		 * @return {String|Array} the label to display
++		 * @return {string|string[]} the label to display
+ 		 */
+ 		values: function(value) {
+ 			return helpers.isArray(value) ? value : '' + value;
+@@ -25,10 +25,10 @@ module.exports = {
+ 		/**
+ 		 * Formatter for linear numeric ticks
+ 		 * @method Chart.Ticks.formatters.linear
+-		 * @param tickValue {Number} the value to be formatted
+-		 * @param index {Number} the position of the tickValue parameter in the ticks array
+-		 * @param ticks {Array<Number>} the list of ticks being converted
+-		 * @return {String} string representation of the tickValue parameter
++		 * @param tickValue {number} the value to be formatted
++		 * @param index {number} the position of the tickValue parameter in the ticks array
++		 * @param ticks {number[]} the list of ticks being converted
++		 * @return {string} string representation of the tickValue parameter
+ 		 */
+ 		linear: function(tickValue, index, ticks) {
+ 			// If we have lots of ticks, don't use the ones
+diff --git a/src/core/core.tooltip.js b/src/core/core.tooltip.js
+index a3757e204..f85055b2e 100644
+--- a/src/core/core.tooltip.js
++++ b/src/core/core.tooltip.js
+@@ -107,7 +107,7 @@ var positioners = {
+ 	 * Average mode places the tooltip at the average position of the elements shown
+ 	 * @function Chart.Tooltip.positioners.average
+ 	 * @param elements {ChartElement[]} the elements being displayed in the tooltip
+-	 * @returns {Point} tooltip position
++	 * @returns {object} tooltip position
+ 	 */
+ 	average: function(elements) {
+ 		if (!elements.length) {
+@@ -139,8 +139,8 @@ var positioners = {
+ 	 * Gets the tooltip position nearest of the item nearest to the event position
+ 	 * @function Chart.Tooltip.positioners.nearest
+ 	 * @param elements {Chart.Element[]} the tooltip elements
+-	 * @param eventPosition {Point} the position of the event in canvas coordinates
+-	 * @returns {Point} the tooltip position
++	 * @param eventPosition {object} the position of the event in canvas coordinates
++	 * @returns {object} the tooltip position
+ 	 */
+ 	nearest: function(elements, eventPosition) {
+ 		var x = eventPosition.x;
+@@ -190,8 +190,8 @@ function pushOrConcat(base, toPush) {
+ 
+ /**
+  * Returns array of strings split by newline
+- * @param {String} value - The value to split by newline.
+- * @returns {Array} value if newline present - Returned from String split() method
++ * @param {string} value - The value to split by newline.
++ * @returns {string[]} value if newline present - Returned from String split() method
+  * @function
+  */
+ function splitNewlines(str) {
+@@ -202,9 +202,11 @@ function splitNewlines(str) {
+ }
+ 
+ 
+-// Private helper to create a tooltip item model
+-// @param element : the chart element (point, arc, bar) to create the tooltip item for
+-// @return : new tooltip item
++/**
++ * Private helper to create a tooltip item model
++ * @param element - the chart element (point, arc, bar) to create the tooltip item for
++ * @return new tooltip item
++ */
+ function createTooltipItem(element) {
+ 	var xScale = element._xScale;
+ 	var yScale = element._yScale || element._scale; // handle radar || polarArea charts
+@@ -228,7 +230,7 @@ function createTooltipItem(element) {
+ 
+ /**
+  * Helper to get the reset model for the tooltip
+- * @param tooltipOpts {Object} the tooltip options
++ * @param tooltipOpts {object} the tooltip options
+  */
+ function getBaseModel(tooltipOpts) {
+ 	var globalDefaults = defaults.global;
+@@ -953,7 +955,7 @@ var exports = Element.extend({
+ 	 * Handle an event
+ 	 * @private
+ 	 * @param {IEvent} event - The event to handle
+-	 * @returns {Boolean} true if the tooltip changed
++	 * @returns {boolean} true if the tooltip changed
+ 	 */
+ 	handleEvent: function(e) {
+ 		var me = this;
+diff --git a/src/helpers/helpers.canvas.js b/src/helpers/helpers.canvas.js
+index 1513386a8..b23c2ff82 100644
+--- a/src/helpers/helpers.canvas.js
++++ b/src/helpers/helpers.canvas.js
+@@ -25,11 +25,11 @@ var exports = {
+ 	 * Creates a "path" for a rectangle with rounded corners at position (x, y) with a
+ 	 * given size (width, height) and the same `radius` for all corners.
+ 	 * @param {CanvasRenderingContext2D} ctx - The canvas 2D Context.
+-	 * @param {Number} x - The x axis of the coordinate for the rectangle starting point.
+-	 * @param {Number} y - The y axis of the coordinate for the rectangle starting point.
+-	 * @param {Number} width - The rectangle's width.
+-	 * @param {Number} height - The rectangle's height.
+-	 * @param {Number} radius - The rounded amount (in pixels) for the four corners.
++	 * @param {number} x - The x axis of the coordinate for the rectangle starting point.
++	 * @param {number} y - The y axis of the coordinate for the rectangle starting point.
++	 * @param {number} width - The rectangle's width.
++	 * @param {number} height - The rectangle's height.
++	 * @param {number} radius - The rounded amount (in pixels) for the four corners.
+ 	 * @todo handle `radius` as top-left, top-right, bottom-right, bottom-left array/object?
+ 	 */
+ 	roundedRect: function(ctx, x, y, width, height, radius) {
+@@ -174,9 +174,9 @@ var exports = {
+ 
+ 	/**
+ 	 * Returns true if the point is inside the rectangle
+-	 * @param {Object} point - The point to test
+-	 * @param {Object} area - The rectangle
+-	 * @returns {Boolean}
++	 * @param {object} point - The point to test
++	 * @param {object} area - The rectangle
++	 * @returns {boolean}
+ 	 * @private
+ 	 */
+ 	_isPointInArea: function(point, area) {
+diff --git a/src/helpers/helpers.core.js b/src/helpers/helpers.core.js
+index 1b798c925..cc8d888e6 100644
+--- a/src/helpers/helpers.core.js
++++ b/src/helpers/helpers.core.js
+@@ -11,7 +11,7 @@ var helpers = {
+ 
+ 	/**
+ 	 * Returns a unique id, sequentially generated from a global variable.
+-	 * @returns {Number}
++	 * @returns {number}
+ 	 * @function
+ 	 */
+ 	uid: (function() {
+@@ -24,7 +24,7 @@ var helpers = {
+ 	/**
+ 	 * Returns true if `value` is neither null nor undefined, else returns false.
+ 	 * @param {*} value - The value to test.
+-	 * @returns {Boolean}
++	 * @returns {boolean}
+ 	 * @since 2.7.0
+ 	 */
+ 	isNullOrUndef: function(value) {
+@@ -34,7 +34,7 @@ var helpers = {
+ 	/**
+ 	 * Returns true if `value` is an array (including typed arrays), else returns false.
+ 	 * @param {*} value - The value to test.
+-	 * @returns {Boolean}
++	 * @returns {boolean}
+ 	 * @function
+ 	 */
+ 	isArray: function(value) {
+@@ -51,7 +51,7 @@ var helpers = {
+ 	/**
+ 	 * Returns true if `value` is an object (excluding null), else returns false.
+ 	 * @param {*} value - The value to test.
+-	 * @returns {Boolean}
++	 * @returns {boolean}
+ 	 * @since 2.7.0
+ 	 */
+ 	isObject: function(value) {
+@@ -61,7 +61,7 @@ var helpers = {
+ 	/**
+ 	 * Returns true if `value` is a finite number, else returns false
+ 	 * @param {*} value  - The value to test.
+-	 * @returns {Boolean}
++	 * @returns {boolean}
+ 	 */
+ 	isFinite: function(value) {
+ 		return (typeof value === 'number' || value instanceof Number) && isFinite(value);
+@@ -80,7 +80,7 @@ var helpers = {
+ 	/**
+ 	 * Returns value at the given `index` in array if defined, else returns `defaultValue`.
+ 	 * @param {Array} value - The array to lookup for value at `index`.
+-	 * @param {Number} index - The index in `value` to lookup for value.
++	 * @param {number} index - The index in `value` to lookup for value.
+ 	 * @param {*} defaultValue - The value to return if `value[index]` is undefined.
+ 	 * @returns {*}
+ 	 */
+@@ -91,9 +91,9 @@ var helpers = {
+ 	/**
+ 	 * Calls `fn` with the given `args` in the scope defined by `thisArg` and returns the
+ 	 * value returned by `fn`. If `fn` is not a function, this method returns undefined.
+-	 * @param {Function} fn - The function to call.
++	 * @param {function} fn - The function to call.
+ 	 * @param {Array|undefined|null} args - The arguments with which `fn` should be called.
+-	 * @param {Object} [thisArg] - The value of `this` provided for the call to `fn`.
++	 * @param {object} [thisArg] - The value of `this` provided for the call to `fn`.
+ 	 * @returns {*}
+ 	 */
+ 	callback: function(fn, args, thisArg) {
+@@ -106,10 +106,10 @@ var helpers = {
+ 	 * Note(SB) for performance sake, this method should only be used when loopable type
+ 	 * is unknown or in none intensive code (not called often and small loopable). Else
+ 	 * it's preferable to use a regular for() loop and save extra function calls.
+-	 * @param {Object|Array} loopable - The object or array to be iterated.
+-	 * @param {Function} fn - The function to call for each item.
+-	 * @param {Object} [thisArg] - The value of `this` provided for the call to `fn`.
+-	 * @param {Boolean} [reverse] - If true, iterates backward on the loopable.
++	 * @param {object|Array} loopable - The object or array to be iterated.
++	 * @param {function} fn - The function to call for each item.
++	 * @param {object} [thisArg] - The value of `this` provided for the call to `fn`.
++	 * @param {boolean} [reverse] - If true, iterates backward on the loopable.
+ 	 */
+ 	each: function(loopable, fn, thisArg, reverse) {
+ 		var i, len, keys;
+@@ -138,7 +138,7 @@ var helpers = {
+ 	 * @see https://stackoverflow.com/a/14853974
+ 	 * @param {Array} a0 - The array to compare
+ 	 * @param {Array} a1 - The array to compare
+-	 * @returns {Boolean}
++	 * @returns {boolean}
+ 	 */
+ 	arrayEquals: function(a0, a1) {
+ 		var i, ilen, v0, v1;
+@@ -224,11 +224,11 @@ var helpers = {
+ 	/**
+ 	 * Recursively deep copies `source` properties into `target` with the given `options`.
+ 	 * IMPORTANT: `target` is not cloned and will be updated with `source` properties.
+-	 * @param {Object} target - The target object in which all sources are merged into.
+-	 * @param {Object|Array(Object)} source - Object(s) to merge into `target`.
+-	 * @param {Object} [options] - Merging options:
+-	 * @param {Function} [options.merger] - The merge method (key, target, source, options)
+-	 * @returns {Object} The `target` object.
++	 * @param {object} target - The target object in which all sources are merged into.
++	 * @param {object|object[]} source - Object(s) to merge into `target`.
++	 * @param {object} [options] - Merging options:
++	 * @param {function} [options.merger] - The merge method (key, target, source, options)
++	 * @returns {object} The `target` object.
+ 	 */
+ 	merge: function(target, source, options) {
+ 		var sources = helpers.isArray(source) ? source : [source];
+@@ -260,9 +260,9 @@ var helpers = {
+ 	/**
+ 	 * Recursively deep copies `source` properties into `target` *only* if not defined in target.
+ 	 * IMPORTANT: `target` is not cloned and will be updated with `source` properties.
+-	 * @param {Object} target - The target object in which all sources are merged into.
+-	 * @param {Object|Array(Object)} source - Object(s) to merge into `target`.
+-	 * @returns {Object} The `target` object.
++	 * @param {object} target - The target object in which all sources are merged into.
++	 * @param {object|object[]} source - Object(s) to merge into `target`.
++	 * @returns {object} The `target` object.
+ 	 */
+ 	mergeIf: function(target, source) {
+ 		return helpers.merge(target, source, {merger: helpers._mergerIf});
+@@ -270,10 +270,10 @@ var helpers = {
+ 
+ 	/**
+ 	 * Applies the contents of two or more objects together into the first object.
+-	 * @param {Object} target - The target object in which all objects are merged into.
+-	 * @param {Object} arg1 - Object containing additional properties to merge in target.
+-	 * @param {Object} argN - Additional objects containing properties to merge in target.
+-	 * @returns {Object} The `target` object.
++	 * @param {object} target - The target object in which all objects are merged into.
++	 * @param {object} arg1 - Object containing additional properties to merge in target.
++	 * @param {object} argN - Additional objects containing properties to merge in target.
++	 * @returns {object} The `target` object.
+ 	 */
+ 	extend: function(target) {
+ 		var setFn = function(value, key) {
+diff --git a/src/helpers/helpers.options.js b/src/helpers/helpers.options.js
+index b1ff4c199..0e96a7107 100644
+--- a/src/helpers/helpers.options.js
++++ b/src/helpers/helpers.options.js
+@@ -7,8 +7,8 @@ var valueOrDefault = helpers.valueOrDefault;
+ 
+ /**
+  * Converts the given font object into a CSS font string.
+- * @param {Object} font - A font object.
+- * @return {String} The CSS font string. See https://developer.mozilla.org/en-US/docs/Web/CSS/font
++ * @param {object} font - A font object.
++ * @return {string} The CSS font string. See https://developer.mozilla.org/en-US/docs/Web/CSS/font
+  * @private
+  */
+ function toFontString(font) {
+@@ -29,9 +29,9 @@ function toFontString(font) {
+ module.exports = {
+ 	/**
+ 	 * Converts the given line height `value` in pixels for a specific font `size`.
+-	 * @param {Number|String} value - The lineHeight to parse (eg. 1.6, '14px', '75%', '1.6em').
+-	 * @param {Number} size - The font size (in pixels) used to resolve relative `value`.
+-	 * @returns {Number} The effective line height in pixels (size * 1.2 if value is invalid).
++	 * @param {number|string} value - The lineHeight to parse (eg. 1.6, '14px', '75%', '1.6em').
++	 * @param {number} size - The font size (in pixels) used to resolve relative `value`.
++	 * @returns {number} The effective line height in pixels (size * 1.2 if value is invalid).
+ 	 * @see https://developer.mozilla.org/en-US/docs/Web/CSS/line-height
+ 	 * @since 2.7.0
+ 	 */
+@@ -58,9 +58,9 @@ module.exports = {
+ 
+ 	/**
+ 	 * Converts the given value into a padding object with pre-computed width/height.
+-	 * @param {Number|Object} value - If a number, set the value to all TRBL component,
++	 * @param {number|object} value - If a number, set the value to all TRBL component,
+ 	 *  else, if and object, use defined properties and sets undefined ones to 0.
+-	 * @returns {Object} The padding values (top, right, bottom, left, width, height)
++	 * @returns {object} The padding values (top, right, bottom, left, width, height)
+ 	 * @since 2.7.0
+ 	 */
+ 	toPadding: function(value) {
+@@ -87,8 +87,8 @@ module.exports = {
+ 
+ 	/**
+ 	 * Parses font options and returns the font object.
+-	 * @param {Object} options - A object that contains font options to be parsed.
+-	 * @return {Object} The font object.
++	 * @param {object} options - A object that contains font options to be parsed.
++	 * @return {object} The font object.
+ 	 * @todo Support font.* options and renamed to toFont().
+ 	 * @private
+ 	 */
+@@ -110,10 +110,10 @@ module.exports = {
+ 
+ 	/**
+ 	 * Evaluates the given `inputs` sequentially and returns the first defined value.
+-	 * @param {Array[]} inputs - An array of values, falling back to the last value.
+-	 * @param {Object} [context] - If defined and the current value is a function, the value
++	 * @param {Array} inputs - An array of values, falling back to the last value.
++	 * @param {object} [context] - If defined and the current value is a function, the value
+ 	 * is called with `context` as first argument and the result becomes the new input.
+-	 * @param {Number} [index] - If defined and the current value is an array, the value
++	 * @param {number} [index] - If defined and the current value is an array, the value
+ 	 * at `index` become the new input.
+ 	 * @since 2.7.0
+ 	 */
+diff --git a/src/platforms/platform.dom.js b/src/platforms/platform.dom.js
+index 777833afe..66f956689 100644
+--- a/src/platforms/platform.dom.js
++++ b/src/platforms/platform.dom.js
+@@ -38,7 +38,7 @@ var EVENT_TYPES = {
+  * `element` has a size relative to its parent and this last one is not yet displayed,
+  * for example because of `display: none` on a parent node.
+  * @see https://developer.mozilla.org/en-US/docs/Web/CSS/used_value
+- * @returns {Number} Size in pixels or undefined if unknown.
++ * @returns {number} Size in pixels or undefined if unknown.
+  */
+ function readUsedSize(element, property) {
+ 	var value = helpers.getStyle(element, property);
+diff --git a/src/platforms/platform.js b/src/platforms/platform.js
+index c755f81fd..159077e49 100644
+--- a/src/platforms/platform.js
++++ b/src/platforms/platform.js
+@@ -22,7 +22,7 @@ module.exports = helpers.extend({
+ 	 * Called at chart construction time, returns a context2d instance implementing
+ 	 * the [W3C Canvas 2D Context API standard]{@link https://www.w3.org/TR/2dcontext/}.
+ 	 * @param {*} item - The native item from which to acquire context (platform specific)
+-	 * @param {Object} options - The chart options
++	 * @param {object} options - The chart options
+ 	 * @returns {CanvasRenderingContext2D} context2d instance
+ 	 */
+ 	acquireContext: function() {},
+@@ -31,24 +31,24 @@ module.exports = helpers.extend({
+ 	 * Called at chart destruction time, releases any resources associated to the context
+ 	 * previously returned by the acquireContext() method.
+ 	 * @param {CanvasRenderingContext2D} context - The context2d instance
+-	 * @returns {Boolean} true if the method succeeded, else false
++	 * @returns {boolean} true if the method succeeded, else false
+ 	 */
+ 	releaseContext: function() {},
+ 
+ 	/**
+ 	 * Registers the specified listener on the given chart.
+ 	 * @param {Chart} chart - Chart from which to listen for event
+-	 * @param {String} type - The ({@link IEvent}) type to listen for
+-	 * @param {Function} listener - Receives a notification (an object that implements
++	 * @param {string} type - The ({@link IEvent}) type to listen for
++	 * @param {function} listener - Receives a notification (an object that implements
+ 	 * the {@link IEvent} interface) when an event of the specified type occurs.
+ 	 */
+ 	addEventListener: function() {},
+ 
+ 	/**
+ 	 * Removes the specified listener previously registered with addEventListener.
+-	 * @param {Chart} chart -Chart from which to remove the listener
+-	 * @param {String} type - The ({@link IEvent}) type to remove
+-	 * @param {Function} listener - The listener function to remove from the event target.
++	 * @param {Chart} chart - Chart from which to remove the listener
++	 * @param {string} type - The ({@link IEvent}) type to remove
++	 * @param {function} listener - The listener function to remove from the event target.
+ 	 */
+ 	removeEventListener: function() {}
+ 
+@@ -65,10 +65,10 @@ module.exports = helpers.extend({
+ 
+ /**
+  * @interface IEvent
+- * @prop {String} type - The event type name, possible values are:
++ * @prop {string} type - The event type name, possible values are:
+  * 'contextmenu', 'mouseenter', 'mousedown', 'mousemove', 'mouseup', 'mouseout',
+  * 'click', 'dblclick', 'keydown', 'keypress', 'keyup' and 'resize'
+  * @prop {*} native - The original native event (null for emulated events, e.g. 'resize')
+- * @prop {Number} x - The mouse x position, relative to the canvas (null for incompatible events)
+- * @prop {Number} y - The mouse y position, relative to the canvas (null for incompatible events)
++ * @prop {number} x - The mouse x position, relative to the canvas (null for incompatible events)
++ * @prop {number} y - The mouse y position, relative to the canvas (null for incompatible events)
+  */
+diff --git a/src/plugins/plugin.legend.js b/src/plugins/plugin.legend.js
+index 03bf8040b..2e832f98a 100644
+--- a/src/plugins/plugin.legend.js
++++ b/src/plugins/plugin.legend.js
+@@ -85,9 +85,9 @@ defaults._set('global', {
+ 
+ /**
+  * Helper function to get the box width based on the usePointStyle option
+- * @param labelopts {Object} the label options on the legend
+- * @param fontSize {Number} the label font size
+- * @return {Number} width of the color box area
++ * @param {object} labelopts - the label options on the legend
++ * @param {number} fontSize - the label font size
++ * @return {number} width of the color box area
+  */
+ function getBoxWidth(labelOpts, fontSize) {
+ 	return labelOpts.usePointStyle && labelOpts.boxWidth > fontSize ?
+@@ -462,7 +462,7 @@ var Legend = Element.extend({
+ 	 * Handle an event
+ 	 * @private
+ 	 * @param {IEvent} event - The event to handle
+-	 * @return {Boolean} true if a change occured
++	 * @return {boolean} true if a change occured
+ 	 */
+ 	handleEvent: function(e) {
+ 		var me = this;
+diff --git a/src/scales/scale.linearbase.js b/src/scales/scale.linearbase.js
+index 057e68ffc..24816e922 100644
+--- a/src/scales/scale.linearbase.js
++++ b/src/scales/scale.linearbase.js
+@@ -10,7 +10,7 @@ var isNullOrUndef = helpers.isNullOrUndef;
+  * Generate a set of linear ticks
+  * @param generationOptions the options used to generate the ticks
+  * @param dataRange the range of the data
+- * @returns {Array<Number>} array of tick values
++ * @returns {number[]} array of tick values
+  */
+ function generateTicks(generationOptions, dataRange) {
+ 	var ticks = [];
+diff --git a/src/scales/scale.logarithmic.js b/src/scales/scale.logarithmic.js
+index 91f90845d..e52f714a8 100644
+--- a/src/scales/scale.logarithmic.js
++++ b/src/scales/scale.logarithmic.js
+@@ -11,7 +11,7 @@ var valueOrDefault = helpers.valueOrDefault;
+  * Generate a set of logarithmic ticks
+  * @param generationOptions the options used to generate the ticks
+  * @param dataRange the range of the data
+- * @returns {Array<Number>} array of tick values
++ * @returns {number[]} array of tick values
+  */
+ function generateTicks(generationOptions, dataRange) {
+ 	var ticks = [];
+@@ -251,8 +251,8 @@ module.exports = Scale.extend({
+ 
+ 	/**
+ 	 * Returns the value of the first tick.
+-	 * @param {Number} value - The minimum not zero value.
+-	 * @return {Number} The first tick value.
++	 * @param {number} value - The minimum not zero value.
++	 * @return {number} The first tick value.
+ 	 * @private
+ 	 */
+ 	_getFirstTickValue: function(value) {
+diff --git a/src/scales/scale.time.js b/src/scales/scale.time.js
+index 8dfa4e36b..d2a5e4844 100644
+--- a/src/scales/scale.time.js
++++ b/src/scales/scale.time.js
+@@ -88,8 +88,8 @@ function arrayUnique(items) {
+  * store pre-computed pixels, but the scale dimensions are not guaranteed at the time we need
+  * to create the lookup table. The table ALWAYS contains at least two items: min and max.
+  *
+- * @param {Number[]} timestamps - timestamps sorted from lowest to highest.
+- * @param {String} distribution - If 'linear', timestamps will be spread linearly along the min
++ * @param {number[]} timestamps - timestamps sorted from lowest to highest.
++ * @param {string} distribution - If 'linear', timestamps will be spread linearly along the min
+  * and max range, so basically, the table will contains only two items: {min, 0} and {max, 1}.
+  * If 'series', timestamps will be positioned at the same distance from each other. In this
+  * case, only timestamps that break the time linearity are registered, meaning that in the

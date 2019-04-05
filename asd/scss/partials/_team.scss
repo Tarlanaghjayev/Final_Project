@@ -1,0 +1,115 @@
+#team{
+    position: relative;
+    .title{
+        // position: absolute;
+        h2{
+            font-family: $font-family-second;
+            font-weight: 600;
+            font-size: $font-size*2; 
+            margin-bottom: 10px;
+        }
+      span{
+         height: 3px;
+         width: 80px;
+         margin: 0 0 15px;
+         border-bottom: 2px solid $color;
+         position: relative;
+         display: inline-block;
+         
+      }
+      span::after{
+         content: "";
+         border-bottom: 2px solid $color;
+         width: 45px;
+         height: 2px;
+         display: block;
+         margin: 5px auto;
+      }
+      p{
+          font-size: $font-size;
+          margin: 0 auto 50px;
+      }
+  }
+
+  //card
+  .card{
+        border: none;
+        box-shadow: 0px 0px 32px 0px rgba(122,122,122,0.1);
+        padding:0 0px;
+        max-width: 350px;
+        @include transition(box-shadow, 0.3s);
+        @include transition(transform, 0.3s);
+        overflow: hidden;
+        .team-img{
+            overflow: hidden;
+            position: relative;
+        }
+        &:hover{
+        box-shadow: 0 22px 43px rgba(0, 0, 0, 0.15);
+        @include transform(translateY(-10px));
+        }
+        img{
+            max-width: 100%;
+        }
+        &:hover{
+            img{
+            @include transform(scale(1.1));
+            @include transition(all,0.7s);
+            transform-origin: center center;
+            }
+        }
+      .card-body{
+          text-align: center;
+          h5{
+              a{
+                  text-decoration: none;
+                  color: $color-black;
+                  &:hover{
+                      color: $color;
+                  }
+              }
+          }
+          p{
+              color: $color;
+              font-style: italic;
+              margin-bottom: 10px;
+          }
+          ul.team-sosial{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li{
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                text-align: center;
+                a{
+                  line-height: 40px;
+                  font-size: $font-size;
+                  color:darken($color-effet-2,20%);
+              }
+                &:hover{
+                    a{
+                        
+                        color: $color-white;
+                    }
+                }
+                &.facebook:hover{
+                    background-color: $facebook;
+                }
+                &.twitter:hover{
+                    background-color: $twitter;
+                }
+                &.linkedin:hover{
+                    background-color: $linkedin;
+                }
+                &.instagram:hover{
+                    background-color: $instagram;
+                }
+            }
+        }
+      }
+      
+  }
+}

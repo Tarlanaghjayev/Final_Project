@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+    display: inline;
+    
+}
+.header .t1 , .header .t2 , .header .t3 , .header .t4{
+    box-sizing: border-box;
+    background-color: red;
+    width: 23%;
+    border-style: solid;
+    border-color: white;
+    padding: 33px;
+    float: left;
+    line-height: 30px;
+    position: center;
+}

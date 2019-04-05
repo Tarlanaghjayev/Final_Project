@@ -1,0 +1,52 @@
+From eddd1f14ba657d64675c6e23a2451b807c7a609b Mon Sep 17 00:00:00 2001
+From: Simon Brunel <simonbrunel@users.noreply.github.com>
+Date: Tue, 12 Mar 2019 08:35:39 +0100
+Subject: [PATCH] Keep the previous extensions page link alive (#6127)
+
+Instead of a direct link, restore the extensions.md file which now redirects /notes/extensions.html to https://github.com/chartjs/awesome in case anyone bookmarked it / there were links to it.
+---
+ book.json                | 10 +++++++++-
+ docs/SUMMARY.md          |  2 +-
+ docs/notes/extensions.md |  1 +
+ 3 files changed, 11 insertions(+), 2 deletions(-)
+ create mode 100644 docs/notes/extensions.md
+
+diff --git a/book.json b/book.json
+index 8b0f73970..22acbde96 100644
+--- a/book.json
++++ b/book.json
+@@ -3,7 +3,15 @@
+   "title": "Chart.js documentation",
+   "author": "chartjs",
+   "gitbook": "3.2.2",
+-  "plugins": ["-lunr", "-search", "search-plus", "anchorjs", "chartjs", "ga"],
++  "plugins": [
++    "-lunr",
++    "-search",
++    "search-plus",
++    "anchorjs",
++    "chartjs",
++    "ga",
++    "redirect"
++  ],
+   "pluginsConfig": {
+     "anchorjs": {
+       "icon": "#",
+diff --git a/docs/SUMMARY.md b/docs/SUMMARY.md
+index f0beb678c..15265bd2b 100644
+--- a/docs/SUMMARY.md
++++ b/docs/SUMMARY.md
+@@ -51,5 +51,5 @@
+   * [Contributing](developers/contributing.md)
+ * [Additional Notes](notes/README.md)
+   * [Comparison Table](notes/comparison.md)
+-  * [Popular Extensions](https://github.com/chartjs/awesome)
++  * [Popular Extensions](notes/extensions.md)
+   * [License](notes/license.md)
+diff --git a/docs/notes/extensions.md b/docs/notes/extensions.md
+new file mode 100644
+index 000000000..d66989b15
+--- /dev/null
++++ b/docs/notes/extensions.md
+@@ -0,0 +1 @@
++!REDIRECT "https://github.com/chartjs/awesome"

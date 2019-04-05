@@ -1,0 +1,50 @@
+From 653e9a954eae83a8fcf157e6d402bcacaac51821 Mon Sep 17 00:00:00 2001
+From: Ben McCann <322311+benmccann@users.noreply.github.com>
+Date: Sun, 3 Mar 2019 01:26:40 -0800
+Subject: [PATCH] Add a note about how to include an example against master
+ (#6107)
+
+---
+ .github/ISSUE_TEMPLATE/BUG.md   | 11 +++++++++--
+ docs/developers/contributing.md |  2 +-
+ 2 files changed, 10 insertions(+), 3 deletions(-)
+
+diff --git a/.github/ISSUE_TEMPLATE/BUG.md b/.github/ISSUE_TEMPLATE/BUG.md
+index 90ebd643e..1d9ca8c27 100644
+--- a/.github/ISSUE_TEMPLATE/BUG.md
++++ b/.github/ISSUE_TEMPLATE/BUG.md
+@@ -21,13 +21,20 @@ labels: 'type: bug'
+ <!-- Tell us what happens instead of the expected behavior -->
+ 
+ ## Possible Solution
+-<!-- Not obligatory, but suggest a fix/reason for the bug, -->
+-<!-- or ideas how to implement the addition or change -->
++<!--
++  Not obligatory, but suggest a fix/reason for the bug,
++  or ideas how to implement the addition or change
++-->
+ 
+ ## Steps to Reproduce (for bugs)
+ <!--
+   Provide a link to a live example. Bug reports MUST be submitted with an
+   interactive example (https://codepen.io/pen?template=JXVYzq).
++
++  If filing a bug against `master`, you may reference the latest code via
++  https://www.chartjs.org/dist/master/Chart.min.js (changing the filename to
++  point at the file you need as appropriate). Do not rely on these files for
++  production purposes as they may be removed at any time.
+ -->
+ 
+ ## Context
+diff --git a/docs/developers/contributing.md b/docs/developers/contributing.md
+index 15fc938ae..6180a3139 100644
+--- a/docs/developers/contributing.md
++++ b/docs/developers/contributing.md
+@@ -72,6 +72,6 @@ Guidelines for reporting bugs:
+ 
+  - Check the issue search to see if it has already been reported
+  - Isolate the problem to a simple test case
+- - Please include a demonstration of the bug on a website such as [JS Bin](https://jsbin.com/), [JS Fiddle](https://jsfiddle.net/), or [Codepen](https://codepen.io/pen/). ([Template](https://codepen.io/pen?template=JXVYzq))
++ - Please include a demonstration of the bug on a website such as [JS Bin](https://jsbin.com/), [JS Fiddle](https://jsfiddle.net/), or [Codepen](https://codepen.io/pen/). ([Template](https://codepen.io/pen?template=JXVYzq)). If filing a bug against `master`, you may reference the latest code via https://www.chartjs.org/dist/master/Chart.min.js (changing the filename to point at the file you need as appropriate). Do not rely on these files for production purposes as they may be removed at any time.
+ 
+ Please provide any additional details associated with the bug, if it's browser or screen density specific, or only happens with a certain configuration or data.

@@ -1,0 +1,124 @@
+#news{
+    position: relative;
+    .title{
+        // position: absolute;
+        h2{
+            font-family: $font-family-second;
+            font-weight: 600;
+            font-size: $font-size*2; 
+            margin-bottom: 10px;
+        }
+      span{
+         height: 3px;
+         width: 80px;
+         margin: 0 0 15px;
+         border-bottom: 2px solid $color;
+         position: relative;
+         display: inline-block;
+         
+      }
+      span::after{
+         content: "";
+         border-bottom: 2px solid $color;
+         width: 45px;
+         height: 2px;
+         display: block;
+         margin: 5px auto;
+      }
+      p{
+          font-size: $font-size;
+          margin: 0 auto 50px;
+      }
+     }
+
+
+     //card
+     .card{
+         position: relative;
+         box-shadow: 0px 0px 32px 0px rgba(122,122,122,0.1);
+         border: none;
+         padding:0 0px;
+         max-width: 350px;
+         @include transition(all,0.5s);
+         overflow: hidden;
+         .news-img{
+             position: relative;
+             overflow: hidden;
+         }
+         &:hover{
+            box-shadow: 0 22px 43px rgba(0, 0, 0, 0.15);
+            @include transform(translateY(-10px));
+            .card-img-top:hover{
+                @include transform(scale(1.1));
+                @include transition(all,0.5s);
+            }
+         }
+        
+         .card-body{
+             padding: 30px 35px;
+             h5{
+                 font-weight: 600;
+                 &:hover{
+                     color: $color;
+                 }
+             }
+             .calendar{
+                 margin-bottom: 20px;
+                 span{
+                    font-size: ($font-size)-2;
+                    margin-right: 15px;
+                    color: darken( $color-effet-2,40%);
+                 }
+                 .span1::before{
+                     content: "\f274";
+                     font-family: 'Font Awesome 5 Free';
+                     font-weight: 900;
+                     font-size: $font-size/1.2;
+                     margin-right: 2px;
+                     color:darken( $color-effet-2,40%);
+                 }
+                 .span2::before{
+                     content: '\f07c';
+                     font-family: 'Font Awesome 5 Free';
+                     font-weight: 900;
+                     font-size: $font-size/1.2;
+                     color:darken( $color-effet-2,40%);
+                 }
+             }
+             .card-text{
+                 color: darken( $color-effet-2,40%);
+             }
+             
+                .news-a{
+                    text-decoration: none;
+                    color: $color-black;
+                    @include transition(all,0.5s);
+                    font-size: ($font-size)-2;
+                    
+                    &:hover{
+                        color: $color;
+                        padding-left: 10px;
+                    }
+                }
+                .news-a::after{
+                    content: '\f30b';
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    margin: 0 5px;
+                    font-size: ($font-size)-4;
+                    
+                }
+                .news-a:hover::after{
+                    content: '\f00c';
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    margin: 0 5px;
+                    font-size: ($font-size)-5;
+                }
+        
+            
+             
+         }
+     }
+}
+

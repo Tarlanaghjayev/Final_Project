@@ -1,0 +1,90 @@
+﻿@model EsgereMektub.Models.Setting
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Setting</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MainLogo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MainLogo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AktLogo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AktLogo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fb)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Twitter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Twitter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Insta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Insta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Youtube)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Youtube)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mail)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,87 @@
+@import 'partials/variables';
+#testimonial_carusel{
+    background: #25292f;
+    height: 800px;
+    .container{
+        .row{
+            color: white;
+            h2{
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-size: 33px;
+                font-weight: 500;
+            }
+            .span{
+                width: 80px;
+                height: 3px;
+                background: $primary-c;
+                display: inline-block;
+                margin-left: 42%;
+                position: relative;
+                &::before{
+                    width: 48px;
+                    content: " ";
+                    height: 3px;
+                    background: $primary-c;
+                    display: inline-block;
+                    margin-left: 42%;
+                    position: absolute;
+                    top: 5px;
+                    right: 16px;
+                }
+            }
+            .pp{
+                font-size: 16px;
+                max-width: 700px;
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 68px;            
+            }
+            .row{
+                .corusel-item{
+                    background: #fff;
+                    // background: white;
+                    color: black;
+                    a{
+                        text-decoration: none;
+                        img{
+                            border-radius: 100%;
+                            height: 100px;
+                            width: 100px;
+                            display: inline;
+                            margin-top: 40px;
+                            margin-bottom: 40px;
+                        }
+                    }
+                    i{
+                        color: yellow;
+                        &::before{
+                            content: "\f104";
+                            border: 1px solid red;
+                            font-size: 51px;
+                            padding: 1px 11px;
+                            color: black;
+                            background: red;
+                        }
+                    }
+                    p{
+                        color: black;
+                    }
+                    span{
+                        color: black;
+                    }
+                }
+            }
+            .owl-carousel{
+                position: relative;
+                .owl-nav{
+                    position: absolute;
+                    top: -78px;
+                    right: 49px;
+                }
+            }
+
+        }
+    }
+}

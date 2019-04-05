@@ -1,0 +1,51 @@
+#mobile-menu-button{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #mobile-menu-button{
+        display: block;
+        width: 100%;
+        background-color: $color-black;
+
+        #simple-menu{
+            color: $color-white;
+            padding: 5px 10px;
+            display: inline-block;
+        }
+        .mob-sidr-menu{
+            ul{
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                li{
+                   
+                    span{
+                        background-color: darken($color-black, 5%);
+                        float: right;
+                        padding: 0 20px;
+                        box-shadow: 0 0 37px #464444 inset;
+                        cursor: pointer;
+                    }
+                    a{
+                        display: inline-block;
+                        text-decoration: none;
+                        color: $color-white;
+                        width: 210px;
+                    }
+                    a.menuless{
+                        width: 100%;
+                    }
+                }
+               
+            }
+            .mob-sub-menu{
+                display: none;
+            }
+        }
+
+
+
+
+    }
+}

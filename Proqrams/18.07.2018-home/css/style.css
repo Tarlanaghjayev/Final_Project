@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(22, 170, 255);
+    height: 1000px;
+    width: 100%;
+    
+    
+}
+.container .yuxari {
+    font-size: 28px;
+    color: white;
+    margin-left: 35%;
+    margin-top: 10%;
+    display: inline-block;
+}
+.container .asagi{
+    margin-left: 11%;
+    margin-top: 3%;
+}
+.container .yuxari .yux1 .fa-gift{
+    color:white;
+    font-size: 70px;
+}
+.container .yuxari .yux1 h3{
+    display: inline-block;
+    font-size: 42px;
+}
+
+.asagi .item{
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+
+}
+.asagi .item .picture img{
+    height: 176px;
+    width: 322px;
+}
+.asagi .item .pro{
+    position: absolute;
+    bottom: 50px;
+    right: 11px;
+    color: white;
+    padding: 8px;
+}
+.asagi .item .text1, .asagi .item .text2{
+    color: white;
+    padding: 8px;
+}
+.picture{
+    position: relative;
+}
+.hid{
+    font-size: 58px;
+    position: absolute;
+    z-index: -1;
+    top: 59px;
+    left: 100px;
+    color: white;
+    transition: all 0.5s;
+}
+.picture:hover .hid {
+    z-index: 1;
+}
+

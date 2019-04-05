@@ -1,0 +1,104 @@
+#single-portfolio{
+    position: relative;
+
+    .single-img{
+        padding-left: 25px;
+        padding-right: 25px;
+        margin: 25px 0 25px 0;
+        img{
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+    }
+    .single-text{
+        padding: 20px 10px;
+        h3{
+            font-weight: 500;
+            line-height: 1.5;
+            margin: 0 0 10px 0;
+        }
+        p{
+            color: darken($color-effet-2,40%) ;
+
+        }
+        ul.single-info{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 25px;
+            li{
+                color: darken($color-effet-2,40%);
+                margin-bottom: 7px;
+            }
+            li::before{
+                content: "\f00c";
+                font-family: 'Font Awesome 5 Free';
+                margin-right: 15px;
+                color: $color;
+                font-size: 13px;
+                display: inline-block;
+                margin-top: 0px;
+                font-weight: 900;
+        
+            }
+            b{
+                width: 50%;
+                display: inline-block;
+            }
+            
+        }
+    }
+    .single-sosial{
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li{
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                text-align: center;
+                margin: 0 5px;
+                
+                a{
+                  line-height: 40px;
+                  font-size: $font-size;
+                  color:$color-white
+                  
+              }
+                
+            
+            }
+            li.facebook{
+                background-color: $facebook;
+            }
+            li.instagram{
+                background-color: $instagram;
+            }
+            li.twitter{
+                background-color: $twitter;
+            }
+            li.youtube{
+                background-color:darken( $youtube, 10%);
+            }
+            li.linkedin{
+                background-color: $linkedin;
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    #single-portfolio{
+        ul.single-info{
+            b{
+                width: 35% !important;
+            }
+        }
+    }
+   
+
+};

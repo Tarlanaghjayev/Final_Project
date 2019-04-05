@@ -1,0 +1,33 @@
+.color1{
+    height: 150px;
+    background: green;
+}
+.color2{
+    height: 150px;
+    background: yellow;
+}
+.color3{
+    height: 150px;
+    background: gray;
+}
+.color4{
+    height: 150px;
+    background: black;
+}
+.color5{
+    height: 150px;
+    background: blue;
+}
+.color6{
+    height: 150px;
+    background: red;
+}
+.color7{
+    height: 150px;
+    background: rgb(171, 247, 73);
+}
+
+.color8{
+    height: 150px;
+    background: rgb(148, 100, 18);
+}

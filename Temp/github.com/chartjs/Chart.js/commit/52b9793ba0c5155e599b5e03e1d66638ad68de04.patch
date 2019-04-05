@@ -1,0 +1,352 @@
+From 52b9793ba0c5155e599b5e03e1d66638ad68de04 Mon Sep 17 00:00:00 2001
+From: Simon Brunel <simonbrunel@users.noreply.github.com>
+Date: Sun, 16 Dec 2018 11:58:29 +0100
+Subject: [PATCH] Use HTTPS instead of HTTP for URLs supporting it
+
+---
+ .editorconfig                     |  2 +-
+ .github/ISSUE_TEMPLATE.md         |  4 ++--
+ .github/PULL_REQUEST_TEMPLATE.md  |  8 ++++----
+ MAINTAINING.md                    |  2 +-
+ README.md                         | 10 +++++-----
+ composer.json                     |  2 +-
+ docs/developers/README.md         |  2 +-
+ samples/charts/scatter/basic.html |  2 +-
+ samples/index.html                |  4 ++--
+ src/core/core.helpers.js          |  6 +++---
+ src/helpers/helpers.core.js       |  2 +-
+ src/platforms/platform.dom.js     |  2 +-
+ src/scales/scale.linearbase.js    |  2 +-
+ src/scales/scale.time.js          | 12 ++++++------
+ test/.eslintrc.yml                |  2 +-
+ test/context.js                   |  2 +-
+ test/specs/core.layouts.tests.js  |  2 +-
+ test/specs/plugin.legend.tests.js |  2 +-
+ test/utils.js                     |  2 +-
+ 19 files changed, 35 insertions(+), 35 deletions(-)
+
+diff --git a/.editorconfig b/.editorconfig
+index bf81c70a9..922810ad7 100644
+--- a/.editorconfig
++++ b/.editorconfig
+@@ -1,4 +1,4 @@
+-# http://editorconfig.org
++# https://editorconfig.org
+ root = true
+ 
+ [*]
+diff --git a/.github/ISSUE_TEMPLATE.md b/.github/ISSUE_TEMPLATE.md
+index e6ead94ec..8dddb59c2 100644
+--- a/.github/ISSUE_TEMPLATE.md
++++ b/.github/ISSUE_TEMPLATE.md
+@@ -4,8 +4,8 @@ Please consider the following before submitting an issue:
+ - Ask questions and get support on StackOverflow: https://stackoverflow.com/questions/tagged/chart.js
+ - DO NOT create issues for questions or support requests.
+ - Issues are reserved for BUG reports and FEATURE requests.
+-- Most features should start as plugins outside of Chart.js (http://www.chartjs.org/docs/#advanced-usage-creating-plugins).
+-- Bug reports MUST be submitted with an interactive example (http://codepen.io/pen?template=JXVYzq).
++- Most features should start as plugins outside of Chart.js (https://www.chartjs.org/docs/#advanced-usage-creating-plugins).
++- Bug reports MUST be submitted with an interactive example (https://codepen.io/pen?template=JXVYzq).
+ - Chart.js 1.x is NOT supported anymore, new issues will be disregarded.
+ -->
+ 
+diff --git a/.github/PULL_REQUEST_TEMPLATE.md b/.github/PULL_REQUEST_TEMPLATE.md
+index 9625965b4..7dd68ba0f 100644
+--- a/.github/PULL_REQUEST_TEMPLATE.md
++++ b/.github/PULL_REQUEST_TEMPLATE.md
+@@ -4,8 +4,8 @@ Please consider the following before submitting a pull request:
+ Guidelines for contributing: https://github.com/chartjs/Chart.js/blob/master/docs/developers/contributing.md
+ 
+ Example of changes on an interactive website such as the following:
+-- http://jsbin.com/
+-- http://jsfiddle.net/
+-- http://codepen.io/pen/
+-- Premade template: http://codepen.io/pen?template=JXVYzq
++- https://jsbin.com/
++- https://jsfiddle.net/
++- https://codepen.io/pen/
++- Premade template: https://codepen.io/pen?template=JXVYzq
+ -->
+diff --git a/MAINTAINING.md b/MAINTAINING.md
+index 5e34f433c..288b03945 100644
+--- a/MAINTAINING.md
++++ b/MAINTAINING.md
+@@ -5,7 +5,7 @@ Chart.js relies on [Travis CI](https://travis-ci.org/) to automate the library [
+ ### Releasing a New Version
+ 
+ 1. draft release notes on [GitHub](https://github.com/chartjs/Chart.js/releases/new) for the upcoming tag
+-1. update `master` `package.json` version using [semver](http://semver.org/) semantic
++1. update `master` `package.json` version using [semver](https://semver.org/) semantic
+ 1. merge `master` into the `release` branch
+ 1. follow the build process on [Travis CI](https://travis-ci.org/chartjs/Chart.js)
+ 
+diff --git a/README.md b/README.md
+index d7e966ca7..8673e30cb 100644
+--- a/README.md
++++ b/README.md
+@@ -2,7 +2,7 @@
+ 
+ [![travis](https://img.shields.io/travis/chartjs/Chart.js.svg?style=flat-square&maxAge=60)](https://travis-ci.org/chartjs/Chart.js) [![coveralls](https://img.shields.io/coveralls/chartjs/Chart.js.svg?style=flat-square&maxAge=600)](https://coveralls.io/github/chartjs/Chart.js?branch=master) [![codeclimate](https://img.shields.io/codeclimate/maintainability/chartjs/Chart.js.svg?style=flat-square&maxAge=600)](https://codeclimate.com/github/chartjs/Chart.js) [![slack](https://img.shields.io/badge/slack-chartjs-blue.svg?style=flat-square&maxAge=3600)](https://chartjs-slack.herokuapp.com/)
+ 
+-*Simple HTML5 Charts using the canvas element* [chartjs.org](http://www.chartjs.org)
++*Simple HTML5 Charts using the canvas element* [chartjs.org](https://www.chartjs.org)
+ 
+ ## Installation
+ 
+@@ -28,7 +28,7 @@ Files:
+ * `dist/Chart.js`
+ * `dist/Chart.min.js`
+ 
+-The stand-alone build includes Chart.js as well as the color parsing library. If this version is used, you are required to include [Moment.js](http://momentjs.com/) before Chart.js for the functionality of the time axis.
++The stand-alone build includes Chart.js as well as the color parsing library. If this version is used, you are required to include [Moment.js](https://momentjs.com/) before Chart.js for the functionality of the time axis.
+ 
+ #### Bundled Build
+ Files:
+@@ -39,11 +39,11 @@ The bundled build includes Moment.js in a single file. You should use this versi
+ 
+ ## Documentation
+ 
+-You can find documentation at [www.chartjs.org/docs](http://www.chartjs.org/docs). The markdown files that build the site are available under `/docs`. Previous version documentation is available at [www.chartjs.org/docs/latest/developers/#previous-versions](http://www.chartjs.org/docs/latest/developers/#previous-versions).
++You can find documentation at [www.chartjs.org/docs](https://www.chartjs.org/docs). The markdown files that build the site are available under `/docs`. Previous version documentation is available at [www.chartjs.org/docs/latest/developers/#previous-versions](https://www.chartjs.org/docs/latest/developers/#previous-versions).
+ 
+ ## Contributing
+ 
+-Before submitting an issue or a pull request, please take a moment to look over the [contributing guidelines](https://github.com/chartjs/Chart.js/blob/master/docs/developers/contributing.md) first. For support using Chart.js, please post questions with the [`chartjs` tag on Stack Overflow](http://stackoverflow.com/questions/tagged/chartjs).
++Before submitting an issue or a pull request, please take a moment to look over the [contributing guidelines](https://github.com/chartjs/Chart.js/blob/master/docs/developers/contributing.md) first. For support using Chart.js, please post questions with the [`chartjs` tag on Stack Overflow](https://stackoverflow.com/questions/tagged/chartjs).
+ 
+ ## Building
+ Instructions on building and testing Chart.js can be found in [the documentation](https://github.com/chartjs/Chart.js/blob/master/docs/developers/contributing.md#building-and-testing).
+@@ -54,4 +54,4 @@ Instructions on building and testing Chart.js can be found in [the documentation
+ 
+ ## License
+ 
+-Chart.js is available under the [MIT license](http://opensource.org/licenses/MIT).
++Chart.js is available under the [MIT license](https://opensource.org/licenses/MIT).
+diff --git a/composer.json b/composer.json
+index 48d05b8dc..b332bb0f5 100644
+--- a/composer.json
++++ b/composer.json
+@@ -6,7 +6,7 @@
+         "chart",
+         "js"
+     ],
+-    "homepage": "http://www.chartjs.org/",
++    "homepage": "https://www.chartjs.org/",
+     "license": "MIT",
+     "authors": [
+         {
+diff --git a/docs/developers/README.md b/docs/developers/README.md
+index 98c7aa5ff..669062c35 100644
+--- a/docs/developers/README.md
++++ b/docs/developers/README.md
+@@ -16,7 +16,7 @@ Latest builds are available for testing at:
+  - https://www.chartjs.org/dist/master/Chart.min.js
+  - https://www.chartjs.org/dist/master/Chart.bundle.min.js
+ 
+-> Note: Development builds are currently only available via HTTP, so in order to include them in [JSFiddle](http://jsfiddle.net) or [CodePen](http://codepen.io), you need to access these tools via HTTP as well.
++> Note: Development builds are currently only available via HTTP, so in order to include them in [JSFiddle](https://jsfiddle.net) or [CodePen](https://codepen.io), you need to access these tools via HTTP as well.
+ 
+ **WARNING: Development builds MUST not be used for production purposes or as replacement for CDN.**
+ 
+diff --git a/samples/charts/scatter/basic.html b/samples/charts/scatter/basic.html
+index ccf1059f8..63b8efafb 100644
+--- a/samples/charts/scatter/basic.html
++++ b/samples/charts/scatter/basic.html
+@@ -31,7 +31,7 @@
+ 			}
+ 			return data;
+ 		}
+-		
++
+ 		var scatterChartData = {
+ 			datasets: [{
+ 				label: 'My First dataset',
+diff --git a/samples/index.html b/samples/index.html
+index b9e13c364..e2b61dfa6 100644
+--- a/samples/index.html
++++ b/samples/index.html
+@@ -16,8 +16,8 @@
+ 			<div class="chartjs-title">Samples</div>
+ 			<div class="chartjs-caption">Simple yet flexible JavaScript charting for designers &amp; developers</div>
+ 			<div class="chartjs-links">
+-				<a class="btn btn-chartjs" href="http://www.chartjs.org">Website</a>
+-				<a class="btn btn-docs" href="http://www.chartjs.org/docs">Documentation</a>
++				<a class="btn btn-chartjs" href="https://www.chartjs.org">Website</a>
++				<a class="btn btn-docs" href="https://www.chartjs.org/docs">Documentation</a>
+ 				<a class="btn btn-gh" href="https://github.com/chartjs/Chart.js">GitHub</a>
+ 			</div>
+ 		</div>
+diff --git a/src/core/core.helpers.js b/src/core/core.helpers.js
+index a0b4b990b..82f2c9811 100644
+--- a/src/core/core.helpers.js
++++ b/src/core/core.helpers.js
+@@ -405,7 +405,7 @@ module.exports = function() {
+ 
+ 		return niceFraction * Math.pow(10, exponent);
+ 	};
+-	// Request animation polyfill - http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
++	// Request animation polyfill - https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
+ 	helpers.requestAnimFrame = (function() {
+ 		if (typeof window === 'undefined') {
+ 			return function(callback) {
+@@ -440,7 +440,7 @@ module.exports = function() {
+ 
+ 		// Scale mouse coordinates into canvas coordinates
+ 		// by following the pattern laid out by 'jerryj' in the comments of
+-		// http://www.html5canvastutorials.com/advanced/html5-canvas-mouse-coordinates/
++		// https://www.html5canvastutorials.com/advanced/html5-canvas-mouse-coordinates/
+ 		var paddingLeft = parseFloat(helpers.getStyle(canvas, 'padding-left'));
+ 		var paddingTop = parseFloat(helpers.getStyle(canvas, 'padding-top'));
+ 		var paddingRight = parseFloat(helpers.getStyle(canvas, 'padding-right'));
+@@ -489,7 +489,7 @@ module.exports = function() {
+ 	// @param domNode : the node to check the constraint on
+ 	// @param maxStyle : the style that defines the maximum for the direction we are using (maxWidth / maxHeight)
+ 	// @param percentageProperty : property of parent to use when calculating width as a percentage
+-	// @see http://www.nathanaeljones.com/blog/2013/reading-max-width-cross-browser
++	// @see https://www.nathanaeljones.com/blog/2013/reading-max-width-cross-browser
+ 	function getConstraintDimension(domNode, maxStyle, percentageProperty) {
+ 		var view = document.defaultView;
+ 		var parentNode = helpers._getParentNode(domNode);
+diff --git a/src/helpers/helpers.core.js b/src/helpers/helpers.core.js
+index c22dff651..c2bd13272 100644
+--- a/src/helpers/helpers.core.js
++++ b/src/helpers/helpers.core.js
+@@ -128,7 +128,7 @@ var helpers = {
+ 
+ 	/**
+ 	 * Returns true if the `a0` and `a1` arrays have the same content, else returns false.
+-	 * @see http://stackoverflow.com/a/14853974
++	 * @see https://stackoverflow.com/a/14853974
+ 	 * @param {Array} a0 - The array to compare
+ 	 * @param {Array} a1 - The array to compare
+ 	 * @returns {Boolean}
+diff --git a/src/platforms/platform.dom.js b/src/platforms/platform.dom.js
+index 0c58358db..c70d73963 100644
+--- a/src/platforms/platform.dom.js
++++ b/src/platforms/platform.dom.js
+@@ -305,7 +305,7 @@ function removeResizeListener(node) {
+ }
+ 
+ function injectCSS(platform, css) {
+-	// http://stackoverflow.com/q/3922139
++	// https://stackoverflow.com/q/3922139
+ 	var style = platform._style || document.createElement('style');
+ 	if (!platform._style) {
+ 		platform._style = style;
+diff --git a/src/scales/scale.linearbase.js b/src/scales/scale.linearbase.js
+index 0dc77fa36..e2898e1ea 100644
+--- a/src/scales/scale.linearbase.js
++++ b/src/scales/scale.linearbase.js
+@@ -12,7 +12,7 @@ var Scale = require('../core/core.scale');
+ function generateTicks(generationOptions, dataRange) {
+ 	var ticks = [];
+ 	// To get a "nice" value for the tick spacing, we will use the appropriately named
+-	// "nice number" algorithm. See http://stackoverflow.com/questions/8506881/nice-label-algorithm-for-charts-with-minimum-ticks
++	// "nice number" algorithm. See https://stackoverflow.com/questions/8506881/nice-label-algorithm-for-charts-with-minimum-ticks
+ 	// for details.
+ 
+ 	var stepSize = generationOptions.stepSize;
+diff --git a/src/scales/scale.time.js b/src/scales/scale.time.js
+index 3044cfae2..dbdb4ef67 100644
+--- a/src/scales/scale.time.js
++++ b/src/scales/scale.time.js
+@@ -130,7 +130,7 @@ function buildLookupTable(timestamps, min, max, distribution) {
+ 	return table;
+ }
+ 
+-// @see adapted from http://www.anujgakhar.com/2014/03/01/binary-search-in-javascript/
++// @see adapted from https://www.anujgakhar.com/2014/03/01/binary-search-in-javascript/
+ function lookup(table, key, value) {
+ 	var lo = 0;
+ 	var hi = table.length - 1;
+@@ -179,7 +179,7 @@ function interpolate(table, skey, sval, tkey) {
+ 
+ /**
+  * Convert the given value to a moment object using the given time options.
+- * @see http://momentjs.com/docs/#/parsing/
++ * @see https://momentjs.com/docs/#/parsing/
+  */
+ function momentify(value, options) {
+ 	var parser = options.parser;
+@@ -448,15 +448,15 @@ module.exports = function() {
+ 		bounds: 'data',
+ 
+ 		time: {
+-			parser: false, // false == a pattern string from http://momentjs.com/docs/#/parsing/string-format/ or a custom callback that converts its argument to a moment
+-			format: false, // DEPRECATED false == date objects, moment object, callback or a pattern string from http://momentjs.com/docs/#/parsing/string-format/
++			parser: false, // false == a pattern string from https://momentjs.com/docs/#/parsing/string-format/ or a custom callback that converts its argument to a moment
++			format: false, // DEPRECATED false == date objects, moment object, callback or a pattern string from https://momentjs.com/docs/#/parsing/string-format/
+ 			unit: false, // false == automatic or override with week, month, year, etc.
+ 			round: false, // none, or override with week, month, year, etc.
+ 			displayFormat: false, // DEPRECATED
+-			isoWeekday: false, // override week start day - see http://momentjs.com/docs/#/get-set/iso-weekday/
++			isoWeekday: false, // override week start day - see https://momentjs.com/docs/#/get-set/iso-weekday/
+ 			minUnit: 'millisecond',
+ 
+-			// defaults to unit's corresponding unitFormat below or override using pattern string from http://momentjs.com/docs/#/displaying/format/
++			// defaults to unit's corresponding unitFormat below or override using pattern string from https://momentjs.com/docs/#/displaying/format/
+ 			displayFormats: {
+ 				millisecond: 'h:mm:ss.SSS a', // 11:20:01.123 AM,
+ 				second: 'h:mm:ss a', // 11:20:01 AM
+diff --git a/test/.eslintrc.yml b/test/.eslintrc.yml
+index 9d98c4528..5fa01f891 100644
+--- a/test/.eslintrc.yml
++++ b/test/.eslintrc.yml
+@@ -7,7 +7,7 @@ globals:
+   moment: true
+   waitForResize: true
+ 
+-# http://eslint.org/docs/rules/
++# https://eslint.org/docs/rules/
+ rules:
+   # Best Practices
+   complexity: 0
+diff --git a/test/context.js b/test/context.js
+index 3497c7219..ecf5f8a4a 100644
+--- a/test/context.js
++++ b/test/context.js
+@@ -1,4 +1,4 @@
+-// Code from http://stackoverflow.com/questions/4406864/html-canvas-unit-testing
++// Code from https://stackoverflow.com/questions/4406864/html-canvas-unit-testing
+ var Context = function() {
+ 	this._calls = []; // names/args of recorded calls
+ 	this._initMethods();
+diff --git a/test/specs/core.layouts.tests.js b/test/specs/core.layouts.tests.js
+index 19b3a14b2..bca7f08dc 100644
+--- a/test/specs/core.layouts.tests.js
++++ b/test/specs/core.layouts.tests.js
+@@ -11,7 +11,7 @@ describe('Chart.layouts', function() {
+ 
+ 	// Disable tests which need to be rewritten based on changes introduced by
+ 	// the following changes: https://github.com/chartjs/Chart.js/pull/2346
+-	// using xit marks the test as pending: http://jasmine.github.io/2.0/introduction.html#section-Pending_Specs
++	// using xit marks the test as pending: https://jasmine.github.io/2.0/introduction.html#section-Pending_Specs
+ 	xit('should fit a simple chart with 2 scales', function() {
+ 		var chart = window.acquireChart({
+ 			type: 'bar',
+diff --git a/test/specs/plugin.legend.tests.js b/test/specs/plugin.legend.tests.js
+index 7b7159dbb..451f7400d 100644
+--- a/test/specs/plugin.legend.tests.js
++++ b/test/specs/plugin.legend.tests.js
+@@ -217,7 +217,7 @@ describe('Legend block tests', function() {
+ 
+ 		// NOTE(SB) We should get ride of the following tests and use image diff instead.
+ 		// For now, as discussed with Evert Timberg, simply comment out.
+-		// See http://humblesoftware.github.io/js-imagediff/test.html
++		// See https://humblesoftware.github.io/js-imagediff/test.html
+ 		/* chart.legend.ctx = window.createMockContext();
+ 		chart.update();
+ 
+diff --git a/test/utils.js b/test/utils.js
+index 80430d4d5..c9e9ae012 100644
+--- a/test/utils.js
++++ b/test/utils.js
+@@ -85,7 +85,7 @@ function releaseChart(chart) {
+ }
+ 
+ function injectCSS(css) {
+-	// http://stackoverflow.com/q/3922139
++	// https://stackoverflow.com/q/3922139
+ 	var head = document.getElementsByTagName('head')[0];
+ 	var style = document.createElement('style');
+ 	style.setAttribute('type', 'text/css');

@@ -1,0 +1,37 @@
+main{
+    .back_photo{
+        margin: 0 auto;
+        position: relative;
+        img{
+            padding: 0px;
+            width: 1349px;
+            height: 700px;
+        }
+               }
+        h3{
+            position: absolute;
+            left: 31%;
+            top: 212px;
+            font-size: 43px;
+            color: white;
+        }
+        h1{
+            position: absolute;
+            left: 21%;
+            top: 252px;
+            font-size: 67px;
+            color: white;
+            margin-top: 20px;
+        
+        }
+        button{
+            font-size: 30px;
+            background-color: #fed136;
+            position: absolute;
+            top: 380px;
+            left: 39%;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }

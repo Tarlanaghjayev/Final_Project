@@ -1,0 +1,80 @@
+#about{
+    .row{
+        .text-uppercase{
+            font-size: 40px;
+            margin-top: 109px;
+        }
+        .text-muted{
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: -33px;
+            margin-left: 78px;
+        
+        }
+
+    }
+    .row{
+        ul{
+            list-style-type: none;
+            margin-left: 39%;
+            margin-top: 90px;
+            li{
+                position: relative;
+                margin-top: 169px;
+                .image{
+                    img{                    
+                        border-radius: 50% ;
+                        max-width: 100%;
+                        height: 170px;
+                        width: 179px;
+                        max-height: 100%;}
+                        h4{
+                            border: 1px solid $secondary-color;
+                            background: $secondary-color;
+                            border-radius: 100%;
+                            max-width: 100%;
+                            height: 170px;
+                            width: 179px;
+                            max-height: 100%;
+                            z-index: 2;
+                        } 
+                            h5{
+                                z-index: 3;
+                                margin-top: -131px;
+                                margin-left: 49px;
+                                color: white;
+                            }  
+                        }
+
+                .info_left{
+                    position: absolute;
+                    top: 10px;
+                    left: -363px;
+                    max-width: 288px;
+                    font-size: 12px;
+                    position: absolute;
+                    .head_info{}
+                    .extra_info{}
+                }
+                .img_right{
+                    position: absolute;
+                    top: 10px;
+                    left: 300px;
+                    max-width: 288px;
+                    font-size: 12px;
+                    position: absolute;
+                    .head_info{}
+                    .extra_info{}
+                }
+            }
+        }
+        span{
+            border: 1px solid $helper-color;
+            border-width: 645px 3px;
+            position: absolute;
+            left: 50%;
+            z-index: -2;
+            top: 251px;
+        }
+    }
+}

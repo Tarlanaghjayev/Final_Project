@@ -1,0 +1,42 @@
+﻿@model EsgereMektub.Models.VwAbout
+
+<!--Main start-->
+<main id="main">
+
+
+    <!-- ABOUT HEADER start -->
+    <div class="container">
+        <div class="contact_header">
+            <div class="row d-flex justify-content-center">
+                <p class="p">Haqqımızda</p>
+                <h3>Haqqımızda</h3>
+            </div>
+        </div>
+    </div>
+    <!-- ABOUT HEADER end -->
+
+    <!-- ABOUT SECTİON start -->
+    <section id="about">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <div class="letter-int-block news-int-block">
+                        <div class="letter-int-content">
+
+                            <!--About TITLE-->
+                            <p class="font-quicksand-bold let-title">@Model.About.Title</p>
+
+                            <!--About TEXT-->
+                            <p>@Model.About.Text</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT SECTİON end -->
+
+
+</main>
+<!--Main end-->

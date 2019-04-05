@@ -1,0 +1,46 @@
+.education_experiance{
+    .row{
+        .p{
+            font-size: 62px;
+            position: relative;
+            color: rgba(160, 160, 160, 0.14);
+            z-index: 2;
+            margin-bottom: 90px;
+            margin-top: 96px;
+            margin-left: 49px;
+        }
+        h3{
+            position: absolute;
+            z-index: 3;
+            top: 139px;
+            left: 228px;
+        }
+    }
+    .row{
+        .kart{
+            color: $helper-color;
+            text-align: left;
+            background: red;
+            border-radius: 11px;
+            margin-right: 10px;
+            height: 250px;
+            margin-bottom: 44px;
+            position: relative;
+            .text{
+                margin-left: 27px;
+                position: absolute;
+                top: 60px;
+                left: 30px;
+                h5{
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-top: 0;
+                }
+                h6{}
+                p{
+                    max-width: 407px;
+                }
+            }
+        }
+    }
+}

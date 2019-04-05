@@ -1,0 +1,13 @@
+.bar {
+    background: gray;
+    width: 15%;
+    display: none;
+}
+.hdn {
+    display: block;
+}
+a .icon {
+    width: 15px;
+    height: 15px;
+    background: black;
+}

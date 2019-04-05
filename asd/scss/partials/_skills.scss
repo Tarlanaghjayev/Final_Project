@@ -1,0 +1,72 @@
+#skills{
+    .skills-img{
+        display: inline;
+        margin-right: 50px;
+        img{
+            max-width: 100%;
+        }
+    }
+    .skill-items{
+        padding: 0 25px;
+        margin: 25px 0;
+    }
+    .skill-bar{
+        h2{
+            font-family: $font-family-second;
+            margin-bottom: 10px;
+            position: relative;
+            font-weight: 500;
+            font-size: $font-size*2+1;
+        }
+        p{
+            color: darken($color-effet-2,40%);
+            margin: 0 0 15px 0;
+        }
+        .skill-item{
+            margin-bottom: 30px;
+            .skill-name{
+                float: left;
+                font-size: $font-size+2;
+                font-weight: 600;
+                margin: 0 0 10px 0;
+            }
+            .skill-percent{
+                float: right;
+                font-size: $font-size+2;
+                font-weight: 600;
+                margin: 0 0 10px 0;
+            }
+            .skillbar-1{
+                width: 100%;
+                background-color:$color-effet-2;
+                height: 5px;
+                position: relative;
+                display: block;
+                @include transition (all,0.4s);
+                margin-bottom: 15px;
+                clear: both;
+                .skillbar-2{
+                    background-color:$color;
+                    height: 10px;
+                    position: relative;
+                    display: block;
+                    top: -3px;
+                    left: 0;
+                    width: 0;
+                }
+            }
+            .skill-bg-1 .skillbar-2{
+                background-color: #67bbf7;
+            }
+            .skill-bg-2 .skillbar-2{
+                background-color: #7e87c9;
+            }
+            .skill-bg-3 .skillbar-2{
+                background-color: #c9048e;
+            }
+            .skill-bg-4 .skillbar-2{
+                background-color: #dd9933;
+            }
+        }
+    }
+}

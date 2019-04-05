@@ -1,0 +1,42 @@
+HTTrack3.49-2+htsswf+htsjava launched on Thu, 31 Jan 2019 17:17:41 at https://www.templatemonster.com/demo/63845.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.templatemonster.com/demo/63845.html -O1 "C:\Users\HP\Desktop\mektub demo" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+17:18:04	Error: 	"Bad Request" (400) at link www.googletagmanager.com/gtm.js?id= (from https://www.templatemonster.com/demo/63845.html)
+17:18:32	Warning: 	Retry after error -4 (No data (connection closed)) at link https://s.tmimgcdn.com/css/owl.carousel.min.css?d=1a63017 (from https://www.templatemonster.com/demo/63845.html)
+17:18:33	Warning: 	Retry after error 500 (Internal Server Error) at link https://www.templatemonster.com/demo/chat_presales=1; expires=03 Jul 2036 21:44:38 GMT; domain=.templatemonster.com; path=/ (from https://www.templatemonster.com/demo/63845.html)
+17:18:33	Warning: 	Retry after error 500 (Internal Server Error) at link https://www.templatemonster.com/demo/callback_notice=closed; expires=03 Jul 2036 21:44:38 GMT; domain=.templatemonster.com; path=/ (from https://www.templatemonster.com/demo/63845.html)
+17:18:57	Warning: 	Retry after error -4 (No data (connection closed)) at link https://s.tmimgcdn.com/img/segmentation-popup/window.png (from https://s.tmimgcdn.com/css/standalone/livedemo.css?d=1a63017)
+17:18:57	Warning: 	Retry after error -4 (No data (connection closed)) at link https://s.tmimgcdn.com/img/segmentation-popup/triangles.png (from https://s.tmimgcdn.com/css/standalone/livedemo.css?d=1a63017)
+17:18:57	Warning: 	Retry after error 500 (Internal Server Error) at link https://www.templatemonster.com/demo/chat_presales=1; expires=03 Jul 2036 21:44:38 GMT; domain=.templatemonster.com; path=/ (from https://www.templatemonster.com/demo/63845.html)
+17:18:58	Warning: 	Retry after error 500 (Internal Server Error) at link https://www.templatemonster.com/demo/callback_notice=closed; expires=03 Jul 2036 21:44:38 GMT; domain=.templatemonster.com; path=/ (from https://www.templatemonster.com/demo/63845.html)
+17:19:00	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/$&/ (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:00	Warning: 	Retry after error 500 (Internal Server Error) at link https://www.templatemonster.com/demo/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/ (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:00	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/map.js (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:00	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/call_get.js (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:00	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/using.js (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:00	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/timers.js (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:00	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/generators.js (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:01	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/nodeify.js (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:01	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/promisify.js (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:01	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/props.js (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:01	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/race.js (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:01	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/reduce.js (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:01	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/settle.js (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:01	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/some.js (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:01	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/filter.js (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:01	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/each.js (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:01	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/any.js (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:01	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/require (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:01	Error: 	"Not Found" (404) at link https://www.templatemonster.com/demo/@@History/ (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:01	Error: 	"Internal Server Error" (500) after 2 retries at link https://www.templatemonster.com/demo/chat_presales=1; expires=03 Jul 2036 21:44:38 GMT; domain=.templatemonster.com; path=/ (from https://www.templatemonster.com/demo/63845.html)
+17:19:01	Error: 	"Internal Server Error" (500) after 2 retries at link https://www.templatemonster.com/demo/callback_notice=closed; expires=03 Jul 2036 21:44:38 GMT; domain=.templatemonster.com; path=/ (from https://www.templatemonster.com/demo/63845.html)
+17:19:01	Warning: 	Retry after error 500 (Internal Server Error) at link https://www.templatemonster.com/demo/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/ (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+17:19:02	Error: 	"Internal Server Error" (500) after 2 retries at link https://www.templatemonster.com/demo/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/ (from https://s.tmimgcdn.com/js/plasma-pocket-react/monsterBundle.js?d=61e3506)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 21 seconds : 68 links scanned, 36 files written (4616200 bytes overall) [2196863 bytes received at 27121 bytes/sec], 4794427 bytes transferred using HTTP compression in 29 files, ratio 37%, 3.5 requests per connection
+(22 errors, 9 warnings, 0 messages)

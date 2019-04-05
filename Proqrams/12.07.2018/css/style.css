@@ -1,0 +1,25 @@
+@font-face{
+    font-family: Roboto;
+    src: url("../Fonts/Roboto-Black.woff");
+}
+.list_of_icons{
+    list-style-type: none;
+ 
+    
+}
+.list_of_icons {
+    font-size: 30px;
+    line-height: 40px;
+    color: lightgreen;
+   
+}
+table {
+    border-style: solid;
+    padding: 10px;
+    margin: 100px;
+    border-color: black;
+}
+td{
+    font-family: Roboto;
+   
+}

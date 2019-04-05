@@ -1,0 +1,207 @@
+#footer-widget{
+    background-color: $color-black;
+    padding-top: 70px; 
+    h3{
+        color: $color-white;
+        font-weight: 400;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    h3::after{
+        display: block;
+        content: "";
+        height: 1px;
+        background: $color-white;
+        width: 50px;
+        position: absolute;
+        bottom: -1px;
+    }
+    p{
+        color: $color-card;
+    }
+    .widget-news{
+        
+
+        .widget-popular-news{
+            
+            h4{
+                font-size: $font-size+1;
+                margin: 10px 0;
+                line-height: 1.5px;
+                padding-top: 12px;
+                a{
+                    text-decoration: none;
+                    color: $color-card;
+                    &:hover{
+                        color: $color-white;
+                    }
+                }
+            }
+            p{
+                margin-bottom: 5px;
+                font-style: italic;
+                font-size: ($font-size)-3;
+            }
+        }
+    }
+    .widget-category{
+
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li{
+                display: block;
+                font-size: $font-size-s;
+                padding: 0px 15px 5px 20px;
+                position: relative;
+
+                a{
+                    text-decoration: none;
+                    color: $color-card;
+                    &:hover{
+                        color: $color-white;
+                    }
+                }
+                span{
+                    float: right;
+                    color: $color-card;
+                }
+            }
+            li::before{
+                color: $color-white;
+                content: "\f105";
+                display: inline-block;
+                font-family: 'Font Awesome 5 Free';
+                font-size: 13px;
+                left: 3px;
+                position: absolute;
+                top: 2px;
+                font-weight: 900;
+            }
+        }
+    }
+    
+    .widget-gallery{
+        .gallery-col{
+            padding: 0;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+        .gallery-widget{
+            margin: 0;
+            padding: 5px;
+            a{
+                img{
+                    max-width: 100%;
+                }
+            }
+        }
+
+      
+    }
+
+
+    //footer menu
+    .footer-bottom-menu{
+        padding: 30px 0;
+    }
+
+    .footer-menu{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        margin-left: -45px;
+        li{
+            display: inline-block;
+            a{
+                text-decoration: none;
+                color: $color-card;
+                display: block;
+                margin-right: 15px;
+                text-transform: capitalize;
+    
+                padding: 5px 0;
+
+                &:hover{
+                    color: $color;
+                }
+            }
+        }
+    }
+
+    .footer-sosial{
+        
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li{
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                border: 2px solid $color-card;
+                border-radius: 50%;
+                text-align: center;
+                margin: 0 5px;
+                @include transition (all,0.5s);
+                a{
+                  line-height: 35px;
+                  font-size: $font-size;
+                  color:darken($color-effet-2,20%);
+                  
+              }
+                &:hover{
+                    a{
+                        
+                        color: $color-white;
+                    }
+                }
+                &.facebook:hover{
+                    background-color: $facebook;
+                    border: 2px solid $facebook;
+
+                }
+                &.twitter:hover{
+                    background-color: $twitter;
+                    border: 2px solid $twitter;
+
+                }
+                &.linkedin:hover{
+                    background-color: $linkedin;
+                    border: 2px solid $linkedin;
+
+                }
+                &.instagram:hover{
+                    background-color: $instagram;
+                    border: 2px solid $instagram;
+
+                }
+                &.vimeo:hover{
+                    background-color: $vimeo;
+                    border: 2px solid $vimeo;
+
+                }
+                &.dribble:hover{
+                    background-color: $dribble;
+                    border: 2px solid $dribble;
+
+                }
+            }
+        }
+    
+}
+
+
+@media screen and (max-width: 520px) {
+    #footer-widget{
+        .footer-menu{
+            margin-left:20px !important;
+        }   
+        .footer-sosial{
+            margin: 0 12px;
+        }
+    }
+}

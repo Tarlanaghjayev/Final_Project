@@ -1,0 +1,48 @@
+#contact{
+    background-image: url("../../img/map-image.png");
+    background-color: black;
+    height: 700px;
+    .main{
+        h2{
+            margin-left: 38%;
+            margin-top: 128px;
+            color: white;
+        }
+        h3{
+            color: white;
+            font-size: 15px;
+            margin-left: 4%;
+            margin-top: -34px;
+        }
+    }
+    .row{
+        position: relative;
+    .l3{
+        position: absolute;
+        top: 58px;
+        input{
+            font-size: 40px;
+            border: 1px solid $primary-color;
+            border-radius: 3%;
+            z-index: 5;
+            height: 46px;
+            margin-top: 27px;
+        }
+    }
+    .l1{
+        input{
+            font-size: 42px;
+            border: 1px solid  $primary-color;
+            border-radius: 3%;
+            z-index: 5;
+            margin-left: 98%;
+            height: 200px;
+            position: absolute;
+            top: 79px;
+        }
+    }
+    .btn-primaryy{
+        color: white;
+        padding: 17px;
+    }
+}}

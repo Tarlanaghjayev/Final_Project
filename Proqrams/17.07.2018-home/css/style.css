@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: roboto;
+    height: 1000px;
+}
+@font-face{
+    font-family: roboto;
+    src: url(Roboto-Black.woff);
+}
+.container{
+    width: 100%;
+    height: 100px;
+}
+.container .sol h3{
+    margin-left: 120px;
+    margin-top: 0px;
+}
+.container .orta .item{
+margin-left: 33%;
+margin-top: -35px;
+}
+.container .orta .item ul li{
+    display: inline;
+    padding: 10px;
+    position: relative;
+}
+.container .sag .item{
+    margin-left: 933px;
+    margin-top: -30px;
+    }
+.container .sag .item ul li{
+    display:inline;
+    padding: 20px;
+}
+.container .sag .item .pro{
+    border: 10px solid #52e652;
+    background-color: #52e652;
+    border-radius: 10%;
+    padding: 1px;
+}
+.container .orta .item li::before {
+	content: '';
+	position: absolute;
+	background-color: #52e652; 
+	width: 10px;
+	height: 3px;
+	bottom: -2px;
+	transition: all 0.5s;
+}
+.container .orta .item li:hover::before {
+	width: 50px;
+}
+.container .sag .item ul li:hover {
+	text-decoration: underline;
+ }

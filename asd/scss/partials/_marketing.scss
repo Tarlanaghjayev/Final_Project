@@ -1,0 +1,63 @@
+#marketing{
+    position: relative;
+    background-image: url("../img/features.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 87vh;
+
+    .market-content{
+        position: relative;
+
+        a{
+            padding: 25px 0;
+            position: relative;
+            height: 95px;
+            width: 95px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: $color-white;
+            color: $color;
+            margin: 0 auto 25px;
+            font-size: $font-size*2;
+            @include transition(all,0.5s);
+            display: block;
+            margin-right: 40px;
+            float: left;
+        }
+        a::after{
+            content: '';
+            position: absolute;
+            width: 103px;
+            height: 103px;
+            border-radius: 50%;
+            top: -4px;
+            left: -4px;
+            padding: 8px;
+            pointer-events: none;
+            border: 5px solid $color-after;
+           
+            @include transition(all,0.5s);
+        }
+        a:hover::after{
+            @include transform(scale(1.2));
+        }
+
+        .market-text{
+            display: flex;
+            flex-direction: column;
+            h3{
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+            p{
+                color: darken($color-effet-2, 40%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #marketing{
+        height: 125vh;
+    }
+}

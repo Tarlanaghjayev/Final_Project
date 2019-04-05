@@ -1,0 +1,40 @@
+#buy{
+    position: relative;
+    
+    
+    .container{
+        height: 20vh;
+        background-color: $color-black;
+        padding: 50px 40px;
+    }
+    
+    .buy-content{
+        display: flex;
+        justify-content: space-between;
+        h2{
+            display: inline;
+            color: $color-white;
+            font-size: $font-size*2.2
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    
+    #buy{
+        .container{
+            height: 30vh;
+        }
+        .buy-content{
+            display: block;
+            text-align: center;
+            a{
+                height: 43px;
+            }
+            h2{
+                font-size: $font-size*1.5;
+                display: block;
+            }
+        }
+    }
+}

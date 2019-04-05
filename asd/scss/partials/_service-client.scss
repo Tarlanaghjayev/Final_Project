@@ -1,0 +1,36 @@
+#service-client{
+    position: relative;
+    .title{
+       // position: absolute;
+       h2{
+           font-family: $font-family-second;
+           font-weight: 600;
+           font-size: $font-size*2; 
+           margin-bottom: 10px;
+       }
+     span{
+        height: 3px;
+        width: 80px;
+        margin: 0 0 15px;
+        border-bottom: 2px solid $color;
+        position: relative;
+        display: inline-block;
+        
+     }
+     span::after{
+        content: "";
+        border-bottom: 2px solid $color;
+        width: 45px;
+        height: 2px;
+        display: block;
+        margin: 5px auto;
+     }
+     p{
+         font-size: $font-size;
+         margin: 0 auto 6px;
+         letter-spacing: 1.5px;
+         font-family: $font-family-second;
+         color: darken( $color-effet-2,40%);
+     }
+    }
+}

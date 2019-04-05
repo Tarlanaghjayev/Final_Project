@@ -1,0 +1,287 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url("../pic.jpg");
+    background-repeat: repeat;
+
+}
+.main{
+    position: relative;
+}
+.main .sun{ 
+    position: absolute;
+    background-color: rgba(255, 153, 0, 0.897);
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    margin: auto;
+    left: 650px;
+    top: 300px;
+    border: none;
+    box-shadow: 0 0 50px #c90;
+}
+.Mercury{
+    position: absolute;
+    border-color: grey;
+    border-style: solid;
+    border-width: 2px;
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    margin: auto;
+    left: 629px;
+    top: 278px;
+    animation-name: period;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.Venus{
+    position: absolute;
+    border-color: grey;
+    border-style: solid;
+    border-width: 2px;
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    margin: auto;
+    left: 605px;
+    top: 252px;
+    animation-name: period;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.World{
+    position: absolute;
+    border-color: grey;
+    border-style: solid;
+    border-width: 2px;
+    height: 170px;
+    width: 170px;
+    border-radius: 100%;
+    margin: auto;
+    left: 580px;
+    top: 226px;
+    animation-name: period;
+    animation-duration: 17s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.Mars{
+    position: absolute;
+    border-color: grey;
+    border-style: solid;
+    border-width: 2px;
+    height: 220px;
+    width: 220px;
+    border-radius: 100%;
+    margin: auto;
+    left: 555px;
+    top: 201px;
+    animation-name: period;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.Jupiter{
+    position: absolute;
+    border-color: grey;
+    border-style: solid;
+    border-width: 2px;
+    height: 270px;
+    width: 270px;
+    border-radius: 100%;
+    margin: auto; 
+    left: 531px;
+    top: 177px;
+    animation-name: period;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.Saturn{
+    position: absolute;
+    border-color: grey;
+    border-style: solid;
+    border-width: 2px;
+    height: 320px;
+    width: 320px;
+    border-radius: 100%;
+    margin: auto; 
+    left: 506px;
+    top: 152px;
+    animation-name: period;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.Uran{
+    position: absolute;
+    border-color: grey;
+    border-style: solid;
+    border-width: 2px;
+    height: 370px;
+    width: 370px;
+    border-radius: 100%;
+    margin: auto;
+    left: 481px;
+    top: 128px;
+    animation-name: period;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.Neptun{
+    position: absolute;
+    border-color: grey;
+    border-style: solid;
+    border-width: 2px;
+    height: 420px;
+    width: 420px;
+    border-radius: 100%;
+    margin: auto;
+    left: 456px;
+    top: 105px;
+    animation-name: period;
+    animation-duration: 85s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.Pluton{
+    position: absolute;
+    border-color: grey;
+    border-style: solid;
+    border-width: 2px;
+    height: 470px;
+    width: 470px;
+    border-radius: 100%;
+    margin: auto;
+    left: 430px;
+    top: 79px;
+    animation-name: period;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes period {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.Mercury .litmer{
+    width: 12px;
+    height: 12px;
+    border-style: solid;
+    background-color: wheat;
+    border-color: wheat;
+    border-radius: 100%;
+}
+.Venus .litven{
+    width: 12px;
+    height: 12px;
+    border-style: solid;
+    background-color: #bf8639;
+    border-color: #bf8639;
+    border-radius: 100%;
+    margin-left: 24px;
+}
+.Mars .litmars{
+    width: 12px;
+    height: 12px;
+    border-style: solid;
+    background-color: orangered;
+    border-color: orangered;
+    border-radius: 100%;
+    margin-left: 60px;
+}
+.Jupiter .litjup{    
+    width: 12px;
+    height: 12px;
+    border-style: solid;
+    background-color: #e0ae6f;
+    border-color: #e0ae6f;
+    border-radius: 100%;
+    margin-left: 80px;
+}
+.Saturn .litsat{
+    width: 15px;
+    height: 15px;
+    border-style: solid;
+    background-color: #dfd3a9;
+    border-color: #dfd3a9;
+    border-radius: 60%;
+    margin-left: 105px;
+}
+.Saturn .litsat2{
+    width: 22px;
+    height: 20px;
+    border-style: solid;
+    border-color: #a8934e;
+    border-radius: 62%;
+    margin-left: 101px;
+    margin-top: -19px;
+    border-width: 2px;
+    transform: skewX(57deg);
+}
+.Uran .lituran{
+    width: 12px;
+    height: 12px;
+    border-style: solid;
+    background-color: #82b3d1;
+    border-color: #82b3d1;
+    border-radius: 100%;
+    margin-left: 127px;
+}
+.Neptun .litnep{
+    width: 12px;
+    height: 12px;
+    border-style: solid;
+    background-color: #77c2ec;
+    border-color: #77c2ec;
+    border-radius: 100%;
+    margin-left: 146px;
+}
+.Pluton .litplut{
+    width: 12px;
+    height: 12px;
+    border-style: solid;
+    background-color: #7c6a5c;
+    border-color: #7c6a5c;
+    border-radius: 100%;
+    margin-left: 164px;
+}
+
+.World .litwor{
+    width: 12px;
+    height: 12px;
+    border-style: solid;
+    background-color: #06c;
+    border-color: #06c;
+    border-radius: 100%;
+    margin-left: 42px;
+    position: absolute;
+    animation-name: period;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.World .litwor .moon{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-style: solid;
+    background-color: #ccc;
+    border-color: #ccc;
+    border-radius: 100%;
+    margin-left: 12px;
+    animation-name: period;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+

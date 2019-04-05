@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:https://github.com/chartjs/Chart.js/releases</id>
+  <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/releases"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/chartjs/Chart.js/releases.atom"/>
+  <title>Tags from Chart.js</title>
+  <updated>2019-03-14T13:03:00Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/8843683/v2.8.0</id>
+    <updated>2019-03-14T13:08:23Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/chartjs/Chart.js/releases/tag/v2.8.0"/>
+    <title>Version 2.8.0</title>
+    <content></content>
+    <author>
+      <name>chartjs-ci</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/21282473?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/8843683/v2.8.0-rc.1</id>
+    <updated>2019-03-04T13:54:52Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/chartjs/Chart.js/releases/tag/v2.8.0-rc.1"/>
+    <title>v2.8.0-rc.1</title>
+    <content></content>
+    <author>
+      <name>chartjs-ci</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/21282473?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/8843683/v2.7.3</id>
+    <updated>2018-10-15T17:21:11Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/chartjs/Chart.js/releases/tag/v2.7.3"/>
+    <title>Version 2.7.3</title>
+    <content></content>
+    <author>
+      <name>chartjs-ci</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/21282473?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/8843683/v2.7.2</id>
+    <updated>2018-03-01T21:51:29Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/chartjs/Chart.js/releases/tag/v2.7.2"/>
+    <title>Version 2.7.2</title>
+    <content></content>
+    <author>
+      <name>chartjs-ci</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/21282473?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/8843683/v2.7.1</id>
+    <updated>2018-01-13T22:00:42Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/chartjs/Chart.js/releases/tag/v2.7.1"/>
+    <title>Version 2.7.1</title>
+    <content></content>
+    <author>
+      <name>chartjs-ci</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/21282473?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/8843683/v2.7.0</id>
+    <updated>2018-01-13T22:01:04Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/chartjs/Chart.js/releases/tag/v2.7.0"/>
+    <title>Version 2.7.0</title>
+    <content></content>
+    <author>
+      <name>chartjs-ci</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/21282473?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/8843683/v2.6.0</id>
+    <updated>2017-09-10T10:27:46Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/chartjs/Chart.js/releases/tag/v2.6.0"/>
+    <title>Version 2.6.0</title>
+    <content></content>
+    <author>
+      <name>chartjs-ci</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/21282473?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/8843683/v2.5.0</id>
+    <updated>2017-09-10T10:28:11Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/chartjs/Chart.js/releases/tag/v2.5.0"/>
+    <title>Version 2.5.0</title>
+    <content></content>
+    <author>
+      <name>chartjs-ci</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/21282473?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/8843683/v2.4.0</id>
+    <updated>2016-11-15T14:45:08Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/chartjs/Chart.js/releases/tag/v2.4.0"/>
+    <title>Version 2.4.0</title>
+    <content></content>
+    <author>
+      <name>chartjs-ci</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/21282473?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/8843683/v2.3.0</id>
+    <updated>2017-01-17T10:26:05Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/chartjs/Chart.js/releases/tag/v2.3.0"/>
+    <title>Version 2.3.0</title>
+    <content></content>
+    <author>
+      <name>chartjs-ci</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/21282473?s=60&amp;v=4"/>
+  </entry>
+</feed>

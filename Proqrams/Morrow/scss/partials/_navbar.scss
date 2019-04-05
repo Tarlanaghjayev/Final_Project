@@ -1,0 +1,29 @@
+header{
+    .fixed-top{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background: $primary-color;}
+    padding: 15px 0px;
+    width: 100%;
+    border-radius: 0px;
+    z-index: 999;
+    margin-bottom: 0px;
+    transition: all 0.5;
+    h3{
+        font-size: 28px;
+        color: white;
+    }
+    ul{
+        list-style-type: none;
+        margin-top: 10px;
+        margin-left: 100px;
+        li{
+            display: inline;
+            padding: 0px 8px;
+            color: $helper-color;
+        }
+    }
+}

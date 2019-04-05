@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/chartjs/Chart.js/commits/55128f74c1518ac82189c0acba2a6b40f77bf698</id>
+  <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commits/55128f74c1518ac82189c0acba2a6b40f77bf698"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/chartjs/Chart.js/commits/55128f74c1518ac82189c0acba2a6b40f77bf698.atom"/>
+  <title>Recent Commits to Chart.js:55128f74c1518ac82189c0acba2a6b40f77bf698</title>
+  <updated>2019-02-08T18:06:04Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/55128f74c1518ac82189c0acba2a6b40f77bf698</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/55128f74c1518ac82189c0acba2a6b40f77bf698"/>
+    <title>
+        Move CSS in a separate file to be CSP-compliant (#6048)
+    </title>
+    <updated>2019-02-08T18:06:04Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Move CSS in a separate file to be CSP-compliant (#6048)
+
+In order to be compatible with any CSP, we need to prevent the automatic creation of the DOM &amp;#39;style&amp;#39; element and offer our CSS as a separate file that can be manually loaded (`Chart.js` or `Chart.min.js`). Users can now opt-out the style injection using `Chart.platform.disableCSSInjection = true` (note that the style sheet is now injected on the first chart creation).
+
+To prevent duplicating and maintaining the same CSS code at different places, move all these rules in `platform.dom.css` and write a minimal rollup plugin to inject that style as string in `platform.dom.js`. Additionally, this plugin extract the imported style in `./dist/Chart.js` and `./dist/Chart.min.js`.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c6c4db79068e70d84f9207d0fb1daed289de6dd2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/c6c4db79068e70d84f9207d0fb1daed289de6dd2"/>
+    <title>
+        Simplify and cleanup the scale _autoskip method (#6043)
+    </title>
+    <updated>2019-02-08T06:10:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Simplify and cleanup the scale _autoskip method (#6043)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/7c11c81d961751db1499a35e3f163b56d4d65ab1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/7c11c81d961751db1499a35e3f163b56d4d65ab1"/>
+    <title>
+        Fix broken markdown link in &#39;line&#39; docs (#6053)
+    </title>
+    <updated>2019-02-08T06:06:17Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/26232823?s=30&amp;v=4"/>
+    <author>
+      <name>janelledement</name>
+      <uri>https://github.com/janelledement</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix broken markdown link in &amp;#39;line&amp;#39; docs (#6053)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cbb7ff7754a0a1619b77a481f6e715c0975c1e6b</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/cbb7ff7754a0a1619b77a481f6e715c0975c1e6b"/>
+    <title>
+        Rename addEventListener and removeEventListener (#6046)
+    </title>
+    <updated>2019-02-06T07:26:53Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/27971921?s=30&amp;v=4"/>
+    <author>
+      <name>kurkle</name>
+      <uri>https://github.com/kurkle</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Rename addEventListener and removeEventListener (#6046)
+
+Prevent conflict with `window.addEventListener` and `window.removeEventListener` (global scope).&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/765c432dfaa1c6472caf9d52926177c48761bd32</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/765c432dfaa1c6472caf9d52926177c48761bd32"/>
+    <title>
+        Fix duplicate anchor (#6038)
+    </title>
+    <updated>2019-02-05T01:00:44Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix duplicate anchor (#6038)
+
+* Fix broken documentation anchors
+
+* Revert changes to installation docs&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/945d91aee2ee09ced5d420dd4325bebba1f39d60</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/945d91aee2ee09ced5d420dd4325bebba1f39d60"/>
+    <title>
+        Provide a rectangle getArea implementation for horizontal bars (#6027)
+    </title>
+    <updated>2019-02-04T08:56:38Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Provide a rectangle getArea implementation for horizontal bars (#6027)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/93d5ac9a311282517a03b47ca9b54be7847aef0f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/93d5ac9a311282517a03b47ca9b54be7847aef0f"/>
+    <title>
+        Remove unused eslint directive (#6040)
+    </title>
+    <updated>2019-02-04T07:19:40Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Remove unused eslint directive (#6040)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/6e9e52afacae801f6247a321c4fe2e01afc0eaab</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/6e9e52afacae801f6247a321c4fe2e01afc0eaab"/>
+    <title>
+        Fix padding of horizontal axes when labels are rotated (#6021)
+    </title>
+    <updated>2019-02-02T08:46:27Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/27971921?s=30&amp;v=4"/>
+    <author>
+      <name>kurkle</name>
+      <uri>https://github.com/kurkle</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix padding of horizontal axes when labels are rotated (#6021)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a2521e54ee0fab58345e0fca71998d8dd98347a3</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/a2521e54ee0fab58345e0fca71998d8dd98347a3"/>
+    <title>
+        Replace deprecated gulp-util and remove unused watchify (#6032)
+    </title>
+    <updated>2019-02-02T01:03:31Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Replace deprecated gulp-util and remove unused watchify (#6032)
+
+* Replace deprecated gulp-util and remove unused watchify
+
+* Remove logging&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/80a159eb9d18c0435ce1d58d04d64baa3ad246e1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/80a159eb9d18c0435ce1d58d04d64baa3ad246e1"/>
+    <title>
+        Enforce tooltip item `label` and `value` to be strings (#6030)
+    </title>
+    <updated>2019-02-01T08:21:53Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/723188?s=30&amp;v=4"/>
+    <author>
+      <name>nagix</name>
+      <uri>https://github.com/nagix</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Enforce tooltip item `label` and `value` to be strings (#6030)
+
+Also update the docs for `xLabel` and `yLabel` to also accept a `number`.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/97da221f27b41d48e243549372ed15137e34bb3e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/97da221f27b41d48e243549372ed15137e34bb3e"/>
+    <title>
+        Prevent infinite resize when vertical scrollbar appears (#6011)
+    </title>
+    <updated>2019-01-30T10:48:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/27971921?s=30&amp;v=4"/>
+    <author>
+      <name>kurkle</name>
+      <uri>https://github.com/kurkle</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Prevent infinite resize when vertical scrollbar appears (#6011)
+
+If the container size shrank during chart resize, let&amp;#39;s assume scrollbar appeared. So we resize again with the scrollbar visible effectively making chart smaller and the scrollbar hidden again. Because we are inside `throttled`, and currently `ticking`, scroll events are ignored during this whole 2 resize process. If we assumed wrong and something else happened, we are resizing twice in a frame (potential performance issue)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/29f7fa23bbb3a241d2ab609d33ce5d8ca50c5348</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/29f7fa23bbb3a241d2ab609d33ce5d8ca50c5348"/>
+    <title>
+        Replace tooltip item xLabel and yLabel with label and value (#5996)
+    </title>
+    <updated>2019-01-30T10:41:19Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/27971921?s=30&amp;v=4"/>
+    <author>
+      <name>kurkle</name>
+      <uri>https://github.com/kurkle</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Replace tooltip item xLabel and yLabel with label and value (#5996)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/fee44cfeef541a72916d0af39797fef0b6c7a90e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/fee44cfeef541a72916d0af39797fef0b6c7a90e"/>
+    <title>
+        Omit inconsistent note about scriptable options (#6026)
+    </title>
+    <updated>2019-01-30T08:24:26Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/26232823?s=30&amp;v=4"/>
+    <author>
+      <name>janelledement</name>
+      <uri>https://github.com/janelledement</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Omit inconsistent note about scriptable options (#6026)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e07c5d0c6c39e621fbe79de39d6e2de66da1cd9a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/e07c5d0c6c39e621fbe79de39d6e2de66da1cd9a"/>
+    <title>
+        Make moment optional from our UMD builds (#5978)
+    </title>
+    <updated>2019-01-29T16:54:22Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Make moment optional from our UMD builds (#5978)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0697d0de9073c456565c9deeb20cb36d85e858c9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/0697d0de9073c456565c9deeb20cb36d85e858c9"/>
+    <title>
+        Deprecate configMerge and scaleMerge helpers (#6022)
+    </title>
+    <updated>2019-01-29T16:52:21Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Deprecate configMerge and scaleMerge helpers (#6022)
+
+These methods shouldn&amp;#39;t have been public since they are specific to the chart controller internal logic. Note that this scale custom merging will be removed in v3.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/17f6fd2340f0728339626179c2780228ff64675f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/17f6fd2340f0728339626179c2780228ff64675f"/>
+    <title>
+        Common logic for resolving line element options (#6005)
+    </title>
+    <updated>2019-01-29T13:45:56Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Common logic for resolving line element options (#6005)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0d01bcf5cca3a85c97305ad44925113cdead9c74</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/0d01bcf5cca3a85c97305ad44925113cdead9c74"/>
+    <title>
+        Fix typos and make the docs consistent (#6020)
+    </title>
+    <updated>2019-01-29T12:34:16Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/723188?s=30&amp;v=4"/>
+    <author>
+      <name>nagix</name>
+      <uri>https://github.com/nagix</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix typos and make the docs consistent (#6020)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/72b7a613a6292cbc07b20834dcb07b55bf9474c7</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/72b7a613a6292cbc07b20834dcb07b55bf9474c7"/>
+    <title>
+        Fix typo in test utils comment (#6017)
+    </title>
+    <updated>2019-01-28T18:40:07Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix typo in test utils comment (#6017)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e6a0c8690981de60d789f74e605f6d6b4557e3f6</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/e6a0c8690981de60d789f74e605f6d6b4557e3f6"/>
+    <title>
+        Fix pointBackgroundColor in radar sample (#6013)
+    </title>
+    <updated>2019-01-25T10:48:01Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/27971921?s=30&amp;v=4"/>
+    <author>
+      <name>kurkle</name>
+      <uri>https://github.com/kurkle</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix pointBackgroundColor in radar sample (#6013)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/05e9627510d938e29cc1b7bd8707088d530f7510</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/05e9627510d938e29cc1b7bd8707088d530f7510"/>
+    <title>
+        Supply correct start param for insertElements in onDataPush (#6008)
+    </title>
+    <updated>2019-01-25T09:27:22Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/27971921?s=30&amp;v=4"/>
+    <author>
+      <name>kurkle</name>
+      <uri>https://github.com/kurkle</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Supply correct start param for insertElements in onDataPush (#6008)&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

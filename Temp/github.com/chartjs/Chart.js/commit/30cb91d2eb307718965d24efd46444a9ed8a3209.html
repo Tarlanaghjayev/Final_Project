@@ -1,0 +1,2183 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from github.com/chartjs/Chart.js/commit/30cb91d2eb307718965d24efd46444a9ed8a3209 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2019 12:22:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://github.githubassets.com/">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com/">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-7uoDIEGQ8zTwUS9KjTP+/2I13FQPHvJ9EKoeUThfin5R1+27bcUC08VQzUo4CIjCdhvJM4zxuI+3HcSycAUTCg==" rel="stylesheet" href="../../../../github.githubassets.com/assets/frameworks-abba74d6e28a6842788159fec056bf26.css" />
+  <link crossorigin="anonymous" media="all" integrity="sha512-nZcL+1Szltbs1e7IMsmzRupcqmH76PIz0/h4jLIAVX74TKAU11YfzKPWpkO/H9OmtVyKnkpjDXItEWBdT3BPtQ==" rel="stylesheet" href="../../../../github.githubassets.com/assets/site-16d020fbc43a8c23c1f051eac510157b.css" />
+    <link crossorigin="anonymous" media="all" integrity="sha512-MW+ZMyZsppet8jpCeuRf6R6ep2YA21uRlAaPeUHmlRvWDbX08i+17kchJwAVY4kws762vLl2VtxFx3kOq0nvGg==" rel="stylesheet" href="../../../../github.githubassets.com/assets/github-7b38ea66ce7a8e79d6a0cad4c9d34684.css" />
+    
+    
+    
+    
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Demonstrate multiple units on financial timeseries sample (#6119) · chartjs/Chart.js@30cb91d · GitHub</title>
+    <meta name="description" content="Simple HTML5 Charts using the &lt;canvas&gt; tag. Contribute to chartjs/Chart.js development by creating an account on GitHub.">
+    <link rel="search" type="application/opensearchdescription+xml" href="../../../opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="../../../fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta property="og:image" content="https://avatars1.githubusercontent.com/u/322311?s=200&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="Demonstrate multiple units on financial timeseries sample (#6119) · chartjs/Chart.js@30cb91d" /><meta property="og:url" content="30cb91d2eb307718965d24efd46444a9ed8a3209.html" /><meta property="og:updated_time" content="1553756197" />
+
+  <link rel="assets" href="https://github.githubassets.com/">
+  
+  <meta name="pjax-timeout" content="1000">
+  
+  <meta name="request-id" content="C68A:1306:9FC50:132C8E:5CA09F0B" data-pjax-transient>
+
+
+  
+
+  <meta name="selected-link" value="repo_commits" data-pjax-transient>
+
+      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="C68A:1306:9FC50:132C8E:5CA09F0B" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" />
+<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/commit/show" data-pjax-transient="true" />
+
+
+
+    <meta name="google-analytics" content="UA-3769691-2">
+
+
+<meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="MDE5NjBjNDY1NmY1NWMxYzU3Y2M3NTdkOWQwYmU1Y2QyNzA1YzBmNzg1ODkwMjU0YTEzMWFmNmVhZDk2MGUwMnx7InJlbW90ZV9hZGRyZXNzIjoiODkuMTQ3LjIwNC4xOCIsInJlcXVlc3RfaWQiOiJDNjhBOjEzMDY6OUZDNTA6MTMyQzhFOjVDQTA5RjBCIiwidGltZXN0YW1wIjoxNTU0MDMwMzQ4LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+
+    <meta name="enabled-features" content="UNIVERSE_BANNER,MARKETPLACE_SOCIAL_PROOF,MARKETPLACE_SOCIAL_PROOF_CUSTOMERS,MARKETPLACE_TRENDING_SOCIAL_PROOF,MARKETPLACE_UNVERIFIED_LISTINGS,MARKETPLACE_PLAN_RESTRICTION_EDITOR">
+
+  <meta name="html-safe-nonce" content="ee97f887d1bf4f38f8a733561d4bb990d7e882a1">
+
+  <meta http-equiv="x-pjax-version" content="0fe86af0669e69ffd4e01406c614081e">
+  
+
+      <link href="30cb91d2eb307718965d24efd46444a9ed8a3209.diff" rel="alternate" type="text/plain+diff" data-pjax-transient="true" />
+  <link href="30cb91d2eb307718965d24efd46444a9ed8a3209.patch" rel="alternate" type="text/plain+patch" data-pjax-transient="true" />
+
+  <meta name="diff-view" content="unified" data-pjax-transient>
+  <link href="../commits/30cb91d2eb307718965d24efd46444a9ed8a3209.atom" rel="alternate" title="Recent Commits to Chart.js:30cb91d2eb307718965d24efd46444a9ed8a3209" type="application/atom+xml">
+      <meta name="robots" content="noindex, nofollow" />
+
+  <meta name="go-import" content="github.com/chartjs/Chart.js git https://github.com/chartjs/Chart.js.git">
+
+  <meta name="octolytics-dimension-user_id" content="10342521" /><meta name="octolytics-dimension-user_login" content="chartjs" /><meta name="octolytics-dimension-repository_id" content="8843683" /><meta name="octolytics-dimension-repository_nwo" content="https://github.com/chartjs/Chart.js/commit/chartjs/Chart.js" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="8843683" /><meta name="octolytics-dimension-repository_network_root_nwo" content="https://github.com/chartjs/Chart.js/commit/chartjs/Chart.js" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
+
+
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+
+
+  <link rel="manifest" href="https://github.com/manifest.json" crossOrigin="use-credentials">
+
+  </head>
+
+  <body class="logged-out env-production">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="px-2 py-4 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+        
+<header class="Header-old header-logged-out  position-relative f4 py-2" role="banner">
+  <div class="container-lg d-flex px-3">
+    <div class="d-flex flex-justify-between flex-items-center">
+        <a class="mr-4" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+          <svg height="32" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+    </div>
+
+    <div class="HeaderMenu HeaderMenu--logged-out d-flex flex-justify-between flex-items-center flex-auto">
+      <div class="d-none">
+        <button class="btn-link js-details-target" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <svg height="24" class="octicon octicon-x text-gray" viewBox="0 0 12 16" version="1.1" width="18" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+        </button>
+      </div>
+
+        <nav class="mt-0" aria-label="Global">
+          <ul class="d-flex list-style-none">
+              <li class=" mr-3 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
+                <details class="HeaderMenu-details details-overlay details-reset width-full">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap  d-inline-block">
+                    Why GitHub?
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
+                      <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 mt-0  p-4 left-n4 position-absolute">
+                    <a href="https://github.com/features" class="py-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Features">Features <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a>
+                    <ul class="list-style-none f5 pb-3">
+                      <li class="edge-item-fix"><a href="https://github.com/features/code-review/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Code review">Code review</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features/project-management/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Project management">Project management</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features/integrations" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Integrations">Integrations</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features/actions" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Actions">Actions</a>
+                      <li class="edge-item-fix"><a href="https://github.com/features#team-management" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Team management">Team management</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features#social-coding" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Social coding">Social coding</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features#documentation" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Documentation">Documentation</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features#code-hosting" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Code hosting">Code hosting</a></li>
+                    </ul>
+
+                    <ul class="list-style-none mb-0 border-lg-top pt-lg-3">
+                      <li class="edge-item-fix"><a href="https://github.com/customer-stories" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Customer stories">Customer stories <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/security" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Security">Security <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+              <li class=" mr-3 mr-lg-3">
+                <a href="https://github.com/enterprise" class="HeaderMenu-link no-underline py-3 d-block d-lg-inline-block" data-ga-click="(Logged out) Header, go to Enterprise">Enterprise</a>
+              </li>
+
+              <li class=" mr-3 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
+                <details class="HeaderMenu-details details-overlay details-reset width-full">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap  d-inline-block">
+                    Explore
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
+                      <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 pt-2 pb-0 mt-0  p-4 left-n4 position-absolute">
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="https://github.com/explore" class="py-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Explore">Explore GitHub <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                    </ul>
+
+                    <h4 class="text-gray-light text-normal text-mono f5 mb-2  border-top pt-3">Learn &amp; contribute</h4>
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="https://github.com/topics" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Topics">Topics</a></li>
+                        <li class="edge-item-fix"><a href="https://github.com/collections" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Collections">Collections</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/trending" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Trending">Trending</a></li>
+                      <li class="edge-item-fix"><a href="https://lab.github.com/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Learning lab">Learning Lab</a></li>
+                      <li class="edge-item-fix"><a href="https://opensource.guide/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Open source guides">Open source guides</a></li>
+                    </ul>
+
+                    <h4 class="text-gray-light text-normal text-mono f5 mb-2  border-top pt-3">Connect with others</h4>
+                    <ul class="list-style-none mb-0">
+                      <li class="edge-item-fix"><a href="https://github.com/events" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Events">Events</a></li>
+                      <li class="edge-item-fix"><a href="https://github.community/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Community forum">Community forum</a></li>
+                      <li class="edge-item-fix"><a href="https://education.github.com/" class="py-2 pb-0 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to GitHub Education">GitHub Education</a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+
+              <li class=" mr-3 mr-lg-3">
+                <a href="https://github.com/marketplace" class="HeaderMenu-link no-underline py-3 d-block d-lg-inline-block" data-ga-click="(Logged out) Header, go to Marketplace">Marketplace</a>
+              </li>
+
+              <li class=" mr-3 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
+                <details class="HeaderMenu-details details-overlay details-reset width-full">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap  d-inline-block">
+                    Pricing
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
+                       <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 pt-2 pb-4 mt-0  p-4 left-n4 position-absolute">
+                    <a href="https://github.com/pricing" class="pb-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Pricing">Plans <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a>
+
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="https://github.com/pricing#feature-comparison" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Compare plans">Compare plans</a></li>
+                      <li class="edge-item-fix"><a href="https://enterprise.github.com/contact" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Contact Sales">Contact Sales</a></li>
+                    </ul>
+
+                    <ul class="list-style-none mb-0  border-top pt-3">
+                      <li class="edge-item-fix"><a href="https://github.com/nonprofit" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Nonprofits">Nonprofit <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                      <li class="edge-item-fix"><a href="https://education.github.com/" class="py-2 pb-0 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover"  data-ga-click="(Logged out) Header, go to Education">Education <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+          </ul>
+        </nav>
+
+      <div class="d-flex flex-items-center px-0 text-center text-left">
+          <div class="d-lg-flex ">
+            <div class="header-search mr-3 scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+  role="combobox"
+  aria-owns="jump-to-results"
+  aria-label="Search or jump to"
+  aria-haspopup="listbox"
+  aria-expanded="false"
+>
+  <div class="position-relative">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-site-search-form" role="search" aria-label="Site" data-scope-type="Repository" data-scope-id="8843683" data-scoped-search-url="/chartjs/Chart.js/search" data-unscoped-search-url="/search" action="https://github.com/chartjs/Chart.js/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <label class="form-control input-sm header-search-wrapper p-0 header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
+        <input type="text"
+          class="form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+          data-hotkey="s,/"
+          name="q"
+          value=""
+          placeholder="Search"
+          data-unscoped-placeholder="Search GitHub"
+          data-scoped-placeholder="Search"
+          autocapitalize="off"
+          aria-autocomplete="list"
+          aria-controls="jump-to-results"
+          aria-label="Search"
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=oZACFUhNO/SAtb/U5I1JUHohHWNG8FHRFRaX9Rb8SxSQ2819fsOUVv5aKlYOIFXGwND8O1gT2znZvgP5+j17bw=="
+          spellcheck="false"
+          autocomplete="off"
+          >
+          <input type="hidden" class="js-site-search-type-field" name="type" >
+            <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
+
+            <div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container">
+              
+<ul class="d-none js-jump-to-suggestions-template-container">
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-suggestion" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="#">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="#" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+</ul>
+
+<ul class="d-none js-jump-to-no-results-template-container">
+  <li class="d-flex flex-justify-center flex-items-center f5 d-none js-jump-to-suggestion p-2">
+    <span class="text-gray">No suggested jump to results</span>
+  </li>
+</ul>
+
+<ul id="jump-to-results" role="listbox" class="p-0 m-0 js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container">
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-scoped-search d-none" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="#">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="#" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-global-search d-none" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="#">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="#" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+
+</ul>
+
+            </div>
+      </label>
+</form>  </div>
+</div>
+
+          </div>
+
+        <a class="HeaderMenu-link no-underline mr-3" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;C68A:1306:9FC50:132C8E:5CA09F0B&quot;,&quot;originating_url&quot;:&quot;https://github.com/chartjs/Chart.js/commit/30cb91d2eb307718965d24efd46444a9ed8a3209&quot;,&quot;referrer&quot;:&quot;http://github.com/chartjs/Chart.js&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="84bb21ce57303f000084bf52afcb79ddcd18967b0d968f4368fd86b5d034e064" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in" href="https://github.com/login?return_to=%2Fchartjs%2FChart.js%2Fcommit%2F30cb91d2eb307718965d24efd46444a9ed8a3209">
+          Sign&nbsp;in
+</a>          <a class="HeaderMenu-link d-inline-block no-underline border border-gray-dark rounded-1 px-2 py-1" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;C68A:1306:9FC50:132C8E:5CA09F0B&quot;,&quot;originating_url&quot;:&quot;https://github.com/chartjs/Chart.js/commit/30cb91d2eb307718965d24efd46444a9ed8a3209&quot;,&quot;referrer&quot;:&quot;http://github.com/chartjs/Chart.js&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="16ff9f20021de967f9e5835c5caea2e16a9b5246f393f3c21851cd4601e5cd00" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up" href="https://github.com/join">
+            Sign&nbsp;up
+</a>      </div>
+    </div>
+  </div>
+</header>
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+
+</div>
+
+
+
+  <div class="application-main " data-commit-hovercards-enabled>
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <main id="js-repo-pjax-container" data-pjax-container >
+      
+
+  
+
+
+
+  
+
+
+
+
+  <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav  ">
+    <div class="repohead-details-container clearfix container">
+
+      <ul class="pagehead-actions">
+
+
+
+  <li>
+    
+  <a class="tooltipped tooltipped-s btn btn-sm btn-with-count" aria-label="You must be signed in to watch a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;notification subscription menu watch&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;C68A:1306:9FC50:132C8E:5CA09F0B&quot;,&quot;originating_url&quot;:&quot;https://github.com/chartjs/Chart.js/commit/30cb91d2eb307718965d24efd46444a9ed8a3209&quot;,&quot;referrer&quot;:&quot;http://github.com/chartjs/Chart.js&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="7d3fd97641ab0d641bb8bde940a583745c83a243f476d429a492ea395dd7c6f7" href="https://github.com/login?return_to=%2Fchartjs%2FChart.js">
+    <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+    Watch
+</a>    <a class="social-count" href="https://github.com/chartjs/Chart.js/watchers"
+       aria-label="1474 users are watching this repository">
+      1,474
+    </a>
+
+  </li>
+
+  <li>
+        <a class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to star a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:8843683,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;C68A:1306:9FC50:132C8E:5CA09F0B&quot;,&quot;originating_url&quot;:&quot;https://github.com/chartjs/Chart.js/commit/30cb91d2eb307718965d24efd46444a9ed8a3209&quot;,&quot;referrer&quot;:&quot;http://github.com/chartjs/Chart.js&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="58c9187c10411d05cd489e9368c8c6e7bdb45134befaaf599f0b07dce53bfca5" href="https://github.com/login?return_to=%2Fchartjs%2FChart.js">
+      <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+      Star
+</a>
+    <a class="social-count js-social-count" href="https://github.com/chartjs/Chart.js/stargazers"
+      aria-label="42653 users starred this repository">
+      42,653
+    </a>
+
+  </li>
+
+  <li>
+      <a class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to fork a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;repo details fork button&quot;,&quot;repository_id&quot;:8843683,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;C68A:1306:9FC50:132C8E:5CA09F0B&quot;,&quot;originating_url&quot;:&quot;https://github.com/chartjs/Chart.js/commit/30cb91d2eb307718965d24efd46444a9ed8a3209&quot;,&quot;referrer&quot;:&quot;http://github.com/chartjs/Chart.js&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="dc21dbefa71fd32a020fd2a4895e834410ae00c1cc10cfaabf44e3d9ecddf72b" href="https://github.com/login?return_to=%2Fchartjs%2FChart.js">
+        <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+        Fork
+</a>
+    <a href="https://github.com/chartjs/Chart.js/network/members" class="social-count"
+       aria-label="9450 users forked this repository">
+      9,450
+    </a>
+  </li>
+</ul>
+
+      <h1 class="public ">
+  <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+  <span class="author" itemprop="author"><a class="url fn" rel="author" data-hovercard-type="organization" data-hovercard-url="/orgs/chartjs/hovercard" href="https://github.com/chartjs">chartjs</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a data-pjax="#js-repo-pjax-container" href="https://github.com/chartjs/Chart.js">Chart.js</a></strong>
+
+</h1>
+
+    </div>
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax container"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+    aria-label="Repository"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a class="js-selected-navigation-item selected reponav-item" itemprop="url" data-hotkey="g c" aria-current="page" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /chartjs/Chart.js" href="https://github.com/chartjs/Chart.js">
+      <svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a itemprop="url" data-hotkey="g i" class="js-selected-navigation-item reponav-item" data-selected-links="repo_issues repo_labels repo_milestones /chartjs/Chart.js/issues" href="https://github.com/chartjs/Chart.js/issues">
+        <svg class="octicon octicon-issue-opened" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
+        <span itemprop="name">Issues</span>
+        <span class="Counter">430</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a data-hotkey="g p" itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /chartjs/Chart.js/pulls" href="https://github.com/chartjs/Chart.js/pulls">
+      <svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">27</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+
+
+
+
+    <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse alerts security people /chartjs/Chart.js/pulse" href="https://github.com/chartjs/Chart.js/pulse">
+      <svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
+      Insights
+</a>
+
+</nav>
+
+
+  </div>
+<div class="container new-discussion-timeline experiment-repo-nav  ">
+  <div class="repository-content ">
+
+    
+    
+  <a href="https://github.com/chartjs/Chart.js/commit/30cb91d2eb307718965d24efd46444a9ed8a3209" class="d-none js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+
+  
+
+  
+<div class="commit full-commit px-2 pt-2 ">
+  <a href="https://github.com/chartjs/Chart.js/tree/30cb91d2eb307718965d24efd46444a9ed8a3209" class="btn btn-outline float-right" title="Browse the repository at this point in the history" rel="nofollow">Browse files</a>
+
+    <p class="commit-title">
+      Demonstrate multiple units on financial timeseries sample (<a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="418536806" data-permission-text="Issue title is private" data-url="https://github.com/chartjs/Chart.js/issues/6119" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/6119/hovercard" href="https://github.com/chartjs/Chart.js/pull/6119">#6119</a>)
+    </p>
+
+
+  <div class="commit-branches">
+  <include-fragment src="https://github.com/chartjs/Chart.js/branch_commits/30cb91d2eb307718965d24efd46444a9ed8a3209">
+    <svg class="octicon octicon-git-branch" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+    <ul class="branches-list">
+      <li class="loading">Loading branch information<span class="animated-ellipsis-container"><span class="animated-ellipsis">...</span></span></li>
+    </ul>
+</include-fragment></div>
+
+
+  <div class="commit-meta p-2 d-flex flex-wrap">
+    
+<div class="AvatarStack flex-self-start AvatarStack--two">
+  <div class="AvatarStack-body" aria-label="benmccann and simonbrunel (non-author committer)">
+        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=322311" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/benmccann">
+          <img height="20" width="20" alt="@benmccann" src="https://avatars1.githubusercontent.com/u/322311?s=60&amp;v=4" />
+</a>        <a class="avatar" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=3874900" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/simonbrunel">
+          <img height="20" width="20" alt="@simonbrunel" src="https://avatars1.githubusercontent.com/u/3874900?s=60&amp;v=4" />
+</a>  </div>
+</div>
+
+    <div class="flex-self-start no-wrap">
+      
+      <a href="https://github.com/chartjs/Chart.js/commits?author=benmccann"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by benmccann">benmccann</a>
+
+
+  authored and   <a href="https://github.com/chartjs/Chart.js/commits?author=simonbrunel"
+     class="commit-author tooltipped tooltipped-s user-mention"
+     aria-label="View all commits by simonbrunel">simonbrunel</a>
+
+  committed
+  <relative-time datetime="2019-03-28T06:56:37Z">Mar 28, 2019</relative-time>
+
+      
+
+    </div>
+    <div class="flex-auto no-wrap text-right">
+      <span class="sha-block" data-pjax>
+        1 parent
+          
+          <a class="sha" data-hotkey="p" href="https://github.com/chartjs/Chart.js/commit/07fae6159e20392a4a883b0b463dde756c2957ae">07fae61</a>
+      </span>
+      <span class="sha-block">commit <span class="sha user-select-contain">30cb91d2eb307718965d24efd46444a9ed8a3209</span></span>
+    </div>
+  </div>
+</div>
+
+
+
+
+      <a name="diff-stat"></a>
+      <div id="toc" class="details-collapse table-of-contents js-details-container Details">
+  <div class="BtnGroup float-right" data-ga-load="Diff, view, Viewed Unified Diff">
+  <a class="btn btn-sm BtnGroup-item selected"
+    aria-current="true"
+    href="https://github.com/chartjs/Chart.js/commit/30cb91d2eb307718965d24efd46444a9ed8a3209?diff=unified">
+    Unified
+  </a>
+  <a class="btn btn-sm BtnGroup-item"
+    
+    href="https://github.com/chartjs/Chart.js/commit/30cb91d2eb307718965d24efd46444a9ed8a3209?diff=split">
+    Split
+  </a>
+</div>
+
+
+  <div class="toc-diff-stats">
+    <svg class="octicon octicon-diff" viewBox="0 0 13 16" version="1.1" width="13" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6 7h2v1H6v2H5V8H3V7h2V5h1v2zm-3 6h5v-1H3v1zM7.5 2L11 5.5V15c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h6.5zM10 6L7 3H1v12h9V6zM8.5 0H3v1h5l4 4v8h1V4.5L8.5 0z"/></svg>
+    Showing
+    <button type="button" class="btn-link js-details-target" aria-expanded="false">
+      1 changed file
+    </button>
+    with
+    <strong>34 additions</strong>
+    and <strong>20 deletions</strong>.
+  </div>
+
+  <ol class="content collapse js-transitionable">
+    <li>
+      <span class="diffstat float-right">
+          <span class="text-green">
+            +34
+          </span>
+          <span class="text-red">
+            −20
+          </span>
+          <a href="#diff-db3be446183f54993ae9021bedc0079c" class="tooltipped tooltipped-s" aria-label="54 lines changed">
+            <span class="block-diff-added"></span><span class="block-diff-added"></span><span class="block-diff-added"></span><span class="block-diff-deleted"></span><span class="block-diff-neutral"></span>
+          </a>
+      </span>
+      <svg title="modified" class="octicon octicon-diff-modified" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M13 1H1c-.55 0-1 .45-1 1v12c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 13H1V2h12v12zM4 8c0-1.66 1.34-3 3-3s3 1.34 3 3-1.34 3-3 3-3-1.34-3-3z"/></svg>
+      <a href="#diff-db3be446183f54993ae9021bedc0079c">samples/scales/time/financial.html</a>
+    </li>
+  </ol>
+</div>
+
+    <div id="files" class="diff-view ">
+
+  <div class="js-diff-progressive-container">
+    
+<a name="diff-db3be446183f54993ae9021bedc0079c"></a>
+<div id="diff-0"
+     class="file js-file js-details-container Details
+              Details--on open
+             
+             
+             
+             
+             
+              show-inline-notes
+           "
+          data-file-type=".html"
+          data-file-deleted="false"
+      >
+  <div class="file-header file-header--expandable js-file-header "
+    data-path="https://github.com/chartjs/Chart.js/commit/samples/scales/time/financial.html"
+    data-short-path="db3be44"
+    data-anchor="diff-db3be446183f54993ae9021bedc0079c"
+    data-file-type=".html"
+    data-file-deleted="false"
+    >
+    <div class="file-actions">
+
+        <span class="show-file-notes pt-1">
+          <label>
+            <input type="checkbox" checked="checked" class="js-toggle-file-notes">
+            Show comments
+          </label>
+        </span>
+
+
+
+          <div class="BtnGroup">
+            <a href="https://github.com/chartjs/Chart.js/blob/30cb91d2eb307718965d24efd46444a9ed8a3209/samples/scales/time/financial.html"
+              class="btn btn-sm BtnGroup-item"
+              rel="nofollow"
+              >
+              View file
+            </a>
+          </div>
+
+
+
+      <button type="button" class="btn-octicon p-1 pr-2 js-details-target tooltipped tooltipped-w" aria-label="Toggle diff contents" aria-expanded="true">
+        <svg class="octicon octicon-chevron-down Details-content--hidden" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5 11L0 6l1.5-1.5L5 8.25 8.5 4.5 10 6l-5 5z"/></svg>
+        <svg class="octicon octicon-chevron-up Details-content--shown" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 10l-1.5 1.5L5 7.75 1.5 11.5 0 10l5-5 5 5z"/></svg>
+      </button>
+    </div>
+    <div class="file-info">
+        <span class="diffstat tooltipped tooltipped-e" aria-label="34 additions &amp; 20 deletions">54 <span class="block-diff-added"></span><span class="block-diff-added"></span><span class="block-diff-added"></span><span class="block-diff-deleted"></span><span class="block-diff-neutral"></span></span>
+
+      <a href="#diff-db3be446183f54993ae9021bedc0079c" class="link-gray-dark"
+         title="samples/scales/time/financial.html">samples/scales/time/financial.html</a>
+
+
+      
+    </div>
+
+  </div>
+  <div class="js-file-content Details-content--hidden">
+        <div class="data highlight js-blob-wrapper " style="overflow-x: auto">
+          <table class="diff-table js-diff-table tab-size  " data-tab-size="4" data-diff-anchor="diff-db3be446183f54993ae9021bedc0079c">
+
+                
+      <tr class="js-expandable-line" data-position="0">
+    <td class="blob-num blob-num-expandable" colspan="2">
+          <a href="#diff-db3be446183f54993ae9021bedc0079c"
+              class="js-expand directional-expander single-expander" title="Expand Up" aria-label="Expand Up"
+              data-url="/chartjs/Chart.js/blob_excerpt/02d3a8a3b2ec4dd0056f7522bcb5a0f01a3276d1?diff=unified&amp;direction=up&amp;in_wiki_context=&amp;last_left=&amp;last_right=&amp;left=26&amp;left_hunk_size=29&amp;mode=100644&amp;path=samples%2Fscales%2Ftime%2Ffinancial.html&amp;right=26&amp;right_hunk_size=41"
+              data-left-range="1-25" data-right-range="1-25">
+            <svg class="octicon octicon-fold-up" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 6L7 3 4 6h2v6h2V6h2zm4 0c0-.55-.45-1-1-1h-2.5l1 1h1l-2 2H9v1h1.5l2 2H9v1h4c.55 0 1-.45 1-1l-2.5-2.5L14 6zM3.5 8H5v1H3.5l-2 2H5v1H1c-.55 0-1-.45-1-1l2.5-2.5L0 6c0-.55.45-1 1-1h2.5l-1 1h-1l2 2z"/></svg>
+          </a>
+    </td>
+    <td class="blob-code blob-code-inner blob-code-hunk" colspan="2">@@ -26,29 +26,41 @@</td>
+  </tr>
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL26" data-line-number="26"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR26" data-line-number="26"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'>		&lt;<span class="pl-ent">option</span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>line<span class="pl-pds">&quot;</span></span>&gt;Line&lt;/<span class="pl-ent">option</span>&gt;</span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL27" data-line-number="27"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR27" data-line-number="27"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'>		&lt;<span class="pl-ent">option</span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>bar<span class="pl-pds">&quot;</span></span>&gt;Bar&lt;/<span class="pl-ent">option</span>&gt;</span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL28" data-line-number="28"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR28" data-line-number="28"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'>	&lt;/<span class="pl-ent">select</span>&gt;</span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR29" data-line-number="29"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'>	&lt;<span class="pl-ent">select</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>unit<span class="pl-pds">&quot;</span></span>&gt;</span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR30" data-line-number="30"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'>		&lt;<span class="pl-ent">option</span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>second<span class="pl-pds">&quot;</span></span>&gt;Second&lt;/<span class="pl-ent">option</span>&gt;</span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR31" data-line-number="31"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'>		&lt;<span class="pl-ent">option</span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>minute<span class="pl-pds">&quot;</span></span>&gt;Minute&lt;/<span class="pl-ent">option</span>&gt;</span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR32" data-line-number="32"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'>		&lt;<span class="pl-ent">option</span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>hour<span class="pl-pds">&quot;</span></span>&gt;Hour&lt;/<span class="pl-ent">option</span>&gt;</span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR33" data-line-number="33"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'>		&lt;<span class="pl-ent">option</span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>day<span class="pl-pds">&quot;</span></span> <span class="pl-e">selected</span>&gt;Day&lt;/<span class="pl-ent">option</span>&gt;</span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR34" data-line-number="34"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'>		&lt;<span class="pl-ent">option</span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>month<span class="pl-pds">&quot;</span></span>&gt;Month&lt;/<span class="pl-ent">option</span>&gt;</span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR35" data-line-number="35"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'>		&lt;<span class="pl-ent">option</span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>year<span class="pl-pds">&quot;</span></span>&gt;Year&lt;/<span class="pl-ent">option</span>&gt;</span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR36" data-line-number="36"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'>	&lt;/<span class="pl-ent">select</span>&gt;</span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL29" data-line-number="29"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR37" data-line-number="37"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'>	&lt;<span class="pl-ent">button</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>update<span class="pl-pds">&quot;</span></span>&gt;update&lt;/<span class="pl-ent">button</span>&gt;</span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL30" data-line-number="30"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR38" data-line-number="38"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'>	&lt;<span class="pl-ent">script</span>&gt;<span class="pl-s1"></span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL31" data-line-number="31"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">		<span class="pl-k">function</span> <span class="pl-en">randomNumber</span>(<span class="pl-smi">min</span>, <span class="pl-smi">max</span>) {</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL32" data-line-number="32"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-k">return</span> <span class="pl-c1">Math</span>.<span class="pl-c1">random</span>() <span class="pl-k">*</span> (max <span class="pl-k">-</span> min) <span class="pl-k">+</span> min;</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL33" data-line-number="33"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">		}</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR39" data-line-number="39"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">		<span class="pl-k">function</span> <span class="pl-en">generateData</span>() {</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR40" data-line-number="40"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-k">function</span> <span class="pl-en">randomNumber</span>(<span class="pl-smi">min</span>, <span class="pl-smi">max</span>) {</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR41" data-line-number="41"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">				<span class="pl-k">return</span> <span class="pl-c1">Math</span>.<span class="pl-c1">random</span>() <span class="pl-k">*</span> (max <span class="pl-k">-</span> min) <span class="pl-k">+</span> min;</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR42" data-line-number="42"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">			}</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL34" data-line-number="34"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR43" data-line-number="43"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1"></span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL35" data-line-number="35"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">		<span class="pl-k">function</span> <span class="pl-en">randomBar</span>(<span class="pl-smi">date</span>, <span class="pl-smi">lastClose</span>) {</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL36" data-line-number="36"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-k">var</span> open <span class="pl-k">=</span> <span class="pl-en">randomNumber</span>(lastClose <span class="pl-k">*</span> <span class="pl-c1">0.95</span>, lastClose <span class="pl-k">*</span> <span class="pl-c1">1.05</span>).<span class="pl-en">toFixed</span>(<span class="pl-c1">2</span>);</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL37" data-line-number="37"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-k">var</span> close <span class="pl-k">=</span> <span class="pl-en">randomNumber</span>(open <span class="pl-k">*</span> <span class="pl-c1">0.95</span>, open <span class="pl-k">*</span> <span class="pl-c1">1.05</span>).<span class="pl-en">toFixed</span>(<span class="pl-c1">2</span>);</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL38" data-line-number="38"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-k">return</span> {</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL39" data-line-number="39"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">				t<span class="pl-k">:</span> <span class="pl-smi">date</span>.<span class="pl-c1">valueOf</span>(),</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL40" data-line-number="40"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">				y<span class="pl-k">:</span> close</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL41" data-line-number="41"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">			};</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL42" data-line-number="42"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">		}</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR44" data-line-number="44"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">		<span class="x x-first x-last">	</span><span class="pl-k">function</span> <span class="pl-en">randomBar</span>(<span class="pl-smi">date</span>, <span class="pl-smi">lastClose</span>) {</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR45" data-line-number="45"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="x x-first x-last">	</span><span class="pl-k">var</span> open <span class="pl-k">=</span> <span class="pl-en">randomNumber</span>(lastClose <span class="pl-k">*</span> <span class="pl-c1">0.95</span>, lastClose <span class="pl-k">*</span> <span class="pl-c1">1.05</span>).<span class="pl-en">toFixed</span>(<span class="pl-c1">2</span>);</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR46" data-line-number="46"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="x x-first x-last">	</span><span class="pl-k">var</span> close <span class="pl-k">=</span> <span class="pl-en">randomNumber</span>(open <span class="pl-k">*</span> <span class="pl-c1">0.95</span>, open <span class="pl-k">*</span> <span class="pl-c1">1.05</span>).<span class="pl-en">toFixed</span>(<span class="pl-c1">2</span>);</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR47" data-line-number="47"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="x x-first x-last">	</span><span class="pl-k">return</span> {</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR48" data-line-number="48"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">				<span class="x x-first x-last">	</span>t<span class="pl-k">:</span> <span class="pl-smi">date</span>.<span class="pl-c1">valueOf</span>(),</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR49" data-line-number="49"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">				<span class="x x-first x-last">	</span>y<span class="pl-k">:</span> close</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR50" data-line-number="50"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="x x-first x-last">	</span>};</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR51" data-line-number="51"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">		<span class="x x-first x-last">	</span>}</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL43" data-line-number="43"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR52" data-line-number="52"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1"></span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL44" data-line-number="44"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">		<span class="pl-k">var</span> dateFormat <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span>MMMM DD YYYY<span class="pl-pds">&#39;</span></span>;</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL45" data-line-number="45"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">		<span class="pl-k">var</span> date <span class="pl-k">=</span> <span class="pl-en">moment</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>April 01 2017<span class="pl-pds">&#39;</span></span>, dateFormat);</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL46" data-line-number="46"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">		<span class="pl-k">var</span> data <span class="pl-k">=</span> [<span class="pl-en">randomBar</span>(date, <span class="pl-c1">30</span>)];</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL47" data-line-number="47"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">		<span class="pl-k">while</span> (<span class="pl-smi">data</span>.<span class="pl-c1">length</span> <span class="pl-k">&lt;</span> <span class="pl-c1">60</span>) {</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL48" data-line-number="48"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">			date <span class="pl-k">=</span> <span class="pl-smi">date</span>.<span class="pl-en">clone</span>().<span class="pl-c1">add</span>(<span class="pl-c1">1</span>, <span class="pl-s"><span class="pl-pds">&#39;</span>d<span class="pl-pds">&#39;</span></span>);</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL49" data-line-number="49"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-k">if</span> (<span class="pl-smi">date</span>.<span class="pl-en">isoWeekday</span>() <span class="pl-k">&lt;=</span> <span class="pl-c1">5</span>) {</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL50" data-line-number="50"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">				<span class="pl-smi">data</span>.<span class="pl-c1">push</span>(<span class="pl-en">randomBar</span>(date, data[<span class="pl-smi">data</span>.<span class="pl-c1">length</span> <span class="pl-k">-</span> <span class="pl-c1">1</span>].<span class="pl-c1">y</span>));</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR53" data-line-number="53"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-k">var</span> date <span class="pl-k">=</span> <span class="pl-en">moment</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>Jan 01 1990<span class="pl-pds">&#39;</span></span>, <span class="pl-s"><span class="pl-pds">&#39;</span>MMM DD YYYY<span class="pl-pds">&#39;</span></span>);</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR54" data-line-number="54"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-k">var</span> now <span class="pl-k">=</span> <span class="pl-en">moment</span>();</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR55" data-line-number="55"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-k">var</span> data <span class="pl-k">=</span> [<span class="pl-en">randomBar</span>(date, <span class="pl-c1">30</span>)];</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR56" data-line-number="56"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-k">var</span> unit <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>unit<span class="pl-pds">&#39;</span></span>).<span class="pl-c1">value</span>;</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR57" data-line-number="57"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-k">for</span> (; <span class="pl-smi">data</span>.<span class="pl-c1">length</span> <span class="pl-k">&lt;</span> <span class="pl-c1">60</span> <span class="pl-k">&amp;&amp;</span> <span class="pl-smi">date</span>.<span class="pl-en">isBefore</span>(now); date <span class="pl-k">=</span> <span class="pl-smi">date</span>.<span class="pl-en">clone</span>().<span class="pl-c1">add</span>(<span class="pl-c1">1</span>, unit)) {</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR58" data-line-number="58"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">				<span class="pl-k">if</span> (<span class="pl-smi">date</span>.<span class="pl-en">isoWeekday</span>() <span class="pl-k">&lt;=</span> <span class="pl-c1">5</span>) {</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR59" data-line-number="59"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">					<span class="pl-smi">data</span>.<span class="pl-c1">push</span>(<span class="pl-en">randomBar</span>(date, data[<span class="pl-smi">data</span>.<span class="pl-c1">length</span> <span class="pl-k">-</span> <span class="pl-c1">1</span>].<span class="pl-c1">y</span>));</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR60" data-line-number="60"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">				}</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL51" data-line-number="51"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR61" data-line-number="61"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1">			}</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR62" data-line-number="62"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1"></span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR63" data-line-number="63"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-k">return</span> data;</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL52" data-line-number="52"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR64" data-line-number="64"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1">		}</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL53" data-line-number="53"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR65" data-line-number="65"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1"></span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL54" data-line-number="54"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR66" data-line-number="66"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1">		<span class="pl-k">var</span> ctx <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>chart1<span class="pl-pds">&#39;</span></span>).<span class="pl-c1">getContext</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>2d<span class="pl-pds">&#39;</span></span>);</span></span></td>
+</tr>
+
+
+
+      <tr class="js-expandable-line" data-position="60">
+    <td class="blob-num blob-num-expandable" colspan="2">
+        <a href="#diff-db3be446183f54993ae9021bedc0079c"
+              class="js-expand directional-expander single-expander" title="Expand All" aria-label="Expand All"
+              data-url="/chartjs/Chart.js/blob_excerpt/02d3a8a3b2ec4dd0056f7522bcb5a0f01a3276d1?diff=unified&amp;in_wiki_context=&amp;last_left=54&amp;last_right=66&amp;left=63&amp;left_hunk_size=7&amp;mode=100644&amp;path=samples%2Fscales%2Ftime%2Ffinancial.html&amp;right=75&amp;right_hunk_size=7"
+              data-left-range="55-57" data-right-range="67-69">
+          <svg class="octicon octicon-unfold" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11.5 7.5L14 10c0 .55-.45 1-1 1H9v-1h3.5l-2-2h-7l-2 2H5v1H1c-.55 0-1-.45-1-1l2.5-2.5L0 5c0-.55.45-1 1-1h4v1H1.5l2 2h7l2-2H9V4h4c.55 0 1 .45 1 1l-2.5 2.5zM6 6h2V3h2L7 0 4 3h2v3zm2 3H6v3H4l3 3 3-3H8V9z"/></svg>
+        </a>
+    </td>
+    <td class="blob-code blob-code-inner blob-code-hunk" colspan="2">@@ -63,7 +75,7 @@</td>
+  </tr>
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL63" data-line-number="63"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR75" data-line-number="75"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1">					label<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&#39;</span>CHRT - Chart.js Corporation<span class="pl-pds">&#39;</span></span>,</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL64" data-line-number="64"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR76" data-line-number="76"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1">					backgroundColor<span class="pl-k">:</span> <span class="pl-en">color</span>(<span class="pl-c1">window</span>.<span class="pl-smi">chartColors</span>.<span class="pl-smi">red</span>).<span class="pl-en">alpha</span>(<span class="pl-c1">0.5</span>).<span class="pl-en">rgbString</span>(),</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL65" data-line-number="65"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR77" data-line-number="77"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1">					borderColor<span class="pl-k">:</span> <span class="pl-c1">window</span>.<span class="pl-smi">chartColors</span>.<span class="pl-smi">red</span>,</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL66" data-line-number="66"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">					data<span class="pl-k">:</span> <span class="x x-first x-last">data</span>,</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR78" data-line-number="78"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">					data<span class="pl-k">:</span> <span class="pl-en x x-first">generateData</span><span class="x x-last">()</span>,</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL67" data-line-number="67"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR79" data-line-number="79"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1">					type<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&#39;</span>line<span class="pl-pds">&#39;</span></span>,</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL68" data-line-number="68"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR80" data-line-number="80"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1">					pointRadius<span class="pl-k">:</span> <span class="pl-c1">0</span>,</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL69" data-line-number="69"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR81" data-line-number="81"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1">					fill<span class="pl-k">:</span> <span class="pl-c1">false</span>,</span></span></td>
+</tr>
+
+
+
+      <tr class="js-expandable-line" data-position="69">
+    <td class="blob-num blob-num-expandable" colspan="2">
+          <a href="#diff-db3be446183f54993ae9021bedc0079c"
+                class="js-expand directional-expander" title="Expand Down" aria-label="Expand Down"
+                data-url="/chartjs/Chart.js/blob_excerpt/02d3a8a3b2ec4dd0056f7522bcb5a0f01a3276d1?diff=unified&amp;direction=down&amp;in_wiki_context=&amp;last_left=69&amp;last_right=81&amp;left=109&amp;left_hunk_size=7&amp;mode=100644&amp;path=samples%2Fscales%2Ftime%2Ffinancial.html&amp;right=121&amp;right_hunk_size=9"
+                data-left-range="70-88" data-right-range="82-100">
+            <svg class="octicon octicon-fold-down" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 11l3 3 3-3H8V5H6v6H4zm-4 0c0 .55.45 1 1 1h2.5l-1-1h-1l2-2H5V8H3.5l-2-2H5V5H1c-.55 0-1 .45-1 1l2.5 2.5L0 11zm10.5-2H9V8h1.5l2-2H9V5h4c.55 0 1 .45 1 1l-2.5 2.5L14 11c0 .55-.45 1-1 1h-2.5l1-1h1l-2-2z"/></svg>
+          </a>
+          <a href="#diff-db3be446183f54993ae9021bedc0079c"
+              class="js-expand directional-expander" title="Expand Up" aria-label="Expand Up"
+              data-url="/chartjs/Chart.js/blob_excerpt/02d3a8a3b2ec4dd0056f7522bcb5a0f01a3276d1?diff=unified&amp;direction=up&amp;in_wiki_context=&amp;last_left=69&amp;last_right=81&amp;left=109&amp;left_hunk_size=7&amp;mode=100644&amp;path=samples%2Fscales%2Ftime%2Ffinancial.html&amp;right=121&amp;right_hunk_size=9"
+              data-left-range="89-108" data-right-range="101-120">
+            <svg class="octicon octicon-fold-up" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 6L7 3 4 6h2v6h2V6h2zm4 0c0-.55-.45-1-1-1h-2.5l1 1h1l-2 2H9v1h1.5l2 2H9v1h4c.55 0 1-.45 1-1l-2.5-2.5L14 6zM3.5 8H5v1H3.5l-2 2H5v1H1c-.55 0-1-.45-1-1l2.5-2.5L0 6c0-.55.45-1 1-1h2.5l-1 1h-1l2 2z"/></svg>
+          </a>
+    </td>
+    <td class="blob-code blob-code-inner blob-code-hunk" colspan="2">@@ -109,7 +121,9 @@</td>
+  </tr>
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL109" data-line-number="109"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR121" data-line-number="121"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1"></span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL110" data-line-number="110"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR122" data-line-number="122"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1">		<span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>update<span class="pl-pds">&#39;</span></span>).<span class="pl-c1">addEventListener</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>click<span class="pl-pds">&#39;</span></span>, <span class="pl-k">function</span>() {</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL111" data-line-number="111"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR123" data-line-number="123"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-k">var</span> type <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>type<span class="pl-pds">&#39;</span></span>).<span class="pl-c1">value</span>;</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL112" data-line-number="112"
+        class="blob-num blob-num-deletion js-linkable-line-number"></td>
+
+    <td class="blob-num blob-num-deletion empty-cell"></td>
+
+  <td class="blob-code blob-code-deletion blob-code-marker-cell"
+      data-code-marker="-">
+  </td>
+
+  <td class="blob-code blob-code-deletion">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-smi">chart</span>.<span class="pl-smi">config</span>.<span class="pl-c1">data</span>.<span class="pl-smi">datasets</span>[<span class="pl-c1">0</span>].<span class="pl-c1">type</span> <span class="pl-k">=</span> type;</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR124" data-line-number="124"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-k">var</span> dataset <span class="pl-k">=</span> <span class="pl-smi">chart</span>.<span class="pl-smi">config</span>.<span class="pl-c1">data</span>.<span class="pl-smi">datasets</span>[<span class="pl-c1">0</span>];</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR125" data-line-number="125"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-smi">dataset</span>.<span class="pl-c1">type</span> <span class="pl-k">=</span> type;</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td class="blob-num blob-num-addition empty-cell"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR126" data-line-number="126"
+        class="blob-num blob-num-addition js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-addition blob-code-marker-cell"
+      data-code-marker="+">
+  </td>
+
+  <td class="blob-code blob-code-addition">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-smi">dataset</span>.<span class="pl-c1">data</span> <span class="pl-k">=</span> <span class="pl-en">generateData</span>();</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL113" data-line-number="113"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR127" data-line-number="127"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1">			<span class="pl-smi">chart</span>.<span class="pl-en">update</span>();</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL114" data-line-number="114"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR128" data-line-number="128"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1">		});</span></span></td>
+</tr>
+
+
+
+    <tr>
+    <td id="diff-db3be446183f54993ae9021bedc0079cL115" data-line-number="115"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+    <td id="diff-db3be446183f54993ae9021bedc0079cR129" data-line-number="129"
+        class="blob-num blob-num-context js-linkable-line-number"></td>
+
+  <td class="blob-code blob-code-context blob-code-marker-cell"
+      data-code-marker=" ">
+  </td>
+
+  <td class="blob-code blob-code-context">
+    <span class='blob-code-inner'><span class="pl-s1"></span></span></td>
+</tr>
+
+
+
+  <tr class="js-expandable-line" data-position="">
+    <td class="blob-num blob-num-expandable" colspan="2">
+          <a href="#diff-db3be446183f54993ae9021bedc0079c"
+                class="js-expand directional-expander single-expander" title="Expand Down" aria-label="Expand Down"
+                data-url="/chartjs/Chart.js/blob_excerpt/02d3a8a3b2ec4dd0056f7522bcb5a0f01a3276d1?diff=unified&amp;direction=down&amp;in_wiki_context=&amp;last_left=115&amp;last_right=129&amp;left=134&amp;left_hunk_size=&amp;mode=100644&amp;path=samples%2Fscales%2Ftime%2Ffinancial.html&amp;right=134&amp;right_hunk_size="
+                data-left-range="116-133" data-right-range="130-133">
+            <svg class="octicon octicon-fold-down" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 11l3 3 3-3H8V5H6v6H4zm-4 0c0 .55.45 1 1 1h2.5l-1-1h-1l2-2H5V8H3.5l-2-2H5V5H1c-.55 0-1 .45-1 1l2.5 2.5L0 11zm10.5-2H9V8h1.5l2-2H9V5h4c.55 0 1 .45 1 1l-2.5 2.5L14 11c0 .55-.45 1-1 1h-2.5l1-1h1l-2-2z"/></svg>
+          </a>
+    </td>
+    <td class="blob-code blob-code-inner blob-code-hunk" colspan="2"></td>
+  </tr>
+
+
+          </table>
+        </div>
+
+  </div>
+</div>
+
+  </div>
+
+</div>
+
+<button type="button" class="js-toggle-all-file-notes" data-hotkey="i" style="display:none">Toggle all file notes</button>
+
+<svg aria-hidden="true" width="340px" height="84px" viewBox="0 0 340 84" version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  class="diff-placeholder-svg position-absolute bottom-0">
+  <defs>
+    <clippath id="diff-placeholder">
+      <rect x="0" y="0" width="67.0175439" height="11.9298746" rx="2"></rect>
+      <rect x="18.9473684" y="47.7194983" width="100.701754" height="11.9298746" rx="2"></rect>
+      <rect x="0" y="71.930126" width="37.8947368" height="11.9298746" rx="2"></rect>
+      <rect x="127.017544" y="48.0703769" width="53.3333333" height="11.9298746" rx="2"></rect>
+      <rect x="187.719298" y="48.0703769" width="72.9824561" height="11.9298746" rx="2"></rect>
+      <rect x="76.8421053" y="0" width="140.350877" height="11.9298746" rx="2"></rect>
+      <rect x="17.8947368" y="23.8597491" width="140.350877" height="11.9298746" rx="2"></rect>
+      <rect x="166.315789" y="23.8597491" width="173.684211" height="11.9298746" rx="2"></rect>
+    </clippath>
+
+    <linearGradient id="animated-diff-gradient" x1="0" x2="0" y1="0" y2="1" spreadMethod="reflect">
+      <stop offset="0" stop-color="#eee"></stop>
+      <stop offset="0.2" stop-color="#eee"></stop>
+      <stop offset="0.5" stop-color="#ddd"></stop>
+      <stop offset="0.8" stop-color="#eee"></stop>
+      <stop offset="1" stop-color="#eee"></stop>
+      <animateTransform attributeName="y1" values="0%; 100%; 0" dur="1s" repeatCount="3"></animateTransform>
+      <animateTransform attributeName="y2" values="100%; 200%; 0" dur="1s" repeatCount="3"></animateTransform>
+    </linearGradient>
+  </defs>
+</svg>
+
+
+
+  <div id="all_commit_comments" class="js-quote-selection-container" data-quote-markdown=".js-comment-body">
+
+    <div class="commit-comments-heading">
+      
+<div id="partial-visible-comments-header">
+  <span class="float-right">
+    
+  </span>
+
+  <h4 class="commit-comment-count">
+    0 comments
+    on commit <code class="commit-sha">30cb91d</code>
+  </h4>
+
+</div>
+
+    </div>
+
+    <div id="comments" class="comment-holder">
+      
+
+
+  <!-- Rendered timeline since 2019-03-27 23:56:37 -->
+  <div id="partial-timeline-marker"
+        class="js-timeline-marker js-socket-channel js-updatable-content"
+        data-channel="repo:8843683:commit:30cb91d2eb307718965d24efd46444a9ed8a3209"
+        data-url="/chartjs/Chart.js/commit/30cb91d2eb307718965d24efd46444a9ed8a3209/show_partial?partial=commit%2Ftimeline_marker&amp;since=1553756197"
+        data-last-modified="Thu, 28 Mar 2019 06:56:37 GMT">
+
+  </div>
+
+    </div>
+
+    
+
+      Please
+  <a rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;commit comment&quot;,&quot;repository_id&quot;:8843683,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;C68A:1306:9FC50:132C8E:5CA09F0B&quot;,&quot;originating_url&quot;:&quot;https://github.com/chartjs/Chart.js/commit/30cb91d2eb307718965d24efd46444a9ed8a3209&quot;,&quot;referrer&quot;:&quot;http://github.com/chartjs/Chart.js&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="5670f0d3839ca1f674e36fa3da60b88114a842873b1add987f790062a539bb2c" href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fchartjs%2FChart.js%2Fcommit%2F30cb91d2eb307718965d24efd46444a9ed8a3209">sign in</a> to comment.
+
+  </div>
+
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </main>
+  </div>
+  
+
+  </div>
+
+        
+<div class="footer container-lg width-full px-3" role="contentinfo">
+  <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap ">
+      <li class="mr-3">&copy; 2019 <span title="0.34711s from unicorn-66f6ff79bc-q5gdz">GitHub</span>, Inc.</li>
+        <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to security, text:security" href="https://github.com/security">Security</a></li>
+        <li class="mr-3"><a href="https://githubstatus.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com/">Help</a></li>
+    </ul>
+
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon mx-lg-4" href="https://github.com/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+   <ul class="list-style-none d-flex flex-wrap ">
+        <li class="mr-3"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
+        <li class="mr-3"><a href="https://github.com/pricing" data-ga-click="Footer, go to Pricing, text:Pricing">Pricing</a></li>
+      <li class="mr-3"><a href="https://developer.github.com/" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3"><a href="https://training.github.com/" data-ga-click="Footer, go to training, text:training">Training</a></li>
+        <li class="mr-3"><a href="https://github.blog/" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
+
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+
+    <script crossorigin="anonymous" integrity="sha512-jFuNBkwlIX73xJbI2nTCs01W/xjwP+Ccc0gEdkD4d/tQBv4xIZx4dZLnkYhzawWhnxjJbvkHsxSXQffNs0Ce4Q==" type="application/javascript" src="https://github.githubassets.com/assets/compat-bootstrap-8102d067.js"></script>
+    <script crossorigin="anonymous" integrity="sha512-m1DeH+jLA0IS/zzy50Kv0yBpZJDQlBkcACJzTGJUq30SG1eo5vztaQg1x1KV1L3XGePC1HOdKU1fu7Ktr+5nsg==" type="application/javascript" src="https://github.githubassets.com/assets/frameworks-3c669c6d.js"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-5fkE5HlHUvjDCSLq2ACLerBiuS+N3x36xiX0Dld1w8J0+IpjD1ddnmRd806jtn+QoMMGkLFSUMXVvMN4JUkZSw==" type="application/javascript" src="https://github.githubassets.com/assets/github-bootstrap-7f581dd4.js"></script>
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner" hidden
+    >
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="#">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="#">Reload</a> to refresh your session.</span>
+  </div>
+  <template id="site-details-dialog">
+  <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark" open>
+    <summary aria-haspopup="dialog" aria-label="Close dialog"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast">
+      <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </button>
+      <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
+    </details-dialog>
+  </details>
+</template>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+  <div aria-live="polite" class="js-global-screen-reader-notice sr-only"></div>
+
+  </body>
+
+<!-- Mirrored from github.com/chartjs/Chart.js/commit/30cb91d2eb307718965d24efd46444a9ed8a3209 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2019 12:22:19 GMT -->
+</html>
+

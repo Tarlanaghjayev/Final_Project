@@ -1,0 +1,33 @@
+.container{
+
+}
+.container  ul{
+
+}
+.container  ul li{
+    list-style: none;
+    font-size: 25px;
+    cursor: pointer;
+    
+}
+.section{
+    padding: 24px;
+    border: 2px solid #adad85;
+    width: 50%;
+    position: relative;
+    background-color: #adad85;
+}
+.section i{
+    position: absolute;
+    top: 32%;
+    right: 5%;
+}
+li p{
+    width: 50%;
+}
+.text{
+    display: none;
+}
+.active{
+    display: block;
+}

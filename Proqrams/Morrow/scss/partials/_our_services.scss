@@ -1,0 +1,56 @@
+.our_services{
+    background: $back-color;
+    margin-top: 61px;
+    .row{
+        .p{
+            font-size: 62px;
+            position: relative;
+            color: rgba(160, 160, 160, 0.14);
+            z-index: 2;
+            margin-bottom: 90px;
+            margin-top: 96px;
+        }
+        h3{
+            position: absolute;
+            z-index: 3;
+            top: 139px;
+            left: 99px;
+        }
+    }
+    .row{
+        .kart{
+            text-align: center;
+            margin-bottom: 50px;
+            background: $helper-color;
+            i{
+                font-size: 32px;
+                height: 65px;
+                color: $secondary-color;
+                width: 65px;
+                display: inline-block;
+                text-align: center;
+                line-height: 65px;
+                border-radius: 50px;
+                border: 2px solid $secondary-color;
+                margin-top: 22px;
+            }
+            h5{
+                margin-top: 30px;
+                margin-bottom: 25px;
+            }
+            p{
+                max-width: 313px;
+                margin-left: 16px;
+            }
+            a{
+                color: $primary-color;
+                text-decoration: none;
+                margin-bottom: 33px;
+                display: inline-block;
+                &:hover{
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}

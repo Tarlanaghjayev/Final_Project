@@ -1,0 +1,23 @@
+#hire{
+    position: relative;
+    .title{
+        // position: absolute;
+        h2{
+            font-family: $font-family-second;
+            font-weight: 600;
+            font-size: $font-size*2; 
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: $font-size;
+            margin: 0 auto 50px;
+        }
+        p.hire-p{
+            color: darken($color-effet-2,40%);
+            font-style: italic;
+            font-size: ($font-size-s)-1;
+            margin: 0 auto 16px;
+            letter-spacing: 1.5px;
+        }
+    }
+}

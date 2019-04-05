@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/chartjs/Chart.js/commits/bf2dd3280321e2640e481ecfc9a94179ef1d3fc4</id>
+  <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commits/bf2dd3280321e2640e481ecfc9a94179ef1d3fc4"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/chartjs/Chart.js/commits/bf2dd3280321e2640e481ecfc9a94179ef1d3fc4.atom"/>
+  <title>Recent Commits to Chart.js:bf2dd3280321e2640e481ecfc9a94179ef1d3fc4</title>
+  <updated>2018-01-06T19:06:27Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/bf2dd3280321e2640e481ecfc9a94179ef1d3fc4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/bf2dd3280321e2640e481ecfc9a94179ef1d3fc4"/>
+    <title>
+        Use the Chart.js shared ESLint config
+    </title>
+    <updated>2018-01-06T19:06:27Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Use the Chart.js shared ESLint config
+
+An ESLint shareable config has been created (from this repository) in the attempt to homogenize Chart.js hosted projects and plugins style. Rename `.eslintrc` files to `.eslintrc.yml` since the name has been deprecated.
+
+Fix the CC badge (maintainability) and disable CodeClimate ESLint plugin because it doesn&amp;#39;t support custom shareable config but also because it already executes relevant checks as part of the regular process.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/fcd463354bae115b4847272ba44f23c57cc0d6ed</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/fcd463354bae115b4847272ba44f23c57cc0d6ed"/>
+    <title>
+        Update license year and copyright holders (#5053)
+    </title>
+    <updated>2017-12-31T14:17:22Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update license year and copyright holders (#5053)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/9874a754e0324cf49df9b2e2a485e44c729eeec3</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/9874a754e0324cf49df9b2e2a485e44c729eeec3"/>
+    <title>
+        Adding helpful note about legendCallback (#5094)
+    </title>
+    <updated>2017-12-29T07:52:17Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/789760?s=30&amp;v=4"/>
+    <author>
+      <name>cameroncf</name>
+      <uri>https://github.com/cameroncf</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Adding helpful note about legendCallback (#5094)
+
+I didn&amp;#39;t realize you had to call generateLegend() manually and a quick search tells me that lots of other people have run into this too.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/92d033beb2d29fc296aee23b9e9d9c4be1fadd15</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/92d033beb2d29fc296aee23b9e9d9c4be1fadd15"/>
+    <title>
+        Optimization: prevent double ticks array reverse for vertical logarit…
+    </title>
+    <updated>2017-12-23T13:34:55Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/33193571?s=30&amp;v=4"/>
+    <author>
+      <name>jcopperfield</name>
+      <uri>https://github.com/jcopperfield</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Optimization: prevent double ticks array reverse for vertical logarithmic axis (#5076)
+
+with ticks option &amp;#39;reverse: true&amp;#39;.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ce1fc28b743d518add5c89653108a287f6aa911d</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/ce1fc28b743d518add5c89653108a287f6aa911d"/>
+    <title>
+        Improve point.xRange and point.yRange performance (#5062)
+    </title>
+    <updated>2017-12-18T19:24:02Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/1490719?s=30&amp;v=4"/>
+    <author>
+      <name>fanthos</name>
+      <uri>https://github.com/fanthos</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Improve point.xRange and point.yRange performance (#5062)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b04ce949d12870e57e51ea998f5f32a1a94f5f8e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/b04ce949d12870e57e51ea998f5f32a1a94f5f8e"/>
+    <title>
+        Use time.unit option to create default min/max for empty chart (#5045)
+    </title>
+    <updated>2017-12-15T17:10:30Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/33193571?s=30&amp;v=4"/>
+    <author>
+      <name>jcopperfield</name>
+      <uri>https://github.com/jcopperfield</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Use time.unit option to create default min/max for empty chart (#5045)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f9beedba40217f07169ce9764f4371d40ee72367</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/f9beedba40217f07169ce9764f4371d40ee72367"/>
+    <title>
+        Fix issue #5029 (#5041)
+    </title>
+    <updated>2017-12-14T15:03:07Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/33193571?s=30&amp;v=4"/>
+    <author>
+      <name>jcopperfield</name>
+      <uri>https://github.com/jcopperfield</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix issue #5029 (#5041)
+
+- infinite loop in generating time axis, due to insufficient bounds checking.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f0bf3954fe363eda86a3db170063aba34f1be08e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/f0bf3954fe363eda86a3db170063aba34f1be08e"/>
+    <title>
+        Fix issues #4572 and #4703 (#4959)
+    </title>
+    <updated>2017-12-12T23:43:51Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/33193571?s=30&amp;v=4"/>
+    <author>
+      <name>jcopperfield</name>
+      <uri>https://github.com/jcopperfield</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix issues #4572 and #4703 (#4959)
+
+- issue #4572: logarithmic type if all numbers are zero browser crashes &amp;quot;Out of memory&amp;quot;
+ - issue #4703: [BUG] Browser unresponsive on bubble chart with logarithmic axes&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4e47c178e42fe84e40d39f9e2b7e26030cc0fc23</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/4e47c178e42fe84e40d39f9e2b7e26030cc0fc23"/>
+    <title>
+        Fix tooltip animation when target changes while animating (#5005)
+    </title>
+    <updated>2017-12-12T23:43:17Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/33193571?s=30&amp;v=4"/>
+    <author>
+      <name>jcopperfield</name>
+      <uri>https://github.com/jcopperfield</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix tooltip animation when target changes while animating (#5005)
+
+* Fix issue #4989
+ - tooltip in &amp;#39;index&amp;#39; mode doesn&amp;#39;t animate smoothly.
+
+* Change: different approach for smooth tooltip animation in &amp;#39;index&amp;#39;
+        mode, when target doesn&amp;#39;t change.
+
+* Fix: jslint error
+
+* Fix: remove spyOn pivot from test
+
+* Add: setAnimating-flag in transition used to set on tooltip.transition
+     to keep track of tooltip animation.
+
+* Decrease code complexity
+
+* Revert transition and complexity changes
+Add: use &amp;#39;tooltip._start&amp;#39; as workaround check for tooltip animation status&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/6f34b2224fd1006a48edd904416ae440cc0a82b5</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/6f34b2224fd1006a48edd904416ae440cc0a82b5"/>
+    <title>
+        Fix issue #4928: linear tick generator doesn&#39;t round values to needed…
+    </title>
+    <updated>2017-12-02T14:24:57Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/33193571?s=30&amp;v=4"/>
+    <author>
+      <name>jcopperfield</name>
+      <uri>https://github.com/jcopperfield</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix issue #4928: linear tick generator doesn&amp;#39;t round values to needed precision. (#4943)
+
+* Fix issue 4928
+ - linear tick generator doesn&amp;#39;t round values to needed precision.
+
+* Improve: replace toPrecision() in toString() to improve readability.
+
+* Fix: logarithmic tick generator doesn&amp;#39;t round values to needed precision.
+
+* Fix: rounding tick values didn&amp;#39;t work for negative values.
+
+* Add: Core ticks tests&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/15d1056b537a07b613f6dfe56fc920390c1dd267</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/15d1056b537a07b613f6dfe56fc920390c1dd267"/>
+    <title>
+        Implement equally sized bars (#4994)
+    </title>
+    <updated>2017-12-02T11:38:36Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Implement equally sized bars (#4994)
+
+When `barThickness: undefined|null` (default), we compute an optimal sample size based on the smallest tick interval reduced to prevent any bar to overlap (bar equally sized). Also added support for a special `barThickness: &amp;#39;flex&amp;#39;` value (previous default) that globally arranges bars side by side to prevent any gap when percentage options are 1 (variable bar sizes).&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b835df02cd05830fb734806f3af27fa43cc5674c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/b835df02cd05830fb734806f3af27fa43cc5674c"/>
+    <title>
+        Add Angular2+ libraries for Chart.js in docs (#5006)
+    </title>
+    <updated>2017-12-01T17:56:49Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/16965068?s=30&amp;v=4"/>
+    <author>
+      <name>christo-ph</name>
+      <uri>https://github.com/christo-ph</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add Angular2+ libraries for Chart.js in docs (#5006)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/9a7182ba36d3a9f1e73f2d2cdc0011ae7837d672</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/9a7182ba36d3a9f1e73f2d2cdc0011ae7837d672"/>
+    <title>
+        Fix typos and broken links in the docs (#5010)
+    </title>
+    <updated>2017-11-30T13:41:32Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/28054830?s=30&amp;v=4"/>
+    <author>
+      <name>beiz23</name>
+      <uri>https://github.com/beiz23</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix typos and broken links in the docs (#5010)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/333f2eba99e29ae643671edbef08a245cae9743c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/333f2eba99e29ae643671edbef08a245cae9743c"/>
+    <title>
+        Fix scale options update (#4198)
+    </title>
+    <updated>2017-11-29T21:52:23Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/8369011?s=30&amp;v=4"/>
+    <author>
+      <name>xg-wang</name>
+      <uri>https://github.com/xg-wang</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix scale options update (#4198)
+
+- allow options to be updated in-place or as a new object
+- re-merge new options and rebuild scales &amp;amp; tooltips
+- preserve reference to old scale if id/type not changed
+- related tests and new sample also added.
+- update document about options update
+- update doc and example&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/42d3d91f52b547e77d2e05d0dc44054f7d975e3c</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/42d3d91f52b547e77d2e05d0dc44054f7d975e3c"/>
+    <title>
+        Fix issue #4441 - y-axis labels partially hidden due to restrictive i…
+    </title>
+    <updated>2017-11-25T13:28:57Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/33193571?s=30&amp;v=4"/>
+    <author>
+      <name>jcopperfield</name>
+      <uri>https://github.com/jcopperfield</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix issue #4441 - y-axis labels partially hidden due to restrictive initial fitting. (#4942)
+
+* Fix issue 4441:
+ - y-axis labels partially hidden due to restrictive initial fitting.
+
+* Add regression test to linear scale
+
+* Moved regression test from linear scale to core layout service&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e2dd4483c79956b76fa3a7bddf0e379e48b3877e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/e2dd4483c79956b76fa3a7bddf0e379e48b3877e"/>
+    <title>
+        Add an Ember.js Integration in the Documentation (#4984)
+    </title>
+    <updated>2017-11-25T00:31:58Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/151262?s=30&amp;v=4"/>
+    <author>
+      <name>jpsirois</name>
+      <uri>https://github.com/jpsirois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add an Ember.js Integration in the Documentation (#4984)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/8ce7a9146b7e335e83e598c1039a808fa5ef4038</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/8ce7a9146b7e335e83e598c1039a808fa5ef4038"/>
+    <title>
+        Fix line to time axis documentation in bar chart docs (#4979)
+    </title>
+    <updated>2017-11-22T23:07:36Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix line to time axis documentation in bar chart docs (#4979)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/6b824d933451243a4fc57d973da6a8ebe6175b8f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/6b824d933451243a4fc57d973da6a8ebe6175b8f"/>
+    <title>
+        add check on overwriting canvas height/width (#4874)
+    </title>
+    <updated>2017-11-22T00:04:26Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/11018622?s=30&amp;v=4"/>
+    <author>
+      <name>andersponders</name>
+      <uri>https://github.com/andersponders</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;add check on overwriting canvas height/width (#4874)
+
+* add check on overwriting canvas height/width
+
+* unit test for this&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e080e782ab44f34d2bcd63ad6255f48bac2292ea</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/e080e782ab44f34d2bcd63ad6255f48bac2292ea"/>
+    <title>
+        Fix bumpy line on smooth data set (#4944)
+    </title>
+    <updated>2017-11-14T12:56:45Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/33193571?s=30&amp;v=4"/>
+    <author>
+      <name>jcopperfield</name>
+      <uri>https://github.com/jcopperfield</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix bumpy line on smooth data set (#4944)
+
+Linear scale getPixelForValue() method doesn&amp;#39;t round the returned value anymore.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/447ca40a7f8baa2ec55f3388e02cabcfe8cbfadc</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/447ca40a7f8baa2ec55f3388e02cabcfe8cbfadc"/>
+    <title>
+        Correctly handle stacked groups when not adjacent (#4937)
+    </title>
+    <updated>2017-11-14T09:33:36Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/33193571?s=30&amp;v=4"/>
+    <author>
+      <name>jcopperfield</name>
+      <uri>https://github.com/jcopperfield</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Correctly handle stacked groups when not adjacent (#4937)
+
+Only the dataset index was used for indexing the stack&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

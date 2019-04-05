@@ -1,0 +1,32 @@
+From 31aebf3bab8a6a45edce853360bc469ed42d386e Mon Sep 17 00:00:00 2001
+From: Simon Brunel <simonbrunel@users.noreply.github.com>
+Date: Mon, 4 Mar 2019 09:57:08 +0100
+Subject: [PATCH] Include generated CSS in the GitHub releases
+
+---
+ .travis.yml | 11 +++++------
+ 1 file changed, 5 insertions(+), 6 deletions(-)
+
+diff --git a/.travis.yml b/.travis.yml
+index 574bfe9a2..0be857782 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -42,13 +42,12 @@ deploy:
+     branch: release
+ - provider: releases
+   api_key: $GITHUB_AUTH_TOKEN
+-  file:
+-  - "./dist/Chart.bundle.js"
+-  - "./dist/Chart.bundle.min.js"
+-  - "./dist/Chart.js"
+-  - "./dist/Chart.min.js"
+-  - "./dist/Chart.js.zip"
+   skip_cleanup: true
++  file_glob: true
++  file:
++  - ./dist/*.css
++  - ./dist/*.js
++  - ./dist/*.zip
+   on:
+     tags: true
+ - provider: npm

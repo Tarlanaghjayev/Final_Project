@@ -1,0 +1,148 @@
+#events{
+    position: relative;
+    h3{
+        color: $color-black;
+        font-size: $font-size+6;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid $color-effet-2;
+        font-weight: 600;
+    }
+    h3::before{
+        content: "\f073";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        margin-right: 15px;
+        display: inline-block;
+    }
+    .event{
+        .event-items{
+            margin-bottom: 35px;
+            clear: both;
+            .event-date{
+                float: left;
+                margin-right: 25px;
+                margin-bottom: 15px;
+               
+                box-shadow: 0 5px 8px $color-effet;
+                span{
+                    display: block;
+                    text-align: center;
+                }
+                span.event-month{
+                    width: 73px;
+                    background-color: $color-effet-2;
+                    font-style: italic;
+                    font-size: $font-size-s;
+                }
+                span.event-day{
+                    font-size: $font-size-s*3;
+                    line-height: 1.5;
+                    overflow: hidden;
+                    font-weight: 400;
+                    padding: 0;
+                    color: darken($color-effet-2, 30%);
+                }
+            }
+            h4{
+                display: block;
+                font-size: $font-size*1.25;
+                color: $color-black;
+                font-weight: 600;
+            }
+            p{
+                color: darken($color-effet-2, 30%);
+            }
+        }
+    }
+    
+    
+    .card{
+        width: 350px;
+        position: relative;
+        box-shadow: 0px 0px 32px 0px rgba(122,122,122,0.1);
+        border: none;
+        padding:0 0px;
+        @include transition(all,0.5s);
+        overflow: hidden;
+        .news-img{
+            position: relative;
+            overflow: hidden;
+        }
+        &:hover{
+           box-shadow: 0 22px 43px rgba(0, 0, 0, 0.15);
+           @include transform(translateY(-10px));
+           .card-img-top:hover{
+               @include transform(scale(1.1));
+               @include transition(all,0.5s);
+           }
+        }
+
+        //card body
+        .card-body{
+            padding: 20px 30px;
+            h5{
+                font-weight: 600;
+                &:hover{
+                    color: $color;
+                }
+            }
+            .calendar{
+                margin-bottom: 20px;
+                span{
+                   font-size: ($font-size)-2;
+                   margin-right: 15px;
+                   color: darken( $color-effet-2,40%);
+                }
+                .span1::before{
+                    content: "\f274";
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    font-size: $font-size/1.2;
+                    margin-right: 2px;
+                    color:darken( $color-effet-2,40%);
+                }
+                .span2::before{
+                    content: '\f07c';
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    font-size: $font-size/1.2;
+                    color:darken( $color-effet-2,40%);
+                }
+            }
+            .card-text{
+                color: darken( $color-effet-2,40%);
+                margin: 0 0 15px 0;
+            }
+        }
+    }
+    
+      .fa-angle-left{
+          position: absolute;
+          color: $color-black;
+          font-size: $font-size+2;
+          right: 6%;
+          top: -18%;
+          padding: 10px 12px;
+          background-color: $color-effet;
+      }
+      .fa-angle-right{
+          color: $color-black;
+          font-size: $font-size+2;
+          position: absolute;
+          right: 0%;
+          top: -18%;
+          padding: 10px 12px;
+          background-color: $color-effet;
+      }
+    
+      
+}
+
+
+
+@media screen and (max-width: 520px) {
+    #events .fa-angle-left{
+        right: 15%; 
+    }
+}

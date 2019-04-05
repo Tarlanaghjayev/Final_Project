@@ -1,0 +1,25 @@
+diff --git a/LICENSE.md b/LICENSE.md
+index 620db307e..29c941dcc 100644
+--- a/LICENSE.md
++++ b/LICENSE.md
+@@ -1,6 +1,6 @@
+ The MIT License (MIT)
+ 
+-Copyright (c) 2013-2017 Nick Downie
++Copyright (c) 2018 Chart.js Contributors
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ 
+diff --git a/gulpfile.js b/gulpfile.js
+index bb42ea9d3..5a3093e44 100644
+--- a/gulpfile.js
++++ b/gulpfile.js
+@@ -29,7 +29,7 @@ var header = "/*!\n" +
+   " * http://chartjs.org/\n" +
+   " * Version: {{ version }}\n" +
+   " *\n" +
+-  " * Copyright 2017 Nick Downie\n" +
++  " * Copyright " + (new Date().getFullYear()) + " Chart.js Contributors\n" +
+   " * Released under the MIT license\n" +
+   " * https://github.com/chartjs/Chart.js/blob/master/LICENSE.md\n" +
+   " */\n";

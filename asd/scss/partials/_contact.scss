@@ -1,0 +1,87 @@
+#contact{
+    background-color: $color-after;
+    .contact{
+        padding: 0 25px;
+        margin: 25px 0;
+        @include transition(all,0.5s);
+        .contact-form-area{
+            padding: 40px;
+            background: $color-white;
+            box-shadow: 0 0 29px #efeded;
+
+            h3{
+                margin: 0 0 10px 0;
+                font-weight: 500;
+                line-height: 1.5;
+                color: $color-black;
+            }
+            p{
+                margin: 0 0 15px 0;
+                color: darken($color-effet-2, 40%);
+            }
+            #contactform #name,#email{
+                padding: 10px 20px;
+                
+                margin-top: 30px;
+                width: 100%;
+            }
+            #contactform button#submit {
+                margin: 20px 0 0;
+                font-size: $font-size+2;
+            }
+        }
+
+
+        .contact-widget{
+            margin-bottom: 34px;
+            padding: 40px;
+            background: $color-white;
+            box-shadow: 0 0 29px $color-effet-2;
+            h3{
+                margin-bottom: 20px;
+            }
+            span{
+                margin-bottom: 10px;
+                font-size: $font-size-s;
+                line-height: 2;
+                display: table;
+                clear: both;
+                i{
+                    font-size: ($font-size-s)-1;
+                    padding-right: 10px;
+                    color: $color-black;
+                    border: 1px solid $color-effet-2;
+                    display: inline-block;
+                    text-align: center;
+                    padding: 12px;
+                    height: 40px;
+                    width: 40px;
+                    margin-right: 10px;
+                    border-radius: 100%;
+                }
+            }
+           
+        }
+    }
+
+    .contact-map{
+        background: $color-white;
+        padding: 10px 10px 0;
+        box-shadow: 0 0 29px $color-effet-2;
+       
+       iframe{
+           width: 500px;
+       } 
+    
+    }
+}
+
+
+
+@media screen and (max-width: 520px) {
+    .contact-map{
+        iframe{
+            width: 307px !important;
+        }
+    }
+}

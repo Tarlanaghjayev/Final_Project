@@ -1,0 +1,39 @@
+diff --git a/book.json b/book.json
+index 8b0f73970..22acbde96 100644
+--- a/book.json
++++ b/book.json
+@@ -3,7 +3,15 @@
+   "title": "Chart.js documentation",
+   "author": "chartjs",
+   "gitbook": "3.2.2",
+-  "plugins": ["-lunr", "-search", "search-plus", "anchorjs", "chartjs", "ga"],
++  "plugins": [
++    "-lunr",
++    "-search",
++    "search-plus",
++    "anchorjs",
++    "chartjs",
++    "ga",
++    "redirect"
++  ],
+   "pluginsConfig": {
+     "anchorjs": {
+       "icon": "#",
+diff --git a/docs/SUMMARY.md b/docs/SUMMARY.md
+index f0beb678c..15265bd2b 100644
+--- a/docs/SUMMARY.md
++++ b/docs/SUMMARY.md
+@@ -51,5 +51,5 @@
+   * [Contributing](developers/contributing.md)
+ * [Additional Notes](notes/README.md)
+   * [Comparison Table](notes/comparison.md)
+-  * [Popular Extensions](https://github.com/chartjs/awesome)
++  * [Popular Extensions](notes/extensions.md)
+   * [License](notes/license.md)
+diff --git a/docs/notes/extensions.md b/docs/notes/extensions.md
+new file mode 100644
+index 000000000..d66989b15
+--- /dev/null
++++ b/docs/notes/extensions.md
+@@ -0,0 +1 @@
++!REDIRECT "https://github.com/chartjs/awesome"

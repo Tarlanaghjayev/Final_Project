@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Marvel:400,700");
+@import 'partials/variables';
+
+.letters_header{
+  margin-top: 71px;
+    .row{
+        .p{
+            font-size: 70px;
+            position: relative;
+            color: rgba(190, 203, 50, 0.19);
+            z-index: 2;
+            margin-bottom: 33px;
+            margin-top: -28px;
+        }
+        h3{
+            position: absolute;
+            z-index: 3;
+            font-size: 41px;
+            color: #becb32;
+            margin-left: 10px;
+            margin-top: 21px;
+        }
+        font-weight: 400;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+}
+#info {
+//   background-color: yellow;
+  padding: 2rem 0;
+}
+#letters{
+    
+}
+.letters{
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+// .row {
+//   width: 100%;
+//   max-width: 45rem;
+//   margin: 0 auto;
+//   padding: 1.5rem;
+// //   background-color: yellow;
+// }
+
+.card2 {
+    display: inline-block;
+    padding: 4rem 1rem 7rem 1rem;
+    background-color: $primary-c;
+    position: relative;
+    border: 0px !important;
+    transition: transform .2s;
+    z-index: 4;
+    height: 400px;
+    width: 320px;
+    max-width: 100%;
+    max-height: 100%;
+    &:hover{
+      transform: scale(1.1);
+    }
+}
+.card2:after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  background-color: skyblue;
+  top: 0px;
+  right: 0px;
+  border-bottom: 20px solid $primary-c;
+  border-left: 20px solid $primary-c;
+  border-right: 20px solid white;
+  border-top: 20px solid white;
+  position: absolute;
+  -webkit-filter: drop-shadow(-5px 5px 3px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(-5px 5px 3px rgba(0, 0, 0, 0.5));
+}
+.card2:before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-top: 40px solid $primary-c;
+  border-right: 40px solid $primary-c;
+  border-left: 40px solid white;
+  border-bottom: 40px solid white;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  -webkit-filter: drop-shadow(7px -7px 5px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(7px -7px 5px rgba(0, 0, 0, 0.5));
+  margin-right: 10%;
+}
+.card2:nth-of-type(1) {
+  margin-right: 9%;
+}
+.card2 h4 {
+  color: snow;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  margin-top: -42px;
+  margin-left: 50px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.card2 p {
+  color: snow;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.ftr{
+    text-align: center;
+}

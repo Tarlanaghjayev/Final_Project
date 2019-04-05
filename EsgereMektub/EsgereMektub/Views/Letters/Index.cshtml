@@ -1,0 +1,48 @@
+﻿@model EsgereMektub.Models.VwLetters
+
+
+<!--Main part of Letters section start-->
+<main id="main">
+
+
+    <!--Header of section start-->
+    <div class="container">
+        <div class="letters_header">
+            <div class="row d-flex justify-content-center">
+                <p class="p">Məktublar</p>
+                <h3>Məktublar</h3>
+            </div>
+        </div>
+    </div>
+    <!--Header of section end-->
+
+
+    <!-- LETTERS SECTION MAIN start -->
+    <section id="letters">
+        <div class="container">
+            <div class="letters">
+
+                <!-- Letters Cards start -->
+                <div class="row d-flex justify-content-center">
+                    @foreach (var item in Model.Letters)
+                    {
+                        <div class="col-lg-4 col-xlg-4 col-md-6 col-sm-12 col-12 d-flex justify-content-center  mb-5">
+                            <div class="card card2">
+                                <h4>Əsgərə məktub!</h4>
+                                <p>
+                                    @item.Text
+                                </p>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <!-- Letters Cards end -->
+
+            </div>
+        </div>
+    </section>
+    <!-- LETTERS SECTION MAIN end -->
+
+
+</main>
+<!--Main part of Letters section end-->

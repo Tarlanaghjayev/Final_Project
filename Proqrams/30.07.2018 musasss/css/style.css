@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+.navbar-brand {
+    margin-left: 10px;
+}
+.navbar-nav{
+    margin-left: 750px;
+}
+.basliq{
+    position: relative;
+}
+.welcome{
+    position: absolute;
+    margin: auto;
+    top: 250px;
+    left: 100px;
+}
+
+.buttons{
+    position: absolute;
+    margin: auto;
+    top: 386px; 
+    left: 113px;
+}
+
+#musas_feature .container .row .col-12 h1 {
+    margin: auto;
+    top: 300px;
+    left: 100px;
+}
+
+section {
+    padding: 100px 0px; 
+}
+.container  {
+    padding: 0px;
+    text-align: center;
+}

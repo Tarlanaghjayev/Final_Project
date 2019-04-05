@@ -1,0 +1,245 @@
+﻿@model EsgereMektub.Models.VwHome
+
+<!-- Main part of home start -->
+<main id="main">
+    <div class="container">
+        <div class="row mt-5 mb-5">
+            <!-- SLIDER SECTION START -->
+            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                <section id="slider">
+                    <div class="owl-carousel"></div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-0">
+                                <div id="carouselExampleIndicators" class="carousel slide slider_1_margin"
+                                     data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        @{
+                                            var a = 0;
+                                            foreach (var item in Model.Slider)
+                                            {
+                                                var itemClasss = a++ == 0 ? "active" : "";
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="@(a-1)" class="@itemClasss"></li>
+                                            }
+                                        }
+                                    </ol>
+                                    <div class="carousel-inner">
+
+                                        <!--Slider item-->
+
+                                        @{
+                                            var i = 0;
+                                            foreach (var item in Model.Slider)
+                                            {
+                                                var itemClass = i++ == 0 ? "item active" : "item";
+                                                <div class="carousel-item @itemClass">
+                                                    <img class="d-block w-100 slider_height" src="~/Public/img/slider/@item.Photo"
+                                                         alt="First slide">
+                                                    <div class="filter"></div>
+                                                </div>
+                                            }
+                                        }
+                                    </div>
+                                    <!--Prev Button for Slider-->
+                                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                       data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <!--Next Button for Slider-->
+                                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                       data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- SLIDER SECTION END -->
+
+
+            <!-- HOW WRITE LETTER START -->
+            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="row d-flex justify-content-center">
+                            <div class="how_write_letter">
+                                <p class="pp">Necə məktub yaza bilərəm?</p>
+                                <p class="hh">Necə məktub yaza bilərəm?</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!--1st Card-->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="row d-flex justify-content-center">
+                            <div class="kart2" style="background-image: linear-gradient(to right, #343d23 0%, #c0ca33 100%)">
+                                <div class="text1">
+                                    <h5></h5>
+                                    <p>Bakı şəhərində və regionlarda yerləşən bütün "ASAN xidmət" mərkəzlərində ayrılmış xüsusi "Əsgərə Məktub" məntəqələrinə yaxınlaşaraq hər bir Azərbaycan vətəndaşı mənəvi dəstəyini əsgərlərimizə göstərə bilər.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!--2nd Card-->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="row d-flex justify-content-center">
+                            <div class="kart2" style="background-image: linear-gradient(to right, #343d23 0%, #c0ca33 100%)">
+                                <div class="text2">
+                                    <h5>Elektron formada</h5>
+                                    <p>esgeremektub.az portalı vasitəsi ilə hər bir Azərbaycan vətəndaşı mənəvi dəstəyini əsgərlərimizə göstərə bilər.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <!-- HOW WRITE LETTER END -->
+
+        </div>
+    </div>
+
+
+    <!-- COUNTER SECTION START -->
+    <section id="counter_section">
+        <div class="container">
+            <div class="cards">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="row d-flex justify-content-center">
+                            <!--Delivered letters count Card START-->
+                            <div class="card">
+                                <p>Yazılan məktub sayı:</p>
+                                <span class="counter">@Model.Counter.Delivered</span>
+                            </div>
+                            <!--Delivered letters count Card END-->
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="row d-flex justify-content-center">
+                            <!--Writted letters count Card START-->
+                            <div class="card">
+                                <p>Çatdırılan məktub sayı:</p>
+                                <span class="counter">@Model.Counter.Writted</span>
+                            </div>
+                            <!--Writted letters count Card END-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- COUNTER SECTION END -->
+
+
+    <!-- WRITE LETTER SECTION START -->
+    <section id="write_letter">
+        <div class="container">
+           
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
+                <div class="row d-flex justify-content-center">
+                    <!--TITLE write letter section START-->
+                    <div class="write_letter_basliq">
+                        <p class="p">Məktub yazaq!</p>
+                        <h3>Məktub yazaq!</h3>
+                    </div>
+                    <!--TITLE write letter section END-->
+                </div>
+
+
+            </div>
+            <div class="row mt-5 d-flex justify-content-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
+                        <a href="#">
+                            <img class="blur" src="~/Public/img/main_pictures/@Model.Setting.WriteLetterSectionPic" alt="">
+                        </a>
+                  
+                </div>
+                <div class="col-lg-6">
+
+                        <!--Inputs for WRITE LETTER START-->
+                        <div class="kartt">
+                            <form method="post" action="@Url.Action("WriteLetter","Letters")">
+                                <input type="text" name="Name" id="name" class="form-control" placeholder="Ad soyad *">
+                                <input type="email" name="Mail" id="email" class="form-control  mt-3" placeholder="E-poçt *">
+                                <textarea class="form-control mt-3" name="Text" id="comments" rows="6" placeholder=""></textarea>
+                                <div class="row d-flex justify-content-center">
+                                    <a href="#">
+                                        <button type="submit" class="btn btn-outline-success waves-effect">Göndər</button>
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                        <!--Inputs for WRITE LETTER END-->
+                
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- WRITE LETTER SECTION END -->
+
+
+    <!-- FIGHT MEMORY SECTION START-->
+    <section id="doyush_xatireleri">
+        <div class="container">
+            <div class="dx_header">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
+                    <div class="row d-flex justify-content-center">
+                        <p class="p">"Döyüş xatirələri" rubrikası</p>
+                        <h3>"Döyüş xatirələri" rubrikası</h3>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="dx_body">
+                <div class="row ">
+
+                    <!--Slider item START-->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
+                        @foreach (var item in Model.FightMemory)
+                        {
+
+                            <figure class="snip1166">
+                                <img src="~/Public/img/doyush_xatireleri/@item.Image" alt="sample74" />
+                                <figcaption>
+                                    <h3>@item.Name</h3>
+                                    <div>
+                                        <p>
+                                            @item.Text
+                                        </p>
+                                    </div><a href="#"></a>
+                                </figcaption>
+                            </figure>
+                           
+                        }
+                    </div>
+                    <!--Slider item END-->
+
+                </div>
+            </div>
+
+            <!--Send Button START-->
+            <div class="read_more">
+                <div class="row d-flex justify-content-center">
+                    <a href="@Url.Action("index","fightmemory")">
+                        <button type="button" class="btn btn-outline-success waves-effect">Ətraflı</button>
+                    </a>
+                </div>
+            </div>
+            <!--Send Button END-->
+
+        </div>
+    </section>
+    <!-- FIGHT MEMORY SECTION END-->
+
+</main>
+<!-- Main part of home end -->

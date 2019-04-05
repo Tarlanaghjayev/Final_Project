@@ -1,0 +1,148 @@
+From 35273ee9488b9764485e6a0adfe92390fa01b130 Mon Sep 17 00:00:00 2001
+From: Simon Brunel <simonbrunel@users.noreply.github.com>
+Date: Sun, 3 Mar 2019 15:19:11 +0100
+Subject: [PATCH] Optimize the npm package by removing useless files (#6105)
+
+Explicitly target files that should be included in the npm package, making it 10x smaller by removing the docs, samples, scripts, sources, tests and other useless files.
+---
+ .npmignore                       | 13 -------------
+ karma.conf.js                    |  4 ++--
+ package.json                     |  6 ++++++
+ rollup.config.js                 |  2 +-
+ src/{chart.js => index.js}       |  0
+ src/scales/scale.category.js     |  2 +-
+ src/scales/scale.linear.js       |  2 +-
+ src/scales/scale.logarithmic.js  |  2 +-
+ src/scales/scale.radialLinear.js |  2 +-
+ src/scales/scale.time.js         |  2 +-
+ 10 files changed, 14 insertions(+), 21 deletions(-)
+ delete mode 100644 .npmignore
+ rename src/{chart.js => index.js} (100%)
+
+diff --git a/.npmignore b/.npmignore
+deleted file mode 100644
+index 47b4948ed..000000000
+--- a/.npmignore
++++ /dev/null
+@@ -1,13 +0,0 @@
+-/.git
+-/.github
+-/coverage
+-/custom
+-/dist/*.zip
+-/docs/index.md
+-/node_modules
+-
+-.codeclimate.yml
+-.DS_Store
+-.gitignore
+-.idea
+-.travis.yml
+diff --git a/karma.conf.js b/karma.conf.js
+index 028785675..d7aae642a 100644
+--- a/karma.conf.js
++++ b/karma.conf.js
+@@ -49,12 +49,12 @@ module.exports = function(karma) {
+ 			{pattern: 'test/fixtures/**/*.png', included: false},
+ 			'node_modules/moment/min/moment.min.js',
+ 			'test/index.js',
+-			'src/chart.js'
++			'src/index.js'
+ 		].concat(args.inputs),
+ 
+ 		preprocessors: {
+ 			'test/index.js': ['rollup'],
+-			'src/chart.js': ['sources']
++			'src/index.js': ['sources']
+ 		},
+ 
+ 		rollupPreprocessor: {
+diff --git a/package.json b/package.json
+index 72c359deb..5d16f9323 100644
+--- a/package.json
++++ b/package.json
+@@ -22,6 +22,12 @@
+   "bugs": {
+     "url": "https://github.com/chartjs/Chart.js/issues"
+   },
++  "files": [
++    "bower.json",
++    "composer.json",
++    "dist/*.css",
++    "dist/*.js"
++  ],
+   "devDependencies": {
+     "clean-css": "^4.2.1",
+     "coveralls": "^3.0.0",
+diff --git a/rollup.config.js b/rollup.config.js
+index 1f0dbbaca..fc53f1a74 100644
+--- a/rollup.config.js
++++ b/rollup.config.js
+@@ -7,7 +7,7 @@ const optional = require('./rollup.plugins').optional;
+ const stylesheet = require('./rollup.plugins').stylesheet;
+ const pkg = require('./package.json');
+ 
+-const input = 'src/chart.js';
++const input = 'src/index.js';
+ const banner = `/*!
+  * Chart.js v${pkg.version}
+  * ${pkg.homepage}
+diff --git a/src/chart.js b/src/index.js
+similarity index 100%
+rename from src/chart.js
+rename to src/index.js
+diff --git a/src/scales/scale.category.js b/src/scales/scale.category.js
+index d837a7365..b9e51bcb1 100644
+--- a/src/scales/scale.category.js
++++ b/src/scales/scale.category.js
+@@ -130,5 +130,5 @@ module.exports = Scale.extend({
+ 	}
+ });
+ 
+-// INTERNAL: static default options, registered in src/chart.js
++// INTERNAL: static default options, registered in src/index.js
+ module.exports._defaults = defaultConfig;
+diff --git a/src/scales/scale.linear.js b/src/scales/scale.linear.js
+index 41a4e4168..a2199b66e 100644
+--- a/src/scales/scale.linear.js
++++ b/src/scales/scale.linear.js
+@@ -186,5 +186,5 @@ module.exports = LinearScaleBase.extend({
+ 	}
+ });
+ 
+-// INTERNAL: static default options, registered in src/chart.js
++// INTERNAL: static default options, registered in src/index.js
+ module.exports._defaults = defaultConfig;
+diff --git a/src/scales/scale.logarithmic.js b/src/scales/scale.logarithmic.js
+index 06b206df2..fd67f0b19 100644
+--- a/src/scales/scale.logarithmic.js
++++ b/src/scales/scale.logarithmic.js
+@@ -345,5 +345,5 @@ module.exports = Scale.extend({
+ 	}
+ });
+ 
+-// INTERNAL: static default options, registered in src/chart.js
++// INTERNAL: static default options, registered in src/index.js
+ module.exports._defaults = defaultConfig;
+diff --git a/src/scales/scale.radialLinear.js b/src/scales/scale.radialLinear.js
+index d19c03e99..ce605bde4 100644
+--- a/src/scales/scale.radialLinear.js
++++ b/src/scales/scale.radialLinear.js
+@@ -530,5 +530,5 @@ module.exports = LinearScaleBase.extend({
+ 	}
+ });
+ 
+-// INTERNAL: static default options, registered in src/chart.js
++// INTERNAL: static default options, registered in src/index.js
+ module.exports._defaults = defaultConfig;
+diff --git a/src/scales/scale.time.js b/src/scales/scale.time.js
+index 7d1df171e..0db15bb78 100644
+--- a/src/scales/scale.time.js
++++ b/src/scales/scale.time.js
+@@ -764,5 +764,5 @@ module.exports = Scale.extend({
+ 	}
+ });
+ 
+-// INTERNAL: static default options, registered in src/chart.js
++// INTERNAL: static default options, registered in src/index.js
+ module.exports._defaults = defaultConfig;

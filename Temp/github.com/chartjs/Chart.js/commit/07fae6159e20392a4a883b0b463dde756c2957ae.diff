@@ -1,0 +1,1188 @@
+diff --git a/docs/configuration/legend.md b/docs/configuration/legend.md
+index c7d124868..f8ce7eb5a 100644
+--- a/docs/configuration/legend.md
++++ b/docs/configuration/legend.md
+@@ -9,6 +9,7 @@ The legend configuration is passed into the `options.legend` namespace. The glob
+ | ---- | ---- | ------- | -----------
+ | `display` | `boolean` | `true` | Is the legend shown?
+ | `position` | `string` | `'top'` | Position of the legend. [more...](#position)
++| `align` | `string` | `'center'` | Alignment of the legend. [more...](#align)
+ | `fullWidth` | `boolean` | `true` | Marks that this box should take the full width of the canvas (pushing down other boxes). This is unlikely to need to be changed in day-to-day use.
+ | `onClick` | `function` | | A callback that is called when a click event is registered on a label item.
+ | `onHover` | `function` | | A callback that is called when a 'mousemove' event is registered on top of a label item.
+@@ -23,6 +24,14 @@ Position of the legend. Options are:
+ * `'bottom'`
+ * `'right'`
+ 
++## Align
++Alignment of the legend. Options are:
++* `'start'`
++* `'center'`
++* `'end'`
++
++Defaults to `'center'` for unrecognized values.
++
+ ## Legend Label Configuration
+ 
+ The legend label configuration is nested below the legend configuration using the `labels` key.
+diff --git a/src/plugins/plugin.legend.js b/src/plugins/plugin.legend.js
+index 2c6870b27..d3fd5e35f 100644
+--- a/src/plugins/plugin.legend.js
++++ b/src/plugins/plugin.legend.js
+@@ -12,6 +12,7 @@ defaults._set('global', {
+ 	legend: {
+ 		display: true,
+ 		position: 'top',
++		align: 'center',
+ 		fullWidth: true,
+ 		reverse: false,
+ 		weight: 1000,
+@@ -102,18 +103,19 @@ function getBoxWidth(labelOpts, fontSize) {
+ var Legend = Element.extend({
+ 
+ 	initialize: function(config) {
+-		helpers.extend(this, config);
++		var me = this;
++		helpers.extend(me, config);
+ 
+ 		// Contains hit boxes for each dataset (in dataset order)
+-		this.legendHitBoxes = [];
++		me.legendHitBoxes = [];
+ 
+ 		/**
+  		 * @private
+  		 */
+-		this._hoveredItem = null;
++		me._hoveredItem = null;
+ 
+ 		// Are we in doughnut mode which has a different data type
+-		this.doughnutMode = false;
++		me.doughnutMode = false;
+ 	},
+ 
+ 	// These methods are ordered by lifecycle. Utilities then follow.
+@@ -253,9 +255,9 @@ var Legend = Element.extend({
+ 					var boxWidth = getBoxWidth(labelOpts, fontSize);
+ 					var width = boxWidth + (fontSize / 2) + ctx.measureText(legendItem.text).width;
+ 
+-					if (i === 0 || lineWidths[lineWidths.length - 1] + width + labelOpts.padding > minSize.width) {
++					if (i === 0 || lineWidths[lineWidths.length - 1] + width + 2 * labelOpts.padding > minSize.width) {
+ 						totalHeight += fontSize + labelOpts.padding;
+-						lineWidths[lineWidths.length - (i > 0 ? 0 : 1)] = labelOpts.padding;
++						lineWidths[lineWidths.length - (i > 0 ? 0 : 1)] = 0;
+ 					}
+ 
+ 					// Store the hitbox width and height here. Final position will be updated in `draw`
+@@ -274,27 +276,27 @@ var Legend = Element.extend({
+ 			} else {
+ 				var vPadding = labelOpts.padding;
+ 				var columnWidths = me.columnWidths = [];
++				var columnHeights = me.columnHeights = [];
+ 				var totalWidth = labelOpts.padding;
+ 				var currentColWidth = 0;
+ 				var currentColHeight = 0;
+-				var itemHeight = fontSize + vPadding;
+ 
+ 				helpers.each(me.legendItems, function(legendItem, i) {
+ 					var boxWidth = getBoxWidth(labelOpts, fontSize);
+ 					var itemWidth = boxWidth + (fontSize / 2) + ctx.measureText(legendItem.text).width;
+ 
+ 					// If too tall, go to new column
+-					if (i > 0 && currentColHeight + itemHeight > minSize.height - vPadding) {
++					if (i > 0 && currentColHeight + fontSize + 2 * vPadding > minSize.height) {
+ 						totalWidth += currentColWidth + labelOpts.padding;
+ 						columnWidths.push(currentColWidth); // previous column width
+-
++						columnHeights.push(currentColHeight);
+ 						currentColWidth = 0;
+ 						currentColHeight = 0;
+ 					}
+ 
+ 					// Get max width
+ 					currentColWidth = Math.max(currentColWidth, itemWidth);
+-					currentColHeight += itemHeight;
++					currentColHeight += fontSize + vPadding;
+ 
+ 					// Store the hitbox width and height here. Final position will be updated in `draw`
+ 					hitboxes[i] = {
+@@ -307,6 +309,7 @@ var Legend = Element.extend({
+ 
+ 				totalWidth += currentColWidth;
+ 				columnWidths.push(currentColWidth);
++				columnHeights.push(currentColHeight);
+ 				minSize.width += totalWidth;
+ 			}
+ 		}
+@@ -329,6 +332,8 @@ var Legend = Element.extend({
+ 		var globalDefaults = defaults.global;
+ 		var defaultColor = globalDefaults.defaultColor;
+ 		var lineDefault = globalDefaults.elements.line;
++		var legendHeight = me.height;
++		var columnHeights = me.columnHeights;
+ 		var legendWidth = me.width;
+ 		var lineWidths = me.lineWidths;
+ 
+@@ -408,18 +413,29 @@ var Legend = Element.extend({
+ 				}
+ 			};
+ 
++			var alignmentOffset = function(dimension, blockSize) {
++				switch (opts.align) {
++				case 'start':
++					return labelOpts.padding;
++				case 'end':
++					return dimension - blockSize;
++				default: // center
++					return (dimension - blockSize + labelOpts.padding) / 2;
++				}
++			};
++
+ 			// Horizontal
+ 			var isHorizontal = me.isHorizontal();
+ 			if (isHorizontal) {
+ 				cursor = {
+-					x: me.left + ((legendWidth - lineWidths[0]) / 2) + labelOpts.padding,
++					x: me.left + alignmentOffset(legendWidth, lineWidths[0]),
+ 					y: me.top + labelOpts.padding,
+ 					line: 0
+ 				};
+ 			} else {
+ 				cursor = {
+ 					x: me.left + labelOpts.padding,
+-					y: me.top + labelOpts.padding,
++					y: me.top + alignmentOffset(legendHeight, columnHeights[0]),
+ 					line: 0
+ 				};
+ 			}
+@@ -438,12 +454,12 @@ var Legend = Element.extend({
+ 					if (i > 0 && x + width + labelOpts.padding > me.left + me.minSize.width) {
+ 						y = cursor.y += itemHeight;
+ 						cursor.line++;
+-						x = cursor.x = me.left + ((legendWidth - lineWidths[cursor.line]) / 2) + labelOpts.padding;
++						x = cursor.x = me.left + alignmentOffset(legendWidth, lineWidths[cursor.line]);
+ 					}
+ 				} else if (i > 0 && y + itemHeight > me.top + me.minSize.height) {
+ 					x = cursor.x = x + me.columnWidths[cursor.line] + labelOpts.padding;
+-					y = cursor.y = me.top + labelOpts.padding;
+ 					cursor.line++;
++					y = cursor.y = me.top + alignmentOffset(legendHeight, columnHeights[cursor.line]);
+ 				}
+ 
+ 				drawLegendBox(x, y, legendItem);
+@@ -459,7 +475,6 @@ var Legend = Element.extend({
+ 				} else {
+ 					cursor.y += itemHeight;
+ 				}
+-
+ 			});
+ 		}
+ 	},
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-bottom-center-mulitiline.json b/test/fixtures/plugin.legend/legend-doughnut-bottom-center-mulitiline.json
+new file mode 100644
+index 000000000..22837c7bc
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-bottom-center-mulitiline.json
+@@ -0,0 +1,25 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
++			"datasets": [{
++				"data": [10, 20, 30, 40, 50, 60, 70, 10, 20, 30, 40, 50, 60, 70, 10, 20, 30, 20, 10],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "bottom",
++				"align": "center"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-bottom-center-mulitiline.png b/test/fixtures/plugin.legend/legend-doughnut-bottom-center-mulitiline.png
+new file mode 100644
+index 000000000..bad507684
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-bottom-center-mulitiline.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-bottom-center-single.json b/test/fixtures/plugin.legend/legend-doughnut-bottom-center-single.json
+new file mode 100644
+index 000000000..82e462f7d
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-bottom-center-single.json
+@@ -0,0 +1,25 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": [""],
++			"datasets": [{
++				"data": [10],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "bottom",
++				"align": "center"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-bottom-center-single.png b/test/fixtures/plugin.legend/legend-doughnut-bottom-center-single.png
+new file mode 100644
+index 000000000..139a16b86
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-bottom-center-single.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-bottom-end-mulitiline.json b/test/fixtures/plugin.legend/legend-doughnut-bottom-end-mulitiline.json
+new file mode 100644
+index 000000000..630b81ee0
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-bottom-end-mulitiline.json
+@@ -0,0 +1,25 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
++			"datasets": [{
++				"data": [10, 20, 30, 40, 50, 60, 70, 10, 20, 30, 40, 50, 60, 70, 10],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "bottom",
++				"align": "end"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-bottom-end-mulitiline.png b/test/fixtures/plugin.legend/legend-doughnut-bottom-end-mulitiline.png
+new file mode 100644
+index 000000000..e7fc84b85
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-bottom-end-mulitiline.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-bottom-start-mulitiline.json b/test/fixtures/plugin.legend/legend-doughnut-bottom-start-mulitiline.json
+new file mode 100644
+index 000000000..4544602a1
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-bottom-start-mulitiline.json
+@@ -0,0 +1,25 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
++			"datasets": [{
++				"data": [10, 20, 30, 40, 50, 60, 70, 10, 20, 30, 40, 50, 60, 70, 10],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "bottom",
++				"align": "start"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-bottom-start-mulitiline.png b/test/fixtures/plugin.legend/legend-doughnut-bottom-start-mulitiline.png
+new file mode 100644
+index 000000000..32700c17d
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-bottom-start-mulitiline.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-left-center-mulitiline.json b/test/fixtures/plugin.legend/legend-doughnut-left-center-mulitiline.json
+new file mode 100644
+index 000000000..6665193f6
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-left-center-mulitiline.json
+@@ -0,0 +1,25 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
++			"datasets": [{
++				"data": [10, 20, 30, 40, 50, 60, 70, 10, 20, 30, 40, 50, 60, 70, 10, 20, 30],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "left",
++				"align": "center"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-left-center-mulitiline.png b/test/fixtures/plugin.legend/legend-doughnut-left-center-mulitiline.png
+new file mode 100644
+index 000000000..5160e356f
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-left-center-mulitiline.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-left-center-single.json b/test/fixtures/plugin.legend/legend-doughnut-left-center-single.json
+new file mode 100644
+index 000000000..4723a8602
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-left-center-single.json
+@@ -0,0 +1,25 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": [""],
++			"datasets": [{
++				"data": [10],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "left",
++				"align": "center"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-left-center-single.png b/test/fixtures/plugin.legend/legend-doughnut-left-center-single.png
+new file mode 100644
+index 000000000..72072bfbe
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-left-center-single.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-left-default-center.json b/test/fixtures/plugin.legend/legend-doughnut-left-default-center.json
+new file mode 100644
+index 000000000..bb48a2778
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-left-default-center.json
+@@ -0,0 +1,24 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": ["", "", "", "", "", ""],
++			"datasets": [{
++				"data": [10, 20, 30, 40, 50],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "left"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-left-default-center.png b/test/fixtures/plugin.legend/legend-doughnut-left-default-center.png
+new file mode 100644
+index 000000000..3d9829833
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-left-default-center.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-left-end-mulitiline.json b/test/fixtures/plugin.legend/legend-doughnut-left-end-mulitiline.json
+new file mode 100644
+index 000000000..662b16725
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-left-end-mulitiline.json
+@@ -0,0 +1,25 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
++			"datasets": [{
++				"data": [10, 20, 30, 40, 50, 60, 70, 10, 20, 30, 40, 50, 60, 70, 10, 20, 30],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "left",
++				"align": "end"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-left-end-mulitiline.png b/test/fixtures/plugin.legend/legend-doughnut-left-end-mulitiline.png
+new file mode 100644
+index 000000000..46c6014eb
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-left-end-mulitiline.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-left-start-mulitiline.json b/test/fixtures/plugin.legend/legend-doughnut-left-start-mulitiline.json
+new file mode 100644
+index 000000000..1d4dc1f7e
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-left-start-mulitiline.json
+@@ -0,0 +1,25 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
++			"datasets": [{
++				"data": [10, 20, 30, 40, 50, 60, 70, 10, 20, 30, 40, 50, 60, 70, 10, 20, 30],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "left",
++				"align": "start"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-left-start-mulitiline.png b/test/fixtures/plugin.legend/legend-doughnut-left-start-mulitiline.png
+new file mode 100644
+index 000000000..91c0c31b0
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-left-start-mulitiline.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-right-center-mulitiline.json b/test/fixtures/plugin.legend/legend-doughnut-right-center-mulitiline.json
+new file mode 100644
+index 000000000..5131989bd
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-right-center-mulitiline.json
+@@ -0,0 +1,25 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
++			"datasets": [{
++				"data": [10, 20, 30, 40, 50, 60, 70, 10, 20, 30, 40, 50, 60, 70, 10, 20, 30],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "right",
++				"align": "center"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-right-center-mulitiline.png b/test/fixtures/plugin.legend/legend-doughnut-right-center-mulitiline.png
+new file mode 100644
+index 000000000..72cbe903d
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-right-center-mulitiline.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-right-center-single.json b/test/fixtures/plugin.legend/legend-doughnut-right-center-single.json
+new file mode 100644
+index 000000000..9cb2ecc23
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-right-center-single.json
+@@ -0,0 +1,25 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": [""],
++			"datasets": [{
++				"data": [10],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "right",
++				"align": "center"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-right-center-single.png b/test/fixtures/plugin.legend/legend-doughnut-right-center-single.png
+new file mode 100644
+index 000000000..aa8c1043c
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-right-center-single.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-right-default-center.json b/test/fixtures/plugin.legend/legend-doughnut-right-default-center.json
+new file mode 100644
+index 000000000..837620720
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-right-default-center.json
+@@ -0,0 +1,24 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": ["", "", "", "", "", ""],
++			"datasets": [{
++				"data": [10, 20, 30, 40, 50],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "right"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-right-default-center.png b/test/fixtures/plugin.legend/legend-doughnut-right-default-center.png
+new file mode 100644
+index 000000000..1ba7052ea
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-right-default-center.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-right-end-mulitiline.json b/test/fixtures/plugin.legend/legend-doughnut-right-end-mulitiline.json
+new file mode 100644
+index 000000000..183959b69
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-right-end-mulitiline.json
+@@ -0,0 +1,25 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
++			"datasets": [{
++				"data": [10, 20, 30, 40, 50, 60, 70, 10, 20, 30, 40, 50, 60, 70, 10, 20, 30],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "right",
++				"align": "end"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-right-end-mulitiline.png b/test/fixtures/plugin.legend/legend-doughnut-right-end-mulitiline.png
+new file mode 100644
+index 000000000..00e366460
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-right-end-mulitiline.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-right-start-mulitiline.json b/test/fixtures/plugin.legend/legend-doughnut-right-start-mulitiline.json
+new file mode 100644
+index 000000000..292ab699d
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-right-start-mulitiline.json
+@@ -0,0 +1,25 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
++			"datasets": [{
++				"data": [10, 20, 30, 40, 50, 60, 70, 10, 20, 30, 40, 50, 60, 70, 10, 20, 30],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "right",
++				"align": "start"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-right-start-mulitiline.png b/test/fixtures/plugin.legend/legend-doughnut-right-start-mulitiline.png
+new file mode 100644
+index 000000000..73c51c070
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-right-start-mulitiline.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-top-center-mulitiline.json b/test/fixtures/plugin.legend/legend-doughnut-top-center-mulitiline.json
+new file mode 100644
+index 000000000..8bb57e4d5
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-top-center-mulitiline.json
+@@ -0,0 +1,25 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
++			"datasets": [{
++				"data": [10, 20, 30, 40, 50, 60, 70, 10, 20, 30, 40, 50, 60, 70, 10, 20, 30, 20, 10],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "top",
++				"align": "center"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-top-center-mulitiline.png b/test/fixtures/plugin.legend/legend-doughnut-top-center-mulitiline.png
+new file mode 100644
+index 000000000..f3b552abe
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-top-center-mulitiline.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-top-center-single.json b/test/fixtures/plugin.legend/legend-doughnut-top-center-single.json
+new file mode 100644
+index 000000000..310ad7556
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-top-center-single.json
+@@ -0,0 +1,25 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": [""],
++			"datasets": [{
++				"data": [10],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "top",
++				"align": "center"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-top-center-single.png b/test/fixtures/plugin.legend/legend-doughnut-top-center-single.png
+new file mode 100644
+index 000000000..6aac52263
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-top-center-single.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-top-end-mulitiline.json b/test/fixtures/plugin.legend/legend-doughnut-top-end-mulitiline.json
+new file mode 100644
+index 000000000..b150ef789
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-top-end-mulitiline.json
+@@ -0,0 +1,25 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
++			"datasets": [{
++				"data": [10, 20, 30, 40, 50, 60, 70, 10, 20, 30, 40, 50, 60, 70, 10],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "top",
++				"align": "end"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-top-end-mulitiline.png b/test/fixtures/plugin.legend/legend-doughnut-top-end-mulitiline.png
+new file mode 100644
+index 000000000..e6e56e470
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-top-end-mulitiline.png differ
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-top-start-mulitiline.json b/test/fixtures/plugin.legend/legend-doughnut-top-start-mulitiline.json
+new file mode 100644
+index 000000000..ca2111922
+--- /dev/null
++++ b/test/fixtures/plugin.legend/legend-doughnut-top-start-mulitiline.json
+@@ -0,0 +1,25 @@
++{
++	"config": {
++		"type": "doughnut",
++		"data": {
++			"labels": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
++			"datasets": [{
++				"data": [10, 20, 30, 40, 50, 60, 70, 10, 20, 30, 40, 50, 60, 70, 10],
++				"backgroundColor": "#00ff00",
++				"borderWidth": 0
++			}]
++		},
++		"options": {
++			"legend": {
++				"position": "top",
++				"align": "start"
++			}
++		}
++	},
++	"options": {
++		"canvas": {
++			"height": 256,
++			"width": 512
++		}
++	}
++}
+diff --git a/test/fixtures/plugin.legend/legend-doughnut-top-start-mulitiline.png b/test/fixtures/plugin.legend/legend-doughnut-top-start-mulitiline.png
+new file mode 100644
+index 000000000..2e7e7fe88
+Binary files /dev/null and b/test/fixtures/plugin.legend/legend-doughnut-top-start-mulitiline.png differ
+diff --git a/test/specs/plugin.legend.tests.js b/test/specs/plugin.legend.tests.js
+index e970c596a..18829cac0 100644
+--- a/test/specs/plugin.legend.tests.js
++++ b/test/specs/plugin.legend.tests.js
+@@ -1,9 +1,12 @@
+ // Test the rectangle element
+ describe('Legend block tests', function() {
++	describe('auto', jasmine.fixture.specs('plugin.legend'));
++
+ 	it('should have the correct default config', function() {
+ 		expect(Chart.defaults.global.legend).toEqual({
+ 			display: true,
+ 			position: 'top',
++			align: 'center',
+ 			fullWidth: true, // marks that this box should take the full width of the canvas (pushing down other boxes)
+ 			reverse: false,
+ 			weight: 1000,
+@@ -177,358 +180,6 @@ describe('Legend block tests', function() {
+ 		expect(makeChart).not.toThrow();
+ 	});
+ 
+-	it('should draw correctly when the legend is positioned on the top', function() {
+-		var chart = window.acquireChart({
+-			type: 'bar',
+-			data: {
+-				datasets: [{
+-					label: 'dataset1',
+-					backgroundColor: '#f31',
+-					borderCapStyle: 'butt',
+-					borderDash: [2, 2],
+-					borderDashOffset: 5.5,
+-					data: []
+-				}, {
+-					label: 'dataset2',
+-					hidden: true,
+-					borderJoinStyle: 'miter',
+-					data: []
+-				}, {
+-					label: 'dataset3',
+-					borderWidth: 10,
+-					borderColor: 'green',
+-					data: []
+-				}],
+-				labels: []
+-			}
+-		});
+-
+-		expect(chart.legend.legendHitBoxes.length).toBe(3);
+-
+-		[
+-			{h: 12, l: 106, t: 10, w: 93},
+-			{h: 12, l: 209, t: 10, w: 93},
+-			{h: 12, l: 312, t: 10, w: 93}
+-		].forEach(function(expected, i) {
+-			expect(chart.legend.legendHitBoxes[i].height).toBeCloseToPixel(expected.h);
+-			expect(chart.legend.legendHitBoxes[i].left).toBeCloseToPixel(expected.l);
+-			expect(chart.legend.legendHitBoxes[i].top).toBeCloseToPixel(expected.t);
+-			expect(chart.legend.legendHitBoxes[i].width).toBeCloseToPixel(expected.w);
+-		});
+-
+-		// NOTE(SB) We should get ride of the following tests and use image diff instead.
+-		// For now, as discussed with Evert Timberg, simply comment out.
+-		// See https://humblesoftware.github.io/js-imagediff/test.html
+-		/* chart.legend.ctx = window.createMockContext();
+-		chart.update();
+-
+-		expect(chart.legend.ctx .getCalls()).toEqual([{
+-			"name": "measureText",
+-			"args": ["dataset1"]
+-		}, {
+-			"name": "measureText",
+-			"args": ["dataset2"]
+-		}, {
+-			"name": "measureText",
+-			"args": ["dataset3"]
+-		}, {
+-			"name": "measureText",
+-			"args": ["dataset1"]
+-		}, {
+-			"name": "measureText",
+-			"args": ["dataset2"]
+-		}, {
+-			"name": "measureText",
+-			"args": ["dataset3"]
+-		}, {
+-			"name": "setLineWidth",
+-			"args": [0.5]
+-		}, {
+-			"name": "setStrokeStyle",
+-			"args": ["#666"]
+-		}, {
+-			"name": "setFillStyle",
+-			"args": ["#666"]
+-		}, {
+-			"name": "measureText",
+-			"args": ["dataset1"]
+-		}, {
+-			"name": "save",
+-			"args": []
+-		}, {
+-			"name": "setFillStyle",
+-			"args": ["#f31"]
+-		}, {
+-			"name": "setLineCap",
+-			"args": ["butt"]
+-		}, {
+-			"name": "setLineDashOffset",
+-			"args": [5.5]
+-		}, {
+-			"name": "setLineJoin",
+-			"args": ["miter"]
+-		}, {
+-			"name": "setLineWidth",
+-			"args": [3]
+-		}, {
+-			"name": "setStrokeStyle",
+-			"args": ["rgba(0,0,0,0.1)"]
+-		}, {
+-			"name": "setLineDash",
+-			"args": [
+-				[2, 2]
+-			]
+-		}, {
+-			"name": "strokeRect",
+-			"args": [114, 110, 40, 12]
+-		}, {
+-			"name": "fillRect",
+-			"args": [114, 110, 40, 12]
+-		}, {
+-			"name": "restore",
+-			"args": []
+-		}, {
+-			"name": "fillText",
+-			"args": ["dataset1", 160, 110]
+-		}, {
+-			"name": "measureText",
+-			"args": ["dataset2"]
+-		}, {
+-			"name": "save",
+-			"args": []
+-		}, {
+-			"name": "setFillStyle",
+-			"args": ["rgba(0,0,0,0.1)"]
+-		}, {
+-			"name": "setLineCap",
+-			"args": ["butt"]
+-		}, {
+-			"name": "setLineDashOffset",
+-			"args": [0]
+-		}, {
+-			"name": "setLineJoin",
+-			"args": ["miter"]
+-		}, {
+-			"name": "setLineWidth",
+-			"args": [3]
+-		}, {
+-			"name": "setStrokeStyle",
+-			"args": ["rgba(0,0,0,0.1)"]
+-		}, {
+-			"name": "setLineDash",
+-			"args": [
+-				[]
+-			]
+-		}, {
+-			"name": "strokeRect",
+-			"args": [250, 110, 40, 12]
+-		}, {
+-			"name": "fillRect",
+-			"args": [250, 110, 40, 12]
+-		}, {
+-			"name": "restore",
+-			"args": []
+-		}, {
+-			"name": "fillText",
+-			"args": ["dataset2", 296, 110]
+-		}, {
+-			"name": "beginPath",
+-			"args": []
+-		}, {
+-			"name": "setLineWidth",
+-			"args": [2]
+-		}, {
+-			"name": "moveTo",
+-			"args": [296, 116]
+-		}, {
+-			"name": "lineTo",
+-			"args": [376, 116]
+-		}, {
+-			"name": "stroke",
+-			"args": []
+-		}, {
+-			"name": "measureText",
+-			"args": ["dataset3"]
+-		}, {
+-			"name": "save",
+-			"args": []
+-		}, {
+-			"name": "setFillStyle",
+-			"args": ["rgba(0,0,0,0.1)"]
+-		}, {
+-			"name": "setLineCap",
+-			"args": ["butt"]
+-		}, {
+-			"name": "setLineDashOffset",
+-			"args": [0]
+-		}, {
+-			"name": "setLineJoin",
+-			"args": ["miter"]
+-		}, {
+-			"name": "setLineWidth",
+-			"args": [10]
+-		}, {
+-			"name": "setStrokeStyle",
+-			"args": ["green"]
+-		}, {
+-			"name": "setLineDash",
+-			"args": [
+-				[]
+-			]
+-		}, {
+-			"name": "strokeRect",
+-			"args": [182, 132, 40, 12]
+-		}, {
+-			"name": "fillRect",
+-			"args": [182, 132, 40, 12]
+-		}, {
+-			"name": "restore",
+-			"args": []
+-		}, {
+-			"name": "fillText",
+-			"args": ["dataset3", 228, 132]
+-		}]);*/
+-	});
+-
+-	it('should draw correctly when the legend is positioned on the left', function() {
+-		var chart = window.acquireChart({
+-			type: 'bar',
+-			data: {
+-				datasets: [{
+-					label: 'dataset1',
+-					backgroundColor: '#f31',
+-					borderCapStyle: 'butt',
+-					borderDash: [2, 2],
+-					borderDashOffset: 5.5,
+-					data: []
+-				}, {
+-					label: 'dataset2',
+-					hidden: true,
+-					borderJoinStyle: 'miter',
+-					data: []
+-				}, {
+-					label: 'dataset3',
+-					borderWidth: 10,
+-					borderColor: 'green',
+-					data: []
+-				}],
+-				labels: []
+-			},
+-			options: {
+-				legend: {
+-					position: 'left'
+-				}
+-			}
+-		});
+-
+-		expect(chart.legend.legendHitBoxes.length).toBe(3);
+-
+-		[
+-			{h: 12, l: 10, t: 16, w: 93},
+-			{h: 12, l: 10, t: 38, w: 93},
+-			{h: 12, l: 10, t: 60, w: 93}
+-		].forEach(function(expected, i) {
+-			expect(chart.legend.legendHitBoxes[i].height).toBeCloseToPixel(expected.h);
+-			expect(chart.legend.legendHitBoxes[i].left).toBeCloseToPixel(expected.l);
+-			expect(chart.legend.legendHitBoxes[i].top).toBeCloseToPixel(expected.t);
+-			expect(chart.legend.legendHitBoxes[i].width).toBeCloseToPixel(expected.w);
+-		});
+-	});
+-
+-	it('should draw correctly when the legend is positioned on the top and has multiple rows', function() {
+-		var chart = window.acquireChart({
+-			type: 'bar',
+-			data: {
+-				datasets: Array.apply(null, Array(9)).map(function() {
+-					return {
+-						label: ' ',
+-						data: []
+-					};
+-				}),
+-				labels: []
+-			}
+-		});
+-
+-		expect(chart.legend.left).toBeCloseToPixel(0);
+-		expect(chart.legend.top).toBeCloseToPixel(0);
+-		expect(chart.legend.width).toBeCloseToPixel(512);
+-		expect(chart.legend.height).toBeCloseToPixel(54);
+-		expect(chart.legend.legendHitBoxes.length).toBe(9);
+-
+-		[
+-			{h: 12, l: 24, t: 10, w: 49},
+-			{h: 12, l: 83, t: 10, w: 49},
+-			{h: 12, l: 142, t: 10, w: 49},
+-			{h: 12, l: 202, t: 10, w: 49},
+-			{h: 12, l: 261, t: 10, w: 49},
+-			{h: 12, l: 320, t: 10, w: 49},
+-			{h: 12, l: 380, t: 10, w: 49},
+-			{h: 12, l: 439, t: 10, w: 49},
+-			{h: 12, l: 231, t: 32, w: 49}
+-		].forEach(function(expected, i) {
+-			expect(chart.legend.legendHitBoxes[i].height).toBeCloseToPixel(expected.h);
+-			expect(chart.legend.legendHitBoxes[i].left).toBeCloseToPixel(expected.l);
+-			expect(chart.legend.legendHitBoxes[i].top).toBeCloseToPixel(expected.t);
+-			expect(chart.legend.legendHitBoxes[i].width).toBeCloseToPixel(expected.w);
+-		});
+-	});
+-
+-	it('should draw correctly when the legend is positioned on the left and has multiple columns', function() {
+-		var chart = window.acquireChart({
+-			type: 'bar',
+-			data: {
+-				datasets: Array.apply(null, Array(22)).map(function() {
+-					return {
+-						label: ' ',
+-						data: []
+-					};
+-				}),
+-				labels: []
+-			},
+-			options: {
+-				legend: {
+-					position: 'left'
+-				}
+-			}
+-		});
+-
+-		expect(chart.legend.left).toBeCloseToPixel(0);
+-		expect(chart.legend.top).toBeCloseToPixel(6);
+-		expect(chart.legend.width).toBeCloseToPixel(128);
+-		expect(chart.legend.height).toBeCloseToPixel(476);
+-		expect(chart.legend.legendHitBoxes.length).toBe(22);
+-
+-		[
+-			{h: 12, l: 10, t: 16, w: 49},
+-			{h: 12, l: 10, t: 38, w: 49},
+-			{h: 12, l: 10, t: 60, w: 49},
+-			{h: 12, l: 10, t: 82, w: 49},
+-			{h: 12, l: 10, t: 104, w: 49},
+-			{h: 12, l: 10, t: 126, w: 49},
+-			{h: 12, l: 10, t: 148, w: 49},
+-			{h: 12, l: 10, t: 170, w: 49},
+-			{h: 12, l: 10, t: 192, w: 49},
+-			{h: 12, l: 10, t: 214, w: 49},
+-			{h: 12, l: 10, t: 236, w: 49},
+-			{h: 12, l: 10, t: 258, w: 49},
+-			{h: 12, l: 10, t: 280, w: 49},
+-			{h: 12, l: 10, t: 302, w: 49},
+-			{h: 12, l: 10, t: 324, w: 49},
+-			{h: 12, l: 10, t: 346, w: 49},
+-			{h: 12, l: 10, t: 368, w: 49},
+-			{h: 12, l: 10, t: 390, w: 49},
+-			{h: 12, l: 10, t: 412, w: 49},
+-			{h: 12, l: 10, t: 434, w: 49},
+-			{h: 12, l: 10, t: 456, w: 49},
+-			{h: 12, l: 69, t: 16, w: 49}
+-		].forEach(function(expected, i) {
+-			expect(chart.legend.legendHitBoxes[i].height).toBeCloseToPixel(expected.h);
+-			expect(chart.legend.legendHitBoxes[i].left).toBeCloseToPixel(expected.l);
+-			expect(chart.legend.legendHitBoxes[i].top).toBeCloseToPixel(expected.t);
+-			expect(chart.legend.legendHitBoxes[i].width).toBeCloseToPixel(expected.w);
+-		});
+-	});
+-
+ 	it('should not draw legend items outside of the chart bounds', function() {
+ 		var chart = window.acquireChart(
+ 			{
+@@ -704,3 +355,4 @@ describe('Legend block tests', function() {
+ 		});
+ 	});
+ });
++

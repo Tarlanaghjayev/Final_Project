@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/chartjs/Chart.js/commits/d4917afba9d2d177ff4eb7c28ccc054bd9983002</id>
+  <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commits/d4917afba9d2d177ff4eb7c28ccc054bd9983002"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/chartjs/Chart.js/commits/d4917afba9d2d177ff4eb7c28ccc054bd9983002.atom"/>
+  <title>Recent Commits to Chart.js:d4917afba9d2d177ff4eb7c28ccc054bd9983002</title>
+  <updated>2016-02-14T20:15:17Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d4917afba9d2d177ff4eb7c28ccc054bd9983002</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/d4917afba9d2d177ff4eb7c28ccc054bd9983002"/>
+    <title>
+        Update git ignore to make it easier to switch between branches. Add c…
+    </title>
+    <updated>2016-02-14T20:15:17Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update git ignore to make it easier to switch between branches. Add code climate config here as well.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/37883689adaf98cc0e3da70d271aea458dd197a0</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/37883689adaf98cc0e3da70d271aea458dd197a0"/>
+    <title>
+        Fixes #1144 with an update to the docs to indicate that labels are re…
+    </title>
+    <updated>2016-02-08T00:58:15Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fixes #1144 with an update to the docs to indicate that labels are required for each point&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cf0b550a80b3be984084dbcf7ae3b3f24be87e66</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/cf0b550a80b3be984084dbcf7ae3b3f24be87e66"/>
+    <title>
+        Check to ensure dom node exists when calculating size. Fixes #919
+    </title>
+    <updated>2016-02-08T00:23:54Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Check to ensure dom node exists when calculating size. Fixes #919&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/126e318fefbbefc4ccc315d9afd5b6f979aac26e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/126e318fefbbefc4ccc315d9afd5b6f979aac26e"/>
+    <title>
+        Update built files
+    </title>
+    <updated>2016-01-09T15:59:52Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update built files&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/1d3cb8ec41f98a1de11e28433ff8ccf43757cbdd</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/1d3cb8ec41f98a1de11e28433ff8ccf43757cbdd"/>
+    <title>
+        Merge pull request #1875 from michaelarnauts/master
+    </title>
+    <updated>2016-01-09T14:40:07Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #1875 from michaelarnauts/master
+
+Ignore null values when calculating scale&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/57bd8c7715998a668d1a3b41daa8a520070969fe</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/57bd8c7715998a668d1a3b41daa8a520070969fe"/>
+    <title>
+        Ignore null values when calculating scale
+    </title>
+    <updated>2016-01-09T11:04:29Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/1193779?s=30&amp;v=4"/>
+    <author>
+      <name>michaelarnauts</name>
+      <uri>https://github.com/michaelarnauts</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Ignore null values when calculating scale&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/104143672bdb49bbcd46b7c30f6e8c3166e919a8</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/104143672bdb49bbcd46b7c30f6e8c3166e919a8"/>
+    <title>
+        Merge pull request #1874 from Parent5446/patch-1
+    </title>
+    <updated>2016-01-09T04:49:32Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #1874 from Parent5446/patch-1
+
+Added documentation about tooltip templates&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c5f141306f358d099eda96e3c0d21aff5604be25</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/c5f141306f358d099eda96e3c0d21aff5604be25"/>
+    <title>
+        Added documentation about tooltip templates
+    </title>
+    <updated>2016-01-09T04:02:45Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/52883?s=30&amp;v=4"/>
+    <author>
+      <name>Parent5446</name>
+      <uri>https://github.com/Parent5446</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Added documentation about tooltip templates
+
+It can be a little unclear what the actual format for tooltip templates are. Added information concerning how the tooltip templates are evaluated, and what context, i.e., variables, is available inside of them.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/299c4b3ae15e8e3dbe56acf2d715495ae1df0573</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/299c4b3ae15e8e3dbe56acf2d715495ae1df0573"/>
+    <title>
+        Update readme for latest v2 beta release
+    </title>
+    <updated>2016-01-01T17:56:08Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update readme for latest v2 beta release&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cea557849af6e285351632bfcbdd92b82cb694cd</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/cea557849af6e285351632bfcbdd92b82cb694cd"/>
+    <title>
+        Merge pull request #1844 from zachpanz88/patch-2
+    </title>
+    <updated>2015-12-31T21:41:26Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #1844 from zachpanz88/patch-2
+
+Bump copyright year in license&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/12a35b5d7bf423713f8f0da2fa698720a6664010</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/12a35b5d7bf423713f8f0da2fa698720a6664010"/>
+    <title>
+        Bump copyright year in license
+    </title>
+    <updated>2015-12-31T20:41:36Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/7033952?s=30&amp;v=4"/>
+    <author>
+      <name>panzarino</name>
+      <uri>https://github.com/panzarino</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Bump copyright year in license&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cfa6eb1289f94efe34e266544ad3fdf7725d6313</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/cfa6eb1289f94efe34e266544ad3fdf7725d6313"/>
+    <title>
+        Update built files
+    </title>
+    <updated>2015-12-27T17:10:07Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update built files&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/92d4d989f56045b7d807bdbf6d13af4f64bd21f1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/92d4d989f56045b7d807bdbf6d13af4f64bd21f1"/>
+    <title>
+        Merge pull request #1834 from damiansilbergleithcunniff/issue-1764-de…
+    </title>
+    <updated>2015-12-27T17:08:33Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Merge pull request #1834 from damiansilbergleithcunniff/issue-1764-default-pie-chart-colors
+
+Issue 1764: Add default colors for Pie Charts&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/cebbca67d196c9f8d05fb51f899175c59097b305</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/cebbca67d196c9f8d05fb51f899175c59097b305"/>
+    <title>
+        Choose a &quot;better&quot; set of 12 default colors/highlight colors for pie c…
+    </title>
+    <updated>2015-12-27T16:14:15Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/14797221?s=30&amp;v=4"/>
+    <author>
+      <name>damiansilbergleithcunniff</name>
+      <uri>https://github.com/damiansilbergleithcunniff</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Choose a &amp;quot;better&amp;quot; set of 12 default colors/highlight colors for pie charts&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c47e4c1da1c2c15711e078b4d8517b4c14b190bf</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/c47e4c1da1c2c15711e078b4d8517b4c14b190bf"/>
+    <title>
+        Change reference to index to prevent running off the end of the array
+    </title>
+    <updated>2015-12-26T22:36:15Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/14797221?s=30&amp;v=4"/>
+    <author>
+      <name>damiansilbergleithcunniff</name>
+      <uri>https://github.com/damiansilbergleithcunniff</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Change reference to index to prevent running off the end of the array&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b06344563d4ab5463b692c1ff00506d4a97dc666</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/b06344563d4ab5463b692c1ff00506d4a97dc666"/>
+    <title>
+        spaces -&gt; tabs
+    </title>
+    <updated>2015-12-26T17:04:29Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/14797221?s=30&amp;v=4"/>
+    <author>
+      <name>damiansilbergleithcunniff</name>
+      <uri>https://github.com/damiansilbergleithcunniff</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;spaces -&amp;gt; tabs&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/77185993df7c7e1171c8b3bac9b551ea616d54a8</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/77185993df7c7e1171c8b3bac9b551ea616d54a8"/>
+    <title>
+        fix spaces -&gt; tabs
+    </title>
+    <updated>2015-12-26T17:01:06Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/14797221?s=30&amp;v=4"/>
+    <author>
+      <name>damiansilbergleithcunniff</name>
+      <uri>https://github.com/damiansilbergleithcunniff</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;fix spaces -&amp;gt; tabs&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/fd2344dd5f9de7b4aebff48fb21af3670705551f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/fd2344dd5f9de7b4aebff48fb21af3670705551f"/>
+    <title>
+        Update the docs to reflect the new feature
+    </title>
+    <updated>2015-12-26T16:47:59Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/14797221?s=30&amp;v=4"/>
+    <author>
+      <name>damiansilbergleithcunniff</name>
+      <uri>https://github.com/damiansilbergleithcunniff</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update the docs to reflect the new feature&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e949edacf5fea379e3bc555fd3812823c139d4b4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/e949edacf5fea379e3bc555fd3812823c139d4b4"/>
+    <title>
+        Update the pie chart to use the default color/highlight if none is sp…
+    </title>
+    <updated>2015-12-26T16:41:31Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/14797221?s=30&amp;v=4"/>
+    <author>
+      <name>damiansilbergleithcunniff</name>
+      <uri>https://github.com/damiansilbergleithcunniff</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update the pie chart to use the default color/highlight if none is specified&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a868a2f61eff3853e8e0777f17334a5e10f22e37</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/a868a2f61eff3853e8e0777f17334a5e10f22e37"/>
+    <title>
+        Add default global values for Color and Highlight color
+    </title>
+    <updated>2015-12-26T16:34:43Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/14797221?s=30&amp;v=4"/>
+    <author>
+      <name>damiansilbergleithcunniff</name>
+      <uri>https://github.com/damiansilbergleithcunniff</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add default global values for Color and Highlight color&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

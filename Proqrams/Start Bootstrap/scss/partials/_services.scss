@@ -1,0 +1,49 @@
+#services{
+    position: relative;
+    height: 600px;
+    .col-lg-12{
+    h2{
+        position: absolute;
+        top: 116px;
+        left: 33%;
+        font-size: 62px;
+    }
+    h3{
+        position: absolute;
+        left: 21%;
+        top: 212px;
+        font-size: 30px;
+    }}
+
+    .kart{
+        position: absolute;
+        top: 337px;
+        align-content: center;
+        margin-left: -102px;
+        .esas{
+            color: white;
+            position: absolute;
+            top: -38px;
+            font-size: 65px;
+            left: -2%;
+        }
+        .daire{
+            color: $secondary-color;
+            font-size: 144px;
+            position: absolute;
+            top: -63px;
+            left: -1%;
+        }
+        h4{
+            font-size: 2rem;
+            position: absolute;
+            top: 91px;
+            left: 26%;
+        }
+        p{
+            margin-top: 147px;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+    }
+}

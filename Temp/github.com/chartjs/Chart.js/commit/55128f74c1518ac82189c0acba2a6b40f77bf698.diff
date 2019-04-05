@@ -1,0 +1,518 @@
+diff --git a/docs/getting-started/integration.md b/docs/getting-started/integration.md
+index 71e7d28ef..4070955ed 100644
+--- a/docs/getting-started/integration.md
++++ b/docs/getting-started/integration.md
+@@ -84,3 +84,18 @@ require(['moment'], function() {
+     });
+ });
+ ```
++
++## Content Security Policy
++
++By default, Chart.js injects CSS directly into the DOM. For webpages secured using [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP), this requires to allow `style-src 'unsafe-inline'`. For stricter CSP environments, where only `style-src 'self'` is allowed, the following CSS file needs to be manually added to your webpage:
++
++```html
++<link rel="stylesheet" type="text/css" href="path/to/chartjs/dist/Chart.min.css">
++```
++
++And the style injection must be turned off **before creating the first chart**:
++
++```javascript
++// Disable automatic style injection
++Chart.platform.disableCSSInjection = true;
++```
+diff --git a/gulpfile.js b/gulpfile.js
+index da8111d21..861a9d1cf 100644
+--- a/gulpfile.js
++++ b/gulpfile.js
+@@ -86,7 +86,7 @@ function buildTask() {
+ function packageTask() {
+   return merge(
+       // gather "regular" files landing in the package root
+-      gulp.src([outDir + '*.js', 'LICENSE.md']),
++      gulp.src([outDir + '*.js', outDir + '*.css', 'LICENSE.md']),
+ 
+       // since we moved the dist files one folder up (package root), we need to rewrite
+       // samples src="../dist/ to src="../ and then copy them in the /samples directory.
+diff --git a/package.json b/package.json
+index 3ef4261b6..72c359deb 100644
+--- a/package.json
++++ b/package.json
+@@ -23,6 +23,7 @@
+     "url": "https://github.com/chartjs/Chart.js/issues"
+   },
+   "devDependencies": {
++    "clean-css": "^4.2.1",
+     "coveralls": "^3.0.0",
+     "eslint": "^5.9.0",
+     "eslint-config-chartjs": "^0.1.0",
+diff --git a/rollup.config.js b/rollup.config.js
+index 83ae38d67..1f0dbbaca 100644
+--- a/rollup.config.js
++++ b/rollup.config.js
+@@ -4,6 +4,7 @@ const commonjs = require('rollup-plugin-commonjs');
+ const resolve = require('rollup-plugin-node-resolve');
+ const terser = require('rollup-plugin-terser').terser;
+ const optional = require('./rollup.plugins').optional;
++const stylesheet = require('./rollup.plugins').stylesheet;
+ const pkg = require('./package.json');
+ 
+ const input = 'src/chart.js';
+@@ -23,6 +24,9 @@ module.exports = [
+ 		plugins: [
+ 			resolve(),
+ 			commonjs(),
++			stylesheet({
++				extract: true
++			}),
+ 			optional({
+ 				include: ['moment']
+ 			})
+@@ -49,6 +53,10 @@ module.exports = [
+ 			optional({
+ 				include: ['moment']
+ 			}),
++			stylesheet({
++				extract: true,
++				minify: true
++			}),
+ 			terser({
+ 				output: {
+ 					preamble: banner
+@@ -76,7 +84,8 @@ module.exports = [
+ 		input: input,
+ 		plugins: [
+ 			resolve(),
+-			commonjs()
++			commonjs(),
++			stylesheet()
+ 		],
+ 		output: {
+ 			name: 'Chart',
+@@ -91,6 +100,9 @@ module.exports = [
+ 		plugins: [
+ 			resolve(),
+ 			commonjs(),
++			stylesheet({
++				minify: true
++			}),
+ 			terser({
+ 				output: {
+ 					preamble: banner
+diff --git a/rollup.plugins.js b/rollup.plugins.js
+index 39c75700e..967c0e592 100644
+--- a/rollup.plugins.js
++++ b/rollup.plugins.js
+@@ -1,4 +1,6 @@
+ /* eslint-env es6 */
++const cleancss = require('clean-css');
++const path = require('path');
+ 
+ const UMD_WRAPPER_RE = /(\(function \(global, factory\) \{)((?:\s.*?)*)(\}\(this,)/;
+ const CJS_FACTORY_RE = /(module.exports = )(factory\(.*?\))( :)/;
+@@ -56,6 +58,51 @@ function optional(config = {}) {
+ 	};
+ }
+ 
++// https://github.com/chartjs/Chart.js/issues/5208
++function stylesheet(config = {}) {
++	const minifier = new cleancss();
++	const styles = [];
++
++	return {
++		name: 'stylesheet',
++		transform(code, id) {
++			// Note that 'id' can be mapped to a CJS proxy import, in which case
++			// 'id' will start with 'commonjs-proxy', so let's first check if we
++			// are importing an existing css file (i.e. startsWith()).
++			if (!id.startsWith(path.resolve('.')) || !id.endsWith('.css')) {
++				return;
++			}
++
++			if (config.minify) {
++				code = minifier.minify(code).styles;
++			}
++
++			// keep track of all imported stylesheets (already minified)
++			styles.push(code);
++
++			return {
++				code: 'export default ' + JSON.stringify(code)
++			};
++		},
++		generateBundle(opts, bundle) {
++			if (!config.extract) {
++				return;
++			}
++
++			const entry = Object.keys(bundle).find(v => bundle[v].isEntry);
++			const name = (entry || '').replace(/\.js$/i, '.css');
++			if (!name) {
++				this.error('failed to guess the output file name');
++			}
++
++			bundle[name] = {
++				code: styles.filter(v => !!v).join('')
++			};
++		}
++	};
++}
++
+ module.exports = {
+-	optional
++	optional,
++	stylesheet
+ };
+diff --git a/samples/advanced/content-security-policy.css b/samples/advanced/content-security-policy.css
+new file mode 100644
+index 000000000..8e5b8fd8c
+--- /dev/null
++++ b/samples/advanced/content-security-policy.css
+@@ -0,0 +1,20 @@
++.content {
++	max-width: 640px;
++	margin: auto;
++	padding: 1rem;
++}
++
++.note {
++	font-family: sans-serif;
++	color: #5050a0;
++	line-height: 1.4;
++	margin-bottom: 1rem;
++	padding: 1rem;
++}
++
++code {
++	background-color: #f5f5ff;
++	border: 1px solid #d0d0fa;
++	border-radius: 4px;
++	padding: 0.05rem 0.25rem;
++}
+diff --git a/samples/advanced/content-security-policy.html b/samples/advanced/content-security-policy.html
+new file mode 100644
+index 000000000..fb2805cdc
+--- /dev/null
++++ b/samples/advanced/content-security-policy.html
+@@ -0,0 +1,27 @@
++<!DOCTYPE html>
++<html lang="en-US">
++<head>
++	<meta charset="utf-8">
++	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
++	<meta name="viewport" content="width=device-width, initial-scale=1">
++	<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
++	<title>Scriptable > Bubble | Chart.js sample</title>
++	<link rel="stylesheet" type="text/css" href="../../dist/Chart.min.css">
++	<link rel="stylesheet" type="text/css" href="./content-security-policy.css">
++	<script src="../../dist/Chart.min.js"></script>
++	<script src="../utils.js"></script>
++	<script src="content-security-policy.js"></script>
++</head>
++<body>
++	<div class="content">
++		<div class="note">
++			In order to support a strict content security policy (<code>default-src 'self'</code>),
++			this page manually loads <code>Chart.min.css</code> and turns off the automatic style
++			injection by setting <code>Chart.platform.disableCSSInjection = true;</code>.
++		</div>
++		<div class="wrapper">
++			<canvas id="chart-0"></canvas>
++		</div>
++	</div>
++</body>
++</html>
+diff --git a/samples/advanced/content-security-policy.js b/samples/advanced/content-security-policy.js
+new file mode 100644
+index 000000000..a185332f7
+--- /dev/null
++++ b/samples/advanced/content-security-policy.js
+@@ -0,0 +1,54 @@
++var utils = Samples.utils;
++
++// CSP: disable automatic style injection
++Chart.platform.disableCSSInjection = true;
++
++utils.srand(110);
++
++function generateData() {
++	var DATA_COUNT = 16;
++	var MIN_XY = -150;
++	var MAX_XY = 100;
++	var data = [];
++	var i;
++
++	for (i = 0; i < DATA_COUNT; ++i) {
++		data.push({
++			x: utils.rand(MIN_XY, MAX_XY),
++			y: utils.rand(MIN_XY, MAX_XY),
++			v: utils.rand(0, 1000)
++		});
++	}
++
++	return data;
++}
++
++window.addEventListener('load', function() {
++	new Chart('chart-0', {
++		type: 'bubble',
++		data: {
++			datasets: [{
++				backgroundColor: utils.color(0),
++				data: generateData()
++			}, {
++				backgroundColor: utils.color(1),
++				data: generateData()
++			}]
++		},
++		options: {
++			aspectRatio: 1,
++			legend: false,
++			tooltip: false,
++			elements: {
++				point: {
++					radius: function(context) {
++						var value = context.dataset.data[context.dataIndex];
++						var size = context.chart.width;
++						var base = Math.abs(value.v) / 1000;
++						return (size / 24) * base;
++					}
++				}
++			}
++		}
++	});
++});
+diff --git a/samples/samples.js b/samples/samples.js
+index c6cc71c7a..b6ffe7626 100644
+--- a/samples/samples.js
++++ b/samples/samples.js
+@@ -187,6 +187,9 @@
+ 		items: [{
+ 			title: 'Progress bar',
+ 			path: 'advanced/progress-bar.html'
++		}, {
++			title: 'Content Security Policy',
++			path: 'advanced/content-security-policy.html'
+ 		}]
+ 	}];
+ 
+diff --git a/samples/style.css b/samples/style.css
+index 8224e2c3f..db92f0c60 100644
+--- a/samples/style.css
++++ b/samples/style.css
+@@ -1,4 +1,3 @@
+-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+ @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+ 
+ body, html {
+diff --git a/scripts/deploy.sh b/scripts/deploy.sh
+index b0edddc7f..35ae4d4e4 100755
+--- a/scripts/deploy.sh
++++ b/scripts/deploy.sh
+@@ -41,7 +41,7 @@ cd $TARGET_DIR
+ git checkout $TARGET_BRANCH
+ 
+ # Copy dist files
+-deploy_files '../dist/*.js' './dist'
++deploy_files '../dist/*.css ../dist/*.js' './dist'
+ 
+ # Copy generated documentation
+ deploy_files '../dist/docs/*' './docs'
+diff --git a/scripts/release.sh b/scripts/release.sh
+index 03c7c6462..71f588034 100755
+--- a/scripts/release.sh
++++ b/scripts/release.sh
+@@ -21,7 +21,7 @@ git remote add auth-origin https://$GITHUB_AUTH_TOKEN@github.com/$TRAVIS_REPO_SL
+ git config --global user.email "$GITHUB_AUTH_EMAIL"
+ git config --global user.name "Chart.js"
+ git checkout --detach --quiet
+-git add -f dist/*.js bower.json
++git add -f dist/*.css dist/*.js bower.json
+ git commit -m "Release $VERSION"
+ git tag -a "v$VERSION" -m "Version $VERSION"
+ git push -q auth-origin refs/tags/v$VERSION 2>/dev/null
+diff --git a/src/platforms/platform.dom.css b/src/platforms/platform.dom.css
+new file mode 100644
+index 000000000..e0b99a4aa
+--- /dev/null
++++ b/src/platforms/platform.dom.css
+@@ -0,0 +1,46 @@
++/*
++ * DOM element rendering detection
++ * https://davidwalsh.name/detect-node-insertion
++ */
++@keyframes chartjs-render-animation {
++	from { opacity: 0.99; }
++	to { opacity: 1; }
++}
++
++.chartjs-render-monitor {
++	animation: chartjs-render-animation 0.001s;
++}
++
++/*
++ * DOM element resizing detection
++ * https://github.com/marcj/css-element-queries
++ */
++.chartjs-size-monitor,
++.chartjs-size-monitor-expand,
++.chartjs-size-monitor-shrink {
++	position: absolute;
++	left: 0;
++	top: 0;
++	right: 0;
++	bottom: 0;
++	overflow: hidden;
++	pointer-events: none;
++	visibility: hidden;
++	z-index: -1;
++}
++
++.chartjs-size-monitor-expand > div {
++	position: absolute;
++	width: 1000000px;
++	height: 1000000px;
++	left: 0;
++	top: 0;
++}
++
++.chartjs-size-monitor-shrink > div {
++	position: absolute;
++	width: 200%;
++	height: 200%;
++	left: 0;
++	top: 0;
++}
+diff --git a/src/platforms/platform.dom.js b/src/platforms/platform.dom.js
+index 053db20d2..777833afe 100644
+--- a/src/platforms/platform.dom.js
++++ b/src/platforms/platform.dom.js
+@@ -5,9 +5,11 @@
+ 'use strict';
+ 
+ var helpers = require('../helpers/index');
++var stylesheet = require('./platform.dom.css');
+ 
+ var EXPANDO_KEY = '$chartjs';
+ var CSS_PREFIX = 'chartjs-';
++var CSS_SIZE_MONITOR = CSS_PREFIX + 'size-monitor';
+ var CSS_RENDER_MONITOR = CSS_PREFIX + 'render-monitor';
+ var CSS_RENDER_ANIMATION = CSS_PREFIX + 'render-animation';
+ var ANIMATION_START_EVENTS = ['animationstart', 'webkitAnimationStart'];
+@@ -166,48 +168,24 @@ function throttled(fn, thisArg) {
+ 	};
+ }
+ 
+-function createDiv(cls, style) {
++function createDiv(cls) {
+ 	var el = document.createElement('div');
+-	el.style.cssText = style || '';
+ 	el.className = cls || '';
+ 	return el;
+ }
+ 
+ // Implementation based on https://github.com/marcj/css-element-queries
+ function createResizer(handler) {
+-	var cls = CSS_PREFIX + 'size-monitor';
+ 	var maxSize = 1000000;
+-	var style =
+-		'position:absolute;' +
+-		'left:0;' +
+-		'top:0;' +
+-		'right:0;' +
+-		'bottom:0;' +
+-		'overflow:hidden;' +
+-		'pointer-events:none;' +
+-		'visibility:hidden;' +
+-		'z-index:-1;';
+ 
+ 	// NOTE(SB) Don't use innerHTML because it could be considered unsafe.
+ 	// https://github.com/chartjs/Chart.js/issues/5902
+-	var resizer = createDiv(cls, style);
+-	var expand = createDiv(cls + '-expand', style);
+-	var shrink = createDiv(cls + '-shrink', style);
+-
+-	expand.appendChild(createDiv('',
+-		'position:absolute;' +
+-		'height:' + maxSize + 'px;' +
+-		'width:' + maxSize + 'px;' +
+-		'left:0;' +
+-		'top:0;'
+-	));
+-	shrink.appendChild(createDiv('',
+-		'position:absolute;' +
+-		'height:200%;' +
+-		'width:200%;' +
+-		'left:0;' +
+-		'top:0;'
+-	));
++	var resizer = createDiv(CSS_SIZE_MONITOR);
++	var expand = createDiv(CSS_SIZE_MONITOR + '-expand');
++	var shrink = createDiv(CSS_SIZE_MONITOR + '-shrink');
++
++	expand.appendChild(createDiv());
++	shrink.appendChild(createDiv());
+ 
+ 	resizer.appendChild(expand);
+ 	resizer.appendChild(shrink);
+@@ -330,6 +308,15 @@ function injectCSS(platform, css) {
+ }
+ 
+ module.exports = {
++	/**
++	 * When `true`, prevents the automatic injection of the stylesheet required to
++	 * correctly detect when the chart is added to the DOM and then resized. This
++	 * switch has been added to allow external stylesheet (`dist/Chart(.min)?.js`)
++	 * to be manually imported to make this library compatible with any CSP.
++	 * See https://github.com/chartjs/Chart.js/issues/5208
++	 */
++	disableCSSInjection: false,
++
+ 	/**
+ 	 * This property holds whether this platform is enabled for the current environment.
+ 	 * Currently used by platform.js to select the proper implementation.
+@@ -337,19 +324,20 @@ module.exports = {
+ 	 */
+ 	_enabled: typeof window !== 'undefined' && typeof document !== 'undefined',
+ 
+-	initialize: function() {
+-		var keyframes = 'from{opacity:0.99}to{opacity:1}';
+-
+-		injectCSS(this,
+-			// DOM rendering detection
+-			// https://davidwalsh.name/detect-node-insertion
+-			'@-webkit-keyframes ' + CSS_RENDER_ANIMATION + '{' + keyframes + '}' +
+-			'@keyframes ' + CSS_RENDER_ANIMATION + '{' + keyframes + '}' +
+-			'.' + CSS_RENDER_MONITOR + '{' +
+-				'-webkit-animation:' + CSS_RENDER_ANIMATION + ' 0.001s;' +
+-				'animation:' + CSS_RENDER_ANIMATION + ' 0.001s;' +
+-			'}'
+-		);
++	/**
++	 * @private
++	 */
++	_ensureLoaded: function() {
++		if (this._loaded) {
++			return;
++		}
++
++		this._loaded = true;
++
++		// https://github.com/chartjs/Chart.js/issues/5208
++		if (!this.disableCSSInjection) {
++			injectCSS(this, stylesheet);
++		}
+ 	},
+ 
+ 	acquireContext: function(item, config) {
+@@ -370,6 +358,10 @@ module.exports = {
+ 		// https://github.com/chartjs/Chart.js/issues/2807
+ 		var context = item && item.getContext && item.getContext('2d');
+ 
++		// Load platform resources on first chart creation, to make possible to change
++		// platform options after importing the library (e.g. `disableCSSInjection`).
++		this._ensureLoaded();
++
+ 		// `instanceof HTMLCanvasElement/CanvasRenderingContext2D` fails when the item is
+ 		// inside an iframe or when running in a protected environment. We could guess the
+ 		// types from their toString() value but let's keep things flexible and assume it's

@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from wrappixel.com/demos/admin-templates/monster-admin/main/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2019 12:29:23 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Areas/AdminPanel/Public/assets/images/favicon.png">
+    <title>Monster Admin Template - The Most Complete & Trusted Bootstrap 4 Admin Template</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Areas/AdminPanel/Public/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- chartist CSS -->
+    <link href="~/Areas/AdminPanel/Public/assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
+    <link href="~/Areas/AdminPanel/Public/assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
+    <link href="~/Areas/AdminPanel/Public/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <link href="~/Areas/AdminPanel/Public/assets/plugins/css-chart/css-chart.css" rel="stylesheet">
+    <!-- toast CSS -->
+    <link href="~/Areas/AdminPanel/Public/assets/plugins/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="~/Areas/AdminPanel/Public/css/style.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="~/Areas/AdminPanel/Public/css/colors/blue.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '~/Areas/AdminPanel/Public/~/Areas/AdminPanel/Public/~/Areas/AdminPanel/Public/~/Areas/AdminPanel/Public/~/Areas/AdminPanel/Public/www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-85622565-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body class="fix-header fix-sidebar card-no-border">
+        <!-- ============================================================== -->
+        <!-- Preloader - style you can find in spinners.css -->
+        <!-- ============================================================== -->
+        <div class="preloader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+            </svg>
+        </div>
+        <!-- ============================================================== -->
+        <!-- Main wrapper - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <div id="main-wrapper">
+            <!-- ============================================================== -->
+            <!-- Topbar header - style you can find in pages.scss -->
+            <!-- ============================================================== -->
+            <header class="topbar">
+                <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">
+                            Admin Panel
+                        </a>
+                    </div>
+                </nav>
+            </header>
+            <!-- ============================================================== -->
+            <!-- End Topbar header -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Left Sidebar - style you can find in sidebar.scss  -->
+            <!-- ============================================================== -->
+            <div class="row">
+                <div class="col-lg-3">
+                    <aside class="left-sidebar">
+                        <!-- Sidebar scroll-->
+                        <div class="scroll-sidebar">
+                            <!-- Sidebar navigation-->
+                            <nav class="sidebar-nav">
+                                <ul id="sidebarnav">
+                                    <li class="nav-small-cap">PERSONAL</li>
+                                    @*<li>
+            <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard <span class="label label-rounded label-success">5</span></span></a>
+            <ul aria-expanded="false" class="collapse">
+                <li><a href="index.html">Modern Dashboard</a></li>
+            </ul>
+        </li>*@
+                                    <li>
+                                        <a href="@Url.Action("index","abouts")">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("index","contacts")">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("index","fightmemories")">Fight Memory</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("index","fmtexts")">Fight Memory Text</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("index","letters")">Letters</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("index","sliders")">Slider</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("index","counters")">Counter</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("index","settings")">Setting</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- End Sidebar navigation -->
+                        </div>
+                        <!-- End Sidebar scroll-->
+                        <!-- Bottom points-->
+                        <div class="sidebar-footer">
+                            <a href="@Url.Action("Logout","Login")" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
+                        </div>
+                        <!-- End Bottom points-->
+                    </aside>
+                    <!-- ============================================================== -->
+                    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+                </div>
+
+                <div class="col-lg-9">
+                    @RenderBody()
+
+                </div> 
+            </div>
+            
+
+        </div>
+    
+   
+
+
+    <script src="~/Areas/AdminPanel/Public/assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="~/Areas/AdminPanel/Public/assets/plugins/bootstrap/js/popper.min.js"></script>
+    <script src="~/Areas/AdminPanel/Public/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="~/Areas/AdminPanel/Public/js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="~/Areas/AdminPanel/Public/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="~/Areas/AdminPanel/Public/js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="~/Areas/AdminPanel/Public/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <!--Custom JavaScript -->
+    <script src="~/Areas/AdminPanel/Public/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!-- chartist chart -->
+    <script src="~/Areas/AdminPanel/Public/assets/plugins/chartist-js/dist/chartist.min.js"></script>
+    <script src="~/Areas/AdminPanel/Public/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+    <!-- Chart JS -->
+    <script src="~/Areas/AdminPanel/Public/assets/plugins/echarts/echarts-all.js"></script>
+    <script src="~/Areas/AdminPanel/Public/assets/plugins/toast-master/js/jquery.toast.js"></script>
+    <!-- Chart JS -->
+    <script src="~/Areas/AdminPanel/Public/js/dashboard1.js"></script>
+    <script src="~/Areas/AdminPanel/Public/js/toastr.js"></script>
+
+    <!-- ============================================================== -->
+    <!-- Style switcher -->
+    <!-- ============================================================== -->
+    <script src="~/Areas/AdminPanel/Public/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+    
+
+</body>
+
+<!-- Mirrored from wrappixel.com/demos/admin-templates/monster-admin/main/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2019 12:29:26 GMT -->
+</html>
+
+
+

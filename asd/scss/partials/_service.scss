@@ -1,0 +1,119 @@
+#service{
+    position: relative;
+    .title{
+       // position: absolute;
+       h2{
+           font-family: $font-family-second;
+           font-weight: 600;
+           font-size: $font-size*2; 
+           margin-bottom: 10px;
+       }
+     span{
+        height: 3px;
+        width: 80px;
+        margin: 0 0 15px;
+        border-bottom: 2px solid $color;
+        position: relative;
+        display: inline-block;
+        
+     }
+     span::after{
+        content: "";
+        border-bottom: 2px solid $color;
+        width: 45px;
+        height: 2px;
+        display: block;
+        margin: 5px auto;
+     }
+     p{
+         font-size: $font-size;
+         margin: 0 auto 50px;
+     }
+    }
+
+    .card{
+        padding: 40px 20px;
+        position: relative;
+        border: none;
+        box-shadow: 0px 0px 32px 0px rgba(122,122,122,0.1);
+        width: 350px;
+        @include transition(all,0.5s);
+        min-width: 350px;
+        margin-bottom: 30px;
+        &:hover{
+            box-shadow: 0 22px 43px rgba(0, 0, 0, 0.15);
+            @include transform(translateY(-10px));
+        }
+        .cart-icon{
+            padding: 25px 0;
+            position: relative;
+            height: 95px;
+            width: 95px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: $color-after;
+            color: $color;
+            margin: 0 auto 25px;
+            font-size: $font-size*2;
+            @include transition(all,0.5s);
+        }
+        .cart-icon::after{
+            content: '';
+            position: absolute;
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+            top: -5px;
+            left: -5px;
+            padding: 8px;
+            pointer-events: none;
+            border: 5px solid $color-after;
+           
+            @include transition(all,0.5s);
+        }
+        .cart-icon:hover::after{
+            @include transform(scale(1.2));
+        }
+        h3{
+            a{
+                color: $color-black;
+                text-decoration: none;
+                &:hover{
+                    color: $color;
+                }
+            }
+           
+
+        }
+
+        .cart-a{
+            text-decoration: none;
+            color: $color-black;
+            @include transition(all,0.5s);
+            font-size: ($font-size)-2;
+            
+            &:hover{
+                color: $color;
+                padding-left: 10px;
+            }
+        }
+        .cart-a::after{
+            content: '\f30b';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin: 0 5px;
+            font-size: ($font-size)-4;
+            
+        }
+        .cart-a:hover::after{
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin: 0 5px;
+            font-size: ($font-size)-5;
+        }
+
+    }
+
+
+}

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/chartjs/Chart.js/commits/a128bafff36a004cc0c27b59b6983864d8220199</id>
+  <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commits/a128bafff36a004cc0c27b59b6983864d8220199"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/chartjs/Chart.js/commits/a128bafff36a004cc0c27b59b6983864d8220199.atom"/>
+  <title>Recent Commits to Chart.js:a128bafff36a004cc0c27b59b6983864d8220199</title>
+  <updated>2019-03-07T22:07:11Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/a128bafff36a004cc0c27b59b6983864d8220199</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/a128bafff36a004cc0c27b59b6983864d8220199"/>
+    <title>
+        Demonstrate multiple units on financial timeseries sample
+    </title>
+    <updated>2019-03-07T22:07:11Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Demonstrate multiple units on financial timeseries sample&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/87a74f99a1e73fef3ebd314a11c322829c3d7cd1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/87a74f99a1e73fef3ebd314a11c322829c3d7cd1"/>
+    <title>
+        Fix missing Chart.Chart (deprecated) alias (#6112)
+    </title>
+    <updated>2019-03-06T08:12:29Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix missing Chart.Chart (deprecated) alias (#6112)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d3b7559b9b2e1ccb62cd315bd103cafbb34118a2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/d3b7559b9b2e1ccb62cd315bd103cafbb34118a2"/>
+    <title>
+        Tighten check for detecting if Moment is installed (#6113)
+    </title>
+    <updated>2019-03-06T08:11:24Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/183786?s=30&amp;v=4"/>
+    <author>
+      <name>jonrimmer</name>
+      <uri>https://github.com/jonrimmer</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Tighten check for detecting if Moment is installed (#6113)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f9f048a5c5ff460e300eec43d7ed6a1fb4f29809</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/f9f048a5c5ff460e300eec43d7ed6a1fb4f29809"/>
+    <title>
+        Bump version to 2.8.0-rc.1
+    </title>
+    <updated>2019-03-04T08:58:08Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Bump version to 2.8.0-rc.1&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/31aebf3bab8a6a45edce853360bc469ed42d386e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/31aebf3bab8a6a45edce853360bc469ed42d386e"/>
+    <title>
+        Include generated CSS in the GitHub releases
+    </title>
+    <updated>2019-03-04T08:57:08Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Include generated CSS in the GitHub releases&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/858cc80a1fbbf33e70808e75aaae94c21968d325</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/858cc80a1fbbf33e70808e75aaae94c21968d325"/>
+    <title>
+        Properly initialize variables if ticks aren&#39;t being displayed (#6100)
+    </title>
+    <updated>2019-03-04T08:15:29Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Properly initialize variables if ticks aren&amp;#39;t being displayed (#6100)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/344628ba9c5fc95a1edbc9cf94488461d24a4b32</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/344628ba9c5fc95a1edbc9cf94488461d24a4b32"/>
+    <title>
+        Fix animation regression introduced by #5331 (#6108)
+    </title>
+    <updated>2019-03-04T08:11:57Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/27971921?s=30&amp;v=4"/>
+    <author>
+      <name>kurkle</name>
+      <uri>https://github.com/kurkle</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix animation regression introduced by #5331 (#6108)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/35273ee9488b9764485e6a0adfe92390fa01b130</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/35273ee9488b9764485e6a0adfe92390fa01b130"/>
+    <title>
+        Optimize the npm package by removing useless files (#6105)
+    </title>
+    <updated>2019-03-03T14:19:11Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Optimize the npm package by removing useless files (#6105)
+
+Explicitly target files that should be included in the npm package, making it 10x smaller by removing the docs, samples, scripts, sources, tests and other useless files.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0ac215b56a14373d3e49d927d39e9e4ccaff52cd</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/0ac215b56a14373d3e49d927d39e9e4ccaff52cd"/>
+    <title>
+        Improve financial sample tooltips and interactions (#6089)
+    </title>
+    <updated>2019-03-03T14:00:24Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Improve financial sample tooltips and interactions (#6089)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/653e9a954eae83a8fcf157e6d402bcacaac51821</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/653e9a954eae83a8fcf157e6d402bcacaac51821"/>
+    <title>
+        Add a note about how to include an example against master (#6107)
+    </title>
+    <updated>2019-03-03T09:26:40Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add a note about how to include an example against master (#6107)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/946c6d0617bfa0eb21e86f6f75d7f34b2bb1dc85</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/946c6d0617bfa0eb21e86f6f75d7f34b2bb1dc85"/>
+    <title>
+        Fix document errors related to ticks (#6099)
+    </title>
+    <updated>2019-03-01T23:03:20Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/723188?s=30&amp;v=4"/>
+    <author>
+      <name>nagix</name>
+      <uri>https://github.com/nagix</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix document errors related to ticks (#6099)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b2f7adc2b4539ee8d5208ccef8e0f6ab1f9c8558</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/b2f7adc2b4539ee8d5208ccef8e0f6ab1f9c8558"/>
+    <title>
+        Revamp the README.md and add link to the awesome list (#6096)
+    </title>
+    <updated>2019-03-01T08:13:21Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Revamp the README.md and add link to the awesome list (#6096)
+
+Integrate the upcoming awesome list and make our README.md welcome page more user friendly by displaying the Chart.js logo, adding the docs TOC and removing instructions that was already in the docs.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/93f4e6e4e8431fdfbdec8654ec325ab9b51cb501</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/93f4e6e4e8431fdfbdec8654ec325ab9b51cb501"/>
+    <title>
+        New weight option for pie and doughnut charts (#5951)
+    </title>
+    <updated>2019-02-27T22:06:54Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/40588938?s=30&amp;v=4"/>
+    <author>
+      <name>Vincent-Ip</name>
+      <uri>https://github.com/Vincent-Ip</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;New weight option for pie and doughnut charts (#5951)
+
+Add functionality to give pie &amp;amp; doughnut datasets a weight attribute, which affects the relative thickness of the dataset when there are multiple datasets in pie &amp;amp; doughnut charts. The default weight of each dataset is 1, providing any other numerical value will allow the pie or doughnut dataset to be drawn with a thickness relative to its default size. 
+
+For example a weight of 2 will allow the dataset to be drawn double its typical dataset thickness. Note that the weight attribute will only affect a pie or doughnut chart if there is more than one visible dataset. Using weight on a pie or doughnut dataset when there is only one dataset on the chart will have no affect.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/79fc340514cb3d52334adefd5c10175386104605</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/79fc340514cb3d52334adefd5c10175386104605"/>
+    <title>
+        Add instructions for image-based tests to the contributors guide (#6073)
+    </title>
+    <updated>2019-02-25T08:17:37Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add instructions for image-based tests to the contributors guide (#6073)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0ec3f5569e6cf45b2d86886554bea200a71bd9c9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/0ec3f5569e6cf45b2d86886554bea200a71bd9c9"/>
+    <title>
+        Add support for per side border width for rectangle (#6077)
+    </title>
+    <updated>2019-02-25T08:03:12Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/27971921?s=30&amp;v=4"/>
+    <author>
+      <name>kurkle</name>
+      <uri>https://github.com/kurkle</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add support for per side border width for rectangle (#6077)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/b36d55d0936bf591d5ab58ae3d6a076f8f2d62e1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/b36d55d0936bf591d5ab58ae3d6a076f8f2d62e1"/>
+    <title>
+        Add onLeave to legend config docs (#6088)
+    </title>
+    <updated>2019-02-25T07:59:48Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/183786?s=30&amp;v=4"/>
+    <author>
+      <name>jonrimmer</name>
+      <uri>https://github.com/jonrimmer</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add onLeave to legend config docs (#6088)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/317cae11dc3358e816528229d05bea7c835c4ad3</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/317cae11dc3358e816528229d05bea7c835c4ad3"/>
+    <title>
+        Ignore invalid log scale min and max (#6058)
+    </title>
+    <updated>2019-02-24T09:59:21Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Ignore invalid log scale min and max (#6058)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f3b18373e67c8e0aab6b29379787725a88dd7391</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/f3b18373e67c8e0aab6b29379787725a88dd7391"/>
+    <title>
+        Add onLeave callback to legend (#6059)
+    </title>
+    <updated>2019-02-24T09:58:22Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/183786?s=30&amp;v=4"/>
+    <author>
+      <name>jonrimmer</name>
+      <uri>https://github.com/jonrimmer</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add onLeave callback to legend (#6059)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f2b099b835bf5d6dfe3a7d3097997ec11983c3ed</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/f2b099b835bf5d6dfe3a7d3097997ec11983c3ed"/>
+    <title>
+        Initialize date adapter with chart options (#6016)
+    </title>
+    <updated>2019-02-21T07:11:32Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Initialize date adapter with chart options (#6016)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/20c26455ba9d3861f0c19b6d8906070168c6d4b9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/20c26455ba9d3861f0c19b6d8906070168c6d4b9"/>
+    <title>
+        Add a link to chartjs-plugin-rough to extensions.md (#6081)
+    </title>
+    <updated>2019-02-20T15:13:41Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/723188?s=30&amp;v=4"/>
+    <author>
+      <name>nagix</name>
+      <uri>https://github.com/nagix</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add a link to chartjs-plugin-rough to extensions.md (#6081)&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

@@ -1,0 +1,18 @@
+@import 'partials/variables';
+#dx_info{
+    .row{
+         .news-int-block {
+            margin-top: 25px;
+            padding: 25px 20px;
+            box-shadow: 0px 3px 23px 0px rgba(0,0,0,0.06);
+            margin-bottom: 30px;
+            border: 1px solid $icon-c;
+            border-radius: 20px;
+            background-color: #fff;
+        }
+        .letter-int-block .letter-int-content .let-title {
+            font-size: 27px;
+            margin-bottom: 30px;
+        }
+    }
+}

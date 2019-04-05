@@ -1,0 +1,52 @@
+#about{
+    
+    .about-img img{
+        max-width: 100%;
+    }
+    .about-text{
+        padding: 80px 40px;
+        h2{
+            font-family: $font-family-second;
+            font-weight: 600;
+        }
+        h5{
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            margin-bottom: 20px;
+        }
+        p{
+            color: darken($color-effet-2,40%) ;
+
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 25px;
+            li{
+                color: darken($color-effet-2,40%);
+                margin-bottom: 7px;
+            }
+            li::before{
+                content: "\f00c";
+                font-family: 'Font Awesome 5 Free';
+                margin-right: 15px;
+                color: $color;
+                font-size: 13px;
+                display: inline-block;
+                margin-top: 0px;
+                font-weight: 900;
+        
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #about{
+        .about-text{
+            padding: 10px;        
+        };
+    }
+}

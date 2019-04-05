@@ -1,0 +1,42 @@
+.back_photo{
+    height: 100vh;
+    background-image: url(../img/bg_home_personal.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: #000;
+    .back_text{
+        position: absolute;
+        left: 30%;
+        top: 107px;
+        max-width: 600px;
+        text-align: center;
+        font-size: 20px;
+        span{
+            border: 1px solid $secondary-color;
+            border-radius: 34px;
+            padding: 10px 29px;
+            background: $secondary-color;
+            color: $helper-color;
+        }
+        h1{
+            margin-top: 32px;
+        }
+        p{
+            margin-top: 15px;
+            max-width: 508px;
+        }
+        a{
+            color: $helper-color;
+            background: none;
+            border-color: $helper-color;
+            font-size: 26px;
+        
+            &:hover{
+                color: #000;
+                background-color: $helper-color;
+                border-color: $helper-color;
+            }
+        }
+    }
+}

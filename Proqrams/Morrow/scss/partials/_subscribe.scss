@@ -1,0 +1,46 @@
+.subscribe{
+    .row{
+        .p{
+            margin-top: 10%;
+            margin-bottom: 10%;
+            font-size: 62px;
+            position: relative;
+            color: rgba(160, 160, 160, 0.14);
+            z-index: 2;
+        }
+        h3{
+            position: absolute;
+            top: 667%;
+            z-index: 3;
+            color: $primary-color;
+        }
+    }
+    .row{
+        .input{
+            margin-bottom: 76px;
+            position: relative;
+            margin-right: 123px;
+            input{
+                border-radius: 27px;
+                max-width: 100%;
+                width: 471px;
+                height: 57px;
+                margin-left: 154px;
+            }
+            span{
+                border: 1px solid #1ba974;
+                padding: 11px 31px;
+                border-radius: 39px;
+                color: #fff;
+                background: #1ba974;
+                position: absolute;
+                top: 4px;
+                right: 6px;            
+            &:hover{
+                cursor: pointer;
+                background: darken(#1ba974, 10%);
+            }
+            }
+        }
+    }
+}

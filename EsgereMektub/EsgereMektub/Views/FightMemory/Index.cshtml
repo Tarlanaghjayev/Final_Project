@@ -1,0 +1,88 @@
+﻿@model EsgereMektub.Models.VwFightMemory
+<!--Main part of FightMemory Section start-->
+<main id="main">
+
+
+    <!-- FIGHT MEMORY SECTION START-->
+    <section id="doyush_xatireleri">
+        <div class="container">
+
+            <!--HEADER OF FIGHT MEMORY SECTION START-->
+            <div class="dx_header ">
+                <div class="row dxx_header d-flex justify-content-center">
+                    <p class="p">"Döyüş xatirələri" rubrikası</p>
+                    <h3>"Döyüş xatirələri" rubrikası</h3>
+                </div>
+            </div>
+            <!--HEADER OF FIGHT MEMORY SECTION END-->
+
+
+            <!--BODY OF FIGHT MEMORY SECTION START-->
+            <div class="dx_body">
+
+                <!--FIGHT MEMORY CARDS START-->
+                <div class="row d-flex justify-content-center ">
+                   
+
+                    @foreach (var item in Model.FightMemory)
+                    {
+                    <div class="col-lg-4">
+                        <figure class="snip1166">
+                            <img src="~/Public/img/doyush_xatireleri/@item.Image" alt="sample74" />
+                            <figcaption>
+                                <h3>@item.Name</h3>
+                                <div>
+                                    <p>
+                                        @item.Text
+                                    </p>
+                                </div><a href="#"></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    }
+                </div>
+                <!--FIGHT MEMORY CARDS END-->
+            </div>
+            <!--BODY OF FIGHT MEMORY SECTION END-->
+
+
+            <!--FOOTER OF FIGHT MEMORY SECTION START-->
+            <div class="dx_footer">
+                <div class="row d-flex justify-content-center">
+                    <p></p>
+                </div>
+            </div>
+            <!--FOOTER OF FIGHT MEMORY SECTION END-->
+
+        </div>
+    </section>
+    <!-- FIGHT MEMORY SECTION END-->
+
+
+    <!-- INFO ABOUT FIGHT MEMORY START-->
+    <section id="dx_info">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <div class="letter-int-block news-int-block">
+                        <div class="letter-int-content">
+
+                            <!--Title of information about fight memory-->
+                            <p class="font-quicksand-bold d-flex justify-content-center let-title">@Model.FMtext.Title</p>
+
+                            <!--Information about fight memory-->
+                            <p>
+                                @Model.FMtext.Text
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- INFO ABOUT FIGHT MEMORY END-->
+
+
+</main>
+<!--Main part of FightMemory Section end-->

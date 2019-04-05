@@ -1,0 +1,2893 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from github.com/chartjs/Chart.js/pulls by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2019 11:52:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://github.githubassets.com/">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com/">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-7uoDIEGQ8zTwUS9KjTP+/2I13FQPHvJ9EKoeUThfin5R1+27bcUC08VQzUo4CIjCdhvJM4zxuI+3HcSycAUTCg==" rel="stylesheet" href="../../../github.githubassets.com/assets/frameworks-abba74d6e28a6842788159fec056bf26.css" />
+  <link crossorigin="anonymous" media="all" integrity="sha512-nZcL+1Szltbs1e7IMsmzRupcqmH76PIz0/h4jLIAVX74TKAU11YfzKPWpkO/H9OmtVyKnkpjDXItEWBdT3BPtQ==" rel="stylesheet" href="../../../github.githubassets.com/assets/site-16d020fbc43a8c23c1f051eac510157b.css" />
+    <link crossorigin="anonymous" media="all" integrity="sha512-MW+ZMyZsppet8jpCeuRf6R6ep2YA21uRlAaPeUHmlRvWDbX08i+17kchJwAVY4kws762vLl2VtxFx3kOq0nvGg==" rel="stylesheet" href="../../../github.githubassets.com/assets/github-7b38ea66ce7a8e79d6a0cad4c9d34684.css" />
+    
+    
+    
+    
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Pull Requests · chartjs/Chart.js · GitHub</title>
+    <meta name="description" content="Simple HTML5 Charts using the &lt;canvas&gt; tag. Contribute to chartjs/Chart.js development by creating an account on GitHub.">
+    <link rel="search" type="application/opensearchdescription+xml" href="../../opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="../../fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta property="og:image" content="https://avatars3.githubusercontent.com/u/10342521?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="chartjs/Chart.json" /><meta property="og:url" content="../Chart.html" /><meta property="og:description" content="Simple HTML5 Charts using the &lt;canvas&gt; tag. Contribute to chartjs/Chart.js development by creating an account on GitHub." />
+
+  <link rel="assets" href="https://github.githubassets.com/">
+  
+  <meta name="pjax-timeout" content="1000">
+  
+  <meta name="request-id" content="C678:0DA8:929AB:119FF7:5CA09EF5" data-pjax-transient>
+
+
+  
+
+  <meta name="selected-link" value="repo_pulls" data-pjax-transient>
+
+      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="C678:0DA8:929AB:119FF7:5CA09EF5" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" />
+<meta name="analytics-location-query-strip" content="true" data-pjax-transient="true" /><meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/pull_requests/index" data-pjax-transient="true" />
+
+
+
+    <meta name="google-analytics" content="UA-3769691-2">
+
+
+<meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="ZWQ4ZTlkM2VmMjg5Yzk5N2Y2NGIzZmU3NDQ1Y2FjMjkzMzk4ZGRkMGY5YzU2NWIyNjBiMjNkMmQ0Nzc5ZmU3MHx7InJlbW90ZV9hZGRyZXNzIjoiODkuMTQ3LjIwNC4xOCIsInJlcXVlc3RfaWQiOiJDNjc4OjBEQTg6OTI5QUI6MTE5RkY3OjVDQTA5RUY1IiwidGltZXN0YW1wIjoxNTU0MDMwMzI2LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+
+    <meta name="enabled-features" content="UNIVERSE_BANNER,MARKETPLACE_SOCIAL_PROOF,MARKETPLACE_SOCIAL_PROOF_CUSTOMERS,MARKETPLACE_TRENDING_SOCIAL_PROOF,MARKETPLACE_UNVERIFIED_LISTINGS,MARKETPLACE_PLAN_RESTRICTION_EDITOR">
+
+  <meta name="html-safe-nonce" content="ee97f887d1bf4f38f8a733561d4bb990d7e882a1">
+
+  <meta http-equiv="x-pjax-version" content="0fe86af0669e69ffd4e01406c614081e">
+  
+
+      <link href="commits/master.atom" rel="alternate" title="Recent Commits to Chart.js:master" type="application/atom+xml">
+
+  <meta name="go-import" content="github.com/chartjs/Chart.js git https://github.com/chartjs/Chart.js.git">
+
+  <meta name="octolytics-dimension-user_id" content="10342521" /><meta name="octolytics-dimension-user_login" content="chartjs" /><meta name="octolytics-dimension-repository_id" content="8843683" /><meta name="octolytics-dimension-repository_nwo" content="chartjs/Chart.json" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="8843683" /><meta name="octolytics-dimension-repository_network_root_nwo" content="chartjs/Chart.json" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
+
+
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+
+
+  <link rel="manifest" href="../../manifest.json" crossOrigin="use-credentials">
+
+  </head>
+
+  <body class="logged-out env-production">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="px-2 py-4 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+        
+<header class="Header-old header-logged-out  position-relative f4 py-2" role="banner">
+  <div class="container-lg d-flex px-3">
+    <div class="d-flex flex-justify-between flex-items-center">
+        <a class="mr-4" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+          <svg height="32" class="octicon octicon-mark-github text-white" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+    </div>
+
+    <div class="HeaderMenu HeaderMenu--logged-out d-flex flex-justify-between flex-items-center flex-auto">
+      <div class="d-none">
+        <button class="btn-link js-details-target" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <svg height="24" class="octicon octicon-x text-gray" viewBox="0 0 12 16" version="1.1" width="18" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+        </button>
+      </div>
+
+        <nav class="mt-0" aria-label="Global">
+          <ul class="d-flex list-style-none">
+              <li class=" mr-3 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
+                <details class="HeaderMenu-details details-overlay details-reset width-full">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap  d-inline-block">
+                    Why GitHub?
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
+                      <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 mt-0  p-4 left-n4 position-absolute">
+                    <a href="https://github.com/features" class="py-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Features">Features <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a>
+                    <ul class="list-style-none f5 pb-3">
+                      <li class="edge-item-fix"><a href="https://github.com/features/code-review/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Code review">Code review</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features/project-management/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Project management">Project management</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features/integrations" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Integrations">Integrations</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features/actions" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Actions">Actions</a>
+                      <li class="edge-item-fix"><a href="https://github.com/features#team-management" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Team management">Team management</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features#social-coding" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Social coding">Social coding</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features#documentation" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Documentation">Documentation</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/features#code-hosting" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Code hosting">Code hosting</a></li>
+                    </ul>
+
+                    <ul class="list-style-none mb-0 border-lg-top pt-lg-3">
+                      <li class="edge-item-fix"><a href="https://github.com/customer-stories" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Customer stories">Customer stories <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/security" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Security">Security <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+              <li class=" mr-3 mr-lg-3">
+                <a href="https://github.com/enterprise" class="HeaderMenu-link no-underline py-3 d-block d-lg-inline-block" data-ga-click="(Logged out) Header, go to Enterprise">Enterprise</a>
+              </li>
+
+              <li class=" mr-3 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
+                <details class="HeaderMenu-details details-overlay details-reset width-full">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap  d-inline-block">
+                    Explore
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
+                      <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 pt-2 pb-0 mt-0  p-4 left-n4 position-absolute">
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="https://github.com/explore" class="py-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Explore">Explore GitHub <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                    </ul>
+
+                    <h4 class="text-gray-light text-normal text-mono f5 mb-2  border-top pt-3">Learn &amp; contribute</h4>
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="https://github.com/topics" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Topics">Topics</a></li>
+                        <li class="edge-item-fix"><a href="https://github.com/collections" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Collections">Collections</a></li>
+                      <li class="edge-item-fix"><a href="https://github.com/trending" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Trending">Trending</a></li>
+                      <li class="edge-item-fix"><a href="https://lab.github.com/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Learning lab">Learning Lab</a></li>
+                      <li class="edge-item-fix"><a href="https://opensource.guide/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Open source guides">Open source guides</a></li>
+                    </ul>
+
+                    <h4 class="text-gray-light text-normal text-mono f5 mb-2  border-top pt-3">Connect with others</h4>
+                    <ul class="list-style-none mb-0">
+                      <li class="edge-item-fix"><a href="https://github.com/events" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Events">Events</a></li>
+                      <li class="edge-item-fix"><a href="https://github.community/" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Community forum">Community forum</a></li>
+                      <li class="edge-item-fix"><a href="https://education.github.com/" class="py-2 pb-0 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to GitHub Education">GitHub Education</a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+
+              <li class=" mr-3 mr-lg-3">
+                <a href="https://github.com/marketplace" class="HeaderMenu-link no-underline py-3 d-block d-lg-inline-block" data-ga-click="(Logged out) Header, go to Marketplace">Marketplace</a>
+              </li>
+
+              <li class=" mr-3 mr-lg-3 edge-item-fix position-relative flex-wrap flex-justify-between d-flex flex-items-center ">
+                <details class="HeaderMenu-details details-overlay details-reset width-full">
+                  <summary class="HeaderMenu-summary HeaderMenu-link px-0 py-3 border-0 no-wrap  d-inline-block">
+                    Pricing
+                    <svg x="0px" y="0px" viewBox="0 0 14 8" xml:space="preserve" fill="none" class="icon-chevon-down-mktg position-relative">
+                       <path d="M1,1l6.2,6L13,1"></path>
+                    </svg>
+                  </summary>
+
+                  <div class="dropdown-menu flex-auto rounded-1 bg-white px-0 pt-2 pb-4 mt-0  p-4 left-n4 position-absolute">
+                    <a href="https://github.com/pricing" class="pb-2 lh-condensed-ultra d-block link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Pricing">Plans <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a>
+
+                    <ul class="list-style-none mb-3">
+                      <li class="edge-item-fix"><a href="https://github.com/pricing#feature-comparison" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Compare plans">Compare plans</a></li>
+                      <li class="edge-item-fix"><a href="https://enterprise.github.com/contact" class="py-2 lh-condensed-ultra d-block link-gray no-underline f5" data-ga-click="(Logged out) Header, go to Contact Sales">Contact Sales</a></li>
+                    </ul>
+
+                    <ul class="list-style-none mb-0  border-top pt-3">
+                      <li class="edge-item-fix"><a href="https://github.com/nonprofit" class="py-2 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover" data-ga-click="(Logged out) Header, go to Nonprofits">Nonprofit <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                      <li class="edge-item-fix"><a href="https://education.github.com/" class="py-2 pb-0 lh-condensed-ultra d-block no-underline link-gray-dark no-underline h5 Bump-link--hover"  data-ga-click="(Logged out) Header, go to Education">Education <span class="Bump-link-symbol float-right text-normal text-gray-light">&rarr;</span></a></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+          </ul>
+        </nav>
+
+      <div class="d-flex flex-items-center px-0 text-center text-left">
+          <div class="d-lg-flex ">
+            <div class="header-search mr-3 scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+  role="combobox"
+  aria-owns="jump-to-results"
+  aria-label="Search or jump to"
+  aria-haspopup="listbox"
+  aria-expanded="false"
+>
+  <div class="position-relative">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-site-search-form" role="search" aria-label="Site" data-scope-type="Repository" data-scope-id="8843683" data-scoped-search-url="/chartjs/Chart.js/search" data-unscoped-search-url="/search" action="https://github.com/chartjs/Chart.js/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <label class="form-control input-sm header-search-wrapper p-0 header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
+        <input type="text"
+          class="form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+          data-hotkey="s,/"
+          name="q"
+          value=""
+          placeholder="Search"
+          data-unscoped-placeholder="Search GitHub"
+          data-scoped-placeholder="Search"
+          autocapitalize="off"
+          aria-autocomplete="list"
+          aria-controls="jump-to-results"
+          aria-label="Search"
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=M4Zu74wkgOL28Hxp4lWGJ4csRXv0jIgILpbwlZEtHC4CzaGHuqovQIgf6esI+JqxPd2kI+pvAuDiPmSZfewsVQ=="
+          spellcheck="false"
+          autocomplete="off"
+          >
+          <input type="hidden" class="js-site-search-type-field" name="type" >
+            <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
+
+            <div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container">
+              
+<ul class="d-none js-jump-to-suggestions-template-container">
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-suggestion" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="#">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="#" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+</ul>
+
+<ul class="d-none js-jump-to-no-results-template-container">
+  <li class="d-flex flex-justify-center flex-items-center f5 d-none js-jump-to-suggestion p-2">
+    <span class="text-gray">No suggested jump to results</span>
+  </li>
+</ul>
+
+<ul id="jump-to-results" role="listbox" class="p-0 m-0 js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container">
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-scoped-search d-none" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="#">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="#" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-global-search d-none" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="#">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="#" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+
+</ul>
+
+            </div>
+      </label>
+</form>  </div>
+</div>
+
+          </div>
+
+        <a class="HeaderMenu-link no-underline mr-3" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;C678:0DA8:929AB:119FF7:5CA09EF5&quot;,&quot;originating_url&quot;:&quot;https://github.com/chartjs/Chart.js/pulls&quot;,&quot;referrer&quot;:&quot;http://github.com/chartjs/Chart.js&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="7ad4a5248ce767eb35a95d4d44835eba798909cfaf0de041dac06da535e11b21" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in" href="https://github.com/login?return_to=%2Fchartjs%2FChart.js%2Fpulls">
+          Sign&nbsp;in
+</a>          <a class="HeaderMenu-link d-inline-block no-underline border border-gray-dark rounded-1 px-2 py-1" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;C678:0DA8:929AB:119FF7:5CA09EF5&quot;,&quot;originating_url&quot;:&quot;https://github.com/chartjs/Chart.js/pulls&quot;,&quot;referrer&quot;:&quot;http://github.com/chartjs/Chart.js&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="92b57757bdec360ae1262417f8ce13ab83c3e29a13be159737f7e6e755548103" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up" href="https://github.com/join">
+            Sign&nbsp;up
+</a>      </div>
+    </div>
+  </div>
+</header>
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+
+</div>
+
+
+
+  <div class="application-main " data-commit-hovercards-enabled>
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <main id="js-repo-pjax-container" data-pjax-container >
+      
+  
+
+
+
+  
+
+
+
+
+  <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav  ">
+    <div class="repohead-details-container clearfix container">
+
+      <ul class="pagehead-actions">
+
+
+
+  <li>
+    
+  <a class="tooltipped tooltipped-s btn btn-sm btn-with-count" aria-label="You must be signed in to watch a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;notification subscription menu watch&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;C678:0DA8:929AB:119FF7:5CA09EF5&quot;,&quot;originating_url&quot;:&quot;https://github.com/chartjs/Chart.js/pulls&quot;,&quot;referrer&quot;:&quot;http://github.com/chartjs/Chart.js&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="266077b84a4972edb8d647782ec9977ce1f04cb29534eea79732ef87ba975966" href="../../login3f61.html?return_to=%2Fchartjs%2FChart.js">
+    <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+    Watch
+</a>    <a class="social-count" href="watchers.html"
+       aria-label="1474 users are watching this repository">
+      1,474
+    </a>
+
+  </li>
+
+  <li>
+        <a class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to star a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:8843683,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;C678:0DA8:929AB:119FF7:5CA09EF5&quot;,&quot;originating_url&quot;:&quot;https://github.com/chartjs/Chart.js/pulls&quot;,&quot;referrer&quot;:&quot;http://github.com/chartjs/Chart.js&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="9dd9c8dcbcde6c25d01ee39c2cf47664ac48b122dc8a7e49f6ffba9440733fd5" href="../../login3f61.html?return_to=%2Fchartjs%2FChart.js">
+      <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+      Star
+</a>
+    <a class="social-count js-social-count" href="stargazers.html"
+      aria-label="42653 users starred this repository">
+      42,653
+    </a>
+
+  </li>
+
+  <li>
+      <a class="btn btn-sm btn-with-count tooltipped tooltipped-s" aria-label="You must be signed in to fork a repository" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;repo details fork button&quot;,&quot;repository_id&quot;:8843683,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;client_id&quot;:null,&quot;originating_request_id&quot;:&quot;C678:0DA8:929AB:119FF7:5CA09EF5&quot;,&quot;originating_url&quot;:&quot;https://github.com/chartjs/Chart.js/pulls&quot;,&quot;referrer&quot;:&quot;http://github.com/chartjs/Chart.js&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="8c1c9ab13eff1e62f785d40311a35a0ede168a033feffa276cd3efc396ba40a5" href="../../login3f61.html?return_to=%2Fchartjs%2FChart.js">
+        <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+        Fork
+</a>
+    <a href="network/members.html" class="social-count"
+       aria-label="9450 users forked this repository">
+      9,450
+    </a>
+  </li>
+</ul>
+
+      <h1 class="public ">
+  <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+  <span class="author" itemprop="author"><a class="url fn" rel="author" data-hovercard-type="organization" data-hovercard-url="/orgs/chartjs/hovercard" href="https://github.com/chartjs">chartjs</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a data-pjax="#js-repo-pjax-container" href="../Chart.html">Chart.js</a></strong>
+
+</h1>
+
+    </div>
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax container"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+    aria-label="Repository"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a class="js-selected-navigation-item reponav-item" itemprop="url" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /chartjs/Chart.js" href="../Chart.html">
+      <svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a itemprop="url" data-hotkey="g i" class="js-selected-navigation-item reponav-item" data-selected-links="repo_issues repo_labels repo_milestones /chartjs/Chart.js/issues" href="issues.html">
+        <svg class="octicon octicon-issue-opened" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
+        <span itemprop="name">Issues</span>
+        <span class="Counter">430</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a data-hotkey="g p" itemprop="url" class="js-selected-navigation-item selected reponav-item" aria-current="page" data-selected-links="repo_pulls checks /chartjs/Chart.js/pulls" href="pulls.html">
+      <svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">27</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+
+
+
+
+    <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse alerts security people /chartjs/Chart.js/pulse" href="pulse.html">
+      <svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
+      Insights
+</a>
+
+</nav>
+
+
+  </div>
+<div class="container new-discussion-timeline experiment-repo-nav  ">
+  <div class="repository-content ">
+
+    
+    
+  <div class="issues-listing js-check-all-container" data-pjax>
+    
+
+
+
+
+  <div class="subnav" data-pjax>
+      <a href="compare.html" class="btn btn-primary float-right" data-hotkey="c"
+        tabindex="0"
+        data-ga-click="Repository, go to compare view, location:pull request list; text:New pull request">
+        New pull request
+      </a>
+
+  <div class="float-left pr-2" role="search">
+
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="subnav-search float-left" data-pjax="true" role="search" aria-label="Issues" action="https://github.com/chartjs/Chart.js/pulls" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <input type="text" name="q" id="js-issues-search" value="is:pr is:open " class="form-control form-control subnav-search-input input-contrast" placeholder="Search all issues" aria-label="Search all issues" data-hotkey="Control+/,Meta+/" />
+      <svg class="octicon octicon-search subnav-search-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+</form>  </div>
+
+  
+<nav class="subnav-links float-left" aria-label="Issue">
+  <a selected_link="repo_pulls" class="js-selected-navigation-item subnav-item" data-selected-links="repo_labels /chartjs/Chart.js/labels" href="labels.html">
+    <svg class="octicon octicon-tag" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.73 1.73C7.26 1.26 6.62 1 5.96 1H3.5C2.13 1 1 2.13 1 3.5v2.47c0 .66.27 1.3.73 1.77l6.06 6.06c.39.39 1.02.39 1.41 0l4.59-4.59a.996.996 0 0 0 0-1.41L7.73 1.73zM2.38 7.09c-.31-.3-.47-.7-.47-1.13V3.5c0-.88.72-1.59 1.59-1.59h2.47c.42 0 .83.16 1.13.47l6.14 6.13-4.73 4.73-6.13-6.15zM3.01 3h2v2H3V3h.01z"/></svg>
+    Labels
+      <span class="Counter" >
+        16
+      </span>
+</a>  <a selected_link="repo_pulls" class="js-selected-navigation-item subnav-item" data-selected-links="repo_milestones /chartjs/Chart.js/milestones" href="milestones.html">
+    <svg class="octicon octicon-milestone" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 2H6V0h2v2zm4 5H2c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h10l2 2-2 2zM8 4H6v2h2V4zM6 16h2V8H6v8z"/></svg>
+    Milestones
+      <span class="Counter" >
+        2
+      </span>
+</a></nav>
+
+</div>
+
+
+
+    <div class="table-list-header" id="js-issues-toolbar">
+
+  <div class="table-list-filters">
+    
+<div class="table-list-header-toggle states float-left pl-3">
+    <a href="pullse309.html?q=is%3Aopen+is%3Apr" class="btn-link selected">
+      <svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+      27 Open
+    </a>
+
+    <a href="pulls762f.html?q=is%3Apr+is%3Aclosed" class="btn-link ">
+      <svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+      1,635 Closed
+    </a>
+</div>
+
+
+      <div class="table-list-header-toggle float-right">
+        <details class="details-reset details-overlay float-left select-menu">
+  <summary class="btn-link select-menu-button" data-hotkey="u">
+    Author
+  </summary>
+  <details-menu class="select-menu-modal position-absolute right-0" style="z-index: 99;" src="issues/show_menu_content8d5a.html?partial=issues%2Ffilters%2Fauthors_content&amp;q=is%3Apr+is%3Aopen" preload>
+    <div class="select-menu-header">
+      <span class="select-menu-title">Filter by author</span>
+    </div>
+    <div class="select-menu-filters">
+      <div class="select-menu-text-filter">
+        <input type="text" id="author-filter-field" class="form-control js-filterable-field" placeholder="Filter users" aria-label="Filter users" autocomplete="off" spellcheck="false" autofocus>
+      </div>
+    </div>
+    <include-fragment class="select-menu-loading-overlay anim-pulse" aria-label="Loading">
+      <svg height="32" class="octicon octicon-octoface" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"/></svg>
+    </include-fragment>
+  </details-menu>
+</details>
+
+          
+<details class="details-reset details-overlay float-left select-menu">
+  <summary class="btn-link select-menu-button" data-hotkey="m">
+    Milestones
+  </summary>
+  <details-menu class="select-menu-modal position-absolute right-0" style="z-index: 99;" src="issues/show_menu_content96f5.html?partial=issues%2Ffilters%2Fmilestones_content&amp;q=is%3Apr+is%3Aopen" preload>
+    <div class="select-menu-header">
+      <span class="select-menu-title">Filter by milestone</span>
+    </div>
+    <div class="select-menu-filters">
+      <div class="select-menu-text-filter">
+        <input type="text" id="milestones-filter-field" class="form-control js-filterable-field" placeholder="Filter milestones" aria-label="Filter milestones" autocomplete="off" autofocus>
+      </div>
+    </div>
+    <include-fragment class="select-menu-loading-overlay anim-pulse">
+      <svg height="32" class="octicon octicon-octoface" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"/></svg>
+    </include-fragment>
+  </details-menu>
+</details>
+
+          <details class="details-reset details-overlay float-left select-menu">
+  <summary class="btn-link select-menu-button">
+    Reviews
+  </summary>
+  <details-menu class="select-menu-modal position-absolute right-0" style="z-index: 99;">
+    <div class="select-menu-header">
+      <span class="select-menu-title">Filter by reviews</span>
+    </div>
+    <div class="select-menu-list">
+        <a href="pullse65e.html?q=is%3Apr+is%3Aopen+review%3Anone" class="select-menu-item " aria-checked="false" role="menuitemradio">
+          <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+          <div class="select-menu-item-text">No reviews</div>
+        </a>
+        <a href="pulls60b1.html?q=is%3Apr+is%3Aopen+review%3Arequired" class="select-menu-item " aria-checked="false" role="menuitemradio">
+          <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+          <div class="select-menu-item-text">Review required</div>
+        </a>
+        <a href="pulls69ac.html?q=is%3Apr+is%3Aopen+review%3Aapproved" class="select-menu-item " aria-checked="false" role="menuitemradio">
+          <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+          <div class="select-menu-item-text">Approved review</div>
+        </a>
+        <a href="pullsab34.html?q=is%3Apr+is%3Aopen+review%3Achanges-requested" class="select-menu-item " aria-checked="false" role="menuitemradio">
+          <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+          <div class="select-menu-item-text">Changes requested</div>
+        </a>
+    </div>
+  </details-menu>
+</details>
+
+        <details class="details-reset details-overlay float-left select-menu">
+  <summary class="btn-link select-menu-button" data-hotkey="a">
+    Assignee
+  </summary>
+  <details-menu class="select-menu-modal position-absolute right-0" style="z-index: 99;" src="issues/show_menu_content96b0.html?partial=issues%2Ffilters%2Fassigns_content&amp;q=is%3Apr+is%3Aopen" preload>
+    <div class="select-menu-header">
+      <span class="select-menu-title">Filter by who’s assigned</span>
+    </div>
+    <div class="select-menu-filters">
+      <div class="select-menu-text-filter">
+        <input type="text" id="assigns-filter-field" class="form-control js-filterable-field" placeholder="Filter users" aria-label="Filter users" autocomplete="off" autofocus>
+      </div>
+    </div>
+    <include-fragment class="select-menu-loading-overlay anim-pulse" aria-label="Loading">
+      <svg height="32" class="octicon octicon-octoface" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"/></svg>
+    </include-fragment>
+  </details-menu>
+</details>
+
+        
+<details class="details-reset details-overlay select-menu float-left">
+  <summary class="btn-link select-menu-button">
+    Sort<span></span>
+  </summary>
+  <details-menu class="select-menu-modal position-absolute right-0" style="z-index: 1000;" aria-label="Sort by">
+    <div class="select-menu-header">
+      <span class="select-menu-title">Sort by</span>
+    </div>
+    <div class="select-menu-list">
+        <a href="pullse309.html?q=is%3Aopen+is%3Apr" class="select-menu-item" aria-checked="true" role="menuitemradio">
+          <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+          <div class="select-menu-item-text">Newest</div>
+        </a>
+        <a href="pulls41bb.html?q=is%3Apr+is%3Aopen+sort%3Acreated-asc" class="select-menu-item" aria-checked="false" role="menuitemradio">
+          <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+          <div class="select-menu-item-text">Oldest</div>
+        </a>
+        <a href="pullseff9.html?q=is%3Apr+is%3Aopen+sort%3Acomments-desc" class="select-menu-item" aria-checked="false" role="menuitemradio">
+          <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+          <div class="select-menu-item-text">Most commented</div>
+        </a>
+        <a href="pullsa03c.html?q=is%3Apr+is%3Aopen+sort%3Acomments-asc" class="select-menu-item" aria-checked="false" role="menuitemradio">
+          <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+          <div class="select-menu-item-text">Least commented</div>
+        </a>
+        <a href="pulls28ff.html?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc" class="select-menu-item" aria-checked="false" role="menuitemradio">
+          <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+          <div class="select-menu-item-text">Recently updated</div>
+        </a>
+        <a href="pulls6a93.html?q=is%3Apr+is%3Aopen+sort%3Aupdated-asc" class="select-menu-item" aria-checked="false" role="menuitemradio">
+          <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+          <div class="select-menu-item-text">Least recently updated</div>
+        </a>
+
+      <div class="select-menu-item select-menu-item-parent ">
+        <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+        <div class="select-menu-item-text">Most reactions</div>
+          <a href="pulls5e85.html?q=is%3Apr+is%3Aopen+sort%3Areactions-%2B1-desc" class="reaction-sort-item" role="menuitemradio" aria-checked="false">
+            <g-emoji alias="+1" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" class="emoji">👍</g-emoji>
+          </a>
+          <a href="pullsef5c.html?q=is%3Apr+is%3Aopen+sort%3Areactions--1-desc" class="reaction-sort-item" role="menuitemradio" aria-checked="false">
+            <g-emoji alias="-1" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" class="emoji">👎</g-emoji>
+          </a>
+          <a href="pulls2b8a.html?q=is%3Apr+is%3Aopen+sort%3Areactions-smile-desc" class="reaction-sort-item" role="menuitemradio" aria-checked="false">
+            <g-emoji alias="smile" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" class="emoji">😄</g-emoji>
+          </a>
+          <a href="pullsb302.html?q=is%3Apr+is%3Aopen+sort%3Areactions-tada-desc" class="reaction-sort-item" role="menuitemradio" aria-checked="false">
+            <g-emoji alias="tada" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png" class="emoji">🎉</g-emoji>
+          </a>
+          <a href="pulls58f0.html?q=is%3Apr+is%3Aopen+sort%3Areactions-thinking_face-desc" class="reaction-sort-item" role="menuitemradio" aria-checked="false">
+            <g-emoji alias="thinking_face" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f615.png" class="emoji">😕</g-emoji>
+          </a>
+          <a href="pullseeb1.html?q=is%3Apr+is%3Aopen+sort%3Areactions-heart-desc" class="reaction-sort-item" role="menuitemradio" aria-checked="false">
+            <g-emoji alias="heart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png" class="emoji">❤️</g-emoji>
+          </a>
+          <a href="pullsfd7f.html?q=is%3Apr+is%3Aopen+sort%3Areactions-rocket-desc" class="reaction-sort-item" role="menuitemradio" aria-checked="false">
+            <g-emoji alias="rocket" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f680.png" class="emoji">🚀</g-emoji>
+          </a>
+          <a href="pullsa80b.html?q=is%3Apr+is%3Aopen+sort%3Areactions-eyes-desc" class="reaction-sort-item" role="menuitemradio" aria-checked="false">
+            <g-emoji alias="eyes" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f440.png" class="emoji">👀</g-emoji>
+          </a>
+      </div>
+    </div>
+  </details-menu>
+</details>
+
+      </div>
+  </div>
+
+</div>
+
+
+    <div class="border-right border-bottom border-left" aria-label="Issues" role="group" data-issue-and-pr-hovercards-enabled>
+      <div class="js-navigation-container js-active-navigation-container">
+          
+<div id="issue_6169" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="426500184">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_6169_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/6169/hovercard" href="pull/6169.html">Remove datapoint with duplicate timestamp in order to fix sample</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-green tooltipped tooltipped-e"
+         aria-label="3 / 3 checks OK"
+         href="pull/6169.html#partial-pull-merging">
+        <svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #dd3300; color: #ffffff" title="type: bug" href="issues126e.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+bug%22">type: bug</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #6169
+            opened <relative-time datetime="2019-03-28T13:44:32Z">Mar 28, 2019</relative-time> by
+            <a class="muted-link" title="Open pull requests created by benmccann" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=322311" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="issues86cf.html?q=is%3Apr+is%3Aopen+author%3Abenmccann">benmccann</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/6169.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_6132" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="420375147">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_6132_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/6132/hovercard" href="pull/6132.html">Added cubicInterpolationMode and changed fill enum</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="bg-pending tooltipped tooltipped-e"
+         aria-label="1 / 1 checks OK"
+         href="pull/6132.html#partial-pull-merging">
+        <svg class="octicon octicon-primitive-dot" viewBox="0 0 8 16" version="1.1" width="8" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 8c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #8822dd; color: #ffffff" title="type: documentation" href="pulls5a08.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+documentation%22">type: documentation</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #6132
+            opened <relative-time datetime="2019-03-13T08:35:54Z">Mar 13, 2019</relative-time> by
+            <a class="muted-link" title="Open pull requests created by stockiNail" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=11741250" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/stockiNail.html?q=is%3Apr+is%3Aopen+author%3AstockiNail">stockiNail</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="1 review requesting changes"
+         href="pull/6132.html#partial-pull-merging">
+        Changes requested
+      </a>
+      </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+              <a class="milestone-link muted-link css-truncate tooltipped tooltipped-n" aria-label="Version 2.9" href="milestone/19.html">
+                <svg aria-label="Milestone" class="octicon octicon-milestone" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M8 2H6V0h2v2zm4 5H2c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h10l2 2-2 2zM8 4H6v2h2V4zM6 16h2V8H6v8z"/></svg>
+                <span class="css-truncate-target">
+                  Version 2.9
+                </span>
+              </a>
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/6132.html" class="muted-link" aria-label="11 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">11</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_6117" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="418075768">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_6117_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/6117/hovercard" href="pull/6117.html">fix: Properly render multi-line labels in legend and tooltip</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-red tooltipped tooltipped-e"
+         aria-label="2 / 3 checks OK"
+         href="pull/6117.html#partial-pull-merging">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </a>
+    </div>
+  </span>
+
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #6117
+            opened <relative-time datetime="2019-03-07T00:44:29Z">Mar 7, 2019</relative-time> by
+            <a class="muted-link" title="Open pull requests created by paviad" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=1235688" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/paviad.html?q=is%3Apr+is%3Aopen+author%3Apaviad">paviad</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="1 review requesting changes"
+         href="pull/6117.html#partial-pull-merging">
+        Changes requested
+      </a>
+      </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/6117.html" class="muted-link" aria-label="48 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">48</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_6115" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="417677701">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_6115_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/6115/hovercard" href="pull/6115.html">Fix overlapping auto-generated ticks on time scale</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-green tooltipped tooltipped-e"
+         aria-label="3 / 3 checks OK"
+         href="pull/6115.html#partial-pull-merging">
+        <svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #dd3300; color: #ffffff" title="type: bug" href="issues126e.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+bug%22">type: bug</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #6115
+            opened <relative-time datetime="2019-03-06T08:23:24Z">Mar 6, 2019</relative-time> by
+            <a class="muted-link" title="Open pull requests created by kurkle" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=27971921" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/kurkle.html?q=is%3Apr+is%3Aopen+author%3Akurkle">kurkle</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/6115.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+              <a class="milestone-link muted-link css-truncate tooltipped tooltipped-n" aria-label="Version 2.9" href="milestone/19.html">
+                <svg aria-label="Milestone" class="octicon octicon-milestone" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M8 2H6V0h2v2zm4 5H2c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h10l2 2-2 2zM8 4H6v2h2V4zM6 16h2V8H6v8z"/></svg>
+                <span class="css-truncate-target">
+                  Version 2.9
+                </span>
+              </a>
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/6115.html" class="muted-link" aria-label="14 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">14</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_6102" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="416285857">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_6102_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/6102/hovercard" href="pull/6102.html">Fix ticks.minor and ticks.major configuration issues</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-green tooltipped tooltipped-e"
+         aria-label="3 / 3 checks OK"
+         href="pull/6102.html#partial-pull-merging">
+        <svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #dd3300; color: #ffffff" title="type: bug" href="issues126e.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+bug%22">type: bug</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #6102
+            opened <relative-time datetime="2019-03-01T21:27:08Z">Mar 1, 2019</relative-time> by
+            <a class="muted-link" title="Open pull requests created by nagix" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=723188" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/nagix.html?q=is%3Apr+is%3Aopen+author%3Anagix">nagix</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/6102.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+              <a class="milestone-link muted-link css-truncate tooltipped tooltipped-n" aria-label="Version 2.9" href="milestone/19.html">
+                <svg aria-label="Milestone" class="octicon octicon-milestone" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M8 2H6V0h2v2zm4 5H2c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h10l2 2-2 2zM8 4H6v2h2V4zM6 16h2V8H6v8z"/></svg>
+                <span class="css-truncate-target">
+                  Version 2.9
+                </span>
+              </a>
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/6102.html" class="muted-link" aria-label="15 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">15</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_6097" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="415447869">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_6097_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/6097/hovercard" href="pull/6097.html">Specify time scale options in standard manner</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-green tooltipped tooltipped-e"
+         aria-label="3 / 3 checks OK"
+         href="pull/6097.html#partial-pull-merging">
+        <svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #555555; color: #ffffff" title="type: chore" href="pullsb1ae.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+chore%22">type: chore</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #6097
+            opened <relative-time datetime="2019-02-28T04:58:22Z">Feb 28, 2019</relative-time> by
+            <a class="muted-link" title="Open pull requests created by benmccann" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=322311" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="issues86cf.html?q=is%3Apr+is%3Aopen+author%3Abenmccann">benmccann</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="1 review requesting changes"
+         href="pull/6097.html#partial-pull-merging">
+        Changes requested
+      </a>
+      </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/6097.html" class="muted-link" aria-label="8 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">8</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_6056" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="408123725">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_6056_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/6056/hovercard" href="pull/6056.html">Add support for floating bar chart ([start, end])</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-red tooltipped tooltipped-e"
+         aria-label="2 / 3 checks OK"
+         href="pull/6056.html#partial-pull-merging">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #1d76db; color: #ffffff" title="type: enhancement" href="pullsdab3.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+enhancement%22">type: enhancement</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #6056
+            opened <relative-time datetime="2019-02-08T12:03:05Z">Feb 8, 2019</relative-time> by
+            <a class="muted-link" title="Open pull requests created by gwyneblaidd" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=6455432" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/gwyneblaidd.html?q=is%3Apr+is%3Aopen+author%3Agwyneblaidd">gwyneblaidd</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="2 review approvals"
+         href="pull/6056.html#partial-pull-merging">
+        Approved
+      </a>
+      </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/6056.html" class="muted-link" aria-label="51 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">51</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_6051" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="407860784">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_6051_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/6051/hovercard" href="pull/6051.html">Background colors for Radar chart sections</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-red tooltipped tooltipped-e"
+         aria-label="2 / 3 checks OK"
+         href="pull/6051.html#partial-pull-merging">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </a>
+    </div>
+  </span>
+
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #6051
+            opened <relative-time datetime="2019-02-07T19:29:18Z">Feb 7, 2019</relative-time> by
+            <a class="muted-link" title="Open pull requests created by rvaidya" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=128848" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/rvaidya.html?q=is%3Apr+is%3Aopen+author%3Arvaidya">rvaidya</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/6051.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/6051.html" class="muted-link" aria-label="9 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">9</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_6037" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="405478253">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_6037_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/6037/hovercard" href="pull/6037.html">Introduce formatter -options for tooltips and tick labels</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-red tooltipped tooltipped-e"
+         aria-label="1 / 2 checks OK"
+         href="pull/6037.html#partial-pull-merging">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </a>
+    </div>
+  </span>
+
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #6037
+            opened <relative-time datetime="2019-01-31T22:59:08Z">Jan 31, 2019</relative-time> by
+            <a class="muted-link" title="Open pull requests created by kurkle" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=27971921" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/kurkle.html?q=is%3Apr+is%3Aopen+author%3Akurkle">kurkle</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/6037.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        <span class="issue-meta-section task-progress ml-2"><svg class="octicon octicon-checklist" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 8.5l-6 6-3-3L8.5 10l1.5 1.5L14.5 7 16 8.5zM5.7 12.2l.8.8H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h7c.55 0 1 .45 1 1v6.5l-.8-.8c-.39-.39-1.03-.39-1.42 0L5.7 10.8a.996.996 0 0 0 0 1.41v-.01zM4 4h5V3H4v1zm0 2h5V5H4v1zm0 2h3V7H4v1zM3 9H2v1h1V9zm0-2H2v1h1V7zm0-2H2v1h1V5zm0-2H2v1h1V3z"/></svg><span class="task-progress-counts">0 of 2</span><span class="progress-bar v-align-middle"><span class="progress" style="width: 0%"></span></span></span>
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/6037.html" class="muted-link" aria-label="23 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">23</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_5999" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="401143176">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_5999_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/5999/hovercard" href="pull/5999.html">Per-controller options to fix mixed charts</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-red tooltipped tooltipped-e"
+         aria-label="2 / 3 checks OK"
+         href="pull/5999.html#partial-pull-merging">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #1d76db; color: #ffffff" title="type: enhancement" href="pullsdab3.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+enhancement%22">type: enhancement</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #5999
+            opened <relative-time datetime="2019-01-20T21:53:25Z">Jan 20, 2019</relative-time> by
+            <a class="muted-link" title="Open pull requests created by benmccann" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=322311" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="issues86cf.html?q=is%3Apr+is%3Aopen+author%3Abenmccann">benmccann</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="1 review requesting changes"
+         href="pull/5999.html#partial-pull-merging">
+        Changes requested
+      </a>
+      </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/5999.html" class="muted-link" aria-label="50 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">50</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_5981" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="398608063">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_5981_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/5981/hovercard" href="pull/5981.html">WIP: Scriptable tooltip options</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-green tooltipped tooltipped-e"
+         aria-label="3 / 3 checks OK"
+         href="pull/5981.html#partial-pull-merging">
+        <svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #1d76db; color: #ffffff" title="type: enhancement" href="pullsdab3.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+enhancement%22">type: enhancement</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #5981
+            opened <relative-time datetime="2019-01-13T01:05:54Z">Jan 13, 2019</relative-time> by
+            <a class="muted-link" title="Open pull requests created by etimberg" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=6757853" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/etimberg.html?q=is%3Apr+is%3Aopen+author%3Aetimberg">etimberg</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/5981.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        <span class="issue-meta-section task-progress ml-2"><svg class="octicon octicon-checklist" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 8.5l-6 6-3-3L8.5 10l1.5 1.5L14.5 7 16 8.5zM5.7 12.2l.8.8H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h7c.55 0 1 .45 1 1v6.5l-.8-.8c-.39-.39-1.03-.39-1.42 0L5.7 10.8a.996.996 0 0 0 0 1.41v-.01zM4 4h5V3H4v1zm0 2h5V5H4v1zm0 2h3V7H4v1zM3 9H2v1h1V9zm0-2H2v1h1V7zm0-2H2v1h1V5zm0-2H2v1h1V3z"/></svg><span class="task-progress-counts">1 of 4</span><span class="progress-bar v-align-middle"><span class="progress" style="width: 25%"></span></span></span>
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/5981.html" class="muted-link" aria-label="7 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">7</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_5961" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="396286036">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_5961_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/5961/hovercard" href="pull/5961.html">Fix tick label rotation and layout issues</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-red tooltipped tooltipped-e"
+         aria-label="2 / 3 checks OK"
+         href="pull/5961.html#partial-pull-merging">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #dd3300; color: #ffffff" title="type: bug" href="issues126e.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+bug%22">type: bug</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #5961
+            opened <relative-time datetime="2019-01-06T19:20:33Z">Jan 6, 2019</relative-time> by
+            <a class="muted-link" title="Open pull requests created by nagix" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=723188" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/nagix.html?q=is%3Apr+is%3Aopen+author%3Anagix">nagix</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/5961.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/5961.html" class="muted-link" aria-label="65 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">65</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_5929" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="393182873">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_5929_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/5929/hovercard" href="pull/5929.html">Dynamically look up the global defaultColor</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-red tooltipped tooltipped-e"
+         aria-label="2 / 3 checks OK"
+         href="pull/5929.html#partial-pull-merging">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </a>
+    </div>
+  </span>
+
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #5929
+            opened <relative-time datetime="2018-12-20T19:33:11Z">Dec 20, 2018</relative-time> by
+            <a class="muted-link" title="Open pull requests created by etimberg" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=6757853" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/etimberg.html?q=is%3Apr+is%3Aopen+author%3Aetimberg">etimberg</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/5929.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/5929.html" class="muted-link" aria-label="22 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">22</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_5919" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="391486553">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_5919_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/5919/hovercard" href="pull/5919.html">Polar area: align start angle with angleLines</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-green tooltipped tooltipped-e"
+         aria-label="3 / 3 checks OK"
+         href="pull/5919.html#partial-pull-merging">
+        <svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #dd3300; color: #ffffff" title="type: bug" href="issues126e.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+bug%22">type: bug</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #5919
+            opened <relative-time datetime="2018-12-16T17:12:17Z">Dec 16, 2018</relative-time> by
+            <a class="muted-link" title="Open pull requests created by kurkle" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=27971921" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/kurkle.html?q=is%3Apr+is%3Aopen+author%3Akurkle">kurkle</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/5919.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/5919.html" class="muted-link" aria-label="22 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">22</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_5847" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="382013119">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_5847_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/5847/hovercard" href="pull/5847.html">Migrate from gitbook to vuepress</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-green tooltipped tooltipped-e"
+         aria-label="3 / 3 checks OK"
+         href="pull/5847.html#partial-pull-merging">
+        <svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #2B303B; color: #ffffff" title="type: infrastructure" href="pulls84a9.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+infrastructure%22">type: infrastructure</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #5847
+            opened <relative-time datetime="2018-11-18T23:28:38Z">Nov 18, 2018</relative-time> by
+            <a class="muted-link" title="Open pull requests created by benmccann" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=322311" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="issues86cf.html?q=is%3Apr+is%3Aopen+author%3Abenmccann">benmccann</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/5847.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/5847.html" class="muted-link" aria-label="5 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">5</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_5824" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="379487973">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_5824_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/5824/hovercard" href="pull/5824.html">Generate jsdocs</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-red tooltipped tooltipped-e"
+         aria-label="2 / 3 checks OK"
+         href="pull/5824.html#partial-pull-merging">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #8822dd; color: #ffffff" title="type: documentation" href="pulls5a08.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+documentation%22">type: documentation</a>
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #2B303B; color: #ffffff" title="type: infrastructure" href="pulls84a9.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+infrastructure%22">type: infrastructure</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #5824
+            opened <relative-time datetime="2018-11-11T04:09:50Z">Nov 11, 2018</relative-time> by
+            <a class="muted-link" title="Open pull requests created by benmccann" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=322311" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="issues86cf.html?q=is%3Apr+is%3Aopen+author%3Abenmccann">benmccann</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/5824.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/5824.html" class="muted-link" aria-label="5 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">5</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_5821" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="379255628">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_5821_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/5821/hovercard" href="pull/5821.html">Add plugin hooks descriptions</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-green tooltipped tooltipped-e"
+         aria-label="3 / 3 checks OK"
+         href="pull/5821.html#partial-pull-merging">
+        <svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #8822dd; color: #ffffff" title="type: documentation" href="pulls5a08.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+documentation%22">type: documentation</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #5821
+            opened <relative-time datetime="2018-11-09T17:35:32Z">Nov 9, 2018</relative-time> by
+            <a class="muted-link" title="Open pull requests created by jukra" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=8558140" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/jukra.html?q=is%3Apr+is%3Aopen+author%3Ajukra">jukra</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/5821.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/5821.html" class="muted-link" aria-label="4 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">4</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_5765" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="369232210">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_5765_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/5765/hovercard" href="pull/5765.html">Scales are measuring the longest text for all ticks including skipped…</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-green tooltipped tooltipped-e"
+         aria-label="3 / 3 checks OK"
+         href="pull/5765.html#partial-pull-merging">
+        <svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #dddddd; color: #000000" title="status: stale" href="pulls9307.html?q=is%3Apr+is%3Aopen+label%3A%22status%3A+stale%22">status: stale</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #5765
+            opened <relative-time datetime="2018-10-11T17:43:33Z">Oct 11, 2018</relative-time> by
+            <a class="muted-link" title="Open pull requests created by desean1625" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=11495566" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/desean1625.html?q=is%3Apr+is%3Aopen+author%3Adesean1625">desean1625</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/5765.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/5765.html" class="muted-link" aria-label="8 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">8</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_5721" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="357739068">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_5721_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/5721/hovercard" href="pull/5721.html">Add a filler &#39;mode&#39; option</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-red tooltipped tooltipped-e"
+         aria-label="0 / 2 checks OK"
+         href="pull/5721.html#partial-pull-merging">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #00b587; color: #000000" title="status: awaiting review" href="pulls255e.html?q=is%3Apr+is%3Aopen+label%3A%22status%3A+awaiting+review%22">status: awaiting review</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #5721
+            opened <relative-time datetime="2018-09-06T16:45:14Z">Sep 6, 2018</relative-time> by
+            <a class="muted-link" title="Open pull requests created by charlesmass" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=14290824" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/charlesmass.html?q=is%3Apr+is%3Aopen+author%3Acharlesmass">charlesmass</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/5721.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/5721.html" class="muted-link" aria-label="7 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">7</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_5621" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="339071548">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_5621_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/5621/hovercard" href="pull/5621.html">Make legend appearance consistent with chart elements</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-red tooltipped tooltipped-e"
+         aria-label="2 / 3 checks OK"
+         href="pull/5621.html#partial-pull-merging">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #00b587; color: #000000" title="status: awaiting review" href="pulls255e.html?q=is%3Apr+is%3Aopen+label%3A%22status%3A+awaiting+review%22">status: awaiting review</a>
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #1d76db; color: #ffffff" title="type: enhancement" href="pullsdab3.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+enhancement%22">type: enhancement</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #5621
+            opened <relative-time datetime="2018-07-06T21:06:22Z">Jul 6, 2018</relative-time> by
+            <a class="muted-link" title="Open pull requests created by nagix" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=723188" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/nagix.html?q=is%3Apr+is%3Aopen+author%3Anagix">nagix</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/5621.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/5621.html" class="muted-link" aria-label="35 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">35</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_5578" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="333860559">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_5578_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/5578/hovercard" href="pull/5578.html">Display tooltip for only one item per dataset at a time</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-red tooltipped tooltipped-e"
+         aria-label="2 / 3 checks OK"
+         href="pull/5578.html#partial-pull-merging">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #00b587; color: #000000" title="status: awaiting review" href="pulls255e.html?q=is%3Apr+is%3Aopen+label%3A%22status%3A+awaiting+review%22">status: awaiting review</a>
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #dd3300; color: #ffffff" title="type: bug" href="issues126e.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+bug%22">type: bug</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #5578
+            opened <relative-time datetime="2018-06-19T22:24:14Z">Jun 19, 2018</relative-time> by
+            <a class="muted-link" title="Open pull requests created by huaruiwu" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=6372245" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/huaruiwu.html?q=is%3Apr+is%3Aopen+author%3Ahuaruiwu">huaruiwu</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/5578.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/5578.html" class="muted-link" aria-label="23 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">23</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_5480" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="321376307">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_5480_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/5480/hovercard" href="pull/5480.html">(Rebase) Move drawing of gridLines into separate plugin and add border functionality</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-red tooltipped tooltipped-e"
+         aria-label="1 / 3 checks OK"
+         href="pull/5480.html#partial-pull-merging">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #00b587; color: #000000" title="status: awaiting review" href="pulls255e.html?q=is%3Apr+is%3Aopen+label%3A%22status%3A+awaiting+review%22">status: awaiting review</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #5480
+            opened <relative-time datetime="2018-05-08T23:04:54Z">May 8, 2018</relative-time> by
+            <a class="muted-link" title="Open pull requests created by okcoker" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=1030830" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/okcoker.html?q=is%3Apr+is%3Aopen+author%3Aokcoker">okcoker</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/5480.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_5246" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="295158772">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_5246_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/5246/hovercard" href="pull/5246.html">Rotations between 180-360 degrees on x axis labels</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-green tooltipped tooltipped-e"
+         aria-label="3 / 3 checks OK"
+         href="pull/5246.html#partial-pull-merging">
+        <svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #dddddd; color: #000000" title="status: stale" href="pulls9307.html?q=is%3Apr+is%3Aopen+label%3A%22status%3A+stale%22">status: stale</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #5246
+            opened <relative-time datetime="2018-02-07T14:31:41Z">Feb 7, 2018</relative-time> by
+            <a class="muted-link" title="Open pull requests created by teroman" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=34158322" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/teroman.html?q=is%3Apr+is%3Aopen+author%3Ateroman">teroman</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="1 review requesting changes"
+         href="pull/5246.html#partial-pull-merging">
+        Changes requested
+      </a>
+      </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/5246.html" class="muted-link" aria-label="14 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">14</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_5190" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="291802515">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_5190_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/5190/hovercard" href="pull/5190.html">Fix chart having hidden right padding</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-red tooltipped tooltipped-e"
+         aria-label="2 / 3 checks OK"
+         href="pull/5190.html#partial-pull-merging">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #00b587; color: #000000" title="status: awaiting review" href="pulls255e.html?q=is%3Apr+is%3Aopen+label%3A%22status%3A+awaiting+review%22">status: awaiting review</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #5190
+            opened <relative-time datetime="2018-01-26T05:19:29Z">Jan 26, 2018</relative-time> by
+            <a class="muted-link" title="Open pull requests created by jhaenchen" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=7771519" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/jhaenchen.html?q=is%3Apr+is%3Aopen+author%3Ajhaenchen">jhaenchen</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="Review required before merging"
+         href="pull/5190.html#partial-pull-merging">
+        Review required
+      </a>
+  </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/5190.html" class="muted-link" aria-label="12 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">12</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          
+<div id="issue_5180" class="Box-row Box-row--focus-gray p-0 js-navigation-item js-issue-row" data-id="291061994">
+  <div class="d-table table-fixed width-full Box-row--drag-hide position-relative">
+
+      <!-- drag handles -->
+
+      <!-- checkbox and issue open icon -->
+
+
+        <div class="float-left pt-2 pl-3">
+          <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+            <svg class="octicon octicon-git-pull-request open" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+          </span>
+        </div>
+
+    <!-- Issue title column -->
+    <div class="float-left col-9 lh-condensed p-2">
+
+      <a id="issue_5180_link" class="link-gray-dark v-align-middle no-underline h4 js-navigation-open" data-hovercard-type="pull_request" data-hovercard-url="/chartjs/Chart.js/pull/5180/hovercard" href="pull/5180.html">Fix Zero pointBorderWidth still drawing border</a>
+        
+  <span class="d-inline-block mr-1">
+    <div class="commit-build-statuses">
+      <a class="text-red tooltipped tooltipped-e"
+         aria-label="2 / 3 checks OK"
+         href="pull/5180.html#partial-pull-merging">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </a>
+    </div>
+  </span>
+
+        <span class="labels lh-default">
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #dddddd; color: #000000" title="status: stale" href="pulls9307.html?q=is%3Apr+is%3Aopen+label%3A%22status%3A+stale%22">status: stale</a>
+            <a class="d-inline-block IssueLabel v-align-text-top" style="background-color: #dd3300; color: #ffffff" title="type: bug" href="issues126e.html?q=is%3Apr+is%3Aopen+label%3A%22type%3A+bug%22">type: bug</a>
+        </span>
+      <div class="mt-1 text-small text-gray">
+        <span class="opened-by">
+          #5180
+            opened <relative-time datetime="2018-01-24T02:21:17Z">Jan 24, 2018</relative-time> by
+            <a class="muted-link" title="Open pull requests created by jhaenchen" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=7771519" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="pulls/jhaenchen.html?q=is%3Apr+is%3Aopen+author%3Ajhaenchen">jhaenchen</a>
+            
+        </span>
+
+          
+  <span class="d-inline-block">
+    &bull;
+      <a class="muted-link tooltipped tooltipped-s"
+         aria-label="1 review requesting changes"
+         href="pull/5180.html#partial-pull-merging">
+        Changes requested
+      </a>
+      </span>
+
+
+
+        
+
+          <span class="issue-meta-section css-truncate issue-milestone ml-2">
+          </span>
+      </div>
+    </div>
+
+
+    <div class="float-right col-2">
+      <div class="float-left col-7 pt-2 pr-3 text-right">
+
+        <div class="AvatarStack AvatarStack--right ">
+          <div class="AvatarStack-body tooltipped tooltipped-sw tooltipped-multiline tooltipped-align-right-1 mt-1"
+               aria-label="Assigned to ">
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right col-5 no-wrap pt-2 pr-3 text-right">
+          <a href="pull/5180.html" class="muted-link" aria-label="20 comments">
+            <svg class="octicon octicon-comment v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"/></svg>
+            <span class="text-small text-bold">20</span>
+          </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      </div>
+    </div>
+
+  <div class="paginate-container">
+
+      <div class="pagination"><span class="previous_page disabled">Previous</span> <em class="current" data-total-pages="2">1</em> <a rel="next" href="pullsc85c.html?page=2&amp;q=is%3Apr+is%3Aopen">2</a> <a class="next_page" rel="next" href="pullsc85c.html?page=2&amp;q=is%3Apr+is%3Aopen">Next</a></div>
+  </div>
+
+  <div class="protip">
+    <svg class="octicon octicon-light-bulb text-gray" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg>
+    <strong>ProTip!</strong>
+    Filter pull requests by the default branch with <a href="pullsdcf3.html?q=is%3Apr+is%3Aopen+base%3Amaster">base:master</a>
+  </div>
+
+  </div>
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </main>
+  </div>
+  
+
+  </div>
+
+        
+<div class="footer container-lg width-full px-3" role="contentinfo">
+  <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap ">
+      <li class="mr-3">&copy; 2019 <span title="0.58520s from unicorn-5647787f89-tbk4g">GitHub</span>, Inc.</li>
+        <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to security, text:security" href="https://github.com/security">Security</a></li>
+        <li class="mr-3"><a href="https://githubstatus.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com/">Help</a></li>
+    </ul>
+
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon mx-lg-4" href="https://github.com/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+   <ul class="list-style-none d-flex flex-wrap ">
+        <li class="mr-3"><a data-ga-click="Footer, go to contact, text:contact" href="../../contact.html">Contact GitHub</a></li>
+        <li class="mr-3"><a href="https://github.com/pricing" data-ga-click="Footer, go to Pricing, text:Pricing">Pricing</a></li>
+      <li class="mr-3"><a href="https://developer.github.com/" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3"><a href="https://training.github.com/" data-ga-click="Footer, go to training, text:training">Training</a></li>
+        <li class="mr-3"><a href="https://github.blog/" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
+
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+
+    <script crossorigin="anonymous" integrity="sha512-jFuNBkwlIX73xJbI2nTCs01W/xjwP+Ccc0gEdkD4d/tQBv4xIZx4dZLnkYhzawWhnxjJbvkHsxSXQffNs0Ce4Q==" type="application/javascript" src="../../../github.githubassets.com/assets/compat-bootstrap-8102d067.js"></script>
+    <script crossorigin="anonymous" integrity="sha512-m1DeH+jLA0IS/zzy50Kv0yBpZJDQlBkcACJzTGJUq30SG1eo5vztaQg1x1KV1L3XGePC1HOdKU1fu7Ktr+5nsg==" type="application/javascript" src="../../../github.githubassets.com/assets/frameworks-3c669c6d.js"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-5fkE5HlHUvjDCSLq2ACLerBiuS+N3x36xiX0Dld1w8J0+IpjD1ddnmRd806jtn+QoMMGkLFSUMXVvMN4JUkZSw==" type="application/javascript" src="../../../github.githubassets.com/assets/github-bootstrap-7f581dd4.js"></script>
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner" hidden
+    >
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="#">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="#">Reload</a> to refresh your session.</span>
+  </div>
+  <template id="site-details-dialog">
+  <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark" open>
+    <summary aria-haspopup="dialog" aria-label="Close dialog"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast">
+      <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </button>
+      <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
+    </details-dialog>
+  </details>
+</template>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+  <div aria-live="polite" class="js-global-screen-reader-notice sr-only"></div>
+
+  </body>
+
+<!-- Mirrored from github.com/chartjs/Chart.js/pulls by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2019 11:55:40 GMT -->
+</html>
+

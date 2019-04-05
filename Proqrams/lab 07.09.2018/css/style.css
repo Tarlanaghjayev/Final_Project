@@ -1,0 +1,45 @@
+.buttons{
+    position: relative;
+}
+.on_top{
+    background: black;
+    color: white;
+    position: absolute;
+    padding: 5px;
+    top: -45px;
+    left: 8px;
+}
+.on_top::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: black;
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -2px;
+    left: 45px;
+    z-index: 1;
+}
+.on_bottom{
+    background: black;
+    color: white;
+    position: absolute;
+    padding: 5px;
+    bottom: -45px;
+    left: 8px;
+}
+.on_left{
+    background: black;
+    color: white;
+    position: absolute;
+    padding: 5px;
+    left: 60px;
+}
+.on_right{
+    background: black;
+    color: white;
+    position: absolute;
+    padding: 5px;
+    right: 60px;
+}
+

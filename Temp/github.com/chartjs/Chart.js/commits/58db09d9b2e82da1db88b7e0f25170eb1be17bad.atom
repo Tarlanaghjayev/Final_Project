@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/chartjs/Chart.js/commits/58db09d9b2e82da1db88b7e0f25170eb1be17bad</id>
+  <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commits/58db09d9b2e82da1db88b7e0f25170eb1be17bad"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/chartjs/Chart.js/commits/58db09d9b2e82da1db88b7e0f25170eb1be17bad.atom"/>
+  <title>Recent Commits to Chart.js:58db09d9b2e82da1db88b7e0f25170eb1be17bad</title>
+  <updated>2018-02-02T13:01:12Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/58db09d9b2e82da1db88b7e0f25170eb1be17bad</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/58db09d9b2e82da1db88b7e0f25170eb1be17bad"/>
+    <title>
+        eslint-disable-next-line no-unused-vars
+    </title>
+    <updated>2018-02-02T13:01:12Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;eslint-disable-next-line no-unused-vars&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/03321b006bb98841c06feee873dcfffe28874f62</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/03321b006bb98841c06feee873dcfffe28874f62"/>
+    <title>
+        Fix plugin id
+    </title>
+    <updated>2018-02-01T22:16:28Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix plugin id&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4a2ff8c1ab40108b5e1f572335089a3f50efaeda</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/4a2ff8c1ab40108b5e1f572335089a3f50efaeda"/>
+    <title>
+        Fix package.json
+    </title>
+    <updated>2018-02-01T22:16:12Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix package.json&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/57fc01cced6b1a84e8ef543c8a2d16892b124917</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/57fc01cced6b1a84e8ef543c8a2d16892b124917"/>
+    <title>
+        Remove old htmlTask
+    </title>
+    <updated>2018-02-01T22:15:51Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Remove old htmlTask&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/1474880963eb37cc21a6193ed4404709f72cd319</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/1474880963eb37cc21a6193ed4404709f72cd319"/>
+    <title>
+        Indentation
+    </title>
+    <updated>2018-02-01T20:19:47Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Indentation&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/261085f19457ad9887d5dd17d535e56d8dca2979</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/261085f19457ad9887d5dd17d535e56d8dca2979"/>
+    <title>
+        Revert &quot;Disable no-unused-vars for inline events&quot;
+    </title>
+    <updated>2018-02-01T16:04:57Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Revert &amp;quot;Disable no-unused-vars for inline events&amp;quot;
+
+This reverts commit 3746bad7cd6144fd2c1741bd25be9c4ca1b4dcd2.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/3746bad7cd6144fd2c1741bd25be9c4ca1b4dcd2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/3746bad7cd6144fd2c1741bd25be9c4ca1b4dcd2"/>
+    <title>
+        Disable no-unused-vars for inline events
+    </title>
+    <updated>2018-02-01T16:02:52Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Disable no-unused-vars for inline events&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/9bb89f412ece16713cfa8d0eab10c168ff4ea7f2</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/9bb89f412ece16713cfa8d0eab10c168ff4ea7f2"/>
+    <title>
+        Revert to inline event handler
+    </title>
+    <updated>2018-02-01T15:59:06Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Revert to inline event handler&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/9b59b55d0b7a42ce859e411748daa4058dbdc806</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/9b59b55d0b7a42ce859e411748daa4058dbdc806"/>
+    <title>
+        Clean gulpfile
+    </title>
+    <updated>2018-02-01T15:43:09Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Clean gulpfile&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/4675e855833a510e305affc9c10a16f9251c0558</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/4675e855833a510e305affc9c10a16f9251c0558"/>
+    <title>
+        Add link to issue for add data bug
+    </title>
+    <updated>2018-02-01T15:37:15Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add link to issue for add data bug&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/8e4c3157f6ea674269b7ae07bc7dba41f5a753a9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/8e4c3157f6ea674269b7ae07bc7dba41f5a753a9"/>
+    <title>
+        Remove unecessary comment
+    </title>
+    <updated>2018-02-01T15:32:52Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Remove unecessary comment&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/1fc07d2aef21895b1b2f58bd4c9cf970d1220767</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/1fc07d2aef21895b1b2f58bd4c9cf970d1220767"/>
+    <title>
+        Remove error
+    </title>
+    <updated>2018-02-01T11:14:43Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Remove error&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ccd9cab9215c1534e425bf5a586788c4802881c1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/ccd9cab9215c1534e425bf5a586788c4802881c1"/>
+    <title>
+        Fail on error
+    </title>
+    <updated>2018-01-31T22:02:19Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fail on error&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/8ac486416fe391254e44143364b2bdb8f572bad1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/8ac486416fe391254e44143364b2bdb8f572bad1"/>
+    <title>
+        Use default config file for htmllint
+    </title>
+    <updated>2018-01-31T21:57:17Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Use default config file for htmllint&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/9d2d09258ec661169001f81eaf468b7d5dbe65da</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/9d2d09258ec661169001f81eaf468b7d5dbe65da"/>
+    <title>
+        Revert &quot;Introduce error&quot;
+    </title>
+    <updated>2018-01-30T13:45:14Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Revert &amp;quot;Introduce error&amp;quot;
+
+This reverts commit adbfb4da18a605b972d98775c445bcc2f58ff6b4.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/6f96837d5c209456afb2f41b1e602348e470b35a</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/6f96837d5c209456afb2f41b1e602348e470b35a"/>
+    <title>
+        Fix src for lintHtmlTask()
+    </title>
+    <updated>2018-01-30T13:44:23Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix src for lintHtmlTask()&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/27fa1a7949270ced8c68a4d95f626a6f78e4c064</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/27fa1a7949270ced8c68a4d95f626a6f78e4c064"/>
+    <title>
+        Revert &quot;Revert &quot;Move htmllint config to .json file&quot;&quot;
+    </title>
+    <updated>2018-01-30T13:04:47Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Revert &amp;quot;Revert &amp;quot;Move htmllint config to .json file&amp;quot;&amp;quot;
+
+This reverts commit 83783287083cc7c6b17300f7037ce438e34d7e9e.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/adbfb4da18a605b972d98775c445bcc2f58ff6b4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/adbfb4da18a605b972d98775c445bcc2f58ff6b4"/>
+    <title>
+        Introduce error
+    </title>
+    <updated>2018-01-30T12:56:11Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Introduce error&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/83783287083cc7c6b17300f7037ce438e34d7e9e</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/83783287083cc7c6b17300f7037ce438e34d7e9e"/>
+    <title>
+        Revert &quot;Move htmllint config to .json file&quot;
+    </title>
+    <updated>2018-01-30T12:53:05Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Revert &amp;quot;Move htmllint config to .json file&amp;quot;
+
+This reverts commit 31d6571fdfd270688ad7b2ccdf75876d802ff644.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/0940fdd67287ede865d0d1213249978eecb6d0d1</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/0940fdd67287ede865d0d1213249978eecb6d0d1"/>
+    <title>
+        SteppedLines
+    </title>
+    <updated>2018-01-30T12:52:42Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;SteppedLines&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>

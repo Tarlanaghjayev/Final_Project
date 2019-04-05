@@ -1,0 +1,71 @@
+.about_me{
+    .row{
+        .top{
+            p{
+                font-size: 62px;
+                position: relative;
+                color: rgba(160, 160, 160, 0.14);
+                z-index: -2;
+            }
+            h2{
+                position: absolute;
+                top: 117%;
+                bottom: 0;
+                left: 47%;
+                z-index: 3;
+                color: $primary-color;
+            }
+        }
+    }
+    .row{
+        text-align: left;
+            img{}
+            .norm_text{}
+            .bold_text{}
+            h4{
+                margin-top: 25px;
+            }
+            h2{
+                display: inline;
+                margin-right: 90px;
+            }
+            p{
+                margin-top: 26px;
+            }
+            h5{               
+                 margin-bottom: 20px;
+            }
+            ul{
+                list-style-type: none;
+                margin-left: -63px;
+                margin-top: 35px;
+                margin-bottom: 35px;
+                li{
+                    display: inline;
+                    font-size: 20px;
+                    margin-left: 25px;
+
+                    a{
+                        color: $primary-color;                    
+                        &:hover{
+                        text-decoration: none;
+                    }
+                        i{
+
+                        }
+                    }
+                }
+            }
+            span{
+                border: 1px solid $secondary-color;
+                padding: 14px 31px;
+                border-radius: 39px;
+                color: $helper-color;
+                background: $secondary-color;
+                &:hover{
+                    cursor: pointer;
+                    background: darken(#1ba974, 10%);
+                }
+            }
+    }
+}

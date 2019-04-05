@@ -1,0 +1,13 @@
+
+table tr td{
+        
+        background-color: rgb(31, 183, 185);
+        background-size: 100px;
+        border: 2px solid white ;
+        padding: 5px;
+        text-align: left;
+        line-height: 1.5;
+        color: white;
+        width: 48%;
+        margin: 25px 50px 75px 260px;
+}

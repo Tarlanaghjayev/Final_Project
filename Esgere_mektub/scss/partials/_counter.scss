@@ -1,0 +1,35 @@
+@import 'partials/variables';
+#counter_section{
+    margin-top: 20px;
+    // background-image: url('../img/cover_photos/map.jpg');
+
+    background: url('../img/cover_photos/map.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    background-size: cover;
+
+    height: 300px;
+    .container{
+        .cards{
+            text-align: center;
+            font-size: 23px; 
+            margin-left: 29px;           
+            .row{
+                .col-lg-6{
+                    .card{
+                        padding: 34px;
+                        width: 496px;
+                        margin-top: 63px;
+                    p{
+                        color: $primary-c;
+                    }
+                    span{
+                        font-size: 40px;
+                        color: $primary-c;
+                    }
+                }    
+            }
+        }
+    }
+}}

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/chartjs/Chart.js/commits/1e3abc4370cb4bdaebaa01aed2ac1705a172cc60</id>
+  <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commits/1e3abc4370cb4bdaebaa01aed2ac1705a172cc60"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/chartjs/Chart.js/commits/1e3abc4370cb4bdaebaa01aed2ac1705a172cc60.atom"/>
+  <title>Recent Commits to Chart.js:1e3abc4370cb4bdaebaa01aed2ac1705a172cc60</title>
+  <updated>2018-04-01T15:03:07Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/1e3abc4370cb4bdaebaa01aed2ac1705a172cc60</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/1e3abc4370cb4bdaebaa01aed2ac1705a172cc60"/>
+    <title>
+        Make `Chart.Animation/animations/Tooltip` importable
+    </title>
+    <updated>2018-04-01T15:03:07Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Make `Chart.Animation/animations/Tooltip` importable&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/ac088a04abf671a217aa03a65699524486ceab06</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/ac088a04abf671a217aa03a65699524486ceab06"/>
+    <title>
+        Bump version to 2.7.2 (#5307)
+    </title>
+    <updated>2018-03-01T21:20:53Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Bump version to 2.7.2 (#5307)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c2a5b1237635875b20c46d47577355ced733db14</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/c2a5b1237635875b20c46d47577355ced733db14"/>
+    <title>
+        Bugfix: Improve polyfill function of log10 to return whole powers of …
+    </title>
+    <updated>2018-02-20T23:44:01Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/33193571?s=30&amp;v=4"/>
+    <author>
+      <name>jcopperfield</name>
+      <uri>https://github.com/jcopperfield</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Bugfix: Improve polyfill function of log10 to return whole powers of 10 (#5275)
+
+* Bugfix: Improve polyfill function of log10 to return whole powers of 10
+        as integer values, as it caused endless loop in IE11 in the tick
+        creation loop.
+
+* Compare floating-point numbers directly instead of using unnecessary division.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c90cf2ebcdce88d90086c32397a9d8355c985695</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/c90cf2ebcdce88d90086c32397a9d8355c985695"/>
+    <title>
+        Make both README.md and installation.md clearer (#5274)
+    </title>
+    <updated>2018-02-20T12:29:10Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/13490408?s=30&amp;v=4"/>
+    <author>
+      <name>wla80</name>
+      <uri>https://github.com/wla80</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Make both README.md and installation.md clearer (#5274)
+
+Address the ambiguity of &amp;quot;Selecting the Correct Build&amp;quot; section&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/be6660c63d10b54f4972170c4f3364b61bb9b9b3</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/be6660c63d10b54f4972170c4f3364b61bb9b9b3"/>
+    <title>
+        Improve title of generated documentation (#5256)
+    </title>
+    <updated>2018-02-16T00:25:49Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/5080442?s=30&amp;v=4"/>
+    <author>
+      <name>wmzhong</name>
+      <uri>https://github.com/wmzhong</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Improve title of generated documentation (#5256)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d6ce5c0772bda8e4331df1d8e867fde7e6ee0bbe</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/d6ce5c0772bda8e4331df1d8e867fde7e6ee0bbe"/>
+    <title>
+        Support multiple font colors for radial chart labels (#5240)
+    </title>
+    <updated>2018-02-15T02:22:19Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6321017?s=30&amp;v=4"/>
+    <author>
+      <name>flaurida</name>
+      <uri>https://github.com/flaurida</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Support multiple font colors for radial chart labels (#5240)
+
+* Support multiple font colors in array
+
+* Address linting error&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/584d1c646c84f3d49c865ab69e774cc6541027a4</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/584d1c646c84f3d49c865ab69e774cc6541027a4"/>
+    <title>
+        Fix label vertical alignment on vertical scales (#5248)
+    </title>
+    <updated>2018-02-09T22:20:06Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/27080760?s=30&amp;v=4"/>
+    <author>
+      <name>MPierre9</name>
+      <uri>https://github.com/MPierre9</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix label vertical alignment on vertical scales (#5248)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/bba29e591604fed8c1e3bc4cf911273d4c5e0f42</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/bba29e591604fed8c1e3bc4cf911273d4c5e0f42"/>
+    <title>
+        Remove trailing spaces from docs (#5227)
+    </title>
+    <updated>2018-02-04T11:27:50Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/322311?s=30&amp;v=4"/>
+    <author>
+      <name>benmccann</name>
+      <uri>https://github.com/benmccann</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Remove trailing spaces from docs (#5227)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/182270ef9b1bc9fab1cefc89ce1e94a41f4d754f</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/182270ef9b1bc9fab1cefc89ce1e94a41f4d754f"/>
+    <title>
+        Setup HTML and JS linters for samples (#5195)
+    </title>
+    <updated>2018-02-03T12:28:54Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Setup HTML and JS linters for samples (#5195)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/97ff45873e8e00af5e25d8adadb830fb15a272ef</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/97ff45873e8e00af5e25d8adadb830fb15a272ef"/>
+    <title>
+        Add Charba GWT integration to extensions.md (#5225)
+    </title>
+    <updated>2018-02-02T09:17:24Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11741250?s=30&amp;v=4"/>
+    <author>
+      <name>stockiNail</name>
+      <uri>https://github.com/stockiNail</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add Charba GWT integration to extensions.md (#5225)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/c2681859531977fb83fee782f8aec6b50196d644</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/c2681859531977fb83fee782f8aec6b50196d644"/>
+    <title>
+        Fix Slack invitation link (#5217)
+    </title>
+    <updated>2018-02-01T02:35:08Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/3874900?s=30&amp;v=4"/>
+    <author>
+      <name>simonbrunel</name>
+      <uri>https://github.com/simonbrunel</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix Slack invitation link (#5217)
+
+Setup a new Heroku app based on rauchg/slackin, using Slack legacy token from the Chart.js (chartjs.slack@...) user and reCAPTCHA from the same Google account.&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e61392a256727bb531e80abbb2d5716fdf7d31ed</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/e61392a256727bb531e80abbb2d5716fdf7d31ed"/>
+    <title>
+        Don&#39;t draw tick across axis/border (#5178)
+    </title>
+    <updated>2018-01-28T17:59:22Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/7771519?s=30&amp;v=4"/>
+    <author>
+      <name>jhaenchen</name>
+      <uri>https://github.com/jhaenchen</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Don&amp;#39;t draw tick across axis/border (#5178)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/98ef3942d982869ee867e134df95008dd612caf3</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/98ef3942d982869ee867e134df95008dd612caf3"/>
+    <title>
+        Fix variable name error on developer api documentation for (#5173)
+    </title>
+    <updated>2018-01-27T14:47:51Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars1.githubusercontent.com/u/7736434?s=30&amp;v=4"/>
+    <author>
+      <name>jonquach</name>
+      <uri>https://github.com/jonquach</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Fix variable name error on developer api documentation for (#5173)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/274fca68c97d956ac4608e19988cb0c84ffe6999</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/274fca68c97d956ac4608e19988cb0c84ffe6999"/>
+    <title>
+        Update custom tooltip documentation and samples (#5166)
+    </title>
+    <updated>2018-01-21T21:47:50Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Update custom tooltip documentation and samples (#5166)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/f82c8adf39382ff1989664a872a0f3ec21ae1265</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/f82c8adf39382ff1989664a872a0f3ec21ae1265"/>
+    <title>
+        Remove copy-pasta error in polar area and doughnut chart docs (#5169)
+    </title>
+    <updated>2018-01-21T21:47:25Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Remove copy-pasta error in polar area and doughnut chart docs (#5169)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/d668882971166ac11768ab659b2d5770642c33b3</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/d668882971166ac11768ab659b2d5770642c33b3"/>
+    <title>
+        Tooltip label callback example (#5168)
+    </title>
+    <updated>2018-01-21T21:47:04Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Tooltip label callback example (#5168)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/9a0117ad492d2c02c4be5f3488f0d8d255fe5aa9</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/9a0117ad492d2c02c4be5f3488f0d8d255fe5aa9"/>
+    <title>
+        Responsive printing docs (#5167)
+    </title>
+    <updated>2018-01-21T21:46:28Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Responsive printing docs (#5167)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/26c44cf7abfce2df221f9c9b568e1c5eae893bfb</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/26c44cf7abfce2df221f9c9b568e1c5eae893bfb"/>
+    <title>
+        Treat negative values in doughnut charts as positive (#5165)
+    </title>
+    <updated>2018-01-21T17:12:33Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars0.githubusercontent.com/u/6757853?s=30&amp;v=4"/>
+    <author>
+      <name>etimberg</name>
+      <uri>https://github.com/etimberg</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Treat negative values in doughnut charts as positive (#5165)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/6d58a6a8a8af64373605c86fe380a61250411e17</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/6d58a6a8a8af64373605c86fe380a61250411e17"/>
+    <title>
+        Add tests related to showLines for controller.scatter (#5150)
+    </title>
+    <updated>2018-01-16T09:29:49Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Add tests related to showLines for controller.scatter (#5150)&lt;/pre&gt;
+    </content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Grit::Commit/e585c7505f33e7115a0d75b7d058e3c0d37a6952</id>
+    <link type="text/html" rel="alternate" href="https://github.com/chartjs/Chart.js/commit/e585c7505f33e7115a0d75b7d058e3c0d37a6952"/>
+    <title>
+        Log gulp error to Chart.js (#5143)
+    </title>
+    <updated>2018-01-13T17:17:38Z</updated>
+    <media:thumbnail height="30" width="30" url="https://avatars2.githubusercontent.com/u/11260832?s=30&amp;v=4"/>
+    <author>
+      <name>loicbourgois</name>
+      <uri>https://github.com/loicbourgois</uri>
+    </author>
+    <content type="html">
+      &lt;pre style=&#39;white-space:pre-wrap;width:81ex&#39;&gt;Log gulp error to Chart.js (#5143)
+
+* Log errors and skip for buildTask
+
+* Write gulp error to Chart.js
++ Add intentional error to core to check if travis fails
+
+* Remove unused require
+
+* Remove error + Proper require fs
+
+* Fix newline
+
+* Refactor
+
+* Put back browser errors
+
+* Use options
+
+* Fix intentional error
+
+* Use yargs + Refactor
+
+* remove space
+
+* Fefactor
+
+* Use booleans&lt;/pre&gt;
+    </content>
+  </entry>
+</feed>
